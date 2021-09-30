@@ -33,9 +33,9 @@ const srcPath = {
 }
 // 出力先パス
 const destPath = {
-  'css'  : '../css/',
-  'php'  : '../',
-  'js'   : '../js/'
+  'css'  : './css/',
+  'php'  : './',
+  'js'   : './js/'
 }
 //styleguide用
 const sg_srcPath = {
@@ -93,7 +93,7 @@ const scssCompile = (done) => {
     .pipe( autoprefixer())
     // 出力設定
     .pipe( dest( destPath.css, {
-      sourcemaps: '/'  // write
+      sourcemaps: ''  // write
     }))
     // 修正部分だけ反映
     .pipe( browserSync.stream()),

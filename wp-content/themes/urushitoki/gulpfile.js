@@ -106,7 +106,7 @@ const scssCompile = (done) => {
 const options = minimist( process.argv.slice(2),{ // process.argv=>コマンドラインの引数取得
   string: 'domain',
   default: {
-    domain: 'sitedomain.local' // 引数初期値
+    domain: 'urushitoki.local' // 引数初期値
   }
 });
 // ローカルサーバー立ち上げ

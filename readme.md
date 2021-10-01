@@ -11,17 +11,17 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |  └─ themes
 |     └─ urushitoki
 |        ├─ node_modules
-|        └─ production     //作業ディレクトリ
-|           ├─js
-|           ├─php
-|           └─sass
+|        ├─ production     //作業ディレクトリ
+|        |  ├─js
+|        |  ├─php
+|        |  └─sass
 |        ├─ src            //styleguide 用ディレクトリ
-|           ├─ js
-|           ├─ sass
-|           ├─ styleguide
+|        |  ├─ js
+|        |  ├─ sass
+|        |  └─ styleguide
 |        ├─ gulpfile.js    //gulp設定ファイル
 |        ├─ package.json
-|        ├─ package-lock.json
+|        └─ package-lock.json
 └─ README.md
 ```
 ## 1. Local by FlywheelでWordPress開発環境を構築  
@@ -93,10 +93,10 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
     ├─ wp-content
     |  └─ themes
     |     └─ urushitoki
-    |        ├─ src
+    |        └─ src
     |           ├─ js         //コンポーネントで作成した JS のコードを記述・保存
     |           ├─ sass       //コンポーネントで作成した Sass のコードを記述・保存
-    |           ├─ styluguide
+    |           └─ styleguide
     |              ├─ components
     |              |  └─ sample
     |              |     ├─ sample.hbs //html の記述。コンポーネントディレクトリ名とファイル名を一致させる

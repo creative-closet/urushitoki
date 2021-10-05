@@ -109,7 +109,7 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 4. 作成した js ファイルを js ディレクトリにコピー
 5. コマンドを実行し、styleguide の作成
 
-``` npm gulp styleguide ```
+``` npx gulp styleguide ```
 
 ## ブランチについて
 
@@ -143,3 +143,19 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 
 入力後 Enter（return） キーで確定すればエディタから抜けられます。
 
+## 役に立つコマンド
+
+### ブランチの作成方法
+
+(.git が存在する階層で)
+git checkout -b <新しいブランチ名>
+
+### ブランチの移動方法
+
+(.git が存在する階層で)
+git checkout <移動したいブランチ名>
+
+### 現在自分がいるブランチの確認方法
+
+(.git が存在する階層で)
+git branch

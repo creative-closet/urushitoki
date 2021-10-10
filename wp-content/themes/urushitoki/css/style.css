@@ -2,6 +2,27 @@
   color: blue;
 }
 
+.c-bullet {
+  list-style: none;
+}
+.c-bullet__item {
+  line-height: 2.8;
+}
+.c-bullet__item::before {
+  display: inline-block;
+  content: "";
+  margin-top: 17px;
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: #897C70;
+}
+.c-bullet__item:last-child {
+  margin-bottom: 0;
+}
+
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */

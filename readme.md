@@ -24,7 +24,7 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |        ├─ package-lock.json
 └─ README.md
 ```
-## 1. Local by FlywheelでWordPress開発環境を構築  
+## 1. Local by FlywheelでWordPress開発環境を構築
 
 Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オプションが不要
 
@@ -66,17 +66,17 @@ Local の Site Domain が urushitoki.local の場合
 
 Site Domain が別の場合
 
-``` npx gulp --domain "サイトのドメイン" ```  
+``` npx gulp --domain "サイトのドメイン" ```
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
 ## 5. コーディング
 PHP、Sass、Jsファイルの編集は```production```の中で行って下さい。
 
-【基本的な動作】  
-・Dart Sassコンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理  
-・起動時ローカルサーバーの立ち上げ  
-・production/sass・php・jsファイルの変更を監視。変更があった場合はブラウザを自動でリロード。  
+【基本的な動作】
+・Dart Sassコンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理
+・起動時ローカルサーバーの立ち上げ
+・production/sass・php・jsファイルの変更を監視。変更があった場合はブラウザを自動でリロード。
 ※sassの変更に関してはリロードは行われず、変更部分だけ反映されます。
 
 # スタイルガイド（ Fractal ）について
@@ -108,6 +108,8 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 3. 作成した sass ファイルを sass ディレクトリにコピー
 4. 作成した js ファイルを js ディレクトリにコピー
 5. コマンドを実行し、styleguide の作成
+
+注意sampleディレクトリとsample.hbsに--は使用不可。使うとstyleguideにhtmlが吐き出されない。
 
 ``` npm gulp styleguide ```
 

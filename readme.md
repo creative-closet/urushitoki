@@ -50,7 +50,7 @@ Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オ
 
 ## 4. テーマの urushitoki ディレクトリに移動し Node のプラグインパッケージインストール
 
-デフォルで Local を登録している場合の移動コマンド
+デフォルトで Local を登録している場合の移動コマンド
 
 ``` cd ~/Local\ Sites/urushitoki/app/public/wp-content/themes/urushitoki ```
 
@@ -70,14 +70,24 @@ Site Domain が別の場合
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
-## 5. コーディング
+## 6. コーディング
 PHP、Sass、Jsファイルの編集は```production```の中で行って下さい。
 
 【基本的な動作】  
-・Dart Sassコンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理  
+・Dart Sass コンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理  
 ・起動時ローカルサーバーの立ち上げ  
-・production/sass・php・jsファイルの変更を監視。変更があった場合はブラウザを自動でリロード。  
-※sassの変更に関してはリロードは行われず、変更部分だけ反映されます。
+・production/sass・php・js ファイルの変更を監視。変更があった場合はブラウザを自動でリロード。  
+※sass の変更に関してはリロードは行われず、変更部分だけ反映されます。
+
+# コンポーネント作成の手順
+
+ 1. pull してきたデータに割り当てのタスクを更新する
+ 2. 一旦、production>php>index.php にコードを記述
+ 3. production>sass>object の中に scss ファイルを定義する
+ 4. ローカルで問題なければ、 index.php の記述内容を削除
+ 5. コミットメッセージに issue 番号を含めて commit 後、 push する
+ 6. 別の人に review してもらう
+
 
 # スタイルガイド（ Fractal ）について
 
@@ -120,7 +130,7 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 ## Git ワークフロー
 
 1. 担当する issue に Assign
-2. main ブランチから issue ブランチを作成
+2. main ブランチから issue ブランチを作成（ main ブランチ移行時に pull すること ）
 3. issue ブランチから main に対してプルリクエスト作成（ Reviewers に誰かを入れてレビューを受ける ）
 4. 取り込みが完了し、issue の開発が終わったら GitHub と ローカルからブランチを削除
 

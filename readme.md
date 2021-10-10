@@ -117,7 +117,8 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 2. sample ディレクトリ内に sample.hbs と readme.md 作成
 3. 作成した sass ファイルを sass ディレクトリにコピー
 4. 作成した js ファイルを js ディレクトリにコピー
-5. コマンドを実行し、styleguide の作成
+5. styl.css ファイルの中に 作成したscss を @use 〜 として追記する
+6. コマンドを実行し、styleguide の作成
 
 ``` npx gulp styleguide ```
 

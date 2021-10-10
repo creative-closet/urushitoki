@@ -2,6 +2,48 @@
   color: blue;
 }
 
+.p-btn--primary {
+  background-color: #fff;
+  font-family: "Times New Roman";
+  border: 2px solid;
+  border-color: #707070;
+}
+
+.p-btn--primary a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 20px;
+  width: 350px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.p-btn--primary a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.8em;
+  transform: translateY(calc(-50% - 2px)) rotate(40deg);
+  width: 32px;
+  height: 2px;
+  background-color: #707070;
+}
+.p-btn--primary a::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 1em;
+  transform: translateY(-50%);
+  width: 193px;
+  height: 2px;
+  background-color: #707070;
+}
+
 .c-bullet {
   list-style: none;
 }

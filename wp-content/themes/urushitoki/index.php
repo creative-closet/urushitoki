@@ -13,6 +13,12 @@
   <article id="sampleId">
     <h1>Js Test2</h1>
   </article>
+  
+<button class="p-btn p-btn--primary">
+	<a href="#">
+    PRIMARY
+	</a>
+</button>
 
   <?php wp_footer(); ?>
 </body>

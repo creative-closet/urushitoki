@@ -1,23 +1,70 @@
 .p-btn {
-  appearance: none;
-  padding: 0;
-  border: none;
-  outline: none;
-  color: #000;
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  background: transparent;
-  cursor: pointer;
-  border: #000 1px solid;
-  border-radius: 3px;
-  padding: 5px 10px;
- 
-  &--typeA {
-    color: #ffffff;
-    background-color: #ff0000;
-  }
-  &--typeB {
-    color: #ffffff;
-    background-color: #0000ff;
-  }
+	appearance: none;
+	padding: 0;
+	border: none;
+	outline: none;
+	color: #000;
+	font-size: 14px;
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ",
+		Meiryo, sans-serif;
+	background: transparent;
+	cursor: pointer;
+	border: #000 1px solid;
+	border-radius: 3px;
+	padding: 5px 10px;
+
+	&--typeA {
+		color: #ffffff;
+		background-color: #ff0000;
+	}
+	&--typeB {
+		color: #ffffff;
+		background-color: #0000ff;
+	}
+	&--typeC {
+		color: #ffffff;
+		background-color: #0000ff;
+	}
+}
+
+.p-btn--primary {
+	background-color: #fff;
+	font-family: "Times New Roman";
+	border: 2px solid;
+	border-color: #707070;
+}
+
+.p-btn--primary a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	padding: 30px 20px;
+	width: 350px;
+	color: black;
+	font-size: 18px;
+	font-weight: 700;
+	transition: 0.3s;
+	text-decoration: none;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0.8em;
+		transform: translateY(calc(-50% - 2px)) rotate(40deg);
+		width: 32px;
+		height: 2px;
+		background-color: #707070;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 60%;
+		right: 1em;
+		transform: translateY(-50%);
+		width: 193px;
+		height: 2px;
+		background-color: #707070;
+	}
 }

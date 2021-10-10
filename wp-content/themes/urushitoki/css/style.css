@@ -11,8 +11,7 @@
 .c-bullet__item::before {
   display: inline-block;
   content: "";
-  margin-top: 17px;
-  margin-right: 10px;
+  margin: 17px 10px 0 0;
   width: 8px;
   height: 8px;
   vertical-align: top;

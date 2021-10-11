@@ -110,6 +110,7 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 5. コマンドを実行し、styleguide の作成
 ``` npx gulp styleguide ```
 
+<<<<<<< HEAD
 ### スタイルガイド追加の注意点
 2. sample ディレクトリ内に sample.hbs と readme.md 作成
 →この時、sampleディレクトリとsample.hbsのファイル名に```--```は使用不可。
@@ -121,6 +122,7 @@ hbsファイルのパスを```../raw/コンポーネント名/画像の名前```
 →``` npx gulp styleguide ```を走らせると、styleguide>components>rawに画像がコンパイルされる。
 吐き出されたhtmlファイルがrawディレクトリ内の画像を読みに行くようにパスを修正しておくとstyleguideでも画像が表示されます。
 
+=======
 
 ## ブランチについて
 

@@ -34,7 +34,9 @@
   border: 2px solid;
   border-color: #707070;
 }
-
+.p-btn--primary:hover {
+  background-color: #270b0b;
+}
 .p-btn--primary a {
   display: flex;
   justify-content: space-between;
@@ -49,6 +51,9 @@
   transition: 0.3s;
   text-decoration: none;
 }
+.p-btn--primary a:hover {
+  color: #fff;
+}
 .p-btn--primary a::before {
   content: "";
   position: absolute;
@@ -59,6 +64,9 @@
   height: 2px;
   background-color: #707070;
 }
+.p-btn--primary a:hover::before {
+  background-color: #fff;
+}
 .p-btn--primary a::after {
   content: "";
   position: absolute;
@@ -68,4 +76,74 @@
   width: 193px;
   height: 2px;
   background-color: #707070;
+}
+.p-btn--primary a:hover::after {
+  background-color: #fff;
+}
+
+.p-btn--cross {
+  background-color: #fff;
+  border: none;
+}
+.p-btn--cross a {
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+}
+.p-btn--cross a::before, .p-btn--cross a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 70px;
+  background: #fff;
+}
+.p-btn--cross a::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.p-btn--cross a::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.p-btn--stripe {
+  background-color: #fff;
+  border: none;
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+}
+.p-btn--stripe span,
+.p-btn--stripe span:before,
+.p-btn--stripe span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 70px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.p-btn--stripe span {
+  transform: translate(-50%, -50%) rotate(25deg);
+  position: absolute;
+  top: 50%;
+  right: -10px;
+}
+.p-btn--stripe span:before {
+  bottom: 20px;
+  position: absolute;
+  right: 10px;
+}
+.p-btn--stripe span:after {
+  top: 20px;
+  position: absolute;
+  right: -15px;
 }

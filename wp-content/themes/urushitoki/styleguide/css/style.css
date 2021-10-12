@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.p-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 14px;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  background: transparent;
+  cursor: pointer;
+  border: #000 1px solid;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+.p-btn--typeA {
+  color: #ffffff;
+  background-color: #ff0000;
+}
+.p-btn--typeB {
+  color: #ffffff;
+  background-color: #0000ff;
+}
+
+.c-bullet {
+  list-style: none;
+}
+.c-bullet__item {
+  line-height: 2.8;
+}
+.c-bullet__item::before {
+  display: inline-block;
+  content: "";
+  margin: 17px 10px 0 0;
+  width: 8px;
+  height: 8px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: #897C70;
+}
+.c-bullet__item:last-child {
+  margin-bottom: 0;
+}

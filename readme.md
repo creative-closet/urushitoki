@@ -24,7 +24,7 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |        └─ package-lock.json
 └─ README.md
 ```
-## 1. Local by FlywheelでWordPress開発環境を構築  
+## 1. Local by FlywheelでWordPress開発環境を構築
 
 Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オプションが不要
 
@@ -66,17 +66,17 @@ Local の Site Domain が urushitoki.local の場合
 
 Site Domain が別の場合
 
-``` npx gulp --domain "サイトのドメイン" ```  
+``` npx gulp --domain "サイトのドメイン" ```
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
 ## 6. コーディング
 PHP、Sass、Jsファイルの編集は```production```の中で行って下さい。
 
-【基本的な動作】  
-・Dart Sass コンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理  
-・起動時ローカルサーバーの立ち上げ  
-・production/sass・php・js ファイルの変更を監視。変更があった場合はブラウザを自動でリロード。  
+【基本的な動作】
+・Dart Sass コンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理
+・起動時ローカルサーバーの立ち上げ
+・production/sass・php・js ファイルの変更を監視。変更があった場合はブラウザを自動でリロード。
 ※sass の変更に関してはリロードは行われず、変更部分だけ反映されます。
 
 # コンポーネント作成の手順
@@ -121,6 +121,16 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 6. コマンドを実行し、styleguide の作成
 
 ``` npx gulp styleguide ```
+### スタイルガイド追加の注意点
+2. sample ディレクトリ内に sample.hbs と readme.md 作成
+→この時、sampleディレクトリとsample.hbsのファイル名に```--```は使用不可。
+使うとstyleguideにhtmlが吐き出されない。
+
+コンポーネントの中に画像を使用する場合は
+sampleディレクトリの中に入れたい画像をコピーして持ってくるのと、
+hbsファイルのパスを```../raw/コンポーネント名/画像の名前```にする
+→``` npx gulp styleguide ```を走らせると、styleguide>components>rawに画像がコンパイルされる。
+吐き出されたhtmlファイルがrawディレクトリ内の画像を読みに行くようにパスを修正しておくとstyleguideでも画像が表示されます。
 
 ## ブランチについて
 

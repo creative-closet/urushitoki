@@ -1,8 +1,11 @@
+@use "../foundation/variables.scss";
+@use "../foundation/base.scss";
+
 .c-text{
-	font-size: 16px;
-	color:#2E2E2E;
+	font-size: variables.$font-s;
+	color:variables.$black;
 	&--white{
-		font-size: 16px;
-		color:#FFFFFF;
+		font-size: variables.$font-s;
+		color:variables.$white;
 	}
 }

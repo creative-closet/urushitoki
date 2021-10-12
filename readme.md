@@ -11,17 +11,17 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |  └─ themes
 |     └─ urushitoki
 |        ├─ node_modules
-|        └─ production     //作業ディレクトリ
-|           ├─js
-|           ├─php
-|           └─sass
+|        ├─ production     //作業ディレクトリ
+|        |  ├─js
+|        |  ├─php
+|        |  └─sass
 |        ├─ src            //styleguide 用ディレクトリ
-|           ├─ js
-|           ├─ sass
-|           ├─ styleguide
+|        |  ├─ js
+|        |  ├─ sass
+|        |  └─ styleguide
 |        ├─ gulpfile.js    //gulp設定ファイル
 |        ├─ package.json
-|        ├─ package-lock.json
+|        └─ package-lock.json
 └─ README.md
 ```
 ## 1. Local by FlywheelでWordPress開発環境を構築
@@ -93,10 +93,10 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
     ├─ wp-content
     |  └─ themes
     |     └─ urushitoki
-    |        ├─ src
+    |        └─ src
     |           ├─ js         //コンポーネントで作成した JS のコードを記述・保存
     |           ├─ sass       //コンポーネントで作成した Sass のコードを記述・保存
-    |           ├─ styluguide
+    |           └─ styleguide
     |              ├─ components
     |              |  └─ sample
     |              |     ├─ sample.hbs //html の記述。コンポーネントディレクトリ名とファイル名を一致させる
@@ -108,10 +108,21 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 3. 作成した sass ファイルを sass ディレクトリにコピー
 4. 作成した js ファイルを js ディレクトリにコピー
 5. コマンドを実行し、styleguide の作成
+``` npx gulp styleguide ```
 
-注意sampleディレクトリとsample.hbsに--は使用不可。使うとstyleguideにhtmlが吐き出されない。
+<<<<<<< HEAD
+### スタイルガイド追加の注意点
+2. sample ディレクトリ内に sample.hbs と readme.md 作成
+→この時、sampleディレクトリとsample.hbsのファイル名に```--```は使用不可。
+使うとstyleguideにhtmlが吐き出されない。
 
-``` npm gulp styleguide ```
+コンポーネントの中に画像を使用する場合は
+sampleディレクトリの中に入れたい画像をコピーして持ってくるのと、
+hbsファイルのパスを```../raw/コンポーネント名/画像の名前```にする
+→``` npx gulp styleguide ```を走らせると、styleguide>components>rawに画像がコンパイルされる。
+吐き出されたhtmlファイルがrawディレクトリ内の画像を読みに行くようにパスを修正しておくとstyleguideでも画像が表示されます。
+
+=======
 
 ## ブランチについて
 
@@ -145,3 +156,19 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 
 入力後 Enter（return） キーで確定すればエディタから抜けられます。
 
+## 役に立つコマンド
+
+### ブランチの作成方法
+
+(.git が存在する階層で)
+git checkout -b <新しいブランチ名>
+
+### ブランチの移動方法
+
+(.git が存在する階層で)
+git checkout <移動したいブランチ名>
+
+### 現在自分がいるブランチの確認方法
+
+(.git が存在する階層で)
+git branch

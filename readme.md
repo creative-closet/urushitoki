@@ -24,16 +24,19 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |        └─ package-lock.json
 └─ README.md
 ```
-## 1. Local by FlywheelでWordPress開発環境を構築
 
-Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オプションが不要
+## 1. Local by Flywheel で WordPress 開発環境を構築
+
+Site Domain を `urushitoki.local` で作成すると gulp の起動時オプションが不要
 
 ## 2. 作業ディレクトリ
+
     Local で作成したプロジェクトディレクトリ
     └─ app //ここでgit clone
+
 ### コマンド
 
-  ``` git@github.com:creative-closet/urushitoki.git ```
+`git@github.com:creative-closet/urushitoki.git`
 
 ## 3. clone された urushitoki の中身を public の方へ移動
 
@@ -52,26 +55,27 @@ Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オ
 
 デフォルトで Local を登録している場合の移動コマンド
 
-``` cd ~/Local\ Sites/urushitoki/app/public/wp-content/themes/urushitoki ```
+`cd ~/Local\ Sites/urushitoki/app/public/wp-content/themes/urushitoki`
 
 パッケージインストール
 
-``` npm install ```
+`npm install`
 
-## 5. gulpを起動
+## 5. gulp を起動
 
 Local の Site Domain が urushitoki.local の場合
 
-```npx gulp ```
+`npx gulp `
 
 Site Domain が別の場合
 
-``` npx gulp --domain "サイトのドメイン" ```
+`npx gulp --domain "サイトのドメイン"`
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
 ## 6. コーディング
-PHP、Sass、Jsファイルの編集は```production```の中で行って下さい。
+
+PHP、Sass、Js ファイルの編集は`production`の中で行って下さい。
 
 【基本的な動作】  
 ・Dart Sass コンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理  
@@ -81,12 +85,12 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 
 # コンポーネント作成の手順
 
- 1. pull してきたデータに割り当てのタスクを更新する
- 2. 一旦、production>php>index.php にコードを記述
- 3. production>sass>object の中に scss ファイルを定義する
- 4. ローカルで問題なければ、 index.php の記述内容を削除
- 5. コミットメッセージに issue 番号を含めて commit 後、 push する
- 6. 別の人に review してもらう
+1.  pull してきたデータに割り当てのタスクを更新する
+2.  一旦、production>php>index.php にコードを記述
+3.  production>sass>object の中に scss ファイルを定義する
+4.  ローカルで問題なければ、 index.php の記述内容を削除
+5.  コミットメッセージに issue 番号を含めて commit 後、 push する
+6.  別の人に review してもらう
 
 # スタイルガイド（ Fractal ）について
 
@@ -119,23 +123,25 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 5. src>scss>style.css ファイルの中に @use 〜 として追記する
 6. コマンドを実行し、styleguide の作成
 
-``` npx gulp styleguide ```
+`npx gulp styleguide`
+
 ### スタイルガイド追加の注意点
+
 2. sample ディレクトリ内に sample.hbs と readme.md 作成
-→この時、sampleディレクトリとsample.hbsのファイル名に```--```は使用不可。
-使うとstyleguideにhtmlが吐き出されない。
+   → この時、sample ディレクトリと sample.hbs のファイル名に`--`は使用不可。
+   使うと styleguide に html が吐き出されない。
 
 コンポーネントの中に画像を使用する場合は
-sampleディレクトリの中に入れたい画像をコピーして持ってくるのと、
-hbsファイルのパスを```../raw/コンポーネント名/画像の名前```にする
-→``` npx gulp styleguide ```を走らせると、styleguide>components>rawに画像がコンパイルされる。
-吐き出されたhtmlファイルがrawディレクトリ内の画像を読みに行くようにパスを修正しておくとstyleguideでも画像が表示されます。
+sample ディレクトリの中に入れたい画像をコピーして持ってくるのと、
+hbs ファイルのパスを`../raw/コンポーネント名/画像の名前`にする
+→`npx gulp styleguide`を走らせると、styleguide>components>raw に画像がコンパイルされる。
+吐き出された html ファイルが raw ディレクトリ内の画像を読みに行くようにパスを修正しておくと styleguide でも画像が表示されます。
 
 ## ブランチについて
 
-必ず ` issue ` の番号をブランチ名に含めてください。この時 #も必要なので
+必ず `issue` の番号をブランチ名に含めてください。この時 #も必要なので
 
-` git branch "#1" ` という具合に、クォーテーションをつけましょう
+`git branch "#1"` という具合に、クォーテーションをつけましょう
 
 ## Git ワークフロー
 
@@ -151,42 +157,41 @@ hbsファイルのパスを```../raw/コンポーネント名/画像の名前```
 
 ### 流れ
 
-①自分の作業ブランチで作業→②プルリクを出す→③developブランチにマージ→④mainブランチにマージ
+① 自分の作業ブランチで作業 →② プルリクを出す →③develop ブランチにマージ →④main ブランチにマージ
 
 1. 自分の作業ブランチで作業
-→上記の"Git ワークフロー"記載の通り作業
-2. githubでプルリクを出してレビューをお願いする(フィードバックがあれば修正)
-→メンバーはここまででタスク完了
-3. developブランチにマージ
-→りえるんかYAT実施
-4. mainブランチにマージ
-→りえるんかYAT実施（タイミングは後日判断）
+   → 上記の"Git ワークフロー"記載の通り作業
+2. github でプルリクを出してレビューをお願いする(フィードバックがあれば修正)
+   → メンバーはここまででタスク完了
+3. develop ブランチにマージ
+   → りえるんか YAT 実施
+4. main ブランチにマージ
+   → りえるんか YAT 実施（タイミングは後日判断）
 
 ### デプロイ先
 
-developブランチ->開発(テスト)環境にデプロイ
-mainブランチ->本番環境にデプロイ
+develop ブランチ->開発(テスト)環境にデプロイ
+main ブランチ->本番環境にデプロイ
 
 ## コンフリクト解消
 
-プルリク先のブランチを自分のローカルに pull (develop[リモート] → develop )
-ローカルで作業しているブランチに取り込み( develop → readmeの修正(styleguideの名前) #68 )
-git push origin {readmeの修正(styleguideの名前) #68}
-
+1. プルリク先のブランチを自分のローカルに pull (develop[リモート] → develop )
+2. ローカルで作業しているブランチに取り込み( develop → readme の修正(styleguide の名前) #68 )
+3. git push origin {readme の修正(styleguide の名前) #68}
 
 ## Q & A
 
 ### Gulp の起動を停止したい
 
- → ` Ctrl + C ` で停止
+→ `Ctrl + C` で停止
 
 ### pull したらターミナルがエディタになってしまった
 
- → vi もしくは vim というエディタでの編集モードになっているので
+→ vi もしくは vim というエディタでの編集モードになっているので
 
-` :q ` で抜けましょう。ただし、ターミナルの下に ` VISUAL ` とか ` INSERT ` と出ているとコマンドを受け付けないので ` esc ` キーで編集モードから抜けて ` :q ` と入力する必要があります。
+`:q` で抜けましょう。ただし、ターミナルの下に `VISUAL` とか `INSERT` と出ているとコマンドを受け付けないので `esc` キーで編集モードから抜けて `:q` と入力する必要があります。
 
-*:qは同時押しではなく続けて入力するのでご注意
+\*:q は同時押しではなく続けて入力するのでご注意
 
 入力後 Enter（return） キーで確定すればエディタから抜けられます。
 

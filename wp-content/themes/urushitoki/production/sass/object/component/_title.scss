@@ -1,22 +1,101 @@
-.c-title-header5 {
-    color: blue;
-//     list-style: none;
-//     &__item {
-//         line-height: 2.8;
-//         &::before {
-//             display: inline-block;
-//             content: "";
-//             margin-top: 17px;
-//             margin-right: 10px;
-//             width: 8px;
-//             height: 8px;
-//             vertical-align: top;
-//             border-radius: 5px;
-//             background-color: #897C70;
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
 
-//         }
-//         &:last-child {
-//             margin-bottom: 0;
-//         }
-//     }    
+.c-title-header{
+    position: relative;
+    font-size   : 2.4rem;
+    font-weight : 400;       // フォントの太さ（基本400）
+    color       : variable.$color__text--main;
+    width: 100%;
+    // margin: 10px auto;
+    padding-bottom: 10px;
+    border-bottom: solid variable.$color__ruled-line--main 4px;
+
+    /* ルビを疑似要素で */
+    &::before{
+        .c-title-header--english{
+            content       : "";
+            display       : block;
+            margin-bottom : 50px;           // タイトルとの余白
+        }
+    }
+    // &--english{
+    //     content       : "";
+    //     display       : block;
+    //     margin-bottom : 50px;           // タイトルとの余白
+    // }
+    /* 罫線を疑似要素で */
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        border-bottom: solid variable.$color__ruled-line--accent 4px;   // 線種、色、太さ
+        width: 42px;                                // 線の長さ
+        padding-top: 10px;                           // タイトルとの余白
+        /********* レスポンシブ *********/
+        // @include breakpoint( breakpoint-medium ){
+        //     margin-top: 20px;
+        // }
+        // @include breakpoint( breakpoint-large ){
+        //     margin-top: 10px;
+        // }
+    }
+}
+
+.c-title-large {
+    position: relative;
+    font-size : 2.4rem;
+    font-weight : 400;
+    color : variable.$color__text--main;
+    width: 100%;
+    padding-bottom: 46px;
+    border-bottom: solid variable.$color__ruled-line--main 4px;
+    /* 罫線のアクセントカラー設定 */
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        border-bottom: solid variable.$color__ruled-line--accent 4px;   // 線種、色、太さ
+        width: 42px;
+        padding-top: 46px;
+    }
+}
+
+.c-title-small{
+    font-size: 2.0rem;
+    font-weight: 400;       // フォントの太さ（基本400）
+    color: variable.$color__text-main;// 
+    /* 罫線を疑似要素で */
+    &::after{
+        content: "";
+        display: block;                             // ブロックが積みあがる
+        border-bottom: solid variable.$color__ruled-line--main 3px;         // 線種、色、太さ // $color__ruled-line--main
+        width: 80px;                                // 線の長さ
+        margin-top: 44px;                           // タイトルとの余白
+    }
+}
+
+.c-title-small--center{
+    font-size: 2.0rem;
+    font-weight: 400;       // フォントの太さ（基本400）
+    text-align: center;
+    color: #fff;// variable.$color__text-sub
+    /* 罫線を疑似要素で */
+    &::after{
+        content: "";
+        display: block;
+        // text-align: center;
+        margin: auto;
+        border-bottom: solid variable.$color__ruled-line--main 3px;         // 線種、色、太さ
+        width: 80px;                             // 線の長さ
+        margin-top: 44px;                        // タイトルとの余白
+    }
+}
+
+.c-title-noborder{
+    font-size: 1.8rem;
+    font-weight: 700;       // bold
+    text-align: center;
+    color: variable.$color__text--third;
 }

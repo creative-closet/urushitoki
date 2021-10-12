@@ -7,11 +7,11 @@
   <?php wp_head(); ?>
 </head>
 <body>
-  <h1 class="c-title-header">ページタイトル</h1>
-  <h2 class="c-title">大見出し</h2>
-  <h3 class="c-title">小見出し</h3>
-  <h4 class="c-title">小見出し20px・中央寄せ</h4>
-  <h4 class="c-title">小見出し18px・中央寄せ</h4>
+  <h1 class="c-title-header"><span lang="en" class="c-title-header--english">English</span>下層ページタイトル</h1><br><br><br>
+  <h2 class="c-title-large">大見出し</h2><br><br><br>
+  <h3 class="c-title-small">小見出し</h3><br><br><br>
+  <h4 class="c-title-small--center">小見出し20px・中央寄せ</h4><br><br><br>
+  <h4 class="c-title-noborder">小見出し18px・中央寄せ</h4>
   <?php wp_footer(); ?>
 </body>
 </html>

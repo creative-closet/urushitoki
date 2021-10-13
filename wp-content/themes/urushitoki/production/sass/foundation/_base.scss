@@ -1,0 +1,13 @@
+@use "./variable.scss";
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    background-color: variable.$color__background--main;
+    font-size: 1.6rem;
+    line-height: 2.125;     // 行の高さ
+    font-weight: 400;       // フォントの太さ（基本400）
+    font-family: "Noto Sans Japanese", sans-serif; // 游明朝'YuMincho',
+}

@@ -1,82 +1,27 @@
 @charset "UTF-8";
-/*
-【font-family】について
-    font-family: 候補1,候補2,候補3,フォントの種類;
-        「sans-serif」  ゴシック体系のフォント（MSゴシック、中ゴシック、Arialなど）
-        「serif」       明朝体系のフォント（MS明朝、MS P明朝、Garamond、MS Georgia、Times New Romanなど）
-        「cursive」     筆記体系のフォント（caflisch script、ex pontoなど）
-        「fantasy」     装飾系のフォント（critter、studzなど）
-        「monospace」   等幅系のフォント（Osaka-等幅、courier、Courier Newなど）
-    ※日本語テキストにcursiveを指定していると、希に正常に表示できない場合がある※
-    英語フォントと日本語フォントの両方を指定する場合は、先に英語フォントを指定する。
-    そうすることで、アルファベットには英語フォントが、日本語には日本語フォントが使用されるようになる。
-
-// バグの見つけ方
-* {
-    outline: 2px solid blue;
-  }
-*/
-html {
-  font-size: 62.5%;
-}
-
-body {
-  background-color: pink;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
 /***** variable *****/
 /* color-code */
 /* 背景 */
 /* テキスト */
 /* 罫線 */
-/*----------------------------------------------------------
-◆SmartPhone  : 320px〜540px
-	iPhone 12mini   : 5.4インチ、375 × 667
-	iPhone 12ProMax : 6.7インチ、428 × 926
-	※最小幅は320px（iPadminiのsplit viewもこの値）
-	※利用率が高いのは375pxだが320pxで表示崩れ（横スクロールなど）がないか確認することが確実。
+html {
+  font-size: 62.5%;
+}
 
-	max-width : 599px
-	min-width : 設定なし（実質599px以下）
+body {
+  background-color: #F0E7DB;
+  font-size: 1.6rem;
+  line-height: 2.125;
+  font-weight: 400;
+  font-family: "Noto Sans Japanese", sans-serif;
+}
 
-	ここでの変数、breakpoint-small
-
-◆Tablet      : 600px〜1024px
-	iPadAir 4 : 10.9インチ、820 × 1180
-	タブレットの最小サイズは  600px
-	最もシェア率の高いサイズが  768 × 1024。つまり横にすると幅は1024px
-
-	max-width : 1024px
-	min-width : 600px
-
-	ここでの変数、breakpoint-medium
-
-◆PC          : 1280px〜
-	PCのブレイクポイントはタブレット1024pxにプラス1px加えた1025px。
-	PCのブレイクポイントは1280px以下で設定が無難。
-
-	max-width : 設定なし（実質1025px以上）
-	min-width : 1025px
-
-	ここでの変数、breakpoint-large
-
-
-モバイルファーストなら、min-width
-PCファーストなら、max-width
-
-参照URL
-https://daib-log.com/responsive/
-2021.05
-----------------------------------------------------------*/
-/* モバイルファースト */
+/* PCファースト */
 .documentClass {
   color: blue;
 }
 
-.c-title-header {
+.c-title, .c-title--header {
   position: relative;
   font-size: 2.4rem;
   font-weight: 400;
@@ -87,12 +32,13 @@ https://daib-log.com/responsive/
   /* ルビを疑似要素で */
   /* 罫線を疑似要素で */
 }
-.c-title-header::before {
-  content: "";
+.c-title--header::before {
+  content: "English";
   display: block;
+  font-size: 1.4rem;
   margin-bottom: 50px;
 }
-.c-title-header::after {
+.c-title::after, .c-title--header::after {
   content: "";
   position: absolute;
   display: block;
@@ -110,7 +56,7 @@ https://daib-log.com/responsive/
   width: 100%;
   padding-bottom: 46px;
   border-bottom: solid #fff 4px;
-  /* 罫線を疑似要素で */
+  /* 罫線のアクセントカラー設定 */
 }
 .c-title-large::after {
   content: "";
@@ -119,7 +65,6 @@ https://daib-log.com/responsive/
   border-bottom: solid #897C70 4px;
   width: 42px;
   padding-top: 46px;
-  /********* レスポンシブ *********/
 }
 
 .c-title-small {

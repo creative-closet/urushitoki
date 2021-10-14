@@ -37,6 +37,15 @@
 .p-btn--primary:hover {
   background-color: #270b0b;
 }
+.p-btn--primary:hover a {
+  color: #fff;
+}
+.p-btn--primary:hover a::before {
+  background-color: #fff;
+}
+.p-btn--primary:hover a::after {
+  background-color: #fff;
+}
 .p-btn--primary a {
   display: flex;
   justify-content: space-between;
@@ -50,9 +59,6 @@
   font-weight: 700;
   transition: 0.3s;
   text-decoration: none;
-}
-.p-btn--primary a:hover {
-  color: #fff;
 }
 .p-btn--primary a::before {
   content: "";
@@ -79,6 +85,38 @@
 }
 .p-btn--primary a:hover::after {
   background-color: #fff;
+}
+
+.p-ripples-effect {
+  /*波紋の基点とするためrelativeを指定*/
+  position: relative;
+  /*はみ出す波紋を隠す*/
+  overflow: hidden;
+}
+.p-ripples-effect:hover {
+  color: #fff;
+}
+.p-ripples-effect::after {
+  content: "";
+  /*絶対配置で波紋位置を決める*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*波紋の形状*/
+  background: radial-gradient(circle, #fff 10%, transparent 10%) no-repeat 50%;
+  transform: scale(10, 10);
+  /*はじめは透過0に*/
+  opacity: 0;
+  color: #fff;
+  /*アニメーションの設定*/
+  transition: transform 0.3s, opacity 1s;
+}
+.p-ripples-effect:active::after {
+  transform: scale(0, 0);
+  transition: 0s;
+  opacity: 0.3;
 }
 
 .p-btn--cross {
@@ -146,4 +184,36 @@
   top: 20px;
   position: absolute;
   right: -15px;
+}
+
+.c-button__profile {
+  font-family: "Georgia", sans-serif;
+  display: inline-block;
+  position: relative;
+  width: 124px;
+  height: 50px;
+  font-size: 23px;
+  border-radius: 5px;
+  background-color: #444;
+  cursor: pointer;
+}
+.c-button__profile a {
+  color: #fff !important;
+  text-decoration: none;
+}
+.c-button__profile:hover {
+  text-decoration: none;
+}
+.c-button__profile div {
+  font-size: 15px;
+}
+
+/* Instagramマウスホバー時 */
+.c-button__profile.insta_btn:hover {
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+
+/* YouTubeマウスホバー時 */
+.c-button__profile.youtube_btn:hover {
+  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
 }

@@ -88,6 +88,7 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
  5. コミットメッセージに issue 番号を含めて commit 後、 push する
  6. 別の人に review してもらう
 
+
 # スタイルガイド（ Fractal ）について
 
 ## 使い方

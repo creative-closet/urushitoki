@@ -1,3 +1,22 @@
+@charset "UTF-8";
+/***** variable *****/
+/* color-code */
+/* 背景 */
+/* テキスト */
+/* 罫線 */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #F0E7DB;
+  font-size: 1.6rem;
+  line-height: 2.125;
+  font-weight: 400;
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
+/* PCファースト */
 .documentClass {
   color: blue;
 }

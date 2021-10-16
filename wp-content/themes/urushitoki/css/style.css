@@ -23,6 +23,7 @@ body {
 
 .c-title, .c-title--header {
   position: relative;
+  font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 2.4rem;
   font-weight: 400;
   color: #252525;
@@ -50,6 +51,7 @@ body {
 
 .c-title-large {
   position: relative;
+  font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 2.4rem;
   font-weight: 400;
   color: #252525;
@@ -68,6 +70,7 @@ body {
 }
 
 .c-title-small {
+  font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 2rem;
   font-weight: 400;
   color: #252525;
@@ -82,6 +85,7 @@ body {
 }
 
 .c-title-small--center {
+  font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 2rem;
   font-weight: 400;
   text-align: center;

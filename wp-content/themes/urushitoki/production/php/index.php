@@ -14,6 +14,16 @@
     <h1>Js Test2</h1>
   </article>
 
+  
+<button class="c-button__up">
+	<div class="c-direction__top">
+		<a href="#"></a>
+	</div>
+</button>
+
+
+  
+  
   <?php wp_footer(); ?>
 </body>
 </html>

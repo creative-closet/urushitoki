@@ -14,6 +14,7 @@
     <h1>Js Test2</h1>
   </article>
 	git test by fujimoto
+	test2nd
   <?php wp_footer(); ?>
 </body>
 </html>

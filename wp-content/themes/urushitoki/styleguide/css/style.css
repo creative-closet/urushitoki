@@ -217,3 +217,107 @@
 .c-button__profile.youtube_btn:hover {
   background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
 }
+
+.c-button__up {
+  background-color: #fff;
+  border: none;
+}
+
+.c-direction__top {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+}
+.c-direction__top a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+.c-direction__top a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f062";
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn {
+  /*ボタン内側の基点となるためrelativeを指定。
+  追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+  position: relative;
+  background: #270b0b;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+/*ボタン内側*/
+.openbtn .openbtn-area {
+  transition: all 0.4s;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 30px;
+  top: 50;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 55%;
+  transform: translateY(6px) rotate(-160deg);
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 30px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 50px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 70px;
+}
+
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+.openbtn.active .openbtn-area {
+  transform: rotateY(-360deg);
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 50px;
+  left: 25px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 60%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 60px;
+  left: 25px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 60%;
+}

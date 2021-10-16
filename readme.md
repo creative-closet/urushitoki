@@ -185,12 +185,16 @@ main ブランチ->本番環境にデプロイ
 ### ブランチの作成方法
 
 (.git が存在する階層で)
-git checkout -b <新しいブランチ名>
+例として、
+$ git checkout -b "#10"
+構文: $ git checkout -b <新しいブランチ名>
 
 ### ブランチの移動方法
 
 (.git が存在する階層で)
-git checkout <移動したいブランチ名>
+例として、
+$ git checkout "#10"
+構文: $ git checkout <移動したいブランチ名>
 
 ### 現在自分がいるブランチの確認方法
 

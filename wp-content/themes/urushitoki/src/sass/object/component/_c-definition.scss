@@ -1,0 +1,33 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variables";
+
+.c-definition{
+	&__list{
+		width: 100%;
+		color:variables.$font-color--definiton;
+	}
+	&__term{
+		font-size: variables.$font-size--definiton-term;
+		padding-bottom: 30px;
+		border-bottom:solid 2px variables.$border-color--definiton-term;
+		margin-bottom: 20px;
+	}
+	&__description{
+		display: flex;
+		margin-inline-start: 0px;
+		border-bottom: solid 1px variables.$border-color--definiton-descripton;
+	}
+	&__item{
+		&:nth-last-child(2){
+			width: 15%;
+			text-align: center;
+		}
+		&:nth-child(2){
+			width: 85%;
+		}
+		&:only-child{
+			margin-left: 15%;
+		}
+	}
+}

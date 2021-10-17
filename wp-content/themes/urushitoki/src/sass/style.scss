@@ -19,5 +19,5 @@ project
 component
 -------------------------------------------------------- */
 @forward "./object/component/c-text";
-@use './object/project/btn.scss';
 @use './object/component/bullet.scss';
+@forward "./object/component/c-definition";

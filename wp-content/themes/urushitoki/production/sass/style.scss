@@ -3,6 +3,9 @@
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
+@forward './foundation/base';
+@forward './foundation/mixin';
+@forward './foundation/variables';
 
 /* --------------------------------------------------------
 layout
@@ -11,8 +14,10 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
-@forward "object/project/document.scss";
-@forward 'object/component/bullet';
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
+@forward "object/project/document.scss";
+@forward 'object/component/bullet';
+@forward 'object/component/c-text';
+@forward './object/component/c-definition';

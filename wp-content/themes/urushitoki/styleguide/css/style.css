@@ -22,4 +22,27 @@
 .p-btn--typeB {
   color: #ffffff;
   background-color: #0000ff;
+<<<<<<< HEAD
+=======
+}
+
+.c-bullet {
+  list-style: none;
+}
+.c-bullet__item {
+  line-height: 2.8;
+}
+.c-bullet__item::before {
+  display: inline-block;
+  content: "";
+  margin: 17px 10px 0 0;
+  width: 8px;
+  height: 8px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: #897C70;
+}
+.c-bullet__item:last-child {
+  margin-bottom: 0;
+>>>>>>> a1397ecb576ee1cdd930c51df7c9f46e8f8e8dac
 }

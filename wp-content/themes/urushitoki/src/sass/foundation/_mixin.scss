@@ -1,0 +1,15 @@
+/* PCファースト */
+@mixin breakpoint( $breakpoint ) {
+	/* tablet */
+	@if $breakpoint == breakpoint-tab{
+		@media ( max-width : 1024px ){
+			@content;
+		}
+	}
+	/* SmartPhone */
+	@if $breakpoint == breakpoint-sp{
+		@media ( max-width : 599px ){
+			@content;
+		}
+	}
+}

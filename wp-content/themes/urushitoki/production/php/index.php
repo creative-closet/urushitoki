@@ -11,8 +11,9 @@
     <h1>Css Test</h1>
   </article>
   <article id="sampleId">
-    <h1>Js Test</h1>
+    <h1>Js Test2</h1>
   </article>
+	git test by fujimoto
   <?php wp_footer(); ?>
 </body>
 </html>

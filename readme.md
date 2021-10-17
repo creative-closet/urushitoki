@@ -24,7 +24,7 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |        └─ package-lock.json
 └─ README.md
 ```
-## 1. Local by FlywheelでWordPress開発環境を構築
+## 1. Local by FlywheelでWordPress開発環境を構築  
 
 Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オプションが不要
 
@@ -66,17 +66,17 @@ Local の Site Domain が urushitoki.local の場合
 
 Site Domain が別の場合
 
-``` npx gulp --domain "サイトのドメイン" ```
+``` npx gulp --domain "サイトのドメイン" ```  
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
 ## 6. コーディング
 PHP、Sass、Jsファイルの編集は```production```の中で行って下さい。
 
-【基本的な動作】  
-・Dart Sass コンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理  
-・起動時ローカルサーバーの立ち上げ  
-・production/sass・php・js ファイルの変更を監視。変更があった場合はブラウザを自動でリロード。  
+【基本的な動作】
+・Dart Sass コンパイル=>ベンダープレフィックス自動付与、メディアクエリの整理
+・起動時ローカルサーバーの立ち上げ
+・production/sass・php・js ファイルの変更を監視。変更があった場合はブラウザを自動でリロード。
 ※sass の変更に関してはリロードは行われず、変更部分だけ反映されます。
 
 # コンポーネント作成の手順
@@ -87,6 +87,7 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
  4. ローカルで問題なければ、 index.php の記述内容を削除
  5. コミットメッセージに issue 番号を含めて commit 後、 push する
  6. 別の人に review してもらう
+
 
 # スタイルガイド（ Fractal ）について
 
@@ -120,16 +121,6 @@ PHP、Sass、Jsファイルの編集は```production```の中で行って下さ�
 6. コマンドを実行し、styleguide の作成
 
 ``` npx gulp styleguide ```
-### スタイルガイド追加の注意点
-2. sample ディレクトリ内に sample.hbs と readme.md 作成
-→この時、sampleディレクトリとsample.hbsのファイル名に```--```は使用不可。
-使うとstyleguideにhtmlが吐き出されない。
-
-コンポーネントの中に画像を使用する場合は
-sampleディレクトリの中に入れたい画像をコピーして持ってくるのと、
-hbsファイルのパスを```../raw/コンポーネント名/画像の名前```にする
-→``` npx gulp styleguide ```を走らせると、styleguide>components>rawに画像がコンパイルされる。
-吐き出されたhtmlファイルがrawディレクトリ内の画像を読みに行くようにパスを修正しておくとstyleguideでも画像が表示されます。
 
 ## ブランチについて
 
@@ -146,6 +137,32 @@ hbsファイルのパスを```../raw/コンポーネント名/画像の名前```
 
 基本的に誰かにソースレビューを受けてマージしましょう。どうしても人が居ない場合や取り急ぎの場合は仕方なし。
 その場合必ず main ブランチに支障が出ていないかチェックを忘れずに
+
+## Git フロー
+
+### 流れ
+
+① 自分の作業ブランチで作業 →② プルリクを出す →③develop ブランチにマージ →④main ブランチにマージ
+
+1. 自分の作業ブランチで作業
+   → 上記の"Git ワークフロー"記載の通り作業
+2. github でプルリクを出してレビューをお願いする(フィードバックがあれば修正)
+   → メンバーはここまででタスク完了
+3. develop ブランチにマージ
+   → りえるんか YAT 実施
+4. main ブランチにマージ
+   → りえるんか YAT 実施（タイミングは後日判断）
+
+### デプロイ先
+
+develop ブランチ->開発(テスト)環境にデプロイ
+main ブランチ->本番環境にデプロイ
+
+## コンフリクト解消
+
+1. プルリク先のブランチを自分のローカルに pull (develop[リモート] → develop )
+2. ローカルで作業しているブランチに取り込み( develop → readme の修正(styleguide の名前) #68 )
+3. git push origin {readme の修正(styleguide の名前) #68}
 
 ## Q & A
 
@@ -168,12 +185,20 @@ hbsファイルのパスを```../raw/コンポーネント名/画像の名前```
 ### ブランチの作成方法
 
 (.git が存在する階層で)
-git checkout -b <新しいブランチ名>
+
+例として、
+$ git checkout -b "#10"
+
+構文: $ git checkout -b <新しいブランチ名>
 
 ### ブランチの移動方法
 
 (.git が存在する階層で)
-git checkout <移動したいブランチ名>
+
+例として、
+$ git checkout "#10"
+
+構文: $ git checkout <移動したいブランチ名>
 
 ### 現在自分がいるブランチの確認方法
 

@@ -1,0 +1,7 @@
+@use "../foundation/variables.scss";
+
+html{
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: variables.$lightbrown;
+	font-size:62.5%
+}

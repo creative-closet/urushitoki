@@ -3,9 +3,15 @@
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
+<<<<<<< HEAD
 @forward './foundation/base';
 @forward './foundation/mixin';
 @forward './foundation/variables';
+=======
+@forward "foundation/base.scss";
+@forward "foundation/variable.scss";
+@forward "foundation/mixin.scss";
+>>>>>>> 3e8277c7971c265ebfe96100f60b3503732f131c
 
 /* --------------------------------------------------------
 layout
@@ -14,6 +20,7 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
+<<<<<<< HEAD
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
@@ -21,3 +28,11 @@ component
 @forward 'object/component/bullet';
 @forward 'object/component/c-text';
 @forward './object/component/c-definition';
+=======
+@forward "object/project/document.scss";
+
+/* --------------------------------------------------------
+component
+-------------------------------------------------------- */
+@forward 'object/component/bullet.scss';
+>>>>>>> 3e8277c7971c265ebfe96100f60b3503732f131c

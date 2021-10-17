@@ -1,4 +1,35 @@
 @charset "UTF-8";
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f0e7db;
+  font-size: 62.5%;
+}
+
+/* PCファースト */
+.documentClass {
+  color: blue;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
+}
+
 .p-btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -87,38 +118,6 @@
   background-color: #fff;
 }
 
-.p-ripples-effect {
-  /*波紋の基点とするためrelativeを指定*/
-  position: relative;
-  /*はみ出す波紋を隠す*/
-  overflow: hidden;
-}
-.p-ripples-effect:hover {
-  color: #fff;
-}
-.p-ripples-effect::after {
-  content: "";
-  /*絶対配置で波紋位置を決める*/
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  /*波紋の形状*/
-  background: radial-gradient(circle, #fff 10%, transparent 10%) no-repeat 50%;
-  transform: scale(10, 10);
-  /*はじめは透過0に*/
-  opacity: 0;
-  color: #fff;
-  /*アニメーションの設定*/
-  transition: transform 0.3s, opacity 1s;
-}
-.p-ripples-effect:active::after {
-  transform: scale(0, 0);
-  transition: 0s;
-  opacity: 0.3;
-}
-
 .p-btn--cross {
   background-color: #fff;
   border: none;
@@ -192,20 +191,23 @@
   position: relative;
   width: 124px;
   height: 50px;
-  font-size: 23px;
+  font-size: 15px;
   border-radius: 5px;
   background-color: #444;
-  cursor: pointer;
 }
 .c-button__profile a {
   color: #fff !important;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  cursor: pointer;
+}
+.c-button__profile a .fab {
+  height: 20px;
 }
 .c-button__profile:hover {
   text-decoration: none;
-}
-.c-button__profile div {
-  font-size: 15px;
 }
 
 /* Instagramマウスホバー時 */
@@ -218,12 +220,9 @@
   background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
 }
 
-.c-button__up {
+.c-direction__top {
   background-color: #fff;
   border: none;
-}
-
-.c-direction__top {
   width: 60px;
   height: 60px;
   border: 2px solid #333;
@@ -233,7 +232,6 @@
 .c-direction__top a {
   position: relative;
   display: block;
-  width: 60px;
   height: 60px;
   text-decoration: none;
 }
@@ -255,7 +253,7 @@
 }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.openbtn {
+.c-openbtn {
   /*ボタン内側の基点となるためrelativeを指定。
   追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
   position: relative;
@@ -268,11 +266,11 @@
 }
 
 /*ボタン内側*/
-.openbtn .openbtn-area {
+.c-openbtn .c-openbtn-area {
   transition: all 0.4s;
 }
 
-.openbtn span {
+.c-openbtn span {
   display: inline-block;
   transition: all 0.4s;
   /*アニメーションの設定*/
@@ -286,38 +284,101 @@
   transform: translateY(6px) rotate(-160deg);
 }
 
-.openbtn span:nth-of-type(1) {
+.c-openbtn span:nth-of-type(1) {
   top: 30px;
 }
 
-.openbtn span:nth-of-type(2) {
+.c-openbtn span:nth-of-type(2) {
   top: 50px;
 }
 
-.openbtn span:nth-of-type(3) {
+.c-openbtn span:nth-of-type(3) {
   top: 70px;
 }
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
-.openbtn.active .openbtn-area {
+.c-openbtn.active .c-openbtn-area {
   transform: rotateY(-360deg);
 }
 
-.openbtn.active span:nth-of-type(1) {
+.c-openbtn.active span:nth-of-type(1) {
   top: 50px;
   left: 25px;
   transform: translateY(6px) rotate(-135deg);
   width: 60%;
 }
 
-.openbtn.active span:nth-of-type(2) {
+.c-openbtn.active span:nth-of-type(2) {
   opacity: 0;
 }
 
-.openbtn.active span:nth-of-type(3) {
+.c-openbtn.active span:nth-of-type(3) {
   top: 60px;
   left: 25px;
   transform: translateY(-6px) rotate(135deg);
   width: 60%;
 }
+
+.c-tab {
+  background-color: transparent;
+  border: none;
+}
+.c-tab a {
+  height: 10px;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e0d7ca;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c-button__before {
+  width: 223px;
+  height: 60px;
+  background-color: #fff;
+  text-align: left;
+  border: solid #707070;
+}
+.c-button__before a {
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding-left: 44px;
+}
+
+.c-button__after {
+  width: 223px;
+  height: 60px;
+  background-color: #fff;
+  text-align: right;
+  border: solid #707070;
+}
+.c-button__after a {
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.c-button__after i {
+  padding-right: 30px;
+}
+
+/* --------------------------------------------------------
+foundation
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+
+/* --------------------------------------------------------
+layout
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+project
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+component
+-------------------------------------------------------- */

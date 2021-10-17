@@ -1,4 +1,35 @@
 @charset "UTF-8";
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f0e7db;
+  font-size: 62.5%;
+}
+
+/* PCファースト */
+.documentClass {
+  color: blue;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
+}
+
 .p-btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -34,7 +65,18 @@
   border: 2px solid;
   border-color: #707070;
 }
-
+.p-btn--primary:hover {
+  background-color: #270b0b;
+}
+.p-btn--primary:hover a {
+  color: #fff;
+}
+.p-btn--primary:hover a::before {
+  background-color: #fff;
+}
+.p-btn--primary:hover a::after {
+  background-color: #fff;
+}
 .p-btn--primary a {
   display: flex;
   justify-content: space-between;
@@ -59,6 +101,9 @@
   height: 2px;
   background-color: #707070;
 }
+.p-btn--primary a:hover::before {
+  background-color: #fff;
+}
 .p-btn--primary a::after {
   content: "";
   position: absolute;
@@ -69,3 +114,271 @@
   height: 2px;
   background-color: #707070;
 }
+.p-btn--primary a:hover::after {
+  background-color: #fff;
+}
+
+.p-btn--cross {
+  background-color: #fff;
+  border: none;
+}
+.p-btn--cross a {
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+}
+.p-btn--cross a::before, .p-btn--cross a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 70px;
+  background: #fff;
+}
+.p-btn--cross a::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.p-btn--cross a::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.p-btn--stripe {
+  background-color: #fff;
+  border: none;
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+}
+.p-btn--stripe span,
+.p-btn--stripe span:before,
+.p-btn--stripe span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 70px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.p-btn--stripe span {
+  transform: translate(-50%, -50%) rotate(25deg);
+  position: absolute;
+  top: 50%;
+  right: -10px;
+}
+.p-btn--stripe span:before {
+  bottom: 20px;
+  position: absolute;
+  right: 10px;
+}
+.p-btn--stripe span:after {
+  top: 20px;
+  position: absolute;
+  right: -15px;
+}
+
+.c-button__profile {
+  font-family: "Georgia", sans-serif;
+  display: inline-block;
+  position: relative;
+  width: 124px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #444;
+}
+.c-button__profile a {
+  color: #fff !important;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  cursor: pointer;
+}
+.c-button__profile a .fab {
+  height: 20px;
+}
+.c-button__profile:hover {
+  text-decoration: none;
+}
+
+/* Instagramマウスホバー時 */
+.c-button__profile.insta_btn:hover {
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+
+/* YouTubeマウスホバー時 */
+.c-button__profile.youtube_btn:hover {
+  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+}
+
+.c-direction__top {
+  background-color: #fff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+}
+.c-direction__top a {
+  position: relative;
+  display: block;
+  height: 60px;
+  text-decoration: none;
+}
+.c-direction__top a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f062";
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.c-openbtn {
+  /*ボタン内側の基点となるためrelativeを指定。
+  追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+  position: relative;
+  background: #270b0b;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+/*ボタン内側*/
+.c-openbtn .c-openbtn-area {
+  transition: all 0.4s;
+}
+
+.c-openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 30px;
+  top: 50;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 55%;
+  transform: translateY(6px) rotate(-160deg);
+}
+
+.c-openbtn span:nth-of-type(1) {
+  top: 30px;
+}
+
+.c-openbtn span:nth-of-type(2) {
+  top: 50px;
+}
+
+.c-openbtn span:nth-of-type(3) {
+  top: 70px;
+}
+
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+.c-openbtn.active .c-openbtn-area {
+  transform: rotateY(-360deg);
+}
+
+.c-openbtn.active span:nth-of-type(1) {
+  top: 50px;
+  left: 25px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 60%;
+}
+
+.c-openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-openbtn.active span:nth-of-type(3) {
+  top: 60px;
+  left: 25px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 60%;
+}
+
+.c-tab {
+  background-color: transparent;
+  border: none;
+}
+.c-tab a {
+  height: 10px;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e0d7ca;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c-button__before {
+  width: 223px;
+  height: 60px;
+  background-color: #fff;
+  text-align: left;
+  border: solid #707070;
+}
+.c-button__before a {
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding-left: 44px;
+}
+
+.c-button__after {
+  width: 223px;
+  height: 60px;
+  background-color: #fff;
+  text-align: right;
+  border: solid #707070;
+}
+.c-button__after a {
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.c-button__after i {
+  padding-right: 30px;
+}
+
+/* --------------------------------------------------------
+foundation
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+
+/* --------------------------------------------------------
+layout
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+project
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+component
+-------------------------------------------------------- */

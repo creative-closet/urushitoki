@@ -168,19 +168,22 @@
 	position: relative;
 	width: 124px;
 	height: 50px;
-	font-size: 23px;
+	font-size: 15px;
 	border-radius: 5px;
 	background-color: #444;
-	cursor: pointer;
 	a {
 		color: #fff !important;
 		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		height: 40px;
+		cursor: pointer;
+		.fab {
+			height: 10px;
+		}
 	}
 	&:hover {
 		text-decoration: none;
-	}
-	div {
-		font-size: 15px;
 	}
 }
 
@@ -195,11 +198,9 @@
 	background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
 }
 
-.c-button__up {
+.c-direction__top {
 	background-color: #fff;
 	border: none;
-}
-.c-direction__top {
 	width: 60px;
 	height: 60px;
 	border: 2px solid #333;
@@ -208,7 +209,6 @@
 	a {
 		position: relative;
 		display: block;
-		width: 60px;
 		height: 60px;
 		text-decoration: none;
 	}
@@ -222,7 +222,6 @@
 		width: 30px;
 		height: 30px;
 		top: 0;
-		bottom: 0;
 		right: 0;
 		left: 0;
 		margin: auto;
@@ -297,4 +296,79 @@
 	left: 25px;
 	transform: translateY(-6px) rotate(135deg);
 	width: 60%;
+}
+
+.c-tab a {
+	height: 10px;
+	background-color: #fff;
+	text-decoration: none;
+	color: black;
+	border: 2px solid #e0d7ca;
+	border-radius: 30px;
+	padding: 8px 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.pagination {
+	margin: 40px 0 0;
+}
+.nav-links {
+	display: flex;
+}
+.pagination .page-numbers {
+	display: inline-block;
+	margin-right: 20px;
+	padding: 20px 25px;
+	color: #333;
+	border-radius: 3px;
+	box-shadow: 0 3px 3px #999;
+	background: #fff;
+}
+.pagination .current {
+	padding: 20px 25px;
+	background: #69a4db;
+	color: #fff;
+}
+.pagination .prev,
+.pagination .next {
+	background: transparent;
+	box-shadow: none;
+	color: #69a4db;
+}
+.pagination .dots {
+	background: transparent;
+	box-shadow: none;
+}
+
+.c-button__before {
+	width: 223px;
+	height: 60px;
+	background-color: #fff;
+	text-align: left;
+	border: solid #707070;
+	a {
+		width: 100%;
+		cursor: pointer;
+		text-decoration: none;
+		color: black;
+		padding-left: 44px;
+	}
+}
+
+.c-button__after {
+	width: 223px;
+	height: 60px;
+	background-color: #fff;
+	text-align: right;
+	border: solid #707070;
+	a {
+		width: 100%;
+		cursor: pointer;
+		text-decoration: none;
+		color: black;
+	}
+	i {
+		padding-right: 30px;
+	}
 }

@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
 <?php get_header(); ?>
-<?php wp_head(); ?>
-</head>
 <body>
 	<header>
 		<h1 class="test-header">テスト</h1>

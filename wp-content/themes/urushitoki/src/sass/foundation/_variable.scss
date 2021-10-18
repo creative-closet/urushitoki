@@ -1,3 +1,17 @@
+/***** variable *****/
+
+/* color-code */
+/* 背景 */
+$background-color--main :    #F0E7DB;   // 明るいライトブラウン
+
+/* テキスト */
+$font-color--main       :    #252525;   // ダークブラウン
+$font-color--sub        :    #fff;      // ホワイト
+$font-color--third      :    #897C70;   // ブラウン
+
+/* 罫線 */
+$border-color--main     :    #fff;      // ホワイト
+$border-color--accent   :    #897C70;   // ブラウン
 
 $primary: #270B0B;
 $darkbrown: #252525;
@@ -17,7 +31,7 @@ $font-xxl:4.0rem;
  * 文字カラー
  */
 $font-color--black :#2E2E2E;
-$font-color--white:#ffffff;
+$font-color--white:#fff;
 $font-color--brown:#897C70;
 
  //dl・dd・dt用

@@ -1,29 +1,46 @@
 @charset "UTF-8";
-.p-btn {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 0;
-  border: none;
-  outline: none;
-  color: #000;
-  font-size: 14px;
-  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  background: transparent;
-  cursor: pointer;
-  border: #000 1px solid;
-  border-radius: 3px;
-  padding: 5px 10px;
+/***** variable *****/
+/* color-code */
+/* 背景 */
+/* テキスト */
+/* 罫線 */
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f0e7db;
+  font-size: 62.5%;
 }
-.p-btn--typeA {
-  color: #ffffff;
-  background-color: #ff0000;
+
+body {
+  background-color: #F0E7DB;
+  font-size: 1.6rem;
+  line-height: 2.125;
+  font-weight: 400;
+  font-family: "Noto Sans Japanese", sans-serif;
 }
-.p-btn--typeB {
+
+/* PCファースト */
+.documentClass {
+  color: blue;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
   color: #ffffff;
-  background-color: #0000ff;
-<<<<<<< HEAD
-=======
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
 }
 
 .c-bullet {
@@ -44,5 +61,46 @@
 }
 .c-bullet__item:last-child {
   margin-bottom: 0;
->>>>>>> a1397ecb576ee1cdd930c51df7c9f46e8f8e8dac
 }
+
+.c-definition__list {
+  width: 100%;
+  color: #2E2E2E;
+}
+.c-definition__term {
+  font-size: 2rem;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #897C70;
+}
+.c-definition__description {
+  display: flex;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  border-bottom: solid 1px #DDD4CD;
+  margin-top: 20px;
+}
+.c-definition__item:nth-last-child(2) {
+  width: 15%;
+  text-align: center;
+}
+.c-definition__item:nth-child(2) {
+  width: 85%;
+}
+.c-definition__item:only-child {
+  margin-left: 15%;
+}
+
+/* --------------------------------------------------------
+foundation
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+
+/* --------------------------------------------------------
+layout
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+project
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+component
+-------------------------------------------------------- */

@@ -1,7 +1,15 @@
-@use "../foundation/variables.scss";
+@use "../foundation/variable.scss";
 
 html{
 	font-family: 'Noto Sans JP', sans-serif;
-	background-color: variables.$lightbrown;
+	background-color: variable.$lightbrown;
 	font-size:62.5%
+}
+
+body{
+    background-color: variable.$background-color--main;
+    font-size: 1.6rem;
+    line-height: 2.125;     // Xd行送り34px/文字サイズ16px
+    font-weight: 400;
+    font-family: "Noto Sans Japanese", sans-serif; // 游明朝'YuMincho'は別で。
 }

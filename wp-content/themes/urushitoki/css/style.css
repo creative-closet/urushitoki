@@ -4,7 +4,15 @@
 /* 背景 */
 /* テキスト */
 /* 罫線 */
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
 html {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f0e7db;
   font-size: 62.5%;
 }
 
@@ -15,6 +23,7 @@ body {
   font-weight: 400;
   font-family: "Noto Sans Japanese", sans-serif;
 }
+
 /* PCファースト */
 .documentClass {
   color: blue;
@@ -62,13 +71,13 @@ body {
   font-size: 2rem;
   padding-bottom: 30px;
   border-bottom: solid 2px #897C70;
-  margin-bottom: 20px;
 }
 .c-definition__description {
   display: flex;
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   border-bottom: solid 1px #DDD4CD;
+  margin-top: 20px;
 }
 .c-definition__item:nth-last-child(2) {
   width: 15%;

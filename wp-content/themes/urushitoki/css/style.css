@@ -65,7 +65,7 @@ body {
   /* SmartPhone */
   /* tablet */
   /* SmartPhone */
-  border-bottom: solid #fff 4px;
+  border-bottom: solid 4px #fff;
   /* Englishタイトル */
   /* 罫線のアクセントカラー設定 */
 }
@@ -80,7 +80,7 @@ body {
   }
 }
 .c-title--header::before {
-  content: "English";
+  content: attr(title-english);
   display: block;
   font-size: 1.4rem;
   margin-bottom: 50px;

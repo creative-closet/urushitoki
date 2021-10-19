@@ -8,6 +8,7 @@
 			'footer-sns_nav' => 'フッター:SNSナビ',
 			'footer-contact_nav' => 'フッター:お問い合わせナビ',
 		]);
+		add_theme_support( 'post-thumbnails');
 	});
 
     //*****************************************************************

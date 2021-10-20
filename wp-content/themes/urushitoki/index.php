@@ -44,6 +44,12 @@
 	<!-- 固定ページ About -->
 	<h1>is_page('about') Test</h1>
 
+	<?php
+		//ユーザープロフィール設定読み出しテスト
+		the_author_meta('twitter-name',1);
+		echo get_user_meta(1,'career', true);
+	?>
+
 
 	<?php } elseif (is_page('gallery')) { ?>
 	<!-- カスタム投稿ギャラリー アーカイブページ -->
@@ -102,8 +108,6 @@
 	<!-- それ以外 -->
 
 	<?php } ?>
-
-
 
 
 

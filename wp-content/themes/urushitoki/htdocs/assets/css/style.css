@@ -77,7 +77,6 @@ body {
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   border-bottom: solid 1px #DDD4CD;
-  margin-top: 20px;
 }
 .c-definition__item:nth-last-child(2) {
   width: 15%;

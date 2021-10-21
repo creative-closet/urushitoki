@@ -185,7 +185,7 @@
 		//受賞のテキストエリアを追加
 		echo'<tr>
 			<th>
-				<label for="career">受賞</label>
+				<label for="award">受賞</label>
 			</th>
 			<td>
 				<textarea name="award" rows="5" cols="30">'.esc_html($profileuser->award).'</textarea>

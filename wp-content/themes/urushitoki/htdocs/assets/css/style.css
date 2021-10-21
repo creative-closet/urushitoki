@@ -63,29 +63,29 @@ body {
   margin-bottom: 0;
 }
 
-.c-definition__list {
+.c-definition {
   width: 100%;
   color: #2E2E2E;
 }
-.c-definition__term {
+.c-definition__title {
   font-size: 2rem;
   padding-bottom: 30px;
   border-bottom: solid 2px #897C70;
 }
-.c-definition__description {
+.c-definition__detail {
   display: flex;
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   border-bottom: solid 1px #DDD4CD;
 }
-.c-definition__item:nth-last-child(2) {
+.c-definition__detail__item:nth-last-child(2) {
   width: 15%;
   text-align: center;
 }
-.c-definition__item:nth-child(2) {
+.c-definition__detail__item:nth-child(2) {
   width: 85%;
 }
-.c-definition__item:only-child {
+.c-definition__detail__item:only-child {
   margin-left: 15%;
 }
 

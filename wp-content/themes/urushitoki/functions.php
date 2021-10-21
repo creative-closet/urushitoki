@@ -146,16 +146,79 @@
 		register_post_type( 'accessory', $args );
 	}
 
-/*アイキャッチ画像がなければ標準画像を取得する*/
-function get_eyecatch_default(){
-    if (has_post_thumbnail()):
+	//*****************************************************************
+	// ユーザープロフィールの項目のカスタマイズ
+	//*****************************************************************
+	function user_meta($profile){
+		//SNS項目
+		$profile['twitter']               = 'Twitter URL';
+		$profile['twitter-name']          = 'Twitter 表示名';
+		$profile['twitter-description']   = 'Twitter 説明文';
+		$profile['facebook']              = 'Facebook URL';
+		$profile['facebook-name']         = 'Facebook 表示名';
+		$profile['facebook-description']  = 'Facebook 説明文';
+		$profile['instagram']             = 'Instagram URL';
+		$profile['instagram-name']        = 'Instagram 表示名';
+		$profile['instagram-description'] = 'Instagram 説明文';
+		$profile['youtube']               = 'YouTube URL';
+		$profile['youtube-name']          = 'YouTube 表示名';
+		$profile['youtube-description']   = 'YouTube 説明文';
 
-        $id = get_post_thumbnail_id();
-        $img = wp_get_attachment_image_src($id,'large');//画像サイズはlargeかfullどちらか。
+	return $profile;
+	}
+	add_filter('user_contactmethods', 'user_meta', 10, 1);
 
-    else:
-        $img = array(get_template_directory_uri(). '/assets/img/post-bg.jpg');//ファイルパスは仮
-    endif;
+	//ユーザーのプロフィール情報下に項目を追加
+	function set_user_profile($bool) {
+		global $profileuser;
 
-    return $img;
-}
+		//経歴のテキストエリアを追加
+		echo'<tr>
+			<th>
+				<label for="career">経歴</label>
+			</th>
+			<td>
+				<textarea name="career" rows="10" cols="30">'.esc_html($profileuser->career).'</textarea>
+			</td>
+		</tr>';
+
+		//受賞のテキストエリアを追加
+		echo'<tr>
+			<th>
+				<label for="award">受賞</label>
+			</th>
+			<td>
+				<textarea name="award" rows="5" cols="30">'.esc_html($profileuser->award).'</textarea>
+			</td>
+		</tr>';
+
+		return $bool;
+	}
+	add_action('show_password_fields', 'set_user_profile');
+
+	function update_user_profile($user_id, $old_user_data) {
+		//経歴を更新
+		if(isset($_POST['career'])) {
+		  update_user_meta($user_id, 'career', $_POST['career'], $old_user_data->career);
+		}
+
+		//受賞を更新
+		if(isset($_POST['award'])) {
+			update_user_meta($user_id, 'award', $_POST['award'], $old_user_data->award);
+		}
+	}
+	add_action('profile_update', 'update_user_profile', 10, 2);
+
+	/*アイキャッチ画像がなければ標準画像を取得する*/
+	function get_eyecatch_default(){
+		if (has_post_thumbnail()):
+
+			$id = get_post_thumbnail_id();
+			$img = wp_get_attachment_image_src($id,'large');//画像サイズはlargeかfullどちらか。
+
+		else:
+			$img = array(get_template_directory_uri(). '/assets/img/post-bg.jpg');//ファイルパスは仮
+		endif;
+
+		return $img;
+	}

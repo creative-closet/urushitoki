@@ -89,7 +89,7 @@ body {
   content: "";
   position: absolute;
   display: block;
-  border-bottom: solid #897C70 4px;
+  border-bottom: solid 4px #897C70;
   width: 42px;
   padding-top: 10px;
   /* レスポンシブ（タイトルとの余白） */
@@ -117,14 +117,14 @@ body {
   color: #252525;
   width: 100%;
   padding-bottom: 46px;
-  border-bottom: solid #fff 4px;
+  border-bottom: solid 4px #fff;
   /* 罫線のアクセントカラー設定 */
 }
 .c-title-large::after {
   content: "";
   position: absolute;
   display: block;
-  border-bottom: solid #897C70 4px;
+  border-bottom: solid 4px #897C70;
   width: 42px;
   padding-top: 46px;
 }
@@ -139,7 +139,7 @@ body {
 .c-title-small::after {
   content: "";
   display: block;
-  border-bottom: solid #fff 3px;
+  border-bottom: solid 3px #fff;
   width: 80px;
   margin-top: 44px;
 }
@@ -156,7 +156,7 @@ body {
   content: "";
   display: block;
   margin: auto;
-  border-bottom: solid #fff 3px;
+  border-bottom: solid 3px #fff;
   width: 80px;
   margin-top: 44px;
 }

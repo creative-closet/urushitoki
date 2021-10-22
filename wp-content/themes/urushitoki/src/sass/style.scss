@@ -18,6 +18,7 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-// @forward "./object/component/c-text";
-@use './object/component/title.scss';
-// @use './object/project/btn.scss';
+@use './object/component/title';
+@forward "./object/component/text";
+@use './object/component/bullet';
+@forward "./object/component/definition";

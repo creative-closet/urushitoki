@@ -14,7 +14,15 @@
 -------------------------------------------------------- */
 /* ベース */
 /* 見出し */
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
 html {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f0e7db;
   font-size: 62.5%;
 }
 
@@ -146,6 +154,68 @@ body {
   font-weight: 700;
   text-align: center;
   color: #897C70;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
+}
+
+.c-bullet {
+  list-style: none;
+}
+.c-bullet__item {
+  line-height: 2.8;
+}
+.c-bullet__item::before {
+  display: inline-block;
+  content: "";
+  margin: 17px 10px 0 0;
+  width: 8px;
+  height: 8px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: #897C70;
+}
+.c-bullet__item:last-child {
+  margin-bottom: 0;
+}
+
+.c-definition {
+  width: 100%;
+  color: #2E2E2E;
+}
+.c-definition__title {
+  font-size: 2rem;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #897C70;
+  font-family: "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+}
+.c-definition__detail {
+  display: flex;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  border-bottom: solid 1px #DDD4CD;
+}
+.c-definition__detail__item:nth-last-child(2) {
+  width: 15%;
+  text-align: center;
+}
+.c-definition__detail__item:nth-child(2) {
+  width: 85%;
+}
+.c-definition__detail__item:only-child {
+  margin-left: 15%;
 }
 
 /* --------------------------------------------------------

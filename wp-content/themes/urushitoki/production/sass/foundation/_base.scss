@@ -1,7 +1,9 @@
 @use "./variable.scss";
 
-html {
-    font-size: 62.5%;
+html{
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: variable.$lightbrown;
+	font-size:62.5%
 }
 
 body{

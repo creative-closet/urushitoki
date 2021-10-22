@@ -3,7 +3,7 @@
 foundation
 -------------------------------------------------------- */
 @forward "./foundation/base";
-@forward "./foundation/variables";
+@forward "./foundation/variable";
 @forward "./foundation/mixin";
 /* --------------------------------------------------------
 
@@ -18,5 +18,6 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-@forward "./object/component/c-text";
-@use './object/project/btn.scss';
+@forward "./object/component/text";
+@use './object/component/bullet.scss';
+@forward "./object/component/definition";

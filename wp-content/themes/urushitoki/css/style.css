@@ -4,7 +4,15 @@
 /* 背景 */
 /* テキスト */
 /* 罫線 */
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
 html {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f0e7db;
   font-size: 62.5%;
 }
 
@@ -39,6 +47,46 @@ body {
 }
 .c-bullet__item:last-child {
   margin-bottom: 0;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
+}
+
+.c-definition {
+  width: 100%;
+  color: #2E2E2E;
+}
+.c-definition__title {
+  font-size: 2rem;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #897C70;
+}
+.c-definition__detail {
+  display: flex;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  border-bottom: solid 1px #DDD4CD;
+}
+.c-definition__detail__item:nth-last-child(2) {
+  width: 15%;
+  text-align: center;
+}
+.c-definition__detail__item:nth-child(2) {
+  width: 85%;
+}
+.c-definition__detail__item:only-child {
+  margin-left: 15%;
 }
 
 /* --------------------------------------------------------

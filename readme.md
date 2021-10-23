@@ -187,20 +187,68 @@ main ブランチ->本番環境にデプロイ
 (.git が存在する階層で)
 
 例として、
-$ git checkout -b "#10"
+` git checkout -b "#10" `
 
-構文: $ git checkout -b <新しいブランチ名>
+構文: ` git checkout -b <新しいブランチ名> `
 
 ### ブランチの移動方法
 
 (.git が存在する階層で)
 
 例として、
-$ git checkout "#10"
+` git checkout "#10" `
 
-構文: $ git checkout <移動したいブランチ名>
+構文:` git checkout <移動したいブランチ名> `
 
 ### 現在自分がいるブランチの確認方法
 
 (.git が存在する階層で)
-git branch
+` git branch `
+
+### main（またはdevelop）にpullできないとき(`git pull origin main` などできないとき)
+
+(.git が存在する階層で)
+
+` git checkout. `
+
+前回コミットしたところまで戻る（addする前まで戻る）※変更分は上書きされてしまうので要注意
+
+### コミット前の内容を一時的に避ける（作業中だけど別のブランチに切り替えたいときなど）
+
+(.git が存在する階層で)
+
+` git stash `
+
+ → 変更内容を退避する
+
+` git stash -u `
+
+ → untracked filesも含めるとき
+
+` git stash save "コメント" `
+
+ → コメントをつけるとき
+
+` git stash list `
+
+ → 保存したリストの表示
+
+` git stash apply `
+
+ → 退避した内容を今いるブランチに適用する（複数ある時は直近が反映される。リストからは消えない。）
+
+` git stash pop `
+
+ → 退避した内容を今いるブランチに適用させ、リストから削除する
+
+` git stash drop `
+
+ → 直近の内容を削除
+
+` git stash drop stash@{1} `
+
+ → 指定した番号を削除
+
+` git stash clear `
+
+ → 退避した内容の全てを削除

@@ -4,10 +4,10 @@
 		<h1 class="test-header">テスト</h1>
 	</header>
 	<article class="documentClass">
-    <h1>Css Test</h1>
+    	<h1>Css Test</h1>
 	</article>
 	<article id="sampleId">
-    <h1>Js Test2</h1>
+    	<h1>Js Test2</h1>
 	</article>
 
 	<?php if (is_front_page() && is_home()) { ?>
@@ -47,7 +47,7 @@
 	<?php
 		//ユーザープロフィール設定読み出しテスト
 		the_author_meta('twitter-name',1);
-		echo get_user_meta(1,'career', true);
+		echo nl2br(get_user_meta(1,'career', true));
 	?>
 
 

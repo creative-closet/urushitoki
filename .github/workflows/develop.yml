@@ -20,4 +20,4 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_DEVELOP_USERNAME }} 
           FTP_PASSWORD: ${{ secrets.FTP_DEVELOP_PASSWORD }} 
           LOCAL_DIR: ./                           
-          REMOTE_DIR: "/home/rietime/www/"
+          REMOTE_DIR: "/home/rietime/www/urushitoki/"

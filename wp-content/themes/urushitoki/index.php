@@ -5,7 +5,7 @@
   </article>
   <article id="sampleId">
     <h1>Js Test2</h1>
-	</article>
+  </article>
 
   <?php wp_footer(); ?>
 </body>

@@ -3,6 +3,7 @@
 	//フッターメニューをサポートのため追加
 	add_action('init', function () {
 		register_nav_menus([
+			'menu-main_nav' => 'メニュー：メインナビ',
 			'footer-main_nav' => 'フッター:メインナビ',
 			'footer-post_nav' => 'フッター:投稿ナビ',
 			'footer-sns_nav' => 'フッター:SNSナビ',

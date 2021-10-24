@@ -4,10 +4,10 @@
 		<h1 class="test-header">テスト</h1>
 	</header>
 	<article class="documentClass">
-    <h1>Css Test</h1>
+    	<h1>Css Test</h1>
 	</article>
 	<article id="sampleId">
-    <h1>Js Test2</h1>
+    	<h1>Js Test2</h1>
 	</article>
 
 	<?php if (is_front_page() && is_home()) { ?>
@@ -25,9 +25,9 @@
 	<h1>is_home() Test</h1>
 
 
-	<?php } elseif (is_page('accessory')) { ?>
+	<?php } elseif (is_page('accessory-archive')) { ?>
 	<!-- カスタム投稿アクセサリー アーカイブページ -->
-	<h1>is_page('accessory') Test</h1>
+	<h1>is_page('accessory-archive') Test</h1>
 
 
 	<?php } elseif (is_page('kintsugi')) { ?>
@@ -47,12 +47,12 @@
 	<?php
 		//ユーザープロフィール設定読み出しテスト
 		the_author_meta('twitter-name',1);
-		echo get_user_meta(1,'career', true);
+		echo nl2br(get_user_meta(1,'career', true));
 	?>
 
 
 	<?php } elseif (is_page('gallery')) { ?>
-	<!-- カスタム投稿ギャラリー アーカイブページ -->
+	<!-- 固定ページ ギャラリー （工芸作品アーカイブページ） -->
 	<h1>is_page('gallery') Test</h1>
 
 
@@ -66,9 +66,9 @@
 	<h1>is_page('contact') Test</h1>
 
 
-	<?php } elseif (is_page('information')) { ?>
+	<?php } elseif (is_page('information-archive')) { ?>
 	<!-- カスタム投稿Information アーカイブページ -->
-	<h1>is_page('information') Test</h1>
+	<h1>is_page('information-archive') Test</h1>
 
 
 	<?php } elseif (is_page()) { ?>
@@ -81,9 +81,9 @@
 	<h1>is_singular('accessory') Test</h1>
 
 
-	<?php } elseif (is_singular('gallery')) { ?>
-	<!-- カスタム投稿ギャラリー 詳細ページ -->
-	<h1>is_singular('gallery') Test</h1>
+	<?php } elseif (is_singular('craft')) { ?>
+	<!-- カスタム投稿工芸作品 詳細ページ -->
+	<h1>is_singular('craft') Test</h1>
 
 
 	<?php } elseif (is_singular('information')) { ?>

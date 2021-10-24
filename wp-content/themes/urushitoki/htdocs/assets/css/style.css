@@ -38,26 +38,43 @@ body {
   color: blue;
 }
 
-.p-button__primary {
+.c-button--primary {
+  display: inline-block;
   background-color: #fff;
-  font-family: "Times New Roman";
   border: 2px solid;
   border-color: #707070;
   width: 350px;
+  height: 80px;
+  text-align: center;
+  display: flex;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
-.p-button__primary:hover {
+.c-button--primary .c-button--primary--text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 16px;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-weight: bold;
+}
+.c-button--primary:hover {
   background-color: #270b0b;
+  color: white;
 }
-.p-button__primary:hover a {
+.c-button--primary:hover .c-button--primary--line {
   color: #fff;
 }
-.p-button__primary:hover a::before {
+.c-button--primary:hover .c-button--primary--line::before {
   background-color: #fff;
 }
-.p-button__primary:hover a::after {
+.c-button--primary:hover .c-button--primary--line::after {
   background-color: #fff;
 }
-.p-button__primary a {
+.c-button--primary .c-button--primary--line {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,7 +88,7 @@ body {
   transition: 0.3s;
   text-decoration: none;
 }
-.p-button__primary a::before {
+.c-button--primary .c-button--primary--line::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -81,10 +98,10 @@ body {
   height: 2px;
   background-color: #707070;
 }
-.p-button__primary a:hover::before {
+.c-button--primary .c-button--primary--line:hover::before {
   background-color: #fff;
 }
-.p-button__primary a::after {
+.c-button--primary .c-button--primary--line::after {
   content: "";
   position: absolute;
   top: 60%;
@@ -94,20 +111,20 @@ body {
   height: 2px;
   background-color: #707070;
 }
-.p-button__primary a:hover::after {
+.c-button--primary .c-button--primary--line:hover::after {
   background-color: #fff;
 }
 
-#p-ripples-effect {
+#p-ripples--effect {
   /*波紋の基点とするためrelativeを指定*/
   position: relative;
   /*はみ出す波紋を隠す*/
   overflow: hidden;
 }
-#p-ripples-effect:hover {
+#p-ripples--effect:hover {
   color: #fff;
 }
-#p-ripples-effect::after {
+#p-ripples--effect::after {
   content: "";
   /*絶対配置で波紋位置を決める*/
   position: absolute;
@@ -124,18 +141,18 @@ body {
   /*アニメーションの設定*/
   transition: transform 0.3s, opacity 1s;
 }
-#p-ripples-effect:active::after {
+#p-ripples--effect:active::after {
   transform: scale(0, 0);
   transition: 0s;
   opacity: 0.3;
 }
 
-.c-button__profile {
+.c-button--sns, .c-button--sns--insta, .c-button--sns--youtube {
   font-family: "Georgia", sans-serif;
   display: inline-block;
   position: relative;
   width: 124px;
-  height: 50px;
+  height: 40px;
   font-size: 15px;
   border-radius: 5px;
   background-color: #444;
@@ -143,28 +160,25 @@ body {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  height: 40px;
   cursor: pointer;
   text-align: center;
+  /* YouTubeマウスホバー時 */
+  /* Instagramマウスホバー時 */
 }
-.c-button__profile .fab {
-  height: 10px;
-}
-.c-button__profile:hover {
+.c-button--sns:hover, .c-button--sns--insta:hover, .c-button--sns--youtube:hover {
   text-decoration: none;
 }
-
-/* Instagramマウスホバー時 */
-.c-button__profile.insta_button:hover {
+.c-button--sns .fab, .c-button--sns--insta .fab, .c-button--sns--youtube .fab {
+  height: 10px;
+}
+.c-button--sns--youtube:hover {
+  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+}
+.c-button--sns--insta:hover {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
 }
 
-/* YouTubeマウスホバー時 */
-.c-button__profile.youtube_button:hover {
-  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
-}
-
-.c-direction__top {
+.c-direction--top {
   background-color: #fff;
   border: none;
   width: 60px;
@@ -173,13 +187,13 @@ body {
   border-radius: 50%;
   background: #270b0b;
 }
-.c-direction__top a {
+.c-direction--top a {
   position: relative;
   display: block;
   height: 60px;
   text-decoration: none;
 }
-.c-direction__top a::before {
+.c-direction--top a::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f062";
@@ -196,7 +210,7 @@ body {
 }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.c-openbutton {
+.c-open--button {
   /*ボタン内側の基点となるためrelativeを指定。
   追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
   position: relative;
@@ -209,11 +223,11 @@ body {
 }
 
 /*ボタン内側*/
-.c-openbutton .c-openbutton-area {
+.c-open--button .c-open--button--area {
   transition: all 0.4s;
 }
 
-.c-openbutton span {
+.c-open--button span {
   display: inline-block;
   transition: all 0.4s;
   /*アニメーションの設定*/
@@ -227,36 +241,36 @@ body {
   transform: translateY(6px) rotate(-160deg);
 }
 
-.c-openbutton span:nth-of-type(1) {
+.c-open--button span:nth-of-type(1) {
   top: 30px;
 }
 
-.c-openbutton span:nth-of-type(2) {
+.c-open--button span:nth-of-type(2) {
   top: 50px;
 }
 
-.c-openbutton span:nth-of-type(3) {
+.c-open--button span:nth-of-type(3) {
   top: 70px;
 }
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
-.c-openbutton.active .c-openbutton-area {
+.c-open--button.active .c-open--button--area {
   transform: rotateY(-360deg);
 }
 
-.c-openbutton.active span:nth-of-type(1) {
+.c-open--button.active span:nth-of-type(1) {
   top: 50px;
   left: 25px;
   transform: translateY(6px) rotate(-135deg);
   width: 60%;
 }
 
-.c-openbutton.active span:nth-of-type(2) {
+.c-open--button.active span:nth-of-type(2) {
   opacity: 0;
 }
 
-.c-openbutton.active span:nth-of-type(3) {
+.c-open--button.active span:nth-of-type(3) {
   top: 60px;
   left: 25px;
   transform: translateY(-6px) rotate(135deg);
@@ -264,7 +278,7 @@ body {
 }
 
 .c-tab {
-  height: 10px;
+  display: inline-block;
   background-color: #fff;
   text-decoration: none;
   color: black;
@@ -273,21 +287,10 @@ body {
   padding: 8px 10px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.c-button__before {
-  text-align: left;
-  padding-left: 44px;
-}
-
-.c-button__after {
-  text-align: right;
-}
-.c-button__after i {
-  margin-right: 20px;
-}
-
-.c-button__mix, .c-button__before, .c-button__after {
+.c-button--mix, .c-button--mix--after, .c-button--mix--before {
   width: 223px;
   height: 60px;
   display: inline-block;
@@ -297,6 +300,16 @@ body {
   border: solid #707070;
   cursor: pointer;
   text-decoration: none;
+}
+.c-button--mix--before {
+  text-align: left;
+  padding-left: 44px;
+}
+.c-button--mix--after {
+  text-align: right;
+}
+.c-button--mix--after i {
+  margin-right: 20px;
 }
 
 .c-title, .c-title--header {

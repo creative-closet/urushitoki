@@ -15,6 +15,39 @@
   <article id="sampleId">
     <h1>Js Test</h1>
   </article>
+
+  <a class="c-tab">
+	タグが入ります
+</a>
+<a class="c-tab">
+	illustration
+</a>
+<a class="c-tab">
+	graphics
+</a>
+<a class="c-tab">
+	ui
+</a>
+<a class="c-tab">
+	design
+</a>
+<a class="c-tab">
+	app
+</a>
+<a class="c-tab">
+	iphone
+</a>
+<a class="c-tab">
+	interface
+</a>
+<a class="c-tab">
+	icon
+</a>
+<a class="c-tab">
+	web design
+</a>
+
+
   <?php wp_footer(); ?>
 </body>
 </html>

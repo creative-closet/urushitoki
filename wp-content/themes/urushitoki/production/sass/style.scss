@@ -17,10 +17,8 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-@forward 'object/component/bullet.scss';
 @forward 'object/component/button.scss';
 @forward './object/component/bullet';
 @forward './object/component/definition';
 @forward './object/component/text';
 @forward './object/component/title';
-

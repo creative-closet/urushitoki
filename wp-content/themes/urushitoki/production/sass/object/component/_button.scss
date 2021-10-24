@@ -1,16 +1,36 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
 .documentClass {
 	color: blue;
 }
 
-.p-button__primary {
+.c-button--primary {
+	display: inline-block;
 	background-color: #fff;
-	font-family: "Times New Roman";
 	border: 2px solid;
 	border-color: #707070;
 	width: 350px;
+	height: 80px;
+	text-align: center;
+	display: flex;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	.c-button--primary--text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 30px;
+		font-size: 16px;
+		@include mixin.font-yumincho;
+		font-weight: bold;
+	}
 	&:hover {
 		background-color: #270b0b;
-		a {
+		color: white;
+		.c-button--primary--line {
 			color: #fff;
 			&::before {
 				background-color: #fff;
@@ -20,7 +40,7 @@
 			}
 		}
 	}
-	a {
+	.c-button--primary--line {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -62,7 +82,7 @@
 	}
 }
 
-#p-ripples-effect {
+#p-ripples--effect {
 	/*波紋の基点とするためrelativeを指定*/
 	position: relative;
 	/*はみ出す波紋を隠す*/
@@ -95,42 +115,12 @@
 	}
 }
 
-.p-button--cross {
-	background-color: #fff;
-	border: none;
-	a {
-		display: block;
-		position: relative;
-		width: 120px;
-		height: 120px;
-		border: 2px solid #333;
-		border-radius: 50%;
-		background: #270b0b;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 3px;
-			height: 70px;
-			background: #fff;
-		}
-		&::before {
-			transform: translate(-50%, -50%) rotate(45deg);
-		}
-		&::after {
-			transform: translate(-50%, -50%) rotate(-45deg);
-		}
-	}
-}
-
-.c-button__profile {
+.c-button--sns {
 	font-family: "Georgia", sans-serif;
 	display: inline-block;
 	position: relative;
 	width: 124px;
-	height: 50px;
+	height: 40px;
 	font-size: 15px;
 	border-radius: 5px;
 	background-color: #444;
@@ -138,30 +128,34 @@
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
-	height: 40px;
 	cursor: pointer;
 	text-align: center;
-	.fab {
-		height: 10px;
-	}
-
 	&:hover {
 		text-decoration: none;
 	}
+	.fab {
+		height: 10px;
+	}
+	/* YouTubeマウスホバー時 */
+	&--youtube {
+		@extend .c-button--sns;
+		&:hover {
+			background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+		}
+	}
+	/* Instagramマウスホバー時 */
+	&--insta {
+		@extend .c-button--sns;
+		&:hover {
+			background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+				no-repeat;
+			background: linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+				no-repeat;
+		}
+	}
 }
 
-/* Instagramマウスホバー時 */
-.c-button__profile.insta_button:hover {
-	background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-		no-repeat;
-	background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-}
-/* YouTubeマウスホバー時 */
-.c-button__profile.youtube_button:hover {
-	background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
-}
-
-.c-direction__top {
+.c-direction--top {
 	background-color: #fff;
 	border: none;
 	width: 60px;
@@ -193,7 +187,7 @@
 }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.openbutton {
+.c-open--button {
 	/*ボタン内側の基点となるためrelativeを指定。
 追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
 	position: relative;
@@ -207,11 +201,11 @@
 
 /*ボタン内側*/
 
-.openbutton .openbutton-area {
+.c-open--button .c-open--button--area {
 	transition: all 0.4s;
 }
 
-.openbutton span {
+.c-open--button span {
 	display: inline-block;
 	transition: all 0.4s; /*アニメーションの設定*/
 	position: absolute;
@@ -224,37 +218,37 @@
 	transform: translateY(6px) rotate(-160deg);
 }
 
-.openbutton span:nth-of-type(1) {
+.c-open--button span:nth-of-type(1) {
 	top: 30px;
 }
 
-.openbutton span:nth-of-type(2) {
+.c-open--button span:nth-of-type(2) {
 	top: 50px;
 }
 
-.openbutton span:nth-of-type(3) {
+.c-open--button span:nth-of-type(3) {
 	top: 70px;
 }
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
 
-.openbutton.active .openbutton-area {
+.c-open--button.active .c-open--button--area {
 	transform: rotateY(-360deg);
 }
 
-.openbutton.active span:nth-of-type(1) {
+.c-open--button.active span:nth-of-type(1) {
 	top: 50px;
 	left: 25px;
 	transform: translateY(6px) rotate(-135deg);
 	width: 60%;
 }
 
-.openbutton.active span:nth-of-type(2) {
+.c-open--button.active span:nth-of-type(2) {
 	opacity: 0;
 }
 
-.openbutton.active span:nth-of-type(3) {
+.c-open--button.active span:nth-of-type(3) {
 	top: 60px;
 	left: 25px;
 	transform: translateY(-6px) rotate(135deg);
@@ -262,7 +256,7 @@
 }
 
 .c-tab {
-	height: 10px;
+	display: inline-block;
 	background-color: #fff;
 	text-decoration: none;
 	color: black;
@@ -271,54 +265,10 @@
 	padding: 8px 10px;
 	text-align: center;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 
-.pagination {
-	margin: 40px 0 0;
-}
-.nav-links {
-	display: flex;
-}
-.pagination .page-numbers {
-	display: inline-block;
-	margin-right: 20px;
-	padding: 20px 25px;
-	color: #333;
-	border-radius: 3px;
-	box-shadow: 0 3px 3px #999;
-	background: #fff;
-}
-.pagination .current {
-	padding: 20px 25px;
-	background: #69a4db;
-	color: #fff;
-}
-.pagination .prev,
-.pagination .next {
-	background: transparent;
-	box-shadow: none;
-	color: #69a4db;
-}
-.pagination .dots {
-	background: transparent;
-	box-shadow: none;
-}
-
-.c-button__before {
-	@extend .c-button__mix;
-	text-align: left;
-	padding-left: 44px;
-}
-
-.c-button__after {
-	@extend .c-button__mix;
-	text-align: right;
-	i {
-		margin-right: 20px;
-	}
-}
-
-.c-button__mix {
+.c-button--mix {
 	width: 223px;
 	height: 60px;
 	display: inline-block;
@@ -328,4 +278,16 @@
 	border: solid #707070;
 	cursor: pointer;
 	text-decoration: none;
+	&--before {
+		@extend .c-button--mix;
+		text-align: left;
+		padding-left: 44px;
+	}
+	&--after {
+		@extend .c-button--mix;
+		text-align: right;
+		i {
+			margin-right: 20px;
+		}
+	}
 }

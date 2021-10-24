@@ -1,3 +1,3 @@
-$(".c-openbutton").click(function () {
+$(".c-open--button").click(function () {
 	$(this).toggleClass("active");
 });

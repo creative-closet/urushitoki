@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <body>
-<header>
-		<h1 class="test-header">テスト</h1>
+	<header>
+		<?php get_template_part('includes/menu'); ?>
+		<h1 class="test-header">テス</h1>
 	</header>
 	<article class="documentClass">
     	<h1>Css Test</h1>

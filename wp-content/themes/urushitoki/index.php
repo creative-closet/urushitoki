@@ -25,9 +25,9 @@
 	<h1>is_home() Test</h1>
 
 
-	<?php } elseif (is_page('accessory')) { ?>
+	<?php } elseif (is_page('accessory-archive')) { ?>
 	<!-- カスタム投稿アクセサリー アーカイブページ -->
-	<h1>is_page('accessory') Test</h1>
+	<h1>is_page('accessory-archive') Test</h1>
 
 
 	<?php } elseif (is_page('kintsugi')) { ?>

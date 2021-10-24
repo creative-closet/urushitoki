@@ -52,7 +52,7 @@
 
 
 	<?php } elseif (is_page('gallery')) { ?>
-	<!-- カスタム投稿ギャラリー アーカイブページ -->
+	<!-- 固定ページ ギャラリー （工芸作品アーカイブページ） -->
 	<h1>is_page('gallery') Test</h1>
 
 
@@ -66,9 +66,9 @@
 	<h1>is_page('contact') Test</h1>
 
 
-	<?php } elseif (is_page('information')) { ?>
+	<?php } elseif (is_page('information-archive')) { ?>
 	<!-- カスタム投稿Information アーカイブページ -->
-	<h1>is_page('information') Test</h1>
+	<h1>is_page('information-archive') Test</h1>
 
 
 	<?php } elseif (is_page()) { ?>
@@ -81,9 +81,9 @@
 	<h1>is_singular('accessory') Test</h1>
 
 
-	<?php } elseif (is_singular('gallery')) { ?>
-	<!-- カスタム投稿ギャラリー 詳細ページ -->
-	<h1>is_singular('gallery') Test</h1>
+	<?php } elseif (is_singular('craft')) { ?>
+	<!-- カスタム投稿工芸作品 詳細ページ -->
+	<h1>is_singular('craft') Test</h1>
 
 
 	<?php } elseif (is_singular('information')) { ?>

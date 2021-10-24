@@ -10,5 +10,4 @@
 	<article id="sampleId">
     	<h1>Js Test2</h1>
 	</article>
-
 	<?php get_footer(); ?>

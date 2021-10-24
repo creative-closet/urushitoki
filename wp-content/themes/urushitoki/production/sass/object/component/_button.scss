@@ -155,7 +155,7 @@
 	}
 }
 
-.c-direction--top {
+.c-button--direction__top {
 	background-color: #fff;
 	border: none;
 	width: 60px;
@@ -290,4 +290,15 @@
 			margin-right: 20px;
 		}
 	}
+}
+
+.c-button--inquiry--menu-inner {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	padding: 8px 10px;
+	text-align: center;
+	cursor: pointer;
 }

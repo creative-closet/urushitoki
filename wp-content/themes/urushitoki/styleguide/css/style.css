@@ -178,7 +178,7 @@ body {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
 }
 
-.c-direction--top {
+.c-button--direction__top {
   background-color: #fff;
   border: none;
   width: 60px;
@@ -187,13 +187,13 @@ body {
   border-radius: 50%;
   background: #270b0b;
 }
-.c-direction--top a {
+.c-button--direction__top a {
   position: relative;
   display: block;
   height: 60px;
   text-decoration: none;
 }
-.c-direction--top a::before {
+.c-button--direction__top a::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f062";
@@ -310,6 +310,17 @@ body {
 }
 .c-button--mix--after i {
   margin-right: 20px;
+}
+
+.c-button--inquiry--menu-inner {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .c-title, .c-title--header {

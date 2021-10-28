@@ -1,17 +1,54 @@
 /***** variable *****/
-
-/* color-code */
+/* --------------------------------------------------------
+    color-code
+-------------------------------------------------------- */
 /* 背景 */
-$background-color--main :    #F0E7DB;   // 明るいライトブラウン
+$background-color--main : #F0E7DB;   // 明るいライトブラウン
 
 /* テキスト */
-$font-color--main       :    #252525;   // ダークブラウン
-$font-color--sub        :    #fff;      // ホワイト
-$font-color--third      :    #897C70;   // ブラウン
+$font-color--main       : #252525;   // ダークブラウン
+$font-color--sub        : #fff;      // ホワイト
+$font-color--third      : #897C70;   // ブラウン
 
 /* 罫線 */
-$border-color--main     :    #fff;      // ホワイト
-$border-color--accent   :    #897C70;   // ブラウン
+$border-color--main     : #fff;      // ホワイト
+$border-color--accent   : #897C70;   // ブラウン
+
+
+/* --------------------------------------------------------
+    文字の太さ
+-------------------------------------------------------- */
+ $font-weight--light          : 300;
+ $font-weight--normal         : 400;
+ $font-weight--bold           : 700;
+
+
+/* --------------------------------------------------------
+    文字のサイズ
+-------------------------------------------------------- */
+/* ベース */
+$font-size--base--pc                         : 1.6rem;
+$font-size--base--tab                        : 1.6rem;
+$font-size--base--sp                         : 1.6rem;
+
+/* 見出し */
+$font-size--title-large--pc                  : 2.4rem;
+$font-size--title-large--tab                 : 2.4rem;
+$font-size--title-large--sp                  : 2.4rem;
+
+$font-size--title-large--header--pc          : 1.4rem;
+$font-size--title-large--header--tab         : 1.4rem;
+$font-size--title-large--header--sp          : 1.4rem;
+
+$font-size--title-small--pc                  : 2.0rem;
+$font-size--title-small--tab                 : 2.0rem;
+$font-size--title-small--sp                  : 2.0rem;
+
+$font-size--title-noborder--pc               : 1.8rem;
+$font-size--title-noborder--tab              : 1.8rem;
+$font-size--title-noborder--sp               : 1.8rem;
+
+
 
 $primary: #270B0B;
 $darkbrown: #252525;

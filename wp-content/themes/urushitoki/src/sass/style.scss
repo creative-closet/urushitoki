@@ -18,6 +18,7 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
+@use './object/component/background';
 @use './object/component/title';
 @forward "./object/component/text";
 @use './object/component/bullet';

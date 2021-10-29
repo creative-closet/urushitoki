@@ -1,0 +1,39 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+// @use "../../foundation/mixin.scss";
+
+.c-background--dot{
+    background: url("../production/images/background-dot.png") repeat;
+    background-attachment: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // height: 10hv;
+}
+
+.c-background--wave{
+    position: -webkit-sticky;   /* Safariに対応する */
+    position: sticky;           /* 要素を固定/解除する */
+    top: 0;                     /* 縦方向の閾値 */
+    left: 0;                    /* 横方向の閾値 */
+    z-index: -1;                // 値は調整
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    // transform: rotate(180deg);
+    background-color: variable.$background-color--main;
+
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 230px;
+    }
+
+    .shape-fill {
+        fill: variable.$background-color--main; // 曲線上の色指定
+        fill: variable.$background-color--sub; // 曲線上の色指定
+        // fill: gray; // 曲線上の色指定
+    }
+}

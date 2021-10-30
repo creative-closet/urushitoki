@@ -146,7 +146,7 @@
 
 		register_post_type( 'accessory', $args );
 	}
-
+	/*
 	//*****************************************************************
 	// ユーザープロフィールの項目のカスタマイズ
 	//*****************************************************************
@@ -208,7 +208,7 @@
 			update_user_meta($user_id, 'award', $_POST['award'], $old_user_data->award);
 		}
 	}
-	add_action('profile_update', 'update_user_profile', 10, 2);
+	add_action('profile_update', 'update_user_profile', 10, 2);*/
 
 	/*アイキャッチ画像がなければ標準画像を取得する*/
 	function get_eyecatch_default(){

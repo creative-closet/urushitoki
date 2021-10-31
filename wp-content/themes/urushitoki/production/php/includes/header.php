@@ -21,7 +21,7 @@
 		ページの説明文が入ります
 	<?php endif;?>
 	</p>
-
+	<?php get_template_part('includes/menu'); ?>
 </header>
 <!-- フロントページのヘッダーのパーツ -->
 <?php else:?>

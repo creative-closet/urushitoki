@@ -216,6 +216,65 @@ body {
   color: #897C70;
 }
 
+.c-pattern {
+  position: relative;
+  width: 980px;
+  height: 380px;
+  margin-top: 30px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern {
+    width: 100%;
+    height: 310px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern {
+    height: 180px;
+  }
+}
+.c-pattern__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0px;
+  z-index: 1;
+  width: 621px;
+  height: 488px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+    top: 140px;
+    width: 437px;
+    height: 350px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+    display: none;
+  }
+}
+.c-pattern__layer--left {
+  left: -300px;
+}
+.c-pattern__layer--right {
+  right: -300px;
+}
+
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */

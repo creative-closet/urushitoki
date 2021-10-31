@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 <body>
-	<header>
-		<h1 class="test-header">テスト</h1>
-	</header>
+	<!-- ヘッダーのフロントに表示 -->
+	<?php get_template_part('/includes/header')?>
 	<article class="documentClass">
     	<h1>Css Test</h1>
 	</article>

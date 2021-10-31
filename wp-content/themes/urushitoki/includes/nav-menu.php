@@ -10,7 +10,7 @@
 			$title      = $menu_item->title;
 			$url        = $menu_item->url;
 			$attr_title = $menu_item->attr_title;
-			$menu_list .= '<li title="'. $attr_title .'"><a href="' . esc_attr( $url ) . '">' . esc_html( $title ) . '</a></li>';
+			$menu_list .= '<li title="'. $attr_title .'"><a href="' . esc_attr($url) . '">' . esc_html($title) . '</a></li>';
 		}
 		$menu_list .= '</ul>';
 	} else {

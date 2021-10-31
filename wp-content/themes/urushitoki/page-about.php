@@ -102,12 +102,10 @@
 			<ul>
 				<?php
 				$fieldData = explode("\n",get_the_author_meta('award',$user_id) );
-				$i = 0;
 				foreach ($fieldData as $value){
 					if ( $value ){
 					echo '<li>' . $value . '</li>';
 					}
-					$i++;
 				}
 				?>
 			</ul>

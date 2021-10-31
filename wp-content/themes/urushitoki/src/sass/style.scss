@@ -2,6 +2,7 @@
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
+@forward "./foundation/ress.css";
 @forward "./foundation/base";
 @forward "./foundation/variable";
 @forward "./foundation/mixin";
@@ -15,6 +16,8 @@ layout
 project
 -------------------------------------------------------- */
 @forward "./object/project/document.scss";
+@forward "./object/project/postCard";
+
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */

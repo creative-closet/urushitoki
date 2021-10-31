@@ -67,6 +67,8 @@ const fractal      = require( '@frctl/fractal' ).create();      // fractal
 fractal.set( 'project.title', 'gulp wordpress styleguide' );
 // コンポーネント設定
 fractal.components.set( 'path', './src/styleguide/components/' );
+//	↑styleguideディレクトリ以下すべて読み込むように変更
+fractal.components.set( 'path', './src/styleguide/' );
 // ドキュメントページ設定
 fractal.docs.set( 'path', './src/styleguide/docs' );
 // 静的ファイルの設定

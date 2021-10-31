@@ -8,7 +8,6 @@
     	<h1>Css Test</h1>
 	</article>
 	<article id="sampleId">
-    	<h1>Js Test2</h1>
+			<h1>Js Test2</h1>
 	</article>
-	<a href="#" class="c-button--direction__top"></a>
 	<?php get_footer(); ?>

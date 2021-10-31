@@ -248,6 +248,24 @@
         
         <p>bullet
 リストの中黒のコンポーネント</p>
+<p>.c-bullet {
+    list-style: none;
+    &amp;__item {
+        line-height: 2.8;
+        &amp;::before {
+            display: inline-block;
+            content: “”;
+            margin: 17px 10px 0 0;
+            width: 8px;
+            height: 8px;
+            vertical-align: top;
+            border-radius: 5px;
+            background-color: #897C70;</p>
+<pre><code class="hljs">    }
+    &amp;<span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+}</code></pre><p>}</p>
 
         
     </div>

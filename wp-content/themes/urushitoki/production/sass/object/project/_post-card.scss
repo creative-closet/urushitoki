@@ -2,7 +2,7 @@
 @use "../../foundation/variable.scss";
 @use "../../foundation/mixin.scss";
 
-.p-postCard{
+.p-post-card{
 	width: 305px;
 	height: 353px;
 	display: flex;
@@ -21,14 +21,12 @@
 			width: 120px;
 			height: 100%;
 		}
-
 	}
 	&__text{
 		width: 100%;
 		height: calc(353px - 180px);
 		background-color: variable.$background-color--postCard;
 		padding:40px 54px 29px 40px;
-		box-sizing: border-box;
 		@include mixin.breakpoint( breakpoint-tab ){
 			width: calc(100% - 120px);
 			height: 100%;

@@ -1,0 +1,45 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+.p-articleCard{
+	width: 400px;
+	height: 315px;
+	position: relative;
+	@include mixin.breakpoint( breakpoint-tab ){
+        width: 100%;
+    }
+	&__image{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__title{
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		width: 100%;
+		margin-left: 30px;
+		margin-bottom: 23px;
+		color:#fff;
+		font-size: 2.0rem;
+		@include mixin.breakpoint( breakpoint-sp ){
+			margin-bottom: 12px;
+		}
+
+	}
+	&::after{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 70px;
+		background-color:rgba($color: #3F2E1F, $alpha: .6);
+		@include mixin.breakpoint( breakpoint-sp ){
+			height: 60px;
+		}
+	}
+
+}

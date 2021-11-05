@@ -12,6 +12,6 @@
 		<figcaption class="p-articleCard__title">漆への思い</figcaption>
 	</figure>
 	<article id="sampleId">
-    	<h1>Js Test2</h1>
+			<h1>Js Test2</h1>
 	</article>
 	<?php get_footer(); ?>

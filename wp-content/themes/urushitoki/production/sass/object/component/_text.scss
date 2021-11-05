@@ -3,15 +3,15 @@
 @use "../../foundation/variable";
 
 .c-text{
-	font-size: variable.$font-size--basetext--medium;
-	color:variable.$black;
+	font-size      : variable.$font-size--basetext--medium;
+	color          : variable.$black;
 	&--white{
-		font-size: variable.$font-size--basetext--medium;
-		color:variable.$white;
+		   font-size  : variable.$font-size--basetext--medium;
+		   color      : variable.$white;
 	}
 	&--large{
-		font-size: variable.$font-size--basetext--large;
-		color:variable.$font-color--brown;
-		font-weight: bold;
+		   font-size  : variable.$font-size--basetext--large;
+		   color      : variable.$font-color--brown;
+		   font-weight: bold;
 	}
 }

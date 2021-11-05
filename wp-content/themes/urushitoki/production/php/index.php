@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 <body>
-	<header>
-		<h1 class="test-header">テスト</h1>
-	</header>
+	<!-- ヘッダーのフロントに表示 -->
+	<?php get_template_part('/includes/header')?>
 	<article class="documentClass">
     	<h1>Css Test</h1>
 	</article>
@@ -64,6 +63,7 @@
 	<?php } elseif (is_page('contact')) { ?>
 	<!-- 固定ページ お問い合わせフォーム -->
 	<h1>is_page('contact') Test</h1>
+		<?php the_content(); ?>
 
 
 	<?php } elseif (is_page('information-archive')) { ?>
@@ -74,6 +74,7 @@
 	<?php } elseif (is_page()) { ?>
 	<!-- その他 固定ページ -->
 	<h1>is_page() Test</h1>
+	<?php the_content(); ?>
 
 
 	<?php } elseif (is_singular('accessory')) { ?>

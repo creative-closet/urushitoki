@@ -9,6 +9,12 @@
 *.map
 .sql
 
+#コンポーネント関係を消しておく
+/wp-content/themes/urushitoki/styleguide/components/detail/*
+/wp-content/themes/urushitoki/styleguide/components/preview/*
+/wp-content/themes/urushitoki/styleguide/components/raw/*
+/wp-content/themes/urushitoki/styleguide/components/render/*
+
 !.gitignore
 .htaccess
 node_modules/

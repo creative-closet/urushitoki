@@ -3,7 +3,9 @@
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
-
+@forward "./foundation/base";
+@forward "./foundation/variable";
+@forward "./foundation/mixin";
 /* --------------------------------------------------------
 layout
 -------------------------------------------------------- */
@@ -11,8 +13,12 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
-@forward "object/project/document.scss";
-@forward 'object/component/bullet';
+@forward "./object/project/document.scss";
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
+@forward './object/component/bullet';
+@forward './object/component/definition';
+@forward './object/component/text';
+@forward './object/component/title';
+

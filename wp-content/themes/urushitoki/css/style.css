@@ -1,3 +1,39 @@
+@charset "UTF-8";
+/***** variable *****/
+/* --------------------------------------------------------
+    color-code
+-------------------------------------------------------- */
+/* 背景 */
+/* テキスト */
+/* 罫線 */
+/* --------------------------------------------------------
+    文字の太さ
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+    文字のサイズ
+-------------------------------------------------------- */
+/* ベース */
+/* 見出し */
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
+html {
+  background-color: #F0E7DB;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Noto Sans Japanese", sans-serif;
+  line-height: 2.125;
+}
+
+/* ブレイクポイント・PCファースト */
+/* 游明朝の指定 */
 .documentClass {
   color: blue;
 }
@@ -20,6 +56,164 @@
 }
 .c-bullet__item:last-child {
   margin-bottom: 0;
+}
+
+.c-definition {
+  width: 100%;
+  color: #2E2E2E;
+}
+.c-definition__title {
+  font-size: 2rem;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #897C70;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+}
+.c-definition__detail {
+  display: flex;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  border-bottom: solid 1px #DDD4CD;
+}
+.c-definition__detail__item:nth-last-child(2) {
+  width: 15%;
+  text-align: center;
+}
+.c-definition__detail__item:nth-child(2) {
+  width: 85%;
+}
+.c-definition__detail__item:only-child {
+  margin-left: 15%;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
+}
+
+.c-title, .c-title--header {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+  border-bottom: solid 4px #fff;
+  /* Englishタイトル */
+  /* 罫線のアクセントカラー設定 */
+}
+@media (max-width: 1024px) {
+  .c-title, .c-title--header {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title, .c-title--header {
+    padding-bottom: 15px;
+  }
+}
+.c-title--header::before {
+  content: attr(title-english);
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+}
+.c-title::after, .c-title--header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 15px;
+  }
+}
+
+.c-title-large {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 46px;
+  border-bottom: solid 4px #fff;
+  /* 罫線のアクセントカラー設定 */
+}
+.c-title-large::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 46px;
+}
+
+.c-title-small {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #252525;
+  /* 罫線 */
+}
+.c-title-small::after {
+  content: "";
+  display: block;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-small--center {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  /* 罫線 */
+}
+.c-title-small--center::after {
+  content: "";
+  display: block;
+  margin: auto;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-noborder {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #897C70;
 }
 
 /* --------------------------------------------------------

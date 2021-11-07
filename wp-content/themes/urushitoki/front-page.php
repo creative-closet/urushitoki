@@ -11,6 +11,7 @@
 			<h1>Js Test2</h1>
 	</article>
 
+	<!-- informationのギャラリー表示 -->
 	<h1 class="c-title">Information</h1>
 	<!-- サブクエリインスタンス -->
 	<?php

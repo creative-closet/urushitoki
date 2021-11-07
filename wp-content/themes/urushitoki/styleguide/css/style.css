@@ -39,7 +39,7 @@ body {
 }
 
 .c-background--dot {
-  background: url("../../../img/background-dot.png") repeat;
+  background: url("../components/raw/backgrounds/background-dot.png") repeat;
   background-attachment: fixed;
   top: 0;
   right: 0;
@@ -63,6 +63,7 @@ body {
 }
 .c-background--wave .shape-fill {
   fill: #E0D7CA;
+  opacity: 0.633;
 }
 
 .c-title, .c-title--header {

@@ -21,15 +21,15 @@
 		'posts_per_page'    => '4',//1ページに表示する数を指定
 		'orderby'           => 'modefied',//ソート
 		);
-	$accessory_query = new WP_Query($args_query);
+	$information_query = new WP_Query($args_query);
 
 	//サブクエリループ
-	if($accessory_query -> have_posts()):
-		while($accessory_query -> have_posts()):
-			$accessory_query -> the_post();
+	if($information_query -> have_posts()):
+		while($information_query -> have_posts()):
+			$information_query -> the_post();
 		//記事の各種データを取得
 			$id_in_query = get_post_thumbnail_id();
-			$img_in_query = wp_get_attachment_image_src($id_in_query,'large');
+			$img_in_query = get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 			$link_in_query = get_permalink( );
 			$time_in_query = get_the_time( 'Y年n月j日' );
 	if (has_excerpt(  )){

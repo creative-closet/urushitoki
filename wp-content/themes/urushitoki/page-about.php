@@ -32,16 +32,20 @@
 					<img src="twitter-icon" alt="twitter"></a>
 				<?php }
 				elseif($my_sns == 'Instagram'){ ?>
-					<a href="<?php esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
-					<img src="<?php echo get_template_directory_uri(); ?>/production/images/Instagram.png" alt="instagram"></a>
+					<a href="<?php esc_attr($fields['sns_url']) ?>" class="c-button--sns--insta" target="_blank" rel="noopener noreferrer">
+						<i class="fab fa-instagram"></i>
+						<span class="c-title__profile">Instagram</span>
+					</a>
 				<?php }
 				elseif($my_sns == 'Facebook'){ ?>
 					<a href="<?php esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
 					<img src="facebook-icon" alt="facebook"></a>
 				<?php }
 				elseif($my_sns == 'Youtube'){ ?>
-					<a href="<?php esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
-					<img src="youtube-icon" alt="youtube"></a>
+					<a href="<?php esc_attr($fields['sns_url']) ?>" class="c-button--sns--youtube" target="_blank" rel="noopener noreferrer">
+						<i class="fab fa-youtube"></i>
+						<span class="c-title__profile">YouTube</span>
+					</a>
 				<?php }
 			}
 		endif; ?>

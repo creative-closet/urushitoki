@@ -99,6 +99,7 @@
 	<?php } elseif (is_single()) { ?>
 	<!-- 投稿 詳細ページ -->
 	<h1>is_single() Test</h1>
+	<?php the_content(); ?>
 
 
 	<?php } elseif (is_404()) { ?>

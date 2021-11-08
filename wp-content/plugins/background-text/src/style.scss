@@ -1,0 +1,14 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-background-text {
+	background-color: #210C02;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

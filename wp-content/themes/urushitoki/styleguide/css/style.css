@@ -356,6 +356,148 @@ body {
   color: blue;
 }
 
+.p-post-card {
+  width: 305px;
+  height: 353px;
+  display: flex;
+  flex-direction: column;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card {
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+  }
+}
+.p-post-card__image {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__image {
+    width: 120px;
+    height: 100%;
+  }
+}
+.p-post-card__text {
+  width: 100%;
+  height: 173px;
+  background-color: #FFF;
+  padding: 40px 54px 29px 40px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text {
+    width: calc(100% - 120px);
+    height: 100%;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 599px) {
+  .p-post-card__text {
+    padding: 8px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.p-post-card__text__title {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p-post-card__text__sentence {
+  font-size: 1.3rem;
+  color: #BFAD9C;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-post-card__text__sentence {
+    display: none;
+  }
+}
+.p-post-card__text__date {
+  font-size: 1.4rem;
+  color: #2E2E2E;
+  font-weight: bold;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text__date {
+    display: inline-block;
+    margin-top: 9px;
+  }
+}
+
+.p-article-card {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-article-card {
+    width: 100%;
+  }
+}
+.p-article-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-article-card__title {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  margin-left: 30px;
+  margin-bottom: 23px;
+  color: #fff;
+  font-size: 2rem;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-article-card__title {
+    margin-bottom: 12px;
+  }
+}
+.p-article-card::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(63, 46, 31, 0.6);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-article-card::after {
+    height: 60px;
+  }
+}
+
 .c-button--primary {
   display: inline-block;
   background-color: #fff;

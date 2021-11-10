@@ -21,7 +21,7 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-// @forward "./object/component/c-text"; //エラー吐いてたのでコメントアウトします
+@use './object/component/background';
 @forward "./object/component/button";
 @use './object/component/title';
 @forward "./object/component/text";

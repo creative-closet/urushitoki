@@ -1,6 +1,7 @@
 @use "../../foundation/base.scss";
 @use "../../foundation/variable.scss";
 @use "../../foundation/mixin.scss";
+@use "sass:math";
 
 .p-article-card{
 	width: 400px;
@@ -16,12 +17,12 @@
 	}
 	&__title{
 		position: absolute;
-		bottom: 0;
+		bottom: math.div((70px - 42.5px),2);//余白(背景の高さ70pxから文字の高さ42.5pxを引いた値)の半分
 		z-index: 1;
 		width: 100%;
-		margin-left: 30px;
-		margin-bottom: 23px;
+		text-align: center;
 		color:#fff;
+		@include mixin.font-yumincho;
 		font-size: 2.0rem;
 		@include mixin.breakpoint( breakpoint-sp ){
 			margin-bottom: 12px;

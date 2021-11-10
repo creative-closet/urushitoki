@@ -17,11 +17,11 @@ project
 -------------------------------------------------------- */
 @forward "./object/project/document.scss";
 @forward "./object/project/post-card";
+@forward "./object/project/circle-card";
 
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-// @forward "./object/component/c-text"; //エラー吐いてたのでコメントアウトします
 @forward "./object/component/button";
 @use './object/component/title';
 @forward "./object/component/text";

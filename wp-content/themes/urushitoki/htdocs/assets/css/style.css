@@ -445,6 +445,19 @@ body {
   }
 }
 
+.p-circle-card {
+  width: 345px;
+  height: 353px;
+  display: flex;
+  flex-direction: column;
+}
+.p-circle-card .p-circle-card__text {
+  margin-top: 25px;
+}
+.p-circle-card .p-circle-card__text .c-text {
+  margin-top: 30px;
+}
+
 .c-button--primary {
   display: inline-block;
   background-color: #fff;

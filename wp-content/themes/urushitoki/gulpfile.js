@@ -39,6 +39,7 @@ const destPath = {
 }
 //styleguide用
 const sg_srcPath = {
+  'base' : './src/styleguide',
   'scss' : './src/sass/**/*.scss',
   'js'   : './src/js/**/*.js',
   'watch': './src/**/*'
@@ -58,6 +59,7 @@ const postcss      = require( 'gulp-postcss' );                 //Node.js製、C
 const autoprefixer = require( 'gulp-autoprefixer' );            // ベンダープレフィックス自動付与(条件はpackage.jsonに記載)
 const browserSync  = require( 'browser-sync' );                 // ブラウザシンク
 const minimist     = require( 'minimist' );                     // コマンドラインパーサー
+const rename       = require( 'gulp-rename' );                  // リネーム
 const fractal      = require( '@frctl/fractal' ).create();      // fractal
 
 //---------------------------------------------------------
@@ -193,6 +195,24 @@ const sg_browserSyncOption = {
   notify: false
 }
 
+const devcopy = ( done ) => {
+	return src([
+		srcPath.scss,
+		'!./production/sass/foundation/*.scss',
+		'!./production/sass/style.scss',
+	], {
+		dot: true
+	} )
+	.pipe( rename ( function ( path ) {
+		path.dirname = '/components/' + path.basename.replace( '_', '' );
+		path.basename = 'style';
+	} ) )
+	.pipe( dest( sg_srcPath.base ) );
+	done();
+};
+
+exports.devcopy = devcopy;
+
 //---------------------------------------------------------
 //  watchタスク
 //---------------------------------------------------------
@@ -219,6 +239,6 @@ exports.default = series(
 );
 
 exports.styleguide = series(
-  parallel( sg_jsWatch, styleguide_scssCompile, styleguideTask ),
+  parallel( sg_jsWatch, styleguide_scssCompile, devcopy, styleguideTask ),
   parallel( watchStyleguide, sg_browserSyncFunc )
 );

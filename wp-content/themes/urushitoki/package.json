@@ -23,5 +23,8 @@
   "browserslist": [
     "last 2 version",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "gulp-rename": "^2.0.0"
+  }
 }

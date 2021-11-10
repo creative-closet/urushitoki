@@ -233,6 +233,8 @@
                 
                 <option value="file-d57c334b87efc8af410e4d7c5115383a">monyou02.png</option>
                 
+                <option value="file-813dcaf96bed79a75fa6016836fa7249">style.scss</option>
+                
             </select>
         </div>
 
@@ -341,6 +343,81 @@
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
                     <span class="Meta-value">483.5 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-813dcaf96bed79a75fa6016836fa7249" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code hljs">
+                                <pre><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/base.scss&quot;</span>;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/variable.scss&quot;</span>;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/mixin.scss&quot;</span>;
+
+<span class="hljs-selector-class">.c-pattern</span>{
+	<span class="hljs-attribute">position</span>: relative;
+	<span class="hljs-attribute">width</span>: <span class="hljs-number">980px</span>;
+	<span class="hljs-attribute">height</span>: <span class="hljs-number">380px</span>;
+	<span class="hljs-attribute">margin-top</span>: <span class="hljs-number">30px</span>;
+	<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+		<span class="hljs-attribute">height</span>: <span class="hljs-number">310px</span>;
+	}
+	<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
+		<span class="hljs-attribute">height</span>: <span class="hljs-number">180px</span>;
+	}
+	&amp;__image{
+		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+		<span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+		<span class="hljs-selector-tag">object</span>-fit: cover;
+	}
+	&amp;__layer{
+		<span class="hljs-attribute">position</span>: absolute;
+		<span class="hljs-selector-tag">object</span>-fit: cover;
+		<span class="hljs-attribute">top</span>: <span class="hljs-number">0px</span>;
+		<span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+		<span class="hljs-attribute">width</span>: <span class="hljs-number">621px</span>;
+		<span class="hljs-attribute">height</span>: <span class="hljs-number">488px</span>;
+		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+			<span class="hljs-attribute">top</span>:<span class="hljs-number">140px</span>;
+			<span class="hljs-attribute">width</span>: <span class="hljs-number">437px</span>;
+			<span class="hljs-attribute">height</span>: <span class="hljs-number">350px</span>;
+		}
+		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
+			<span class="hljs-attribute">display</span>: none;
+		}
+		&amp;--<span class="hljs-attribute">left</span>{
+			<span class="hljs-keyword">@extend</span> .c-pattern__layer;
+			<span class="hljs-attribute">left</span>: -<span class="hljs-number">300px</span>;
+		}
+		&amp;--<span class="hljs-attribute">right</span>{
+			<span class="hljs-keyword">@extend</span> .c-pattern__layer;
+			<span class="hljs-attribute">right</span>: -<span class="hljs-number">300px</span>;
+		}
+	}
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/pattern/style.scss"><span>/components/raw/pattern/style.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/styleguide/components/pattern/style.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">818 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -471,8 +548,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./bullets.html" data-role="tree-link" data-pjax data-handle="bullets">
-                <span>Bullets</span>
+            <a class="Tree-entityLink" href="./bullet.html" data-role="tree-link" data-pjax data-handle="bullet">
+                <span>Bullet</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1477,8 +1554,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-11-05T12:35:32.270Z">
-                                11/5/2021
+                            <time datetime="2021-11-10T15:51:20.215Z">
+                                11/11/2021
                             </time>
                         
                     </dd>

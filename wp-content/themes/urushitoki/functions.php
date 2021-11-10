@@ -158,7 +158,7 @@
 			$img = wp_get_attachment_image_src($id,'large');//画像サイズはlargeかfullどちらか。
 
 		else:
-			$img = array(get_template_directory_uri(). '/assets/img/post-bg.jpg');//ファイルパスは仮
+			$img = array(get_template_directory_uri(). '/assets/image/no-image.png');//ファイルパスは仮
 		endif;
 
 		return $img;

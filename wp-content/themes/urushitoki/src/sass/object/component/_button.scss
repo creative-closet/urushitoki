@@ -1,6 +1,10 @@
-@use "../../foundation/base.scss";
-@use "../../foundation/variable.scss";
-@use "../../foundation/mixin.scss";
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.documentClass {
+	color: blue;
+}
 
 .c-button--primary {
 	display: inline-block;
@@ -170,6 +174,7 @@
 		color: #fff;
 	}
 }
+
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
 .c-open--button {
 	/*ボタン内側の基点となるためrelativeを指定。

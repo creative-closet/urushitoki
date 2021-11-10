@@ -44,6 +44,10 @@ const sg_srcPath = {
   'js'   : './src/js/**/*.js',
   'watch': './src/**/*'
 }
+const src_destPath = {
+	'scss': './src/sass/',
+	'js'  : './src/js/',
+}
 const sg_destPath = {
   'css'  : './htdocs/assets/css/',
   'js'   : './htdocs/assets/js/'
@@ -60,6 +64,7 @@ const autoprefixer = require( 'gulp-autoprefixer' );            // ベンダー�
 const browserSync  = require( 'browser-sync' );                 // ブラウザシンク
 const minimist     = require( 'minimist' );                     // コマンドラインパーサー
 const rename       = require( 'gulp-rename' );                  // リネーム
+const del          = require( 'del' );                          //ディレクトリ削除
 const fractal      = require( '@frctl/fractal' ).create();      // fractal
 
 //---------------------------------------------------------
@@ -195,6 +200,28 @@ const sg_browserSyncOption = {
   notify: false
 }
 
+
+const clean = ( done ) => {
+	return del( [src_destPath.scss] );
+	done();
+}
+
+const srccopySass = ( done ) => {
+	return src([ srcPath.scss], {
+		dot: true
+	} )
+	.pipe( dest( src_destPath.scss ) );
+	done();
+};
+
+const srccopyJs = ( done ) => {
+	return src([ srcPath.js], {
+		dot: true
+	} )
+	.pipe( dest( src_destPath.js ) );
+	done();
+};
+
 const devcopy = ( done ) => {
 	return src([
 		srcPath.scss,
@@ -211,7 +238,7 @@ const devcopy = ( done ) => {
 	done();
 };
 
-exports.devcopy = devcopy;
+exports.devcopy = series( clean, srccopySass, srccopyJs, devcopy );
 
 //---------------------------------------------------------
 //  watchタスク
@@ -239,6 +266,6 @@ exports.default = series(
 );
 
 exports.styleguide = series(
-  parallel( sg_jsWatch, styleguide_scssCompile, devcopy, styleguideTask ),
+  parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopy, styleguideTask ),
   parallel( watchStyleguide, sg_browserSyncFunc )
 );

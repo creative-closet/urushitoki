@@ -25,6 +25,8 @@
     "not dead"
   ],
   "dependencies": {
+    "del": "^6.0.0",
+    "dell": "0.0.0",
     "gulp-rename": "^2.0.0"
   }
 }

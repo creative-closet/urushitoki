@@ -20,6 +20,9 @@
 /*
  * 文字サイズ
  */
+/*
+ *	postCard
+ */
 html {
   background-color: #F0E7DB;
   font-size: 62.5%;
@@ -34,6 +37,123 @@ body {
 
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
+.p-post-card {
+  width: 305px;
+  height: 353px;
+  display: flex;
+  flex-direction: column;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card {
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+  }
+}
+.p-post-card__image {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__image {
+    width: 120px;
+    height: 100%;
+  }
+}
+.p-post-card__text {
+  width: 100%;
+  height: 173px;
+  background-color: #FFF;
+  padding: 40px 54px 29px 40px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text {
+    width: calc(100% - 120px);
+    height: 100%;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 599px) {
+  .p-post-card__text {
+    padding: 8px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.p-post-card__text__title {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p-post-card__text__sentence {
+  font-size: 1.3rem;
+  color: #BFAD9C;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-post-card__text__sentence {
+    display: none;
+  }
+}
+.p-post-card__text__date {
+  font-size: 1.4rem;
+  color: #2E2E2E;
+  font-weight: bold;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text__date {
+    display: inline-block;
+    margin-top: 9px;
+  }
+}
+
+.c-background--dot {
+  background: url("../production/images/background-dot.png") repeat;
+  background-attachment: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-background--wave {
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #F0E7DB;
+}
+.c-background--wave .shape-fill {
+  fill: #E0D7CA;
+  opacity: 0.633;
+}
+
 .documentClass {
   color: blue;
 }
@@ -451,6 +571,7 @@ body {
 }
 
 .c-title-small {
+  position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
   font-size: 2rem;
@@ -466,6 +587,7 @@ body {
 }
 
 .c-title-small--center {
+  position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
   font-size: 2rem;
@@ -483,6 +605,7 @@ body {
 }
 
 .c-title-noborder {
+  position: relative;
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;

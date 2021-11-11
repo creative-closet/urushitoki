@@ -17,30 +17,22 @@
 	}
 	&__title{
 		position: absolute;
-		bottom: math.div((70px - 42.5px),2);//余白(背景の高さ70pxから文字の高さ42.5pxを引いた値)の半分
 		z-index: 1;
+		bottom: 0;
+		height: 70px;
 		width: 100%;
-		text-align: center;
+		line-height: 70px;
+		padding-left: 28px;
 		color:#fff;
+	 	background-color:rgba($color: #3F2E1F, $alpha: .6);
 		@include mixin.font-yumincho;
 		font-size: 2.0rem;
-		@include mixin.breakpoint( breakpoint-sp ){
-			margin-bottom: 12px;
+		@include mixin.breakpoint( breakpoint-tab ){
+			padding-left: 30px;
 		}
-
-	}
-	&::after{
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		content: "";
-		display: block;
-		width: 100%;
-		height: 70px;
-		background-color:rgba($color: #3F2E1F, $alpha: .6);
 		@include mixin.breakpoint( breakpoint-sp ){
 			height: 60px;
+			line-height: 60px;
 		}
 	}
-
 }

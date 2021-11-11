@@ -200,6 +200,9 @@ const sg_browserSyncOption = {
   notify: false
 }
 
+//---------------------------------------------------------
+//  dev copy
+//---------------------------------------------------------
 
 const clean = ( done ) => {
 	return del( [src_destPath.scss] );
@@ -237,7 +240,6 @@ const devcopy = ( done ) => {
 	.pipe( dest( sg_srcPath.base ) );
 	done();
 };
-
 exports.devcopy = series( clean, srccopySass, srccopyJs, devcopy );
 
 //---------------------------------------------------------

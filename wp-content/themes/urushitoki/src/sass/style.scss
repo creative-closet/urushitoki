@@ -1,13 +1,11 @@
-@charset 'utf-8';
+@charset "utf-8";
+
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
-@forward "./foundation/ress.css";
 @forward "./foundation/base";
 @forward "./foundation/variable";
 @forward "./foundation/mixin";
-/* --------------------------------------------------------
-
 /* --------------------------------------------------------
 layout
 -------------------------------------------------------- */
@@ -15,17 +13,18 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
-@forward "./object/project/document.scss";
+@forward "./object/project/document";
 @forward "./object/project/post-card";
-@forward "./object/project/article-card";
+@forward './object/project/article-card';
 
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-@use './object/component/background';
-@forward "./object/component/button";
-@use './object/component/title';
-@forward "./object/component/text";
-@use './object/component/bullet';
-@forward "./object/component/definition";
+@forward './object/component/background';
+@forward './object/component/button';
+@forward './object/component/bullet';
+@forward './object/component/definition';
+@forward './object/component/text';
+@forward './object/component/title';
 @forward './object/component/pattern';
+

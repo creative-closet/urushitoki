@@ -13,13 +13,15 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
-@forward "./object/project/document.scss";
+@forward "./object/project/document";
 @forward "./object/project/post-card";
+@forward './object/project/article-card';
+
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
 @forward './object/component/background';
-@forward 'object/component/button.scss';
+@forward './object/component/button';
 @forward './object/component/bullet';
 @forward './object/component/definition';
 @forward './object/component/text';

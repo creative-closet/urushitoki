@@ -88,9 +88,12 @@ registerBlockType( 'create-block/background-text', {
 				mediaAlt: ''
 			});
 		}
+		const blockProps = useBlockProps( {
+			className: 'p-contents-card',
+		} );
 		return (
-			<div { ...useBlockProps() }>
-				<dl className="p-contents-card">
+			<figure { ...blockProps }>
+				<dl>
 					<TextControl
 						placeholder="タイトル"
 						value={ title }
@@ -119,7 +122,7 @@ registerBlockType( 'create-block/background-text', {
 						</MediaUploadCheck>
 					}
 				</dl>
-			</div>
+			</figure>
 		);
 	},
 
@@ -142,8 +145,11 @@ registerBlockType( 'create-block/background-text', {
 				/>
 			);
 		};
+		const blockProps = useBlockProps.save( {
+			className: 'p-contents-card',
+		} );
 		return (
-				<figure className="p-contents-card">
+				<figure {...blockProps}>
 					<dl>
 						<dt className="c-title-small--center">{ attributes.title }</dt>
 						<dd className="c-text--white">{ attributes.description }</dd>

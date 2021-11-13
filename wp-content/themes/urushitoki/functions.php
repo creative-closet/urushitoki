@@ -46,7 +46,7 @@
 		array(
 			'name'         => 'background-02',
 			'label'        => '茶（薄）',
-			'inline_style' => '.wp-block-create-block-background-text.is-style-background-01 {
+			'inline_style' => '.wp-block-create-block-background-text.is-style-background-02 {
 					background-color: rgba(33,12,2,0.9);
 			}',
 		)

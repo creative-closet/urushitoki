@@ -217,15 +217,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-36ef960e553cce5348b4b3f836d8a767">4ぐい吞み.jpg</option>
+                <option value="file-dc08656ecad91ee6152cd44082dcb3c0">4ぐい吞み.jpg</option>
                 
-                <option value="file-3907745aa9440747c2643eddda2d1909">style.scss</option>
+                <option value="file-6e2c4ffd3c48a1c5effa2dacda3f8567">style.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-36ef960e553cce5348b4b3f836d8a767" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-dc08656ecad91ee6152cd44082dcb3c0" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -243,7 +243,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src\styleguide\projects\article-card\4ぐい吞み.jpg</span>
+                    <span class="Meta-value">src/styleguide/projects/article-card/4ぐい吞み.jpg</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -252,7 +252,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-3907745aa9440747c2643eddda2d1909" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-6e2c4ffd3c48a1c5effa2dacda3f8567" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -263,6 +263,7 @@
                                 <pre><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/base.scss&quot;</span>;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/variable.scss&quot;</span>;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/mixin.scss&quot;</span>;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;sass:math&quot;</span>;
 
 <span class="hljs-selector-class">.p-article-card</span>{
 	<span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;
@@ -278,32 +279,24 @@
 	}
 	&amp;__title{
 		<span class="hljs-attribute">position</span>: absolute;
-		<span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
 		<span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
-		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-		<span class="hljs-attribute">margin-left</span>: <span class="hljs-number">30px</span>;
-		<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">23px</span>;
-		<span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>;
-		<span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.0rem</span>;
-		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
-			<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">12px</span>;
-		}
-
-	}
-	&amp;<span class="hljs-selector-pseudo">::after</span>{
-		<span class="hljs-attribute">position</span>: absolute;
-		<span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 		<span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
-		<span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
-		<span class="hljs-attribute">display</span>: block;
-		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 		<span class="hljs-attribute">height</span>: <span class="hljs-number">70px</span>;
-		<span class="hljs-attribute">background-color</span>:rgba(<span class="hljs-variable">$color</span>: <span class="hljs-number">#3F2E1F</span>, <span class="hljs-variable">$alpha</span>: .<span class="hljs-number">6</span>);
+		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+		<span class="hljs-attribute">line-height</span>: <span class="hljs-number">70px</span>;
+		<span class="hljs-attribute">padding-left</span>: <span class="hljs-number">28px</span>;
+		<span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>;
+	 	<span class="hljs-attribute">background-color</span>:rgba(<span class="hljs-variable">$color</span>: <span class="hljs-number">#3F2E1F</span>, <span class="hljs-variable">$alpha</span>: .<span class="hljs-number">6</span>);
+		<span class="hljs-keyword">@include</span> mixin.font-yumincho;
+		<span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.0rem</span>;
+		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+			<span class="hljs-attribute">padding-left</span>: <span class="hljs-number">30px</span>;
+		}
 		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
 			<span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
+			<span class="hljs-attribute">line-height</span>: <span class="hljs-number">60px</span>;
 		}
 	}
-
 }
 </pre>
                             </code>
@@ -317,11 +310,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src\styleguide\projects\article-card\style.scss</span>
+                    <span class="Meta-value">src/styleguide/projects/article-card/style.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">799 Bytes</span>
+                    <span class="Meta-value">761 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -358,7 +351,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src\styleguide\projects\article-card\article-card.hbs</span>
+            <span class="Meta-value">src/styleguide/projects/article-card/article-card.hbs</span>
         </li>
         
         
@@ -450,31 +443,29 @@
     
         
         
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-bullets">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-bullets-items">
-                    Bullets
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-bullets-items">
-                
-                
-                
-                
-    
         
         
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-bullet_typea">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-bullet_typea-items">
-                    Bullet Typea
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-bullet_typea-items">
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./backgrounds.html" data-role="tree-link" data-pjax data-handle="backgrounds">
+                <span>Backgrounds</span>
                 
-                
-                
-                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
@@ -502,53 +493,13 @@
         </li>
         
     
-
-                </ul>
-            </li>
-            
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-buttons">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-buttons-items">
-                    Buttons
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-buttons-items">
-                
-                
-                
-                
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_-top">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_-top-items">
-                    Btn Type Top
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_-top-items">
-                
-                
-                
-                
-    
         
         
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_top.html" data-role="tree-link" data-pjax data-handle="btn–type_top">
-                <span>Btn Type Top</span>
+            <a class="Tree-entityLink" href="./buttons.html" data-role="tree-link" data-pjax data-handle="buttons">
+                <span>Buttons</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -568,33 +519,13 @@
         </li>
         
     
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_after">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_after-items">
-                    Btn Type After
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_after-items">
-                
-                
-                
-                
-    
         
         
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_after.html" data-role="tree-link" data-pjax data-handle="btn–type_after">
-                <span>Btn Type After</span>
+            <a class="Tree-entityLink" href="./definiton.html" data-role="tree-link" data-pjax data-handle="definiton">
+                <span>Definiton</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -612,478 +543,6 @@
 
             </a>
         </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_before">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_before-items">
-                    Btn Type Before
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_before-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_before.html" data-role="tree-link" data-pjax data-handle="btn–type_before">
-                <span>Btn Type Before</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_cross">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_cross-items">
-                    Btn Type Cross
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_cross-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_cross.html" data-role="tree-link" data-pjax data-handle="btn–type_cross">
-                <span>Btn Type Cross</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_inquiry">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_inquiry-items">
-                    Btn Type Inquiry
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_inquiry-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_inquiry.html" data-role="tree-link" data-pjax data-handle="btn–type_inquiry">
-                <span>Btn Type Inquiry</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_inquiry2">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_inquiry2-items">
-                    Btn Type Inquiry 2
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_inquiry2-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_inquiry2.html" data-role="tree-link" data-pjax data-handle="btn–type_inquiry2">
-                <span>Btn Type Inquiry 2</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_insta">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_insta-items">
-                    Btn Type Insta
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_insta-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_insta.html" data-role="tree-link" data-pjax data-handle="btn–type_insta">
-                <span>Btn Type Insta</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_mail">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_mail-items">
-                    Btn Type Mail
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_mail-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_mail.html" data-role="tree-link" data-pjax data-handle="btn–type_mail">
-                <span>Btn Type Mail</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_primary">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_primary-items">
-                    Btn Type Primary
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_primary-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_primary.html" data-role="tree-link" data-pjax data-handle="btn–type_primary">
-                <span>Btn Type Primary</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_tab">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_tab-items">
-                    Btn Type Tab
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_tab-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_tab.html" data-role="tree-link" data-pjax data-handle="btn–type_tab">
-                <span>Btn Type Tab</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-btn-type_youtube">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-btn-type_youtube-items">
-                    Btn Type Youtube
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-btn-type_youtube-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./btn–type_youtube.html" data-role="tree-link" data-pjax data-handle="btn–type_youtube">
-                <span>Btn Type Youtube</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-definiton">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-definiton-items">
-                    Definiton
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-definiton-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./definiton_term.html" data-role="tree-link" data-pjax data-handle="definiton_term">
-                <span>Definiton Term</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
         
     
         
@@ -1114,25 +573,11 @@
     
         
         
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-texts">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-texts-items">
-                    Texts
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-texts-items">
-                
-                
-                
-                
-    
-        
-        
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./text.html" data-role="tree-link" data-pjax data-handle="text">
-                <span>Text</span>
+            <a class="Tree-entityLink" href="./texts.html" data-role="tree-link" data-pjax data-handle="texts">
+                <span>Texts</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1157,8 +602,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./text-large.html" data-role="tree-link" data-pjax data-handle="text-large">
-                <span>Text Large</span>
+            <a class="Tree-entityLink" href="./titles.html" data-role="tree-link" data-pjax data-handle="titles">
+                <span>Titles</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1176,214 +621,6 @@
 
             </a>
         </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./text-white.html" data-role="tree-link" data-pjax data-handle="text-white">
-                <span>Text White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
-        
-    
-        
-        
-            
-            
-            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-titles">
-                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-titles-items">
-                    Titles
-                </button>
-                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-titles-items">
-                
-                
-                
-                
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./title.html" data-role="tree-link" data-pjax data-handle="title">
-                <span>Title</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./title-header.html" data-role="tree-link" data-pjax data-handle="title-header">
-                <span>Title Header</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./title-large.html" data-role="tree-link" data-pjax data-handle="title-large">
-                <span>Title Large</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./title-noborder.html" data-role="tree-link" data-pjax data-handle="title-noborder">
-                <span>Title Noborder</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./title-small.html" data-role="tree-link" data-pjax data-handle="title-small">
-                <span>Title Small</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="./title-small-center.html" data-role="tree-link" data-pjax data-handle="title-small-center">
-                <span>Title Small Center</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-                </ul>
-            </li>
-            
         
     
 
@@ -1525,8 +762,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-11-07T12:19:18.193Z">
-                                11/7/2021
+                            <time datetime="2021-11-11T17:17:33.972Z">
+                                11/12/2021
                             </time>
                         
                     </dd>
@@ -1551,38 +788,6 @@
                 Back
             </button>
         </div>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
         

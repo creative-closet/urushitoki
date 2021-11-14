@@ -1,9 +1,9 @@
 @use "../../foundation/base";
 @use "../../foundation/variable";
-@use "../../foundation/mixin.scss";
+@use "../../foundation/mixin";
 
 .c-background--dot{
-    background: url("../components/raw/backgrounds/background-dot.png") repeat;
+    background: url("../production/images/background-dot.png") repeat;
     background-attachment: fixed;
     top: 0;
     right: 0;
@@ -22,7 +22,7 @@
     line-height: 0;
     background-color: variable.$background-color--main;
 
-    .shape-fill{   
+    .shape-fill{
         fill: variable.$background-color--sub; // 曲線上の色指定
         opacity: 0.633;
     }

@@ -26,7 +26,7 @@ component
 component
 -------------------------------------------------------- */
 @forward './object/component/background';
-@forward 'object/component/button.scss';
+@forward './object/component/button';
 @forward './object/component/bullet';
 @forward './object/component/definition';
 @forward './object/component/text';

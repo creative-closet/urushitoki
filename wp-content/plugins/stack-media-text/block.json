@@ -3,10 +3,10 @@
 	"apiVersion": 2,
 	"name": "create-block/stack-media-text",
 	"version": "0.1.0",
-	"title": "Stack Media Text",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"title": "重ね合わせ(画像/説明)",
+	"category": "media",
+	"icon": "admin-page",
+	"description": "画像と背景付き説明が重なったスタイルを表示します。",
 	"supports": {
 		"html": false
 	},

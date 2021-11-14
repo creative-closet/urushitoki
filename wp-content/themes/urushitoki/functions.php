@@ -31,6 +31,28 @@
     add_action('wp_enqueue_scripts','mysite_script');
 
     //*****************************************************************
+	//  カスタムブロック ブロックスタイル追加
+	//*****************************************************************
+	register_block_style(
+		'create-block/background-text',
+		array(
+			'name'         => 'background-01',
+			'label'        => '茶（濃）',
+			'is_default'   => true,
+		)
+	);
+	register_block_style(
+		'create-block/background-text',
+		array(
+			'name'         => 'background-02',
+			'label'        => '茶（薄）',
+			'inline_style' => '.wp-block-create-block-background-text.is-style-background-02 {
+					background-color: rgba(33,12,2,0.9);
+			}',
+		)
+	);
+
+    //*****************************************************************
 	//  カスタム投稿
 	//*****************************************************************
 	function codex_craft_init() {
@@ -158,7 +180,7 @@
 			$img = wp_get_attachment_image_src($id,'large');//画像サイズはlargeかfullどちらか。
 
 		else:
-			$img = array(get_template_directory_uri(). '/assets/img/post-bg.jpg');//ファイルパスは仮
+			$img = array(get_template_directory_uri(). '/assets/image/no-image.png');//ファイルパスは仮
 		endif;
 
 		return $img;

@@ -457,6 +457,86 @@ body {
 }
 .p-circle-card .p-circle-card__text .c-text {
   margin-top: 30px;
+.p-article-card {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-article-card {
+    width: 100%;
+  }
+}
+.p-article-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-article-card__title {
+  position: absolute;
+  bottom: 13.75px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-article-card__title {
+    margin-bottom: 12px;
+  }
+}
+.p-article-card::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(63, 46, 31, 0.6);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-article-card::after {
+    height: 60px;
+  }
+}
+
+.c-background--dot {
+  background: url("../components/raw/backgrounds/background-dot.png") repeat;
+  background-attachment: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-background--wave {
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #F0E7DB;
+}
+.c-background--wave .shape-fill {
+  fill: #E0D7CA;
+  opacity: 0.633;
 }
 
 .c-button--primary {
@@ -810,6 +890,7 @@ body {
 }
 
 .c-title-small {
+  position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
   font-size: 2rem;
@@ -825,6 +906,7 @@ body {
 }
 
 .c-title-small--center {
+  position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
   font-size: 2rem;
@@ -842,6 +924,7 @@ body {
 }
 
 .c-title-noborder {
+  position: relative;
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;

@@ -2,8 +2,10 @@
 <h1 class="c-title">Information</h1>
 <!-- サブクエリインスタンス -->
 <?php
-if (is_front_page( )){$pager = '4';
-}else{$pager = '16';
+if (is_front_page()){
+	$pager = '4';
+}else{
+	$pager = '16';
 }
 $paged =  (get_query_var( 'paged' )) ? absint( get_query_var( 'paged' ) ) : 1;//absint 負の数にならないように絶対値を表示 get_query_var:クエリ変数を取得 pagedは現在のページ送り番号
 $args_query = array(
@@ -24,21 +26,18 @@ if($information_query -> have_posts()):
 		$img_in_query = get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 		$link_in_query = get_permalink( );
 		$time_in_query = get_the_time( 'Y年n月j日' );
-if (has_excerpt(  )){
-	$excerpt = get_the_excerpt(  );
-}
 ?>
 
 <figure class="p-post-card">
 	<a href="<?php echo esc_url($link_in_query);?>">
-		<img class="p-post-card__image" src="<?php echo $img_in_query[0]; ?>" alt="作品の画像です">
+		<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">
 		<figcaption class="p-post-card__text">
 			<h2 class="p-post-card__text__title"><?php the_title(); ?></h2>
 			<p class="p-post-card__text__sentence">
 				<?php
-				if (has_excerpt(  )){
-					$excerpt = get_the_excerpt(  );
-					echo $excerpt;
+				if (has_excerpt()){
+					$excerpt = get_the_excerpt();
+					echo esc_html($excerpt);
 				}
 				?>
 			</p>

@@ -2,8 +2,10 @@
 	<h1 class="c-title">Article</h1>
 	<!-- サブクエリインスタンス -->
 	<?php
-	if (is_front_page( )){$pager = '4';
-	}else{$pager = '16';
+	if (is_front_page()){
+		$pager = '4';
+	}else{
+		$pager = '16';
 	}
 	$paged =  (get_query_var( 'paged' )) ? absint( get_query_var( 'paged' ) ) : 1;//absint 負の数にならないように絶対値を表示 get_query_var:クエリ変数を取得 pagedは現在のページ送り番号
 	$args_query = array(
@@ -26,7 +28,7 @@
 	?>
 		<figure class="p-article-card">
 			<a href="<?php echo esc_url($link_in_query);?>">
-				<img class="p-article-card__image" src="<?php echo $img_in_query[0]; ?>" alt="投稿の画像です">
+				<img class="p-article-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="投稿の画像です">
 				<figcaption class="p-article-card__title"><?php the_title(); ?></figcaption>
 			</a>
 		</figure>

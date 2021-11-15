@@ -5,6 +5,7 @@
 .p-contents-card{
 	background-color: variable.$background-color--content-card;
 	overflow:hidden;
+	height: 100%;
 	&__title{
 		max-width: 640px;
 		margin: 100px 160px 63px;
@@ -27,13 +28,15 @@
 		@include mixin.breakpoint( breakpoint-tab ){
 			display: block;
 		}
-		.p-contents-card:nth-of-type(2){
-			background-color: rgba($color: variable.$background-color--content-card, $alpha: .9);
-			transform: translateY(120px);
-			@include mixin.breakpoint( breakpoint-tab ){
-				transform: translateY(0px);
+		.p-contents-card{
+			width: 50%;
+			&:nth-of-type(2){
+				background-color: rgba($color: variable.$background-color--content-card, $alpha: .9);
+				transform: translateY(120px);
+				@include mixin.breakpoint( breakpoint-tab ){
+					transform: translateY(0px);
+				}
 			}
-
 		}
 	}
 }

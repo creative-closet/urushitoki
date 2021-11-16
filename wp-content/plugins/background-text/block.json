@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/background-text",
+	"version": "0.1.0",
+	"title": "背景付きテキスト/画像",
+	"category": "media",
+	"icon": "excerpt-view",
+	"description": "テキストと画像を背景色付きで表示します。",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "background-text",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

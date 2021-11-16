@@ -104,7 +104,9 @@
 	<?php } elseif (is_single()) { ?>
 	<!-- 投稿 詳細ページ -->
 	<h1>is_single() Test</h1>
+
 	<?php get_template_part('/includes/archive-post'); ?>
+	<?php the_content(); ?>
 
 
 

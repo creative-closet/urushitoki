@@ -28,7 +28,6 @@
 	?>
 	<a href="<?php echo esc_url($link_in_query);?>">
 		<figure class="p-post-card">
-			<?php var_dump($img_in_query[0]) ?>
 			<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">
 			<figcaption class="p-post-card__text">
 				<h2 class="p-post-card__text__title"><?php the_title(); ?></h2>

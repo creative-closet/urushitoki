@@ -18,8 +18,8 @@ $args_query = array(
 $information_query = new WP_Query($args_query);
 
 //サブクエリループ
-if($information_query -> have_posts()):
-	while($information_query -> have_posts()):
+if($information_query -> have_posts())://(投稿データ有無確認 -start-)
+	while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
 	//記事の各種データを取得
 		$id_in_query = get_post_thumbnail_id();
@@ -46,7 +46,7 @@ if($information_query -> have_posts()):
 	</a>
 </figure>
 <?php
-	endwhile;
+	endwhile;//(投稿データ出力ループ -end-)
 	if (is_archive()){
 		$big = 999999999; // need an unlikely integer
 		echo paginate_links( array(
@@ -59,6 +59,6 @@ if($information_query -> have_posts()):
 			'next_text' => '＞',//次のページへの文字
 		) );
 	}
-endif;
+endif;//(投稿データ有無確認 -end-)
 wp_reset_postdata();
 ?>

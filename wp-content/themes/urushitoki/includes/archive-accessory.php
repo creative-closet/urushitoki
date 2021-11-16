@@ -18,8 +18,8 @@
 	$accessory_query = new WP_Query($args_query);
 
 	//サブクエリループ
-	if($accessory_query -> have_posts()):
-		while($accessory_query -> have_posts()):
+	if($accessory_query -> have_posts())://(投稿データ有無確認 -start-)
+		while($accessory_query -> have_posts())://(投稿データ出力ループ -start-)
 			$accessory_query -> the_post();
 		//記事の各種データを取得
 			$id_in_query = get_post_thumbnail_id();
@@ -43,7 +43,7 @@
 		</figure>
 	</a>
 	<?php
-		endwhile;
+		endwhile;//(投稿データ出力ループ -end-)
 		if (is_page('accessory-archive')){
 			$big = 999999999; // need an unlikely integer
 			echo paginate_links( array(
@@ -56,7 +56,7 @@
 				'next_text' => '＞',//次のページへの文字
 			) );
 		}
-	endif;
+	endif;//(投稿データ有無確認 -end-)
 	wp_reset_postdata();
 	?>
 	<!-- サブクエリここまで -->

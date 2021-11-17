@@ -67,6 +67,9 @@ const rename       = require( 'gulp-rename' );                  // リネーム
 const del          = require( 'del' );                          //ディレクトリ削除
 const fractal      = require( '@frctl/fractal' ).create();      // fractal
 
+const replace = require('gulp-replace');
+
+
 //---------------------------------------------------------
 //  fractal設定
 //---------------------------------------------------------
@@ -213,6 +216,7 @@ const srccopySass = ( done ) => {
 	return src([ srcPath.scss], {
 		dot: true
 	} )
+  .pipe( replace('/production/images', '/components/raw/background') ) //文字列の置換
 	.pipe( dest( src_destPath.scss ) );
 	done();
 };
@@ -233,6 +237,7 @@ const devcopy = ( done ) => {
 	], {
 		dot: true
 	} )
+  .pipe( replace('/production/images', '/components/raw/background') ) //文字列の置換
 	.pipe( rename ( function ( path ) {
 		path.dirname = '/components/' + path.basename.replace( '_', '' );
 		path.basename = 'style';
@@ -241,6 +246,22 @@ const devcopy = ( done ) => {
 	done();
 };
 exports.devcopy = series( clean, srccopySass, srccopyJs, devcopy );
+
+
+
+//文字列の置換（削除）
+// gulp.task('replace', function(){ //「replace」のタスク内容を書こう
+//   gulp.src( ['style.scss'] ) //「style.css」ファイルを指定
+//   .pipe( replace('../production/images', '../components/raw/backgrounds') ) //正規表現で「@charset "UTF-8";」という文字列を空文字に置換（つまり削除している）
+//   .pipe( gulp.dest( 'background/style.scss' ) ); //「build」配下に「style.css」ファイルを作成
+//  });
+
+
+
+
+
+
+
 
 //---------------------------------------------------------
 //  watchタスク

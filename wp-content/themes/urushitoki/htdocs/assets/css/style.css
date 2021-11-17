@@ -466,7 +466,7 @@ body {
 }
 
 .c-background--dot {
-  background: url("../production/images/background-dot.png") repeat;
+  background: url("../components/raw/background/background-dot.png") repeat;
   background-attachment: fixed;
   top: 0;
   right: 0;

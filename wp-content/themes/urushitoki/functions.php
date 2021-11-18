@@ -13,6 +13,7 @@
 		codex_craft_init();
 		codex_information_init();
 		codex_accessory_init();
+		codex_shop_init();
 
 	});
 

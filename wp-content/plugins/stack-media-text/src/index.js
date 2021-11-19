@@ -13,17 +13,17 @@ import { Button } from '@wordpress/components';
 import './style.scss';
 import './editor.scss';
 
-registerBlockType( 'create-block/background-text', {
+registerBlockType( 'create-block/stack-media-text', {
 	attributes: {
 		title: {
 			type    : 'string',
 			source  : 'text',
-			selector: 'dt.c-title-small--center',
+			selector: 'h3.c-title-large',
 		},
 		description: {
 			type    : 'string',
 			source  : 'text',
-			selector: 'dd.c-text--white',
+			selector: 'p.c-text--white',
 		},
 		mediaID: {
             type: 'number',
@@ -89,20 +89,14 @@ registerBlockType( 'create-block/background-text', {
 			});
 		}
 		const blockProps = useBlockProps( {
-			className: 'p-contents-card',
+			className: 'p-classname',
 		} );
 		return (
-			<figure { ...blockProps }>
-				<dl>
+			<div { ...blockProps }>
 					<TextControl
 						placeholder="タイトル"
 						value={ title }
 						onChange={( value ) => setAttributes( { title: value } )}
-					/>
-					<TextareaControl
-						placeholder="説明"
-						value={ description }
-						onChange={ ( value ) => setAttributes({ description: value })}
 					/>
 					<MediaUploadCheck>
 						<MediaUpload
@@ -121,8 +115,14 @@ registerBlockType( 'create-block/background-text', {
 							</Button>
 						</MediaUploadCheck>
 					}
-				</dl>
-			</figure>
+					<div className="text-background">
+						<TextareaControl
+							placeholder="説明"
+							value={ description }
+							onChange={ ( value ) => setAttributes({ description: value })}
+						/>
+					</div>
+			</div>
 		);
 	},
 
@@ -146,16 +146,14 @@ registerBlockType( 'create-block/background-text', {
 			);
 		};
 		const blockProps = useBlockProps.save( {
-			className: 'p-contents-card',
+			className: 'p-classname',
 		} );
 		return (
-				<figure {...blockProps}>
-					<dl>
-						<dt className="c-title-small--center">{ attributes.title }</dt>
-						<dd className="c-text--white">{ attributes.description }</dd>
-					</dl>
+				<div {...blockProps}>
+					<h3 className="c-title-large">{ attributes.title }</h3>
 					{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
-				</figure>
+					<p className="c-text--white">{ attributes.description }</p>
+				</div>
 		);
 	},
 } );

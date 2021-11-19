@@ -2,14 +2,9 @@
 <body>
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
-	<header>
-	</header>
-	<article class="documentClass">
-    	<h1>Css Test</h1>
-	</article>
-	<article id="sampleId">
-			<h1>Js Test2</h1>
-	</article>
+
+	<!-- 記述内容の表示 -->
+	<?php get_template_part('/includes/have-post-loop');?>
 
 	<!-- うるしときの職人表示 -->
 	<h2 class="c-title-large">うるしときの職人</h2>

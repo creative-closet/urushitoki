@@ -11,18 +11,4 @@
 		height: 250px;
 		object-fit: cover;
 	}
-	&__text{
-		&__wrapper{
-			margin:0px 20px;
-		}
-		&__term{
-			font-size: variable.$font-size--product-card-term;
-			color:variable.$font-color--product-card-term;
-		}
-		&__description{
-			font-size: variable.$font-size--product-card-description;
-			color:variable.$font-color--product-card-description;
-			line-height: 1.6;
-		}
-	}
 }

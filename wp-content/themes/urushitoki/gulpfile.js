@@ -232,6 +232,19 @@ const srccopyJs = ( done ) => {
 	done();
 };
 
+// 削除
+const cleanSg = ( done ) => {
+	return del( [
+    sg_srcPath.base,  // ./src/styleguide を削除
+    '!./src/styleguide/docs/',
+    '!./src/styleguide/_preview.hbs',
+    '!./src/styleguide/**/**/*.jpg',
+    '!./src/styleguide/**/**/readme.md',
+    '!./src/styleguide/**/**/*.hbs'
+  ] );
+	done();
+}
+
 // ComponentはComponentsへコピー
 const devcopyComponent = ( done ) => {
 	return src([

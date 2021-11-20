@@ -48,5 +48,8 @@
 			$menu_name = 'menu-main_nav';
 			get_template_part('includes/nav-menu', null , $menu_name );
 		?>
+		<a href="<?php echo home_url('/contact/');  ?>" class="c-button--inquiry--menu-inner">
+			お問い合わせ・ご依頼
+		</a>
 	</article>
 </menu>

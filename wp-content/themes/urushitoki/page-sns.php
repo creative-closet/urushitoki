@@ -2,14 +2,6 @@
 <body>
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
-	<header>
-	</header>
-	<article class="documentClass">
-    	<h1>Css Test</h1>
-	</article>
-	<article id="sampleId">
-			<h1>Js Test2</h1>
-	</article>
 
 	<?php $users = get_users(array('orderby'=>'ID','order'=>'ASC'));
 	foreach($users as $user) {
@@ -45,5 +37,8 @@
 			<?php }
 		endif;
 	} ?>
+
+	<!-- 記述内容の表示 -->
+	<?php get_template_part('/includes/have-post-loop');?>
 
 	<?php get_footer(); ?>

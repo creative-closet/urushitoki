@@ -59,15 +59,15 @@ const sg_destPath = {
 const sass         = require( 'gulp-sass' )( require('sass') ); // cssコンパイル
 const plumber      = require( 'gulp-plumber' );                 // エラーが発生しても強制終了させない
 const notify       = require( 'gulp-notify' );                  // エラー発生時のアラート出力
-const postcss      = require( 'gulp-postcss' );                 //Node.js製、CSS操作プラグインのフレームワーク
+const postcss      = require( 'gulp-postcss' );                 // Node.js製、CSS操作プラグインのフレームワーク
 const autoprefixer = require( 'gulp-autoprefixer' );            // ベンダープレフィックス自動付与(条件はpackage.jsonに記載)
 const browserSync  = require( 'browser-sync' );                 // ブラウザシンク
 const minimist     = require( 'minimist' );                     // コマンドラインパーサー
 const rename       = require( 'gulp-rename' );                  // リネーム
-const del          = require( 'del' );                          //ディレクトリ削除
+const del          = require( 'del' );                          // ディレクトリ削除
+const replace      = require( 'gulp-replace' );                 // 置換
 const fractal      = require( '@frctl/fractal' ).create();      // fractal
 
-const replace = require('gulp-replace');
 
 
 //---------------------------------------------------------
@@ -207,20 +207,23 @@ const sg_browserSyncOption = {
 //  dev copy
 //---------------------------------------------------------
 
+// 削除
 const clean = ( done ) => {
-	return del( [src_destPath.scss] );
+	return del( [src_destPath.scss] );// ./src/sass/**/*.scss を削除
 	done();
 }
 
+// ./src/sass下へsassのコピー
 const srccopySass = ( done ) => {
-	return src([ srcPath.scss], {
+	return src([srcPath.scss], {// ./production/sass/**/*.scss
 		dot: true
 	} )
   .pipe( replace('/production/images', '/components/raw/background') ) //文字列の置換
-	.pipe( dest( src_destPath.scss ) );
+	.pipe( dest( src_destPath.scss ) );// ./src/sass/**/*.scss へコピー
 	done();
 };
 
+// ./src/sass下へjsのコピー
 const srccopyJs = ( done ) => {
 	return src([ srcPath.js], {
 		dot: true
@@ -229,39 +232,44 @@ const srccopyJs = ( done ) => {
 	done();
 };
 
-const devcopy = ( done ) => {
+// ComponentはComponentsへコピー
+const devcopyComponent = ( done ) => {
 	return src([
-		srcPath.scss,
-		'!./production/sass/foundation/*.scss',
-		'!./production/sass/style.scss',
+		// srcPath.scss,
+		// '!./production/sass/foundation/*.scss',
+		'./production/sass/object/component/*.scss',
+		// '!production/sass/foundation/*.scss',
+		// '!./production/sass/style.scss',
 	], {
 		dot: true
 	} )
   .pipe( replace('/production/images', '/components/raw/background') ) //文字列の置換
 	.pipe( rename ( function ( path ) {
-		path.dirname = '/components/' + path.basename.replace( '_', '' );
-		path.basename = 'style';
+		path.dirname = '/components/' + path.basename.replace( '_', '' );// /components/textフォルダのパスの作成
+		path.basename = 'style';// style.scssの「style」の指定
 	} ) )
-	.pipe( dest( sg_srcPath.base ) );
+	.pipe( dest( sg_srcPath.base ) );//./src/styleguideへ吐く
 	done();
 };
-exports.devcopy = series( clean, srccopySass, srccopyJs, devcopy );
 
+// ProjectはProjectsへコピー
+const devcopyProject = ( done ) => {
+	return src([
+		'./production/sass/object/project/*.scss',
+	], {
+		dot: true
+	} )
+  // .pipe( replace('/production/images', '/components/raw/background') ) //文字列の置換
+	.pipe( rename ( function ( path ) {
+		path.dirname = '/projects/' + path.basename.replace( '_', '' );
+		path.basename = 'style';
+	} ) )
+	.pipe( dest( sg_srcPath.base ) );//./src/styleguideへ吐く
+	done();
+};
 
-
-//文字列の置換（削除）
-// gulp.task('replace', function(){ //「replace」のタスク内容を書こう
-//   gulp.src( ['style.scss'] ) //「style.css」ファイルを指定
-//   .pipe( replace('../production/images', '../components/raw/backgrounds') ) //正規表現で「@charset "UTF-8";」という文字列を空文字に置換（つまり削除している）
-//   .pipe( gulp.dest( 'background/style.scss' ) ); //「build」配下に「style.css」ファイルを作成
-//  });
-
-
-
-
-
-
-
+// 処理をまとめて実行
+exports.devcopy = series( clean, srccopySass, srccopyJs, devcopyComponent, devcopyProject );
 
 //---------------------------------------------------------
 //  watchタスク
@@ -289,6 +297,7 @@ exports.default = series(
 );
 
 exports.styleguide = series(
-  parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopy, styleguideTask ),
+  // parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopy, styleguideTask ),
+  parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopyComponent, devcopyProject, styleguideTask ),
   parallel( watchStyleguide, sg_browserSyncFunc )
 );

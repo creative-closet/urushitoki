@@ -32,7 +32,7 @@
 	.menu-list.active{
 		right: 0%;
 	}
-	.c-open--button{
+	.k-open--button{
 		margin: 60px;
 		position: fixed;
 		z-index: 20;
@@ -41,7 +41,7 @@
 <!-- styleはマークアップ完了までの仮置き -->
 
 <menu>
-	<div class="c-open--button">
+	<div class="c-open--button k-open--button">
 		<div class="c-open--button--area">
 			<span></span><span></span><span></span>
 		</div>

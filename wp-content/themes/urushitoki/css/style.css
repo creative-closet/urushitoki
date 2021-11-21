@@ -23,6 +23,9 @@
 /*
  *	postCard
  */
+/*
+ *	shopCard
+ */
 html {
   background-color: #F0E7DB;
   font-size: 62.5%;
@@ -172,6 +175,159 @@ body {
     height: 60px;
     line-height: 60px;
   }
+}
+
+.c-title, .c-title--header {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+  border-bottom: solid 4px #fff;
+  /* Englishタイトル */
+  /* 罫線のアクセントカラー設定 */
+}
+@media (max-width: 1024px) {
+  .c-title, .c-title--header {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title, .c-title--header {
+    padding-bottom: 15px;
+  }
+}
+.c-title--header::before {
+  content: attr(title-english);
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+}
+.c-title::after, .c-title--header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 15px;
+  }
+}
+
+.c-title-large {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 46px;
+  border-bottom: solid 4px #fff;
+  /* 罫線のアクセントカラー設定 */
+}
+.c-title-large::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 46px;
+}
+
+.c-title-small, .p-shop-card__title {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #252525;
+  /* 罫線 */
+}
+.c-title-small::after, .p-shop-card__title::after {
+  content: "";
+  display: block;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-small--center {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  /* 罫線 */
+}
+.c-title-small--center::after {
+  content: "";
+  display: block;
+  margin: auto;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-noborder {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #897C70;
+}
+
+.p-shop-card {
+  background-color: #FFF;
+  background-image: url("../production/images/monyou05.png");
+  background-repeat: repeat;
+  border: solid 10px #DED6CC;
+  padding: 5% 5% 5% 7%;
+  position: relative;
+}
+.p-shop-card__title {
+  margin-bottom: 30px;
+}
+.p-shop-card__title::after {
+  margin-top: 27px;
+  border-color: #897C70;
+}
+.p-shop-card__link img {
+  width: 24px;
+  height: 24px;
+}
+.p-shop-card__text {
+  width: 50%;
+}
+.p-shop-card__image {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 62%;
+  transform: translateY(-25%);
+}
+.p-shop-card__image img {
+  width: 100%;
+  height: 100%;
 }
 
 .c-background--dot {
@@ -539,125 +695,6 @@ body {
   font-size: 2.4rem;
   color: #897C70;
   font-weight: bold;
-}
-
-.c-title, .c-title--header {
-  position: relative;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  color: #252525;
-  width: 100%;
-  padding-bottom: 10px;
-  /* レスポンシブ（タイトルとの余白） */
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-  border-bottom: solid 4px #fff;
-  /* Englishタイトル */
-  /* 罫線のアクセントカラー設定 */
-}
-@media (max-width: 1024px) {
-  .c-title, .c-title--header {
-    padding-bottom: 20px;
-  }
-}
-@media (max-width: 599px) {
-  .c-title, .c-title--header {
-    padding-bottom: 15px;
-  }
-}
-.c-title--header::before {
-  content: attr(title-english);
-  display: block;
-  font-size: 1.4rem;
-  margin-bottom: 50px;
-}
-.c-title::after, .c-title--header::after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-bottom: solid 4px #897C70;
-  width: 42px;
-  padding-top: 10px;
-  /* レスポンシブ（タイトルとの余白） */
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-title::after, .c-title--header::after {
-    padding-top: 20px;
-  }
-}
-@media (max-width: 599px) {
-  .c-title::after, .c-title--header::after {
-    padding-top: 15px;
-  }
-}
-
-.c-title-large {
-  position: relative;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  color: #252525;
-  width: 100%;
-  padding-bottom: 46px;
-  border-bottom: solid 4px #fff;
-  /* 罫線のアクセントカラー設定 */
-}
-.c-title-large::after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-bottom: solid 4px #897C70;
-  width: 42px;
-  padding-top: 46px;
-}
-
-.c-title-small {
-  position: relative;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2rem;
-  color: #252525;
-  /* 罫線 */
-}
-.c-title-small::after {
-  content: "";
-  display: block;
-  border-bottom: solid 3px #fff;
-  width: 80px;
-  margin-top: 44px;
-}
-
-.c-title-small--center {
-  position: relative;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  color: #fff;
-  /* 罫線 */
-}
-.c-title-small--center::after {
-  content: "";
-  display: block;
-  margin: auto;
-  border-bottom: solid 3px #fff;
-  width: 80px;
-  margin-top: 44px;
-}
-
-.c-title-noborder {
-  position: relative;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-  color: #897C70;
 }
 
 .c-pattern {

@@ -4,8 +4,8 @@
 @use "../../object/component/title";
 
 .p-shop-card{
-	background-image: url("../components/raw/shop-card/monyou05.png");
-	background-color: variable.$background-color--postCard;
+	background-color: variable.$background-color--shop-card;
+	background-image: url("../production/images/monyou05.png");
 	background-repeat: repeat;
 	border: solid 10px variable.$border-color--shop-card;
 	padding: 5% 5% 5% 7%;

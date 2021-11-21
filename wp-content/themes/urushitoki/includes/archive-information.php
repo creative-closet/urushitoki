@@ -1,5 +1,3 @@
-<!-- informationのギャラリー表示 -->
-<h1 class="c-title">Information</h1>
 <!-- サブクエリインスタンス -->
 <?php
 if (is_front_page()){

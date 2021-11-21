@@ -1,5 +1,8 @@
 <!-- styleはマークアップ完了までの仮置き -->
 <style>
+	body.active{
+		overflow-y: hidden;
+	}
 	menu{
 		width: 100vw;
 		overflow: hidden;
@@ -19,7 +22,7 @@
 		color: #E0D7CA;
 	}
 	.menu-list{
-		background-color: #270B0B;
+		background-color: rgba(39, 11, 11, 0.7);
 		position: fixed;
 		z-index: 10;
 		top: 0;

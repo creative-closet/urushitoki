@@ -1,9 +1,7 @@
-	<!-- 投稿のギャラリー表示 -->
-	<h1 class="c-title">Article</h1>
 	<!-- サブクエリインスタンス -->
 	<?php
 	if (is_front_page()){
-		$pager = '4';
+		$pager = '3';
 	}else{
 		$pager = '16';
 	}

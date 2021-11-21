@@ -7,6 +7,10 @@
 		z-index: 10;
 		margin-left: auto;
 	}
+	.k-information__archive , .k-article__archive{
+		position: relative;
+		z-index: 10;
+	}
 </style>
 
 

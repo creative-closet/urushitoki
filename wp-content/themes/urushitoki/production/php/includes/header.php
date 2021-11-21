@@ -1,5 +1,5 @@
 <?php if (!(is_front_page(  ))):
-	$img = get_eyecatch_default();
+	$img = urushitoki_get_header_image();
 ?>
 
 <!-- フロントページ以外のヘッダーのパーツ -->

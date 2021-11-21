@@ -20,14 +20,22 @@
 	}
 	.menu-list{
 		background-color: #270B0B;
-		position: absolute;
+		position: fixed;
 		z-index: 10;
+		top: 0;
 		right: -100%;
+		padding-top: 250px;
+		padding-left: 60px;
 		width: 100vw;
 		height: 100vh;
 	}
 	.menu-list.active{
 		right: 0%;
+	}
+	.c-open--button{
+		margin: 60px;
+		position: fixed;
+		z-index: 20;
 	}
 </style>
 <!-- styleはマークアップ完了までの仮置き -->

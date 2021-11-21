@@ -88,5 +88,5 @@
 		<?php }
 	} ?>
 	<!-- うるしときの職人表示ここまで -->
-
+	<?php get_template_part('/includes/archive-shop');?>
 	<?php get_footer(); ?>

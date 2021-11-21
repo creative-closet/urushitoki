@@ -161,6 +161,8 @@
 			</a>
 		</article>
 
+		<br><br><br>
+
 	</div>
 
 	<?php get_footer(); ?>

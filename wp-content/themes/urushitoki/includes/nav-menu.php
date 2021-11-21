@@ -10,7 +10,15 @@
 			$title      = $menu_item->title;
 			$url        = $menu_item->url;
 			$attr_title = $menu_item->attr_title;
-			$menu_list .= '<li title="'. $attr_title .'"><a href="' . esc_attr($url) . '">' . esc_html($title) . '</a></li>';
+			$target     = $menu_item->target;
+			if($target != ""){
+				$add_class = ' blank-link';
+				$blank = 'target="_blank" rel="noopener noreferrer"';
+			}
+			$menu_list .=
+			'<li class="'. $menu_name . '_list'. $add_class .'" title="'. $attr_title .'">
+			<a href="' . esc_attr($url) . '"'. $blank .'>' . esc_html($title) . '</a>
+			</li>';
 		}
 		$menu_list .= '</ul>';
 	} else {

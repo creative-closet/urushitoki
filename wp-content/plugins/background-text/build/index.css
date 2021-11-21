@@ -6,8 +6,8 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-background-text {
-  border: 1px dotted #f00;
+.wp-block-background-text {
+  border: 1px solid #999;
 }
 
 /*# sourceMappingURL=index.css.map*/

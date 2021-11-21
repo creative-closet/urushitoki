@@ -13,15 +13,9 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
-@forward "./object/project/document";
-@forward "./object/project/post-card";
-@forward "./object/project/circle-card";
-/* --------------------------------------------------------
-component
--------------------------------------------------------- */
-@forward './object/component/button';
 @forward './object/project/article-card';
-
+@forward "./object/project/circle-card";
+@forward "./object/project/post-card";
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
@@ -32,4 +26,3 @@ component
 @forward './object/component/text';
 @forward './object/component/title';
 @forward './object/component/pattern';
-

@@ -2,14 +2,9 @@
 <body>
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
-	<header>
-	</header>
-	<article class="documentClass">
-    	<h1>Css Test</h1>
-	</article>
-	<article id="sampleId">
-			<h1>Js Test2</h1>
-	</article>
+
+	<!-- 記述内容の表示 -->
+	<?php get_template_part('/includes/have-post-loop');?>
 
 	<!-- うるしときの職人表示 -->
 	<h2 class="c-title-large">うるしときの職人</h2>
@@ -28,21 +23,21 @@
 			foreach ($group as $fields ) {
 				$my_sns = $fields['sns_type'];
 				if($my_sns == 'Twitter'){ ?>
-					<a href="<?php esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
 					<img src="twitter-icon" alt="twitter"></a>
 				<?php }
 				elseif($my_sns == 'Instagram'){ ?>
-					<a href="<?php esc_attr($fields['sns_url']) ?>" class="c-button--sns--insta" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-button--sns--insta" target="_blank" rel="noopener noreferrer">
 						<i class="fab fa-instagram"></i>
 						<span class="c-title__profile">Instagram</span>
 					</a>
 				<?php }
 				elseif($my_sns == 'Facebook'){ ?>
-					<a href="<?php esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
 					<img src="facebook-icon" alt="facebook"></a>
 				<?php }
-				elseif($my_sns == 'Youtube'){ ?>
-					<a href="<?php esc_attr($fields['sns_url']) ?>" class="c-button--sns--youtube" target="_blank" rel="noopener noreferrer">
+				elseif($my_sns == 'YouTube'){ ?>
+					<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-button--sns--youtube" target="_blank" rel="noopener noreferrer">
 						<i class="fab fa-youtube"></i>
 						<span class="c-title__profile">YouTube</span>
 					</a>

@@ -35,6 +35,8 @@ wp-config.php
 /wp-content/plugins/*
 !/wp-content/plugins/background-text/
 !/wp-content/plugins/background-text/*
+!/wp-content/plugins/stack-media-text/
+!/wp-content/plugins/stack-media-text/*
 #!/wp-content/plugins/YourPlugin/*
 
 

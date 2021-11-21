@@ -6,6 +6,7 @@
 <!-- フロントページ以外のヘッダーのパーツ -->
 <!-- マークアップは仮です。 -->
 <header class="masthead" style="background-image: url('<?php echo $img[0];?>')">
+	<?php get_template_part('includes/menu'); ?>
 	<h1 class="c-title--header" title-english="
 	<?php if($titleEn):?>
 		<?php echo esc_attr($titleEn)?>">
@@ -21,7 +22,6 @@
 		ページの説明文が入ります
 	<?php endif;?>
 	</p>
-	<?php get_template_part('includes/menu'); ?>
 </header>
 <!-- フロントページのヘッダーのパーツ -->
 <?php else:?>

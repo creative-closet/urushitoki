@@ -1,5 +1,4 @@
-document.getElementById("sampleId").style.color = "blue";
-
-$(".openbtn").click(function () {
+$(".c-open--button").click(function () {
 	$(this).toggleClass("active");
+	$(".menu-list").toggleClass("active");
 });

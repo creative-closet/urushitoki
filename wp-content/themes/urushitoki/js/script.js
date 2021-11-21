@@ -1,5 +1,5 @@
-$(".c-open--button").click(function () {
-	$(this).toggleClass("active");
-	$(".menu-list").toggleClass("active");
-	$("body").toggleClass("active");
+jQuery(".c-open--button").click(function () {
+	jQuery(this).toggleClass("active");
+	jQuery(".menu-list").toggleClass("active");
+	jQuery("body").toggleClass("active");
 });

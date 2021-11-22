@@ -6,7 +6,6 @@
 			'menu-main_nav' => 'メニュー：メインナビ',
 			'footer-main_nav' => 'フッター:メインナビ',
 			'footer-post_nav' => 'フッター:投稿ナビ',
-			'footer-sns_nav' => 'フッター:SNSナビ',
 			'footer-contact_nav' => 'フッター:お問い合わせナビ',
 		]);
 		add_theme_support( 'post-thumbnails');

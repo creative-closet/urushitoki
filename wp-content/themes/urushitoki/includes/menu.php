@@ -7,15 +7,15 @@
 		width: 100vw;
 		overflow: hidden;
 	}
-	.menu-main_nav_list{
+	.menu-main_nav__list{
 		position: relative;
 		list-style: none;
 	}
-	.menu-main_nav_list a{
+	.menu-main_nav__list a{
 		text-decoration: none;
 		color: #fff;
 	}
-	.menu-main_nav_list::after {
+	.menu-main_nav__list::after {
 		content: attr(title) "";
 		position: absolute;
 		left: 200px;
@@ -36,7 +36,8 @@
 		right: 0%;
 	}
 	.k-open--button{
-		margin: 60px;
+		top: 60px;
+		left: 60px;
 		position: fixed;
 		z-index: 20;
 	}

@@ -214,7 +214,7 @@
 	}
 
 	/*アイキャッチ画像がなければ標準画像を取得する*/
-	function get_eyecatch_default(){
+	function urushitoki_get_eyecatch_default(){
 		if (has_post_thumbnail()):
 
 			$id = get_post_thumbnail_id();

@@ -19,7 +19,7 @@
 			$shop_query -> the_post();
 		//記事の各種データを取得
 			$id_in_query = get_post_thumbnail_id();
-			$img_in_query = get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
+			$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 			$img_in_query_2 = array(get_template_directory_uri(). '/assets/image/125_arr_hoso_b.png');//ファイルパスは仮
 			$name = get_post_meta( get_the_ID(), 'shop-name', true);
 			$address = get_post_meta( get_the_ID(), 'shop-address', true);

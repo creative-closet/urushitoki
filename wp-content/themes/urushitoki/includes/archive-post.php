@@ -21,7 +21,7 @@
 			$post_query -> the_post();
 		//記事の各種データを取得
 			$id_in_query = get_post_thumbnail_id();
-			$img_in_query = get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
+			$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 			$link_in_query = get_permalink( );
 	?>
 		<figure class="p-article-card">

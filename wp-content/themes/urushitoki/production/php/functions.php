@@ -232,15 +232,15 @@
 	/*トップページは動画のため除外*/
 	function urushitoki_get_header_image(){
 		if(is_page('accessory-archive'))://アクセサリー
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.jpg');
 		elseif(is_page('kintsugi'))://金継ぎ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.jpg');
 		elseif(is_page('うるしと生活'))://うるしと生活
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.png');
 		elseif(is_page('うるしと楽器'))://うるしと楽器
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-musical.png');
 		elseif(is_page('About'))://About
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.jpg');
 		elseif(is_page('gallery'))://gallery
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		elseif(is_page('SNS'))://SNS

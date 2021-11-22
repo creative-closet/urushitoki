@@ -55,16 +55,16 @@
 
 		<?php /* SNS */
 		$users = get_users(array('orderby'=>'ID','order'=>'ASC'));
-		$i = 1;
+		$have_ul_tag = false;
 		foreach($users as $user) {
 			$user_id = $user->ID;
 			$group = SCF::get_user_meta($user_id,'sns');
 				foreach ($group as $fields ) {
 					if($fields['sns_type'] != "" && $fields['sns_url'] != ""){
-						if($i == 1){
-							$i = 2; ?>
+						if(!$have_ul_tag){ ?>
 							<ul class="footer-sns_nav">
-						<?php }
+							<?php $have_ul_tag = true;
+						}
 						$my_sns = $fields['sns_type']; ?>
 						<li class="footer-sns_nav__list">
 							<?php if($my_sns == 'Twitter'){ ?>
@@ -90,7 +90,7 @@
 					<?php }
 				} ?>
 		<?php }
-		if($i == 2){ ?>
+		if($have_ul_tag){ ?>
 			</ul>
 		<?php } ?>
 		<div class="k-footer-logo">

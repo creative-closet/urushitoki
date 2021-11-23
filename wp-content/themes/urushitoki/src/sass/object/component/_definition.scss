@@ -29,4 +29,17 @@
 			}
 		}
 	}
+
+	&--figcaption{
+		margin:0px 40px;
+		&__term{
+			font-size: variable.$font-size--definiton--figcaption-term;
+			color:variable.$font-color--definiton--figcaption-term;
+		}
+		&__description{
+			font-size: variable.$font-size--definiton--figcaption-description;
+			color:variable.$font-color--definiton--figcaption-description;
+			line-height: 1.6;
+		}
+	}
 }

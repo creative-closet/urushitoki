@@ -72,21 +72,21 @@
 		<?php } ?>
 
 		<?php /* 受賞 */
-		$group = SCF::get_user_meta($user_id,'award');
-		$i     = 1;
+		$group       = SCF::get_user_meta($user_id,'award');
+		$have_ul_tag = false;
 		foreach ($group as $fields ) {
 			if($fields['award_detail'] != ""){
-				if($i == 1){ ?>
+				if(!$have_ul_tag){ ?>
 					<ul class="c-bullet">
-					<?php $i = 2;
+					<?php $have_ul_tag = true;
 				} ?>
 				<li class="c-bullet__item"><?php echo $fields['award_detail']; ?></li>
 			<?php }
 		}
-		if($i == 2){ ?>
+		if($have_ul_tag){ ?>
 			</ul>
 		<?php }
 	} ?>
 	<!-- うるしときの職人表示ここまで -->
-
+	<?php get_template_part('/includes/archive-shop');?>
 	<?php get_footer(); ?>

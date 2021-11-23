@@ -6,7 +6,6 @@
 			'menu-main_nav' => 'メニュー：メインナビ',
 			'footer-main_nav' => 'フッター:メインナビ',
 			'footer-post_nav' => 'フッター:投稿ナビ',
-			'footer-sns_nav' => 'フッター:SNSナビ',
 			'footer-contact_nav' => 'フッター:お問い合わせナビ',
 		]);
 		add_theme_support( 'post-thumbnails');
@@ -214,7 +213,7 @@
 	}
 
 	/*アイキャッチ画像がなければ標準画像を取得する*/
-	function get_eyecatch_default(){
+	function urushitoki_get_eyecatch_default(){
 		if (has_post_thumbnail()):
 
 			$id = get_post_thumbnail_id();
@@ -232,15 +231,15 @@
 	/*トップページは動画のため除外*/
 	function urushitoki_get_header_image(){
 		if(is_page('accessory-archive'))://アクセサリー
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.jpg');
 		elseif(is_page('kintsugi'))://金継ぎ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.jpg');
 		elseif(is_page('うるしと生活'))://うるしと生活
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.png');
 		elseif(is_page('うるしと楽器'))://うるしと楽器
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-musical.png');
 		elseif(is_page('About'))://About
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.jpg');
 		elseif(is_page('gallery'))://gallery
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		elseif(is_page('SNS'))://SNS

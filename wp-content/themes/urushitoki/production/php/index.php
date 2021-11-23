@@ -13,7 +13,9 @@
 	<?php } ?>
 
 	<!-- Article ループ表示 -->
-	<?php if (is_page('kintsugi') || is_single() || is_archive()) { ?>
+	<?php if (is_page('kintsugi') || is_archive()
+	 || !(is_singular(array('accessory','craft','information')))
+	 && is_single()) { ?>
 		<?php get_template_part('/includes/archive-post'); ?>
 	<?php } ?>
 

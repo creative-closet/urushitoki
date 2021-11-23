@@ -1,29 +1,63 @@
+<!-- 仮 -->
+<style>
+	.c-wrapper{
+		padding-left:17%;
+		padding-right:17%;
+	}
+	header{
+		height: 420px;
+		background-size:cover;
+		background-position:center;
+	}
+	.l-header{
+		padding-top: 140px;
+	}
+	.p-header{
+		max-width:640px;
+		width:100%;
+	}
+</style>
+
+
 <?php if (!(is_front_page(  ))):
-	$titleEn = get_post_meta( get_the_ID(), 'title_english', true );
-	$titleDesc = get_post_meta( get_the_ID(), 'title_description', true );
-	$img = get_eyecatch_default();
+	$img = urushitoki_get_header_image();
 ?>
+
 <!-- フロントページ以外のヘッダーのパーツ -->
 <!-- マークアップは仮です。 -->
-<header class="masthead" style="background-image: url('<?php echo $img[0];?>')">
+<header class="masthead c-wrapper temp" style="background-image: url('<?php echo $img[0];?>')">
+
+	<?php
+		// カスタムフィールドの値を取得
+		global $wp_query;
+		$postID = $wp_query->post->ID;
+		$title = get_post_meta( $postID, 'header-title', true);
+		$description = get_post_meta( $postID, 'header-description', true);
+	?>
+	<div class="l-header p-header temp">
+		<h1 class="c-title--header" title-english="<?php echo esc_attr($title);?>"><?php the_title( );?></h1>
+		<p><?php echo $description;?></p>
+	</div>
 	<?php get_template_part('includes/menu'); ?>
-	<h1 class="c-title--header" title-english="
-	<?php if($titleEn):?>
-		<?php echo esc_attr($titleEn)?>">
-	<?php else:?>
-		ページタイトルの英訳が入ります">
-	<?php endif;?>
-	<?php the_title( );?>
-	</h1>
-	<p>
-	<?php if($titleDesc):?>
-		<?php echo $titleDesc?>
-	<?php else:?>
-		ページの説明文が入ります
-	<?php endif;?>
-	</p>
 </header>
-<!-- フロントページのヘッダーのパーツ -->
+
+<!-- フロントページのヘッダー動画テスト -->
 <?php else:?>
+	<?php $headerMovie = array(get_template_directory_uri(). '/assets/movie/movie.mp4');?>
+	<video id="video" poster="img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
+        <!--
+        poster：動画ファイルが利用できない環境で代替表示される画像
+        webkit-playsinline：iOS 9までのSafari用インライン再生指定
+        playsinline：iOS 10以降のSafari用インライン再生指定
+        muted：音声をミュートさせる
+        autoplay：動画を自動再生させる
+        loop：動画をループさせる
+        controls：コントロールバーを表示する
+        -->
+        <source src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
+        <!-- <source src="video/movie.ogv" type="video/ogv">
+        <source src="video/movie.webm" type="video/webm"> -->
+        </video>
 	<h1>こちらはフロントページのヘッダー</h1>
 <?php endif;?>
+

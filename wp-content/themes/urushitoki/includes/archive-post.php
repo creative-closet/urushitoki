@@ -1,9 +1,7 @@
-	<!-- 投稿のギャラリー表示 -->
-	<h1 class="c-title">Article</h1>
 	<!-- サブクエリインスタンス -->
 	<?php
 	if (is_front_page()){
-		$pager = '4';
+		$pager = '3';
 	}else{
 		$pager = '16';
 	}
@@ -23,7 +21,7 @@
 			$post_query -> the_post();
 		//記事の各種データを取得
 			$id_in_query = get_post_thumbnail_id();
-			$img_in_query = get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
+			$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 			$link_in_query = get_permalink( );
 	?>
 		<figure class="p-article-card">

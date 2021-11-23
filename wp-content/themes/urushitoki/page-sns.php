@@ -2,23 +2,15 @@
 <body>
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
-	<header>
-	</header>
-	<article class="documentClass">
-    	<h1>Css Test</h1>
-	</article>
-	<article id="sampleId">
-			<h1>Js Test2</h1>
-	</article>
 
 	<?php $users = get_users(array('orderby'=>'ID','order'=>'ASC'));
 	foreach($users as $user) {
 		$user_id = $user->ID;?>
 
-		<!-- SNS -->
-		<?php if(SCF::get_user_meta($user_id,'sns') != ""):
-			$group = SCF::get_user_meta($user_id,'sns');
-			foreach ($group as $fields ) {
+	<?php /* SNS */
+		$group = SCF::get_user_meta($user_id,'sns');
+		foreach ($group as $fields ) {
+			if($fields['sns_type'] != "" && $fields['sns_url'] != ""){
 				$my_sns = $fields['sns_type'];
 				if($my_sns == 'Twitter'){ ?>
 					<a href="<?php echo esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
@@ -43,7 +35,11 @@
 				<p><?php echo $fields['sns_name']; ?></p>
 				<p><?php echo $fields['sns_description']; ?></p>
 			<?php }
-		endif;
+		}
 	} ?>
+
+
+	<!-- 記述内容の表示 -->
+	<?php get_template_part('/includes/have-post-loop');?>
 
 	<?php get_footer(); ?>

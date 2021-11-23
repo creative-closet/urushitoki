@@ -1,12 +1,20 @@
 <!-- 仮 -->
 <style>
+	.c-wrapper{
+		padding-left:17%;
+		padding-right:17%;
+	}
 	header{
 		height: 420px;
-		height: 420px;
-		padding-left: 17%;
-		padding-top: 140px;
-		padding-right: 60%;
 		background-size:cover;
+		background-position:center;
+	}
+	.l-header{
+		padding-top: 140px;
+	}
+	.p-header{
+		max-width:640px;
+		width:100%;
 	}
 </style>
 
@@ -17,7 +25,7 @@
 
 <!-- フロントページ以外のヘッダーのパーツ -->
 <!-- マークアップは仮です。 -->
-<header class="masthead" style="background-image: url('<?php echo $img[0];?>')">
+<header class="masthead c-wrapper temp" style="background-image: url('<?php echo $img[0];?>')">
 
 	<?php
 		// カスタムフィールドの値を取得
@@ -26,8 +34,10 @@
 		$title = get_post_meta( $postID, 'header-title', true);
 		$description = get_post_meta( $postID, 'header-description', true);
 	?>
-	<h1 class="c-title--header" title-english="<?php echo esc_attr($title);?>"><?php the_title( );?></h1>
-	<p><?php echo $description;?></p>
+	<div class="l-header p-header temp">
+		<h1 class="c-title--header" title-english="<?php echo esc_attr($title);?>"><?php the_title( );?></h1>
+		<p><?php echo $description;?></p>
+	</div>
 	<?php get_template_part('includes/menu'); ?>
 </header>
 

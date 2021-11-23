@@ -19,19 +19,19 @@
 			$shop_query -> the_post();
 		//記事の各種データを取得
 			$id_in_query = get_post_thumbnail_id();
-			$img_in_query = get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
+			$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 			$img_in_query_2 = array(get_template_directory_uri(). '/assets/image/125_arr_hoso_b.png');//ファイルパスは仮
-			$name = get_post_meta( get_the_ID(), 'name', true);
-			$address = get_post_meta( get_the_ID(), 'address', true);
-			$description = get_post_meta( get_the_ID(), 'description', true);
-			$url = get_post_meta( get_the_ID(), 'url', true);
+			$name = get_post_meta( get_the_ID(), 'shop-name', true);
+			$address = get_post_meta( get_the_ID(), 'shop-address', true);
+			$description = get_post_meta( get_the_ID(), 'shop-description', true);
+			$url = get_post_meta( get_the_ID(), 'shop-url', true);
 	?>
 
 	<dl class="p-shop-card">
 	<dt class="p-shop-card__title"><?php echo $name;?></dt>
 	<dd class="p-shop-card__text">
-		<p class="c-text"><?php echo $address; ?></p>
-		<p class="c-text"><?php echo $description;?></p>
+		<p class="c-text"><?php echo nl2br($address); ?></p>
+		<p class="c-text"><?php echo nl2br($description);?></p>
 	</dd>
 	<dd class="p-shop-card__link">
 		<a class="c-title-noborder" href="<?php echo esc_url($url); ?>"><?php echo esc_url($url); ?></a>

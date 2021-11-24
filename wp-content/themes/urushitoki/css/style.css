@@ -206,6 +206,18 @@ body {
      object-fit: cover;
 }
 
+.p-product-card {
+  width: 280px;
+  height: 350px;
+  background-color: #fff;
+}
+.p-product-card__image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .c-title, .c-title--header {
   position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;

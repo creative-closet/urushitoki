@@ -30,8 +30,6 @@
 		}
 		.p-contents-card{
 			width: 50%;
-			padding-right: 17%;
-			padding-left: 17%;
 			@include mixin.breakpoint( breakpoint-tab ){
 				width: 100%;
 			}

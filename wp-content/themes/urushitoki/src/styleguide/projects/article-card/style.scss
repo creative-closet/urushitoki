@@ -33,5 +33,11 @@
 			height: 60px;
 			line-height: 60px;
 		}
+		&--wide{
+			@extend .p-article-card__title;
+		}
+	}
+	&--wide{
+		@extend .p-article-card;
 	}
 }

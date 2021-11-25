@@ -34,12 +34,12 @@
 				width: 100%;
 			}
 			&:nth-of-type(2){
-					background-color: rgba($color: variable.$background-color--content-card, $alpha: .9);
-					transform: translateY(120px);
-					@include mixin.breakpoint( breakpoint-tab ){
-						transform: translateY(0px);
-					}
+				background-color: rgba($color: variable.$background-color--content-card, $alpha: .9);
+				transform: translateY(120px);
+				@include mixin.breakpoint( breakpoint-tab ){
+					transform: translateY(0px);
 				}
 			}
+		}
 	}
 }

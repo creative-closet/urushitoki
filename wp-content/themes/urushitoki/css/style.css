@@ -182,6 +182,10 @@ body {
     line-height: 60px;
   }
 }
+.p-article-card__title--wide {
+  height: 105px;
+  line-height: 105px;
+}
 .p-contents-card {
   background-color: #210C02;
   overflow: hidden;

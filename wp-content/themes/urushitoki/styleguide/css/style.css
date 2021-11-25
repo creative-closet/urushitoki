@@ -438,46 +438,47 @@ body {
   }
 }
 
-.c-background-icon__left {
+.c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
   transform: translateX(-35px);
   width: 600px;
   height: 250px;
+  background: url("/components/raw/background-icon/monyou01.png") center;
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 599px) {
-  .c-background-icon__left {
+  .c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
     transform: translateX(0px);
   }
 }
-.c-background-icon__right {
+.c-background-icon__left--gentian {
+  background: url("/components/raw/background-icon/monyou02.png") center;
+}
+.c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
   margin: 0 0 0 auto;
   width: 600px;
   height: 250px;
+  background: url("/components/raw/background-icon/monyou01.png") center;
   /* tablet */
   /* SmartPhone */
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .c-background-icon__right {
+  .c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
     height: 350px;
     width: 865px;
   }
 }
 @media (max-width: 599px) {
-  .c-background-icon__right {
+  .c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
     width: 100%;
   }
 }
-.c-background-icon--cloisonne, .c-background-icon--gentian {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: none;
-     object-fit: none;
-  -o-object-position: center center;
-     object-position: center center;
+.c-background-icon__right--gentian {
+  background: url("/components/raw/background-icon/monyou02.png") center;
 }
+
 .c-background--dot {
   background: url("../production/images/background-dot.png") repeat;
   background-attachment: fixed;

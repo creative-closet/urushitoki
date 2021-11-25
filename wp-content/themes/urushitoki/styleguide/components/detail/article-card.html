@@ -180,6 +180,11 @@
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../raw/article-card/4ぐい吞み.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__title&quot;</span>&gt;</span>漆への思い<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card--wide&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../raw/article-card/4ぐい吞み.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__title--wide&quot;</span>&gt;</span>漆への思い<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></pre>
         
     </code>
@@ -191,6 +196,11 @@
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card&quot;</span>&gt;</span>
 	<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../raw/article-card/4ぐい吞み.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
 	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__title&quot;</span>&gt;</span>漆への思い<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card--wide&quot;</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../raw/article-card/4ぐい吞み.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-article-card__title--wide&quot;</span>&gt;</span>漆への思い<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -295,6 +305,14 @@
 			<span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
 			<span class="hljs-attribute">line-height</span>: <span class="hljs-number">60px</span>;
 		}
+		&amp;--wide{
+			<span class="hljs-keyword">@extend</span> .p-article-card__title;
+			<span class="hljs-attribute">height</span>: <span class="hljs-number">105px</span>;
+			<span class="hljs-attribute">line-height</span>: <span class="hljs-number">105px</span>;
+		}
+	}
+	&amp;--wide{
+		<span class="hljs-keyword">@extend</span> .p-article-card;
 	}
 }
 </pre>
@@ -313,7 +331,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">780 Bytes</span>
+                    <span class="Meta-value">919 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -361,8 +379,12 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-2b13aa907979e2a84c8bb1418ab80ed9-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p>優先表示記事のカードです。
+        <p>p-article-card
+優先表示記事のカードです。
 トップページのArticleで使用しています。</p>
+<p>p-article-card–wide
+固定ページ 金継ぎで使用しています。
+ほぼp-article-cardと同じですが、p-article-card__titleの高さが少し異なります。</p>
 
         
     </div>
@@ -865,7 +887,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-11-25T03:56:52.288Z">
+                            <time datetime="2021-11-25T14:25:42.745Z">
                                 11/25/2021
                             </time>
                         

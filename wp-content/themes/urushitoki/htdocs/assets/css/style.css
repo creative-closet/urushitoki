@@ -46,7 +46,7 @@ body {
 
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
-.p-article-card {
+.p-article-card, .p-article-card--wide {
   width: 400px;
   height: 315px;
   position: relative;
@@ -54,7 +54,7 @@ body {
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .p-article-card {
+  .p-article-card, .p-article-card--wide {
     width: 100%;
   }
 }
@@ -64,7 +64,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-article-card__title {
+.p-article-card__title, .p-article-card__title--wide {
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -83,17 +83,20 @@ body {
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .p-article-card__title {
+  .p-article-card__title, .p-article-card__title--wide {
     padding-left: 30px;
   }
 }
 @media (max-width: 599px) {
-  .p-article-card__title {
+  .p-article-card__title, .p-article-card__title--wide {
     height: 60px;
     line-height: 60px;
   }
 }
-
+.p-article-card__title--wide {
+  height: 105px;
+  line-height: 105px;
+}
 .p-circle-card {
   width: 345px;
   display: flex;

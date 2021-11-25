@@ -6,7 +6,10 @@
 	background-color: variable.$background-color--content-card;
 	overflow:hidden;
 	height: 100%;
-	padding:14.5% 8% 10%;
+	padding-top:min(116px,15%);
+	padding-bottom: min(160px,10%);
+	padding-right:8%;
+	padding-left: 8%;
 	&__title{
 		max-width: 640px;
 		margin: auto;

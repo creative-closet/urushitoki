@@ -1,0 +1,35 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+.c-background-icon{
+	&__left{
+		transform: translateX(-35px);
+		width: 600px;
+		height: 250px;
+		@include mixin.breakpoint( breakpoint-sp ){
+			transform: translateX(0px);
+		}
+	}
+	&__right{
+		margin: 0 0 0 auto;
+		width: 600px;
+		height: 250px;
+		@include mixin.breakpoint( breakpoint-tab ){
+			height: 350px;
+			width: 865px;
+		}
+		@include mixin.breakpoint( breakpoint-sp ){
+			width: 100%;
+		}
+	}
+	&--cloisonne{
+		width: 100%;
+		height: 100%;
+		object-fit:none;
+		object-position: center center;
+	}
+	&--gentian{
+		@extend .c-background-icon--cloisonne;
+	}
+}

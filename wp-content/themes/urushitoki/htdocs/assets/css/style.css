@@ -46,95 +46,6 @@ body {
 
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
-.p-post-card {
-  width: 305px;
-  height: 353px;
-  display: flex;
-  flex-direction: column;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .p-post-card {
-    flex-direction: row;
-    width: 100%;
-    height: 120px;
-  }
-}
-.p-post-card__image {
-  width: 100%;
-  height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .p-post-card__image {
-    width: 120px;
-    height: 100%;
-  }
-}
-.p-post-card__text {
-  width: 100%;
-  height: 173px;
-  background-color: #FFF;
-  padding: 40px 54px 29px 40px;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .p-post-card__text {
-    width: calc(100% - 120px);
-    height: 100%;
-    padding: 10px 30px;
-  }
-}
-@media (max-width: 599px) {
-  .p-post-card__text {
-    padding: 8px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-}
-.p-post-card__text__title {
-  font-size: 1.6rem;
-  color: #2E2E2E;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.p-post-card__text__sentence {
-  font-size: 1.3rem;
-  color: #BFAD9C;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 599px) {
-  .p-post-card__text__sentence {
-    display: none;
-  }
-}
-.p-post-card__text__date {
-  font-size: 1.4rem;
-  color: #2E2E2E;
-  font-weight: bold;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .p-post-card__text__date {
-    display: inline-block;
-    margin-top: 9px;
-  }
-}
-
 .p-article-card, .p-article-card--wide {
   width: 400px;
   height: 315px;
@@ -244,16 +155,93 @@ body {
   }
 }
 
-.p-product-card {
-  width: 280px;
-  height: 350px;
-  background-color: #fff;
+.p-post-card {
+  width: 305px;
+  height: 353px;
+  display: flex;
+  flex-direction: column;
+  /* tablet */
+  /* SmartPhone */
 }
-.p-product-card__image {
+@media (max-width: 1024px) {
+  .p-post-card {
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+  }
+}
+.p-post-card__image {
   width: 100%;
-  height: 250px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__image {
+    width: 120px;
+    height: 100%;
+  }
+}
+.p-post-card__text {
+  width: 100%;
+  height: 173px;
+  background-color: #FFF;
+  padding: 40px 54px 29px 40px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text {
+    width: calc(100% - 120px);
+    height: 100%;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 599px) {
+  .p-post-card__text {
+    padding: 8px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.p-post-card__text__title {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p-post-card__text__sentence {
+  font-size: 1.3rem;
+  color: #BFAD9C;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-post-card__text__sentence {
+    display: none;
+  }
+}
+.p-post-card__text__date {
+  font-size: 1.4rem;
+  color: #2E2E2E;
+  font-weight: bold;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text__date {
+    display: inline-block;
+    margin-top: 9px;
+  }
 }
 
 .c-title, .c-title--header {
@@ -373,6 +361,52 @@ body {
   font-weight: 700;
   text-align: center;
   color: #897C70;
+}
+
+.p-price-card {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-price-card {
+    width: 100%;
+  }
+}
+.p-price-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-price-card__price {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 41px;
+  width: 100%;
+  line-height: 41px;
+  padding-right: 10px;
+  text-align: right;
+  color: #fff;
+  background-color: rgba(63, 46, 31, 0.6);
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.p-product-card {
+  width: 280px;
+  height: 350px;
+  background-color: #fff;
+}
+.p-product-card__image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-shop-card {
@@ -806,20 +840,6 @@ body {
   line-height: 1.6;
 }
 
-.c-text {
-  font-size: 1.6rem;
-  color: #2E2E2E;
-}
-.c-text--white {
-  font-size: 1.6rem;
-  color: #ffffff;
-}
-.c-text--large {
-  font-size: 2.4rem;
-  color: #897C70;
-  font-weight: bold;
-}
-
 .c-pattern {
   position: relative;
   width: 980px;
@@ -877,6 +897,20 @@ body {
 }
 .c-pattern__layer--right {
   right: -300px;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
 }
 
 /* --------------------------------------------------------

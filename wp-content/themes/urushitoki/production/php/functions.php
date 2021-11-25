@@ -250,6 +250,8 @@
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		elseif(is_page('information-archive'))://information-archive
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+		elseif(is_single())://投稿ページ
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-post.jpg');
 		else://未登録の画像
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		endif;

@@ -13,7 +13,7 @@
 			$target     = $menu_item->target;
 			if($target != ""){
 				$add_class = ' blank-link';
-				$blank     = 'target = "_blank" rel = "noopener noreferrer"';
+				$blank     = 'target="_blank" rel="noopener noreferrer"';
 			}
 			$menu_list .=
 			'<li class="'. $menu_name . '__list'. $add_class .'" title="'. $attr_title .'">

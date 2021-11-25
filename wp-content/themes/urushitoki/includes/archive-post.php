@@ -1,6 +1,6 @@
 	<!-- サブクエリインスタンス -->
 	<?php
-	if (is_front_page()){
+	if (is_front_page() || is_single()){
 		$pager = '3';
 	}else{
 		$pager = '16';
@@ -17,6 +17,7 @@
 
 	//サブクエリループ
 	if($post_query -> have_posts())://(投稿データ有無確認 -start-)
+		echo '<div class="p-archive c-flex">';
 		while($post_query -> have_posts())://(投稿データ出力ループ -start-)
 			$post_query -> the_post();
 		//記事の各種データを取得
@@ -32,6 +33,7 @@
 		</figure>
 	<?php
 		endwhile;//(投稿データ出力ループ -end-)
+		echo '</div>';
 		if (is_archive()){
 			$big = 999999999; // need an unlikely integer
 			echo paginate_links( array(

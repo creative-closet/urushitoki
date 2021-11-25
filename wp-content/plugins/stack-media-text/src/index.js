@@ -152,7 +152,7 @@ registerBlockType( 'create-block/stack-media-text', {
 				<div {...blockProps}>
 					<h3 className="c-title-large">{ attributes.title }</h3>
 					{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
-					<p className="c-text--white">{ attributes.description }</p>
+					<p className="c-text--white text-background">{ attributes.description }</p>
 				</div>
 		);
 	},

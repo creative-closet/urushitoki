@@ -225,11 +225,13 @@ const srccopyJs = ( done ) => {
 	done();
 };
 
-const devcopy = ( done ) => {
+// ComponentはComponentsへコピー
+const devcopyComponent = ( done ) => {
 	return src([
-		srcPath.scss,
-		'!./production/sass/foundation/*.scss',
-		'!./production/sass/style.scss',
+		// srcPath.scss,
+		// '!./production/sass/foundation/*.scss',
+		// '!./production/sass/style.scss',
+    './production/sass/object/component/*.scss'
 	], {
 		dot: true
 	} )
@@ -240,7 +242,23 @@ const devcopy = ( done ) => {
 	.pipe( dest( sg_srcPath.base ) );
 	done();
 };
-exports.devcopy = series( clean, srccopySass, srccopyJs, devcopy );
+
+// ProjectはProjectsへコピー
+const devcopyProject = ( done ) => {
+	return src([
+		'./production/sass/object/project/*.scss',
+	], {
+		dot: true
+	} )
+	.pipe( rename ( function ( path ) {
+		path.dirname = '/projects/' + path.basename.replace( '_', '' );
+		path.basename = 'style';
+	} ) )
+	.pipe( dest( sg_srcPath.base ) );
+	done();
+};
+
+exports.devcopy = series( clean, srccopySass, srccopyJs, devcopyComponent, devcopyProject );
 
 //---------------------------------------------------------
 //  watchタスク
@@ -268,6 +286,7 @@ exports.default = series(
 );
 
 exports.styleguide = series(
-  parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopy, styleguideTask ),
+  // parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopy, styleguideTask ),
+  parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopyComponent, devcopyProject, styleguideTask ),
   parallel( watchStyleguide, sg_browserSyncFunc )
 );

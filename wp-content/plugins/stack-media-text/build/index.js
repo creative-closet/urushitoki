@@ -164,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
       className: "c-title-large"
     }, attributes.title), getImagesSave(attributes.mediaURL, attributes.mediaAlt), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      className: "c-text--white"
+      className: "c-text--white text-background"
     }, attributes.description));
   }
 });

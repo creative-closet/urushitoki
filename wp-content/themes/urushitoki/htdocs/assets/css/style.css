@@ -913,6 +913,18 @@ body {
   right: -300px;
 }
 
+.c-tab {
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e0d7ca;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
 .c-text {
   font-size: 1.6rem;
   color: #2E2E2E;

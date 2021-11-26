@@ -8,14 +8,14 @@
 			transform: translateX(-35px);
 			width: 600px;
 			height: 250px;
-			background:url("/components/raw/background-icon/monyou01.png") center;
+			background:url("../production/images/monyou01.png") center;
 			@include mixin.breakpoint( breakpoint-sp ){
 				transform: translateX(0px);
 			}
 		}
 		&--gentian{
 			@extend .c-background-icon__left--cloisonne;
-			background:url("/components/raw/background-icon/monyou02.png") center;
+			background:url("../production/images/monyou02.png") center;
 		}
 	}
 	&__right{
@@ -23,7 +23,7 @@
 			margin: 0 0 0 auto;
 			width: 600px;
 			height: 250px;
-			background:url("/components/raw/background-icon/monyou01.png") center;
+			background:url("../production/images/monyou01.png") center;
 			@include mixin.breakpoint( breakpoint-tab ){
 				height: 350px;
 				width: 865px;
@@ -34,7 +34,7 @@
 		}
 		&--gentian{
 			@extend .c-background-icon__right--cloisonne;
-			background:url("/components/raw/background-icon/monyou02.png") center;
+			background:url("../production/images/monyou02.png") center;
 		}
 	}
 

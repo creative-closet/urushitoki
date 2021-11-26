@@ -442,7 +442,7 @@ body {
   transform: translateX(-35px);
   width: 600px;
   height: 250px;
-  background: url("/components/raw/background-icon/monyou01.png") center;
+  background: url("../production/images/monyou01.png") center;
   /* tablet */
   /* SmartPhone */
 }
@@ -452,13 +452,13 @@ body {
   }
 }
 .c-background-icon__left--gentian {
-  background: url("/components/raw/background-icon/monyou02.png") center;
+  background: url("../production/images/monyou02.png") center;
 }
 .c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
   margin: 0 0 0 auto;
   width: 600px;
   height: 250px;
-  background: url("/components/raw/background-icon/monyou01.png") center;
+  background: url("../production/images/monyou01.png") center;
   /* tablet */
   /* SmartPhone */
   /* tablet */
@@ -476,7 +476,7 @@ body {
   }
 }
 .c-background-icon__right--gentian {
-  background: url("/components/raw/background-icon/monyou02.png") center;
+  background: url("../production/images/monyou02.png") center;
 }
 
 .c-background--dot {

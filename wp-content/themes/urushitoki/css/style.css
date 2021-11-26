@@ -626,37 +626,6 @@ body {
   opacity: 0.3;
 }
 
-.c-button--sns, .c-button--sns--insta, .c-button--sns--youtube {
-  font-family: "Georgia", sans-serif;
-  display: inline-block;
-  position: relative;
-  width: 124px;
-  height: 40px;
-  font-size: 15px;
-  border-radius: 5px;
-  background-color: #444;
-  color: #fff !important;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  text-align: center;
-  /* YouTubeマウスホバー時 */
-  /* Instagramマウスホバー時 */
-}
-.c-button--sns:hover, .c-button--sns--insta:hover, .c-button--sns--youtube:hover {
-  text-decoration: none;
-}
-.c-button--sns .fab, .c-button--sns--insta .fab, .c-button--sns--youtube .fab {
-  height: 10px;
-}
-.c-button--sns--youtube:hover {
-  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
-}
-.c-button--sns--insta:hover {
-  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-}
-
 .c-button--direction__top {
   background-color: #fff;
   border: none;
@@ -907,6 +876,37 @@ body {
   padding: 8px 10px;
   text-align: center;
   cursor: pointer;
+}
+
+.c-sns, .c-sns--insta, .c-sns--youtube {
+  font-family: "Georgia", sans-serif;
+  display: inline-block;
+  position: relative;
+  width: 124px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff !important;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  /* YouTubeマウスホバー時 */
+  /* Instagramマウスホバー時 */
+}
+.c-sns:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
+  text-decoration: none;
+}
+.c-sns .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
+  height: 10px;
+}
+.c-sns--youtube:hover {
+  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+}
+.c-sns--insta:hover {
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
 }
 
 .c-text {

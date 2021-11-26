@@ -111,46 +111,6 @@
 	}
 }
 
-.c-button--sns {
-	font-family: "Georgia", sans-serif;
-	display: inline-block;
-	position: relative;
-	width: 124px;
-	height: 40px;
-	font-size: 15px;
-	border-radius: 5px;
-	background-color: #444;
-	color: #fff !important;
-	text-decoration: none;
-	display: flex;
-	flex-direction: column;
-	cursor: pointer;
-	text-align: center;
-	&:hover {
-		text-decoration: none;
-	}
-	.fab {
-		height: 10px;
-	}
-	/* YouTubeマウスホバー時 */
-	&--youtube {
-		@extend .c-button--sns;
-		&:hover {
-			background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
-		}
-	}
-	/* Instagramマウスホバー時 */
-	&--insta {
-		@extend .c-button--sns;
-		&:hover {
-			background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-				no-repeat;
-			background: linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-				no-repeat;
-		}
-	}
-}
-
 .c-button--direction__top {
 	background-color: #fff;
 	border: none;

@@ -2,10 +2,6 @@
 @use "../../foundation/mixin";
 @use "../../foundation/variable";
 
-.documentClass {
-	color: blue;
-}
-
 .c-button--primary {
 	display: inline-block;
 	background-color: #fff;
@@ -115,46 +111,6 @@
 	}
 }
 
-.c-button--sns {
-	font-family: "Georgia", sans-serif;
-	display: inline-block;
-	position: relative;
-	width: 124px;
-	height: 40px;
-	font-size: 15px;
-	border-radius: 5px;
-	background-color: #444;
-	color: #fff !important;
-	text-decoration: none;
-	display: flex;
-	flex-direction: column;
-	cursor: pointer;
-	text-align: center;
-	&:hover {
-		text-decoration: none;
-	}
-	.fab {
-		height: 10px;
-	}
-	/* YouTubeマウスホバー時 */
-	&--youtube {
-		@extend .c-button--sns;
-		&:hover {
-			background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
-		}
-	}
-	/* Instagramマウスホバー時 */
-	&--insta {
-		@extend .c-button--sns;
-		&:hover {
-			background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-				no-repeat;
-			background: linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-				no-repeat;
-		}
-	}
-}
-
 .c-button--direction__top {
 	background-color: #fff;
 	border: none;
@@ -242,42 +198,6 @@
 	left: 25px;
 	transform: translateY(-6px) rotate(135deg);
 	width: 60%;
-}
-
-.c-tab {
-	display: inline-block;
-	background-color: #fff;
-	text-decoration: none;
-	color: black;
-	border: 2px solid #e0d7ca;
-	border-radius: 30px;
-	padding: 8px 10px;
-	text-align: center;
-	cursor: pointer;
-}
-
-.c-button--mix {
-	width: 223px;
-	height: 60px;
-	display: inline-block;
-	background-color: #fff;
-	color: black;
-	line-height: 55px;
-	border: solid #707070;
-	cursor: pointer;
-	text-decoration: none;
-	&--before {
-		@extend .c-button--mix;
-		text-align: left;
-		padding-left: 44px;
-	}
-	&--after {
-		@extend .c-button--mix;
-		text-align: right;
-		i {
-			margin-right: 20px;
-		}
-	}
 }
 
 .c-button--inquiry--menu-inner {

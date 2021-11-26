@@ -33,5 +33,13 @@
 			height: 60px;
 			line-height: 60px;
 		}
+		&--wide{
+			@extend .p-article-card__title;
+			height: 105px;
+			line-height: 105px;
+		}
+	}
+	&--wide{
+		@extend .p-article-card;
 	}
 }

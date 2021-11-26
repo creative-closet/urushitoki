@@ -517,10 +517,6 @@ body {
   opacity: 0.633;
 }
 
-.documentClass {
-  color: blue;
-}
-
 .c-button--primary {
   display: inline-block;
   background-color: #fff;
@@ -749,18 +745,6 @@ body {
   width: 60%;
 }
 
-.c-tab {
-  display: inline-block;
-  background-color: #fff;
-  text-decoration: none;
-  color: black;
-  border: 2px solid #e0d7ca;
-  border-radius: 30px;
-  padding: 8px 10px;
-  text-align: center;
-  cursor: pointer;
-}
-
 .c-button--inquiry--menu-inner {
   display: inline-block;
   text-decoration: none;
@@ -911,6 +895,18 @@ body {
 }
 .c-pattern__layer--right {
   right: -300px;
+}
+
+.c-tab {
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e0d7ca;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .c-text {

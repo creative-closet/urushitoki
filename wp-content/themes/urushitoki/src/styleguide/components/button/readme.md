@@ -6,10 +6,6 @@
 ### ハンバーガーボタン
 - ✖️button
 
-### Instagram ボタン
-
-### YouTube ボタン
-
 ### inquiry ボタン
 - PC版
 

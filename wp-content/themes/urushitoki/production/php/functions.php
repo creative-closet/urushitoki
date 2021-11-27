@@ -54,8 +54,32 @@
 	register_block_style(
 		'core/heading',
 		array(
-			'name'         => 'title',
-			'label'        => '茶（薄）',
+			'name'         => 'c-title-large',
+			'label'        => '大見出し',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-small',
+			'label'        => '小見出し',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-small--center',
+			'label'        => '小見出し・中央寄せ・白',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-noborder',
+			'label'        => '小見出し・中央寄せ・茶',
 			'style_handle' => 'urushidoki-block-style'
 		)
 	);
@@ -64,8 +88,25 @@
 	register_block_style(
 		'core/paragraph',
 		array(
-			'name'         => 'title',
-			'label'        => '茶（薄）',
+			'name'         => 'c-text',
+			'label'        => '通常',
+			'is_default'   => true,
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text--large',
+			'label'        => '太文字',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text--white',
+			'label'        => '白文字',
 			'style_handle' => 'urushidoki-block-style'
 		)
 	);

@@ -1,6 +1,5 @@
 <?php
 
-	//フッターメニューをサポートのため追加
 	add_action('init', function () {
 		register_nav_menus([
 			'menu-main_nav' => 'メニュー：メインナビ',
@@ -13,7 +12,7 @@
 		codex_information_init();
 		codex_accessory_init();
 		codex_shop_init();
-
+		wp_register_style( 'urushidoki-block-style', get_theme_file_uri() . '/css/urushidoki-block-style.css' );
 	});
 
     //*****************************************************************
@@ -31,8 +30,9 @@
     add_action('wp_enqueue_scripts','mysite_script');
 
     //*****************************************************************
-	//  カスタムブロック ブロックスタイル追加
+	//  Gutenberg ブロックスタイル追加
 	//*****************************************************************
+	//カスタムブロック 背景付きテキスト/画像
 	register_block_style(
 		'create-block/background-text',
 		array(
@@ -46,9 +46,68 @@
 		array(
 			'name'         => 'background-02',
 			'label'        => '茶（薄）',
-			'inline_style' => '.wp-block-create-block-background-text.is-style-background-02 {
-					background-color: rgba(33,12,2,0.9);
-			}',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+
+	//見出し
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-large',
+			'label'        => '大見出し',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-small',
+			'label'        => '小見出し',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-small--center',
+			'label'        => '小見出し・中央寄せ・白',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-noborder',
+			'label'        => '小見出し・中央寄せ・茶',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+
+	//段落
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text',
+			'label'        => '通常',
+			'is_default'   => true,
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text--large',
+			'label'        => '太文字',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text--white',
+			'label'        => '白文字',
+			'style_handle' => 'urushidoki-block-style'
 		)
 	);
 

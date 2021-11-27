@@ -1,0 +1,981 @@
+@charset "UTF-8";
+/***** variable *****/
+/* --------------------------------------------------------
+    color-code
+-------------------------------------------------------- */
+/* 背景 */
+/* テキスト */
+/* 罫線 */
+/* --------------------------------------------------------
+    文字の太さ
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+    文字のサイズ
+-------------------------------------------------------- */
+/* ベース */
+/* 見出し */
+/*
+ * 文字カラー
+ */
+/*
+ * 文字サイズ
+ */
+/*
+ *	postCard
+ */
+/*
+ *	product-card
+ */
+/*
+ *	content-card
+ */
+/*
+*	shopCard
+*/
+html {
+  background-color: #F0E7DB;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Noto Sans Japanese", sans-serif;
+  line-height: 2.125;
+}
+
+/* ブレイクポイント・PCファースト */
+/* 游明朝の指定 */
+.p-article-card, .p-article-card--wide {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-article-card, .p-article-card--wide {
+    width: 100%;
+  }
+}
+.p-article-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-article-card__title, .p-article-card__title--wide {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  line-height: 70px;
+  padding-left: 28px;
+  color: #fff;
+  background-color: rgba(63, 46, 31, 0.6);
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-article-card__title, .p-article-card__title--wide {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 599px) {
+  .p-article-card__title, .p-article-card__title--wide {
+    height: 60px;
+    line-height: 60px;
+  }
+}
+.p-article-card__title--wide {
+  height: 105px;
+  line-height: 105px;
+}
+.p-circle-card {
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-circle-card .p-circle-card__text {
+  margin-top: 25px;
+  width: 340px;
+}
+.p-circle-card .p-circle-card__text .c-text {
+  margin-top: 30px;
+}
+
+.p-contents-card {
+  background-color: #210C02;
+  overflow: hidden;
+  height: 100%;
+  padding-top: min(116px, 15%);
+  padding-bottom: min(160px, 10%);
+  padding-right: 8%;
+  padding-left: 8%;
+}
+.p-contents-card__title {
+  max-width: 640px;
+  margin: auto;
+}
+.p-contents-card__text {
+  margin: 60px 0;
+}
+.p-contents-card__image {
+  height: 180px;
+  overflow: hidden;
+}
+.p-contents-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-contents-card-column {
+  display: flex;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-contents-card-column {
+    display: block;
+  }
+}
+.p-contents-card-column .p-contents-card {
+  width: 50%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-contents-card-column .p-contents-card {
+    width: 100%;
+  }
+}
+.p-contents-card-column .p-contents-card:nth-of-type(2) {
+  background-color: rgba(33, 12, 2, 0.9);
+  transform: translateY(120px);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-contents-card-column .p-contents-card:nth-of-type(2) {
+    transform: translateY(0px);
+  }
+}
+
+.p-post-card {
+  width: 305px;
+  height: 353px;
+  display: flex;
+  flex-direction: column;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card {
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+  }
+}
+.p-post-card__image {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__image {
+    width: 120px;
+    height: 100%;
+  }
+}
+.p-post-card__text {
+  width: 100%;
+  height: 173px;
+  background-color: #FFF;
+  padding: 40px 54px 29px 40px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text {
+    width: calc(100% - 120px);
+    height: 100%;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 599px) {
+  .p-post-card__text {
+    padding: 8px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.p-post-card__text__title {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p-post-card__text__sentence {
+  font-size: 1.3rem;
+  color: #BFAD9C;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-post-card__text__sentence {
+    display: none;
+  }
+}
+.p-post-card__text__date {
+  font-size: 1.4rem;
+  color: #2E2E2E;
+  font-weight: bold;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-card__text__date {
+    display: inline-block;
+    margin-top: 9px;
+  }
+}
+
+.c-title, .c-title--header {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+  border-bottom: solid 4px #fff;
+  /* Englishタイトル */
+  /* 罫線のアクセントカラー設定 */
+}
+@media (max-width: 1024px) {
+  .c-title, .c-title--header {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title, .c-title--header {
+    padding-bottom: 15px;
+  }
+}
+.c-title--header::before {
+  content: attr(title-english);
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+}
+.c-title::after, .c-title--header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 15px;
+  }
+}
+
+.c-title-large {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 46px;
+  border-bottom: solid 4px #fff;
+  /* 罫線のアクセントカラー設定 */
+}
+.c-title-large::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 46px;
+}
+
+.c-title-small, .p-shop-card__title {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #252525;
+  /* 罫線 */
+}
+.c-title-small::after, .p-shop-card__title::after {
+  content: "";
+  display: block;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-small--center {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  /* 罫線 */
+}
+.c-title-small--center::after {
+  content: "";
+  display: block;
+  margin: auto;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-noborder {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #897C70;
+}
+
+.p-price-card {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-price-card {
+    width: 100%;
+  }
+}
+.p-price-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-price-card__price {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 41px;
+  width: 100%;
+  line-height: 41px;
+  padding-right: 10px;
+  text-align: right;
+  color: #fff;
+  background-color: rgba(63, 46, 31, 0.6);
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.p-product-card {
+  width: 280px;
+  height: 350px;
+  background-color: #fff;
+}
+.p-product-card__image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-shop-card {
+  background-color: #FFF;
+  background-image: url("../production/images/monyou05.png");
+  background-repeat: repeat;
+  border: solid 10px #DED6CC;
+  padding: 5% 5% 5% 7%;
+  position: relative;
+  z-index: -2;
+}
+.p-shop-card::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  z-index: -1;
+}
+.p-shop-card__title {
+  margin-bottom: 30px;
+}
+.p-shop-card__title::after {
+  margin-top: 27px;
+  border-color: #897C70;
+}
+.p-shop-card__link img {
+  width: 24px;
+  height: 24px;
+}
+.p-shop-card__text {
+  width: 50%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-shop-card__text {
+    width: 100%;
+  }
+}
+.p-shop-card__image {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 62%;
+  transform: translateY(-25%);
+  /* tablet */
+  /* SmartPhone */
+}
+.p-shop-card__image img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .p-shop-card__image {
+    position: relative;
+    transform: translateY(0);
+    right: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+}
+
+.c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
+  transform: translateX(-35px);
+  width: 600px;
+  height: 250px;
+  background: url("../production/images/monyou01.png") center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
+    transform: translateX(0px);
+  }
+}
+.c-background-icon__left--gentian {
+  background: url("../production/images/monyou02.png") center;
+}
+.c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
+  margin: 0 0 0 auto;
+  width: 600px;
+  height: 250px;
+  background: url("../production/images/monyou01.png") center;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
+    height: 350px;
+    width: 865px;
+  }
+}
+@media (max-width: 599px) {
+  .c-background-icon__right--cloisonne, .c-background-icon__right--gentian {
+    width: 100%;
+  }
+}
+.c-background-icon__right--gentian {
+  background: url("../production/images/monyou02.png") center;
+}
+
+.c-background--dot {
+  background: url("../production/images/background-dot.png") repeat;
+  background-attachment: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-background--wave {
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #F0E7DB;
+}
+.c-background--wave .shape-fill {
+  fill: #E0D7CA;
+  opacity: 0.633;
+}
+
+.c-button--primary {
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #707070;
+  width: 350px;
+  height: 80px;
+  text-align: center;
+  display: flex;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.c-button--primary .c-button--primary--text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 16px;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-weight: bold;
+}
+.c-button--primary:hover {
+  background-color: #270b0b;
+  color: white;
+}
+.c-button--primary:hover .c-button--primary--line {
+  color: #fff;
+}
+.c-button--primary:hover .c-button--primary--line::before {
+  background-color: #fff;
+}
+.c-button--primary:hover .c-button--primary--line::after {
+  background-color: #fff;
+}
+.c-button--primary .c-button--primary--line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 20px;
+  width: 350px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.c-button--primary .c-button--primary--line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.8em;
+  transform: translateY(calc(-50% - 2px)) rotate(40deg);
+  width: 32px;
+  height: 2px;
+  background-color: #707070;
+}
+.c-button--primary .c-button--primary--line:hover::before {
+  background-color: #fff;
+}
+.c-button--primary .c-button--primary--line::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 1em;
+  transform: translateY(-50%);
+  width: 193px;
+  height: 2px;
+  background-color: #707070;
+}
+.c-button--primary .c-button--primary--line:hover::after {
+  background-color: #fff;
+}
+
+#p-ripples--effect {
+  /*波紋の基点とするためrelativeを指定*/
+  position: relative;
+  /*はみ出す波紋を隠す*/
+  overflow: hidden;
+}
+#p-ripples--effect:hover {
+  color: #fff;
+}
+#p-ripples--effect::after {
+  content: "";
+  /*絶対配置で波紋位置を決める*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*波紋の形状*/
+  background: radial-gradient(circle, #fff 10%, transparent 10%) no-repeat 50%;
+  transform: scale(10, 10);
+  /*はじめは透過0に*/
+  opacity: 0;
+  color: #fff;
+  /*アニメーションの設定*/
+  transition: transform 0.3s, opacity 1s;
+}
+#p-ripples--effect:active::after {
+  transform: scale(0, 0);
+  transition: 0s;
+  opacity: 0.3;
+}
+
+.c-button--direction__top {
+  background-color: #fff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #270b0b;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+.c-button--direction__top::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f062";
+  font-size: 25px;
+  color: #fff;
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.c-open--button {
+  /*ボタン内側の基点となるためrelativeを指定。
+  追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+  position: relative;
+  background: #270b0b;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+/*ボタン内側*/
+.c-open--button .c-open--button--area {
+  transition: all 0.4s;
+}
+
+.c-open--button span {
+  display: inline-block;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 30px;
+  top: 50;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 55%;
+  transform: translateY(6px) rotate(-160deg);
+}
+
+.c-open--button span:nth-of-type(1) {
+  top: 30px;
+}
+
+.c-open--button span:nth-of-type(2) {
+  top: 50px;
+}
+
+.c-open--button span:nth-of-type(3) {
+  top: 70px;
+}
+
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+.c-open--button.active .c-open--button--area {
+  transform: rotateY(-360deg);
+}
+
+.c-open--button.active span:nth-of-type(1) {
+  top: 50px;
+  left: 25px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 60%;
+}
+
+.c-open--button.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-open--button.active span:nth-of-type(3) {
+  top: 60px;
+  left: 25px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 60%;
+}
+
+.c-button--inquiry--menu-inner {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c-bullet {
+  list-style: none;
+}
+.c-bullet__item {
+  line-height: 2.8;
+}
+.c-bullet__item::before {
+  display: inline-block;
+  content: "";
+  margin: 17px 10px 0 0;
+  width: 8px;
+  height: 8px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: #897C70;
+}
+.c-bullet__item:last-child {
+  margin-bottom: 0;
+}
+
+.c-definition {
+  width: 100%;
+  color: #2E2E2E;
+}
+.c-definition__title {
+  font-size: 2rem;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #897C70;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+}
+.c-definition__detail {
+  display: flex;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  border-bottom: solid 1px #DDD4CD;
+}
+.c-definition__detail__item:nth-last-child(2) {
+  width: 15%;
+  text-align: center;
+}
+.c-definition__detail__item:nth-child(2) {
+  width: 85%;
+}
+.c-definition__detail__item:only-child {
+  margin-left: 15%;
+}
+.c-definition--figcaption {
+  margin: 0px 40px;
+}
+.c-definition--figcaption__term {
+  font-size: 1.6rem;
+  color: #202124;
+}
+.c-definition--figcaption__description {
+  font-size: 1.2rem;
+  color: #A6ADB4;
+  line-height: 1.6;
+}
+
+.c-pagination, .c-pagination--next, .c-pagination--previous {
+  width: 223px;
+  height: 60px;
+  display: inline-block;
+  background-color: #fff;
+  color: black;
+  line-height: 55px;
+  border: solid #707070;
+  cursor: pointer;
+  text-decoration: none;
+}
+.c-pagination--previous {
+  text-align: left;
+  padding-left: 44px;
+}
+.c-pagination--next {
+  text-align: right;
+}
+.c-pagination--next i {
+  margin-right: 20px;
+}
+
+.c-pattern {
+  position: relative;
+  width: 980px;
+  height: 380px;
+  margin-top: 30px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern {
+    width: 100%;
+    height: 310px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern {
+    height: 180px;
+  }
+}
+.c-pattern__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0px;
+  z-index: 1;
+  width: 621px;
+  height: 488px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+    top: 140px;
+    width: 437px;
+    height: 350px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+    display: none;
+  }
+}
+.c-pattern__layer--left {
+  left: -300px;
+}
+.c-pattern__layer--right {
+  right: -300px;
+}
+
+.c-tab {
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e0d7ca;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c-sns, .c-sns--insta, .c-sns--youtube {
+  font-family: "Georgia", sans-serif;
+  display: inline-block;
+  position: relative;
+  width: 124px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff !important;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  /* YouTubeマウスホバー時 */
+  /* Instagramマウスホバー時 */
+}
+.c-sns:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
+  text-decoration: none;
+}
+.c-sns .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
+  height: 10px;
+}
+.c-sns--youtube:hover {
+  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+}
+.c-sns--insta:hover {
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------
+foundation
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+layout
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+project
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+component
+-------------------------------------------------------- */
+.wp-block-create-block-background-text.is-style-background-02 {
+  background-color: rgba(33, 12, 2, 0.9);
+}

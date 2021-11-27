@@ -1,6 +1,5 @@
 <?php
 
-	//フッターメニューをサポートのため追加
 	add_action('init', function () {
 		register_nav_menus([
 			'menu-main_nav' => 'メニュー：メインナビ',
@@ -13,7 +12,7 @@
 		codex_information_init();
 		codex_accessory_init();
 		codex_shop_init();
-
+		wp_register_style( 'urushidoki-block-style', get_theme_file_uri() . '/css/urushidoki-block-style.css' );
 	});
 
     //*****************************************************************
@@ -31,8 +30,9 @@
     add_action('wp_enqueue_scripts','mysite_script');
 
     //*****************************************************************
-	//  カスタムブロック ブロックスタイル追加
+	//  Gutenberg ブロックスタイル追加
 	//*****************************************************************
+	//カスタムブロック 背景付きテキスト/画像
 	register_block_style(
 		'create-block/background-text',
 		array(
@@ -46,9 +46,27 @@
 		array(
 			'name'         => 'background-02',
 			'label'        => '茶（薄）',
-			'inline_style' => '.wp-block-create-block-background-text.is-style-background-02 {
-					background-color: rgba(33,12,2,0.9);
-			}',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+
+	//見出し
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'title',
+			'label'        => '茶（薄）',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+
+	//段落
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'title',
+			'label'        => '茶（薄）',
+			'style_handle' => 'urushidoki-block-style'
 		)
 	);
 

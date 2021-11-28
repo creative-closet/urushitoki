@@ -1,10 +1,8 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 import {
-	TextControl,
-	TextareaControl,
-} from '@wordpress/components';
-import {
+	InnerBlocks,
+	RichText,
 	MediaUpload,
 	MediaUploadCheck,
 	useBlockProps
@@ -16,14 +14,12 @@ import './editor.scss';
 registerBlockType( 'create-block/background-text', {
 	attributes: {
 		title: {
-			type    : 'string',
-			source  : 'text',
-			selector: 'dt.c-title-small--center',
+			type   : 'string',
+			default: ''
 		},
 		description: {
-			type    : 'string',
-			source  : 'text',
-			selector: 'dd.c-text--white',
+			type   : 'string',
+			default: ''
 		},
 		mediaID: {
             type: 'number',
@@ -46,11 +42,19 @@ registerBlockType( 'create-block/background-text', {
 	edit: ( { attributes, setAttributes } ) => {
 		const {
 			title,
-			description,
 			mediaURL,
 			mediaID,
 			mediaAlt
 		} = attributes;
+		const description = [
+			[
+				"core/paragraph",
+				{
+					className: "c-text--white",
+					placeholder: "説明が入ります。",
+				},
+			],
+		];
 		const onSelectImage = ( media ) => {
             setAttributes( {
                 mediaURL: media.url,
@@ -91,36 +95,44 @@ registerBlockType( 'create-block/background-text', {
 		const blockProps = useBlockProps( {
 			className: 'p-contents-card',
 		} );
+
 		return (
 			<figure { ...blockProps }>
 				<dl>
-					<TextControl
-						placeholder="タイトル"
-						value={ title }
-						onChange={( value ) => setAttributes( { title: value } )}
-					/>
-					<TextareaControl
-						placeholder="説明"
-						value={ description }
-						onChange={ ( value ) => setAttributes({ description: value })}
-					/>
-					<MediaUploadCheck>
-						<MediaUpload
-							onSelect={ onSelectImage }
-							allowedTypes={ ['image'] }
-							value={ mediaID }
-							render={ ({ open }) => getImageButton( open ) }
+					<dt className="p-contents-card__title">
+						<RichText
+							tagName                = "h4"
+							className              = "c-title-small--center"
+							placeholder            = "タイトルが入ります。"
+							keepPlaceholderOnFocus = { true }
+							value                  = { title }
+							onChange               = { ( newTitle ) => setAttributes({ title: newTitle })}
 						/>
-					</MediaUploadCheck>
-					{ mediaID != 0  &&
+					</dt>
+					<dd className="p-contents-card__text">
+						<InnerBlocks template= { description } templateLock="all" />
+					</dd>
+					<dd className="p-contents-card__image">
 						<MediaUploadCheck>
-							<Button
-							onClick={removeMedia}
-							className="button button-large">
-							画像を削除
-							</Button>
+							<MediaUpload
+								onSelect     = { onSelectImage }
+								allowedTypes = { ['image'] }
+								value        = { mediaID }
+								render       = { ({ open }) => getImageButton( open ) }
+							/>
 						</MediaUploadCheck>
-					}
+					</dd>
+					<dd>
+						{ mediaID != 0  &&
+							<MediaUploadCheck>
+								<Button
+								onClick   = {removeMedia}
+								className = "button button-large">
+								画像を削除
+								</Button>
+							</MediaUploadCheck>
+						}
+					</dd>
 				</dl>
 			</figure>
 		);
@@ -151,10 +163,20 @@ registerBlockType( 'create-block/background-text', {
 		return (
 				<figure {...blockProps}>
 					<dl>
-						<dt className="c-title-small--center">{ attributes.title }</dt>
-						<dd className="c-text--white">{ attributes.description }</dd>
+						<dt className="p-contents-card__title">
+							<RichText.Content
+								tagName   = "h4"
+								className = "c-title-small--center"
+								value     = { attributes.title }
+							/>
+						</dt>
+						<dd className="p-contents-card__text">
+							<InnerBlocks.Content />
+						</dd>
+						<dd className="p-contents-card__image">
+							{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
+						</dd>
 					</dl>
-					{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
 				</figure>
 		);
 	},

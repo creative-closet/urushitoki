@@ -8,6 +8,7 @@
 			'footer-contact_nav' => 'フッター:お問い合わせナビ',
 		]);
 		add_theme_support( 'post-thumbnails');
+		add_theme_support("editor-styles");
 		codex_craft_init();
 		codex_information_init();
 		codex_accessory_init();
@@ -28,6 +29,8 @@
         wp_enqueue_script('jQuery','https://code.jquery.com/jquery-3.4.1.min.js');
     }
     add_action('wp_enqueue_scripts','mysite_script');
+
+	add_editor_style(get_theme_file_uri() . '/css/editor-style.css');
 
     //*****************************************************************
 	//  Gutenberg ブロックスタイル追加
@@ -107,6 +110,14 @@
 		array(
 			'name'         => 'c-text--white',
 			'label'        => '白文字',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/group',
+		array(
+			'name'         => 'p-contents-card-column',
+			'label'        => '階段',
 			'style_handle' => 'urushidoki-block-style'
 		)
 	);

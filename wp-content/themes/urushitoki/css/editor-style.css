@@ -979,3 +979,7 @@ component
 .wp-block-create-block-background-text.is-style-background-02 {
   background-color: rgba(33, 12, 2, 0.9);
 }
+
+.is-style-p-contents-card-column {
+  padding-bottom: 120px;
+}

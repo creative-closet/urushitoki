@@ -125,11 +125,11 @@
 					if($tags){
 						echo '<ul class="tag_list c-flex">';
 						foreach($tags as $tag):
-						$tag_name = $tag->name;
-						$tag_link = get_tag_link($tag->term_id);
-						echo '<li><a class="c-tab" href="'.$tag_link.'">'.$tag_name.'</a></li>';
+							$tag_name = $tag->name;
+							$tag_link = get_tag_link($tag->term_id);
+							echo '<li><a class="c-tab" href="'.$tag_link.'">'.$tag_name.'</a></li>';
 						endforeach;
-						echo '</ul>';
+							echo '</ul>';
 					}
 					?>
 					<?php the_content() ?>

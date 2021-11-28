@@ -97,44 +97,42 @@ registerBlockType( 'create-block/background-text', {
 		} );
 
 		return (
-			<figure { ...blockProps }>
-				<dl>
-					<dt className="p-contents-card__title">
-						<RichText
-							tagName                = "h4"
-							className              = "c-title-small--center"
-							placeholder            = "タイトルが入ります。"
-							keepPlaceholderOnFocus = { true }
-							value                  = { title }
-							onChange               = { ( newTitle ) => setAttributes({ title: newTitle })}
+			<dl { ...blockProps }>
+				<dt className="p-contents-card__title">
+					<RichText
+						tagName                = "h4"
+						className              = "c-title-small--center"
+						placeholder            = "タイトルが入ります。"
+						keepPlaceholderOnFocus = { true }
+						value                  = { title }
+						onChange               = { ( newTitle ) => setAttributes({ title: newTitle })}
+					/>
+				</dt>
+				<dd className="p-contents-card__text">
+					<InnerBlocks template= { description } templateLock="all" />
+				</dd>
+				<dd className="p-contents-card__image">
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect     = { onSelectImage }
+							allowedTypes = { ['image'] }
+							value        = { mediaID }
+							render       = { ({ open }) => getImageButton( open ) }
 						/>
-					</dt>
-					<dd className="p-contents-card__text">
-						<InnerBlocks template= { description } templateLock="all" />
-					</dd>
-					<dd className="p-contents-card__image">
+					</MediaUploadCheck>
+				</dd>
+				<dd>
+					{ mediaID != 0  &&
 						<MediaUploadCheck>
-							<MediaUpload
-								onSelect     = { onSelectImage }
-								allowedTypes = { ['image'] }
-								value        = { mediaID }
-								render       = { ({ open }) => getImageButton( open ) }
-							/>
+							<Button
+							onClick   = {removeMedia}
+							className = "button button-large">
+							画像を削除
+							</Button>
 						</MediaUploadCheck>
-					</dd>
-					<dd>
-						{ mediaID != 0  &&
-							<MediaUploadCheck>
-								<Button
-								onClick   = {removeMedia}
-								className = "button button-large">
-								画像を削除
-								</Button>
-							</MediaUploadCheck>
-						}
-					</dd>
-				</dl>
-			</figure>
+					}
+				</dd>
+			</dl>
 		);
 	},
 
@@ -161,23 +159,21 @@ registerBlockType( 'create-block/background-text', {
 			className: 'p-contents-card',
 		} );
 		return (
-				<figure {...blockProps}>
-					<dl>
-						<dt className="p-contents-card__title">
-							<RichText.Content
-								tagName   = "h4"
-								className = "c-title-small--center"
-								value     = { attributes.title }
-							/>
-						</dt>
-						<dd className="p-contents-card__text">
-							<InnerBlocks.Content />
-						</dd>
-						<dd className="p-contents-card__image">
-							{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
-						</dd>
-					</dl>
-				</figure>
+			<dl {...blockProps}>
+				<dt className="p-contents-card__title">
+					<RichText.Content
+						tagName   = "h4"
+						className = "c-title-small--center"
+						value     = { attributes.title }
+					/>
+				</dt>
+				<dd className="p-contents-card__text">
+					<InnerBlocks.Content />
+				</dd>
+				<dd className="p-contents-card__image">
+					{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
+				</dd>
+			</dl>
 		);
 	},
 } );

@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)({
       className: 'p-contents-card'
     });
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dl", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dt", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dl", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dt", {
       className: "p-contents-card__title"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
       tagName: "h4",
@@ -138,7 +138,7 @@ __webpack_require__.r(__webpack_exports__);
     }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dd", null, mediaID != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
       onClick: removeMedia,
       className: "button button-large"
-    }, "\u753B\u50CF\u3092\u524A\u9664")))));
+    }, "\u753B\u50CF\u3092\u524A\u9664"))));
   },
   save: _ref3 => {
     let {
@@ -165,7 +165,7 @@ __webpack_require__.r(__webpack_exports__);
     const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save({
       className: 'p-contents-card'
     });
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dl", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dt", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dl", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dt", {
       className: "p-contents-card__title"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText.Content, {
       tagName: "h4",
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
       className: "p-contents-card__text"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("dd", {
       className: "p-contents-card__image"
-    }, getImagesSave(attributes.mediaURL, attributes.mediaAlt))));
+    }, getImagesSave(attributes.mediaURL, attributes.mediaAlt)));
   }
 });
 

@@ -33,3 +33,9 @@
 	@extend .c-text--white;
 }
 
+//グループ 階段
+.is-style-p-contents-card-column{
+	.wp-block-group__inner-container{
+		@extend .p-contents-card-column
+	}
+}

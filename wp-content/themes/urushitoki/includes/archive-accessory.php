@@ -19,6 +19,7 @@
 
 	//サブクエリループ
 	if($accessory_query -> have_posts())://(投稿データ有無確認 -start-)
+		echo '<article class="c-flex c-flex--wrap">';
 		while($accessory_query -> have_posts())://(投稿データ出力ループ -start-)
 			$accessory_query -> the_post();
 		//記事の各種データを取得
@@ -44,8 +45,10 @@
 	</a>
 	<?php
 		endwhile;//(投稿データ出力ループ -end-)
+		echo '</article>';
 		if (is_page('accessory-archive')){
 			$big = 999999999; // need an unlikely integer
+			echo '<div class="c-flex c-flex--center">';
 			echo paginate_links( array(
 				'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),//ページ番号付きのリンクを生成するために使われるベースの URL を指定します。例えば 'http://example.com/all_posts.php%_%' を指定すると、それに含まれる '%_%' は 'format' 引数（下記参照）により置き換えられます。
 				'current'   => max( 1, $paged),//現在のページ番号
@@ -55,6 +58,7 @@
 				'prev_text' => '＜',//前ページへの文字
 				'next_text' => '＞',//次のページへの文字
 			) );
+			echo '</div>';
 		}
 	endif;//(投稿データ有無確認 -end-)
 	wp_reset_postdata();

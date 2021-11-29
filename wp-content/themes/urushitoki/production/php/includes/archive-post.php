@@ -42,8 +42,8 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 		$term_list = get_terms('post_tag');
 		$result_list = [];
 		foreach ($term_list as $term) {
-		$u = (get_term_link( $term, 'post_tag' ));
-		echo '<li><a class="c-tab" href="'.$u.'">'.$term->name.'</a></li>';
+			$u = (get_term_link( $term, 'post_tag' ));
+			echo '<li><a class="c-tab" href="'.$u.'">'.$term->name.'</a></li>';
 		}
 		echo '</ul>';
 	}

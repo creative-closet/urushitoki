@@ -138,7 +138,7 @@
 				</div>
 				<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
 			</div>
-			<a href="<?php echo home_url('/information-archive/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
+			<a href="<?php echo home_url('/information_archive/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
 				<span class="c-button--primary--text">MORE</span>
 				<span class="c-button--primary--line"></span>
 			</a>
@@ -155,7 +155,7 @@
 				</div>
 				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
 			</div>
-			<a href="<?php echo home_url('/article-archive/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
+			<a href="<?php echo home_url('/post_archive/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
 				<span class="c-button--primary--text">MORE</span>
 				<span class="c-button--primary--line"></span>
 			</a>

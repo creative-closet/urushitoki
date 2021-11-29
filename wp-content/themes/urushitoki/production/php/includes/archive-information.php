@@ -17,6 +17,10 @@ $information_query = new WP_Query($args_query);
 
 //サブクエリループ
 if($information_query -> have_posts())://(投稿データ有無確認 -start-)
+	echo '<article class="p-archive c-wrapper">';
+	//informationのギャラリー表示
+	echo '<h2 class="c-title">Information</h2>';
+	echo '<section class="p-archive__cards c-flex c-flex--wrap c-flex--column">';
 	while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
 	//記事の各種データを取得
@@ -25,9 +29,8 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 		$link_in_query = get_permalink( );
 		$time_in_query = get_the_time( 'Y年n月j日' );
 ?>
-
-<figure class="p-post-card">
-	<a href="<?php echo esc_url($link_in_query);?>">
+<a href="<?php echo esc_url($link_in_query);?>">
+	<figure class="p-post-card">
 		<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">
 		<figcaption class="p-post-card__text">
 			<h2 class="p-post-card__text__title"><?php the_title(); ?></h2>
@@ -41,12 +44,14 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 			</p>
 			<time class="p-post-card__text__date"><?php echo $time_in_query;?></time>
 		</figcaption>
-	</a>
-</figure>
+	</figure>
+</a>
 <?php
 	endwhile;//(投稿データ出力ループ -end-)
-	if (is_archive()){
+	echo '</section>';
+	if (is_page('information')){
 		$big = 999999999; // need an unlikely integer
+		echo '<div class="p-pager c-flex c-flex--center">';
 		echo paginate_links( array(
 			'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),//ページ番号付きのリンクを生成するために使われるベースの URL を指定します。例えば 'http://example.com/all_posts.php%_%' を指定すると、それに含まれる '%_%' は 'format' 引数（下記参照）により置き換えられます。
 			'current'   => max( 1, $paged),//現在のページ番号
@@ -56,6 +61,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 			'prev_text' => '＜',//前ページへの文字
 			'next_text' => '＞',//次のページへの文字
 		) );
+		echo '</div>';
 	}
 endif;//(投稿データ有無確認 -end-)
 wp_reset_postdata();

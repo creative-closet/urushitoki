@@ -1,13 +1,13 @@
-<!-- 仮 -->
+<!-- 仮のスタイルは絶対に読み込まれるヘッダーにまとめた -->
 <style>
 	.c-wrapper{
 		padding-left:17%;
 		padding-right:17%;
 	}
 	header{
-		height: 420px;
 		background-size:cover;
 		background-position:center;
+		height:420px;
 	}
 	.l-header{
 		padding-top: 140px;
@@ -16,18 +16,30 @@
 		max-width:640px;
 		width:100%;
 	}
-		.c-flex{
-		display:flex;
+
+	.p-archive__tags{
+		list-style:none;
+	}
+
+	.c-flex{
+	display:flex;
+	}
+
+	@media screen and (max-width:1024px) {
+	.c-flex--column {
+		flex-direction:column;
+	}
+	}
+	.c-flex--center{
+		justify-content: center;
+		align-items:center;
+		gap:50px;
+	}
+	.c-flex--wrap{
+		flex-wrap: wrap;
 	}
 	.c-flex--space-between{
 		justify-content: space-between;
-	}
-	.tag_list{
-		list-style-type:none;
-		gap:10px;
-	}
-	.pager{
-		/* text-align:center; */
 	}
 	.p-archive{
 		padding-top: 39px;
@@ -36,6 +48,73 @@
 	.c-button--primary{
 		margin-left: auto;
 	}
+	.p-archive__tags{
+		list-style-type:none;
+		gap:10px;
+	}
+	/* ページネーション */
+	.page-numbers{
+		text-decoration: none;
+		color:black;
+		border:solid 1px;
+		border-radius:50%;
+		width:70px;
+		height:70px;
+		background-color:#FFF;
+		text-align:center;
+		line-height:70px;
+		font-size:16px;
+	}
+	.current{
+		background-color:#270B0B;
+		color:#FFF;
+	}
+	.page-numbers:hover{
+	background-color:#270B0B;
+	color:#FFF;
+	}
+	/* ページネーション */
+	.p-pager>a{
+		text-decoration: none;
+		color:#3B4043;
+	}
+	.p-pager__previous:before{
+		text-decoration: none;
+		color:black;
+		border:solid 1px;
+		border-radius:50%;
+		width:70px;
+		height:70px;
+		background-color:#FFF;
+		text-align:center;
+		line-height:70px;
+		font-size:20px;
+		content:"<";
+		display:inline-block;
+		margin-right:20px;
+	}
+	.p-pager__previous:before:hover{
+		background-color:#270B0B;
+		color:#FFF;
+	}
+
+	.p-pager__next:after{
+		text-decoration: none;
+		color:black;
+		border:solid 1px;
+		border-radius:50%;
+		width:70px;
+		height:70px;
+		background-color:#FFF;
+		text-align:center;
+		line-height:70px;
+		font-size:20px;
+		content:">";
+		display:inline-block;
+		margin-left:20px;
+	}
+
+
 </style>
 
 <!-- カスタムフィールドの値を取得 -->

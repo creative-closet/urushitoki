@@ -300,28 +300,24 @@
 	/*ファイルパスとスラッグ名は仮*/
 	/*トップページは動画のため除外*/
 	function urushitoki_get_header_image(){
-		if(is_page('accessory-archive'))://アクセサリー
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.jpg');
+		if(is_page('archive-accessory'))://アクセサリー
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.png');
 		elseif(is_page('kintsugi'))://金継ぎ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.jpg');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.png');
 		elseif(is_page('うるしと生活'))://うるしと生活
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.png');
 		elseif(is_page('うるしと楽器'))://うるしと楽器
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-musical.png');
 		elseif(is_page('About'))://About
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.jpg');
-		elseif(is_page('gallery'))://gallery
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+		elseif(is_page('craft')||is_page('information_archive')||is_page('post_archive')||is_single())://gallery
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-craft.png');
 		elseif(is_page('SNS'))://SNS
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		elseif(is_page('よくある質問'))://よくある質問
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		elseif(is_page('問い合わせ'))://問い合わせ
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_page('information-archive'))://information-archive
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_single())://投稿ページ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-post.jpg');
 		else://未登録の画像
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		endif;

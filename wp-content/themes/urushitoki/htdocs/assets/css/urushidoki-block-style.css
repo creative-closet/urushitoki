@@ -107,7 +107,7 @@ body {
   margin-top: 25px;
   width: 340px;
 }
-.p-circle-card .p-circle-card__text .c-text {
+.p-circle-card .p-circle-card__text .c-text, .p-circle-card .p-circle-card__text .is-style-c-text {
   margin-top: 30px;
 }
 
@@ -137,34 +137,34 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-contents-card-column {
+.p-contents-card-column, .is-style-p-contents-card-column .wp-block-group__inner-container {
   display: flex;
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .p-contents-card-column {
+  .p-contents-card-column, .is-style-p-contents-card-column .wp-block-group__inner-container {
     display: block;
   }
 }
-.p-contents-card-column .p-contents-card {
+.p-contents-card-column .p-contents-card, .is-style-p-contents-card-column .wp-block-group__inner-container .p-contents-card {
   width: 50%;
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .p-contents-card-column .p-contents-card {
+  .p-contents-card-column .p-contents-card, .is-style-p-contents-card-column .wp-block-group__inner-container .p-contents-card {
     width: 100%;
   }
 }
-.p-contents-card-column .p-contents-card:nth-of-type(2) {
+.p-contents-card-column .p-contents-card:nth-of-type(2), .is-style-p-contents-card-column .wp-block-group__inner-container .p-contents-card:nth-of-type(2) {
   background-color: rgba(33, 12, 2, 0.9);
   transform: translateY(120px);
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .p-contents-card-column .p-contents-card:nth-of-type(2) {
+  .p-contents-card-column .p-contents-card:nth-of-type(2), .is-style-p-contents-card-column .wp-block-group__inner-container .p-contents-card:nth-of-type(2) {
     transform: translateY(0px);
   }
 }
@@ -315,7 +315,7 @@ body {
   }
 }
 
-.c-title-large {
+.c-title-large, .is-style-c-title-large {
   position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
@@ -326,7 +326,7 @@ body {
   border-bottom: solid 4px #fff;
   /* 罫線のアクセントカラー設定 */
 }
-.c-title-large::after {
+.c-title-large::after, .is-style-c-title-large::after {
   content: "";
   position: absolute;
   display: block;
@@ -335,7 +335,7 @@ body {
   padding-top: 46px;
 }
 
-.c-title-small, .p-shop-card__title {
+.c-title-small, .is-style-c-title-small, .p-shop-card__title {
   position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
@@ -343,7 +343,7 @@ body {
   color: #252525;
   /* 罫線 */
 }
-.c-title-small::after, .p-shop-card__title::after {
+.c-title-small::after, .is-style-c-title-small::after, .p-shop-card__title::after {
   content: "";
   display: block;
   border-bottom: solid 3px #fff;
@@ -351,7 +351,7 @@ body {
   margin-top: 44px;
 }
 
-.c-title-small--center {
+.c-title-small--center, .is-style-c-title-small--center {
   position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: 400;
@@ -360,7 +360,7 @@ body {
   color: #fff;
   /* 罫線 */
 }
-.c-title-small--center::after {
+.c-title-small--center::after, .is-style-c-title-small--center::after {
   content: "";
   display: block;
   margin: auto;
@@ -369,7 +369,7 @@ body {
   margin-top: 44px;
 }
 
-.c-title-noborder {
+.c-title-noborder, .is-style-c-title-noborder {
   position: relative;
   font-size: 1.8rem;
   font-weight: 700;
@@ -951,15 +951,15 @@ body {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
 }
 
-.c-text {
+.c-text, .is-style-c-text {
   font-size: 1.6rem;
   color: #2E2E2E;
 }
-.c-text--white {
+.c-text--white, .is-style-c-text--white {
   font-size: 1.6rem;
   color: #ffffff;
 }
-.c-text--large {
+.c-text--large, .is-style-c-text--large {
   font-size: 2.4rem;
   color: #897C70;
   font-weight: bold;
@@ -977,3 +977,6 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
+.wp-block-create-block-background-text.is-style-background-02 {
+  background-color: rgba(33, 12, 2, 0.9);
+}

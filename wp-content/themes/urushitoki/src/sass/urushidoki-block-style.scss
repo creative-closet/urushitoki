@@ -1,0 +1,41 @@
+@forward './style.scss';
+
+//カスタムブロック 背景付きテキスト/画像
+.wp-block-create-block-background-text.is-style-background-02 {
+	background-color: rgba(33,12,2,0.9);
+}
+
+//見出し
+.is-style-c-title-large{
+	@extend .c-title-large;
+}
+
+.is-style-c-title-small{
+	@extend .c-title-small;
+}
+
+.is-style-c-title-small--center{
+	@extend .c-title-small--center;
+}
+
+.is-style-c-title-noborder{
+	@extend .c-title-noborder;
+}
+
+//段落
+.is-style-c-text{
+	@extend .c-text;
+}
+.is-style-c-text--large{
+	@extend .c-text--large;
+}
+.is-style-c-text--white{
+	@extend .c-text--white;
+}
+
+//グループ 階段
+.is-style-p-contents-card-column{
+	.wp-block-group__inner-container{
+		@extend .p-contents-card-column
+	}
+}

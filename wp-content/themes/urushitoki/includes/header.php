@@ -93,7 +93,7 @@
 		display:inline-block;
 		margin-right:20px;
 	}
-	.p-pager__previous:before:hover{
+	.p-pager__previous:hover:before {
 		background-color:#270B0B;
 		color:#FFF;
 	}
@@ -113,13 +113,17 @@
 		display:inline-block;
 		margin-left:20px;
 	}
+	.p-pager__next:hover:after {
+		background-color:#270B0B;
+		color:#FFF;
+	}
 
 
 </style>
 
 <!-- カスタムフィールドの値を取得 -->
 <?php
-	if (!(is_tag()||is_category()||is_page('archive'))){
+	if (!(is_tag()||is_category()||(is_single()))){
 	// カスタムフィールドの値を取得と各項目を変数に格納
 		global $wp_query;
 		$postID = $wp_query->post->ID;
@@ -137,7 +141,7 @@
 		$description = tag_description();
 		$titleEnglish = "Archive";
 
-	}elseif (is_page('archive')){
+	}elseif (is_single()){
 		$title = "アーカイブ";
 		$description = "投稿アーカイブです";
 		$titleEnglish = "Archive";

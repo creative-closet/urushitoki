@@ -20,8 +20,12 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 	echo '<article class="p-archive c-wrapper">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title">Information</h2>';
-	echo '<section class="p-archive__cards c-flex c-flex--wrap c-flex--column">';
-	while($information_query -> have_posts())://(投稿データ出力ループ -start-)
+	if (is_front_page()){
+		echo '<section class="p-archive__cards c-flex c-flex--column">';
+	}else{
+		echo '<section class="p-archive__cards c-flex c-flex--wrap c-flex--column">';
+	}
+		while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
 	//記事の各種データを取得
 		$id_in_query = get_post_thumbnail_id();
@@ -49,7 +53,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 <?php
 	endwhile;//(投稿データ出力ループ -end-)
 	echo '</section>';
-	if (is_page('information')){
+	if (is_page('archive_information')){
 		$big = 999999999; // need an unlikely integer
 		echo '<div class="p-pager c-flex c-flex--center">';
 		echo paginate_links( array(

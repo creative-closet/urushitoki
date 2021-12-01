@@ -307,7 +307,7 @@
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.png');
 		elseif(is_page('instrument'))://うるしと楽器
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-instrument.png');
-		elseif(is_page('About'))://About
+		elseif(is_page('about'))://About
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.png');
 		elseif(is_page('archive_craft')||is_page('archive_information')||is_page('archive_post')||is_single()||is_tag())://gallery
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-craft-article-information.png');

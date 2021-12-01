@@ -1,6 +1,6 @@
-@use "../../foundation/base.scss";
-@use "../../foundation/variable.scss";
-@use "../../foundation/mixin.scss";
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
 
 .c-title{
     position       : relative;
@@ -66,6 +66,7 @@
 }
 
 .c-title-small{
+    position       : relative;
     @include mixin.font-yumincho;
     font-size : variable.$font-size--title-small--pc;
     color     : variable.$font-color--main;
@@ -80,6 +81,7 @@
 }
 
 .c-title-small--center{
+    position       : relative;
     @include mixin.font-yumincho;
     font-size  : variable.$font-size--title-small--pc;
     text-align : center;
@@ -96,6 +98,7 @@
 }
 
 .c-title-noborder{
+    position    : relative;
     font-size   : variable.$font-size--title-noborder--pc;
     font-weight : variable.$font-weight--bold;
     text-align  : center;

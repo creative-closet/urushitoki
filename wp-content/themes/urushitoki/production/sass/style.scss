@@ -13,15 +13,23 @@ layout
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
-@forward "./object/project/document.scss";
-@forward "./object/project/post-card";
+@forward './object/project/article-card';
+@forward './object/project/circle-card';
+@forward './object/project/contents-card';
+@forward './object/project/post-card';
+@forward './object/project/price-card';
+@forward './object/project/product-card';
+@forward './object/project/shop-card';
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
-@forward 'object/component/button.scss';
+@forward './object/component/background';
+@forward './object/component/button';
 @forward './object/component/bullet';
 @forward './object/component/definition';
+@forward './object/component/pagination';
+@forward './object/component/pattern';
+@forward './object/component/tab';
+@forward './object/component/sns';
 @forward './object/component/text';
 @forward './object/component/title';
-@forward './object/component/pattern';
-

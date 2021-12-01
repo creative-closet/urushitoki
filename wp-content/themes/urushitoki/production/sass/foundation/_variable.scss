@@ -4,6 +4,7 @@
 -------------------------------------------------------- */
 /* 背景 */
 $background-color--main : #F0E7DB;   // 明るいライトブラウン
+$background-color--sub  : #E0D7CA;
 
 /* テキスト */
 $font-color--main       : #252525;   // ダークブラウン
@@ -102,3 +103,27 @@ $font-size--postCard-date:1.4rem;
 $font-color--postCard-title:#2E2E2E;
 $font-color--postCard-sentence:#BFAD9C;
 $font-color--postCard-date:#2E2E2E;
+
+/*
+ *	product-card
+ */
+ //フォントサイズ
+ $font-size--definiton--figcaption-term:1.6rem;
+ $font-size--definiton--figcaption-description:1.2rem;
+
+ //文字の色
+ $font-color--definiton--figcaption-term:#202124;
+ $font-color--definiton--figcaption-description:#A6ADB4;
+
+/*
+ *	content-card
+ */
+ //背景色
+ $background-color--content-card : #210C02;
+
+ /*
+ *	shopCard
+ */
+$background-color--shop-card : #FFF;
+$border-color--shop-card:#DED6CC;
+$border-color--shop-card__title:#897C70;

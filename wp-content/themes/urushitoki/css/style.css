@@ -23,6 +23,15 @@
 /*
  *	postCard
  */
+/*
+ *	product-card
+ */
+/*
+ *	content-card
+ */
+/*
+*	shopCard
+*/
 html {
   background-color: #F0E7DB;
   font-size: 62.5%;
@@ -37,6 +46,129 @@ body {
 
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
+.p-article-card, .p-article-card--wide {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-article-card, .p-article-card--wide {
+    width: 100%;
+  }
+}
+.p-article-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-article-card__title, .p-article-card__title--wide {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  line-height: 70px;
+  padding-left: 28px;
+  color: #fff;
+  background-color: rgba(63, 46, 31, 0.6);
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-article-card__title, .p-article-card__title--wide {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 599px) {
+  .p-article-card__title, .p-article-card__title--wide {
+    height: 60px;
+    line-height: 60px;
+  }
+}
+.p-article-card__title--wide {
+  height: 105px;
+  line-height: 105px;
+}
+.p-circle-card {
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-circle-card .p-circle-card__text {
+  margin-top: 25px;
+  width: 340px;
+}
+.p-circle-card .p-circle-card__text .c-text {
+  margin-top: 30px;
+}
+
+.p-contents-card {
+  background-color: #210C02;
+  overflow: hidden;
+  height: 100%;
+  padding-top: min(116px, 15%);
+  padding-bottom: min(160px, 10%);
+  padding-right: 8%;
+  padding-left: 8%;
+}
+.p-contents-card__title {
+  max-width: 640px;
+  margin: auto;
+}
+.p-contents-card__text {
+  margin: 60px 0;
+}
+.p-contents-card__image {
+  height: 180px;
+  overflow: hidden;
+}
+.p-contents-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-contents-card-column {
+  display: flex;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-contents-card-column {
+    display: block;
+  }
+}
+.p-contents-card-column .p-contents-card {
+  width: 50%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-contents-card-column .p-contents-card {
+    width: 100%;
+  }
+}
+.p-contents-card-column .p-contents-card:nth-of-type(2) {
+  background-color: rgba(33, 12, 2, 0.9);
+  transform: translateY(120px);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-contents-card-column .p-contents-card:nth-of-type(2) {
+    transform: translateY(0px);
+  }
+}
+
 .p-post-card {
   width: 305px;
   height: 353px;
@@ -126,8 +258,263 @@ body {
   }
 }
 
-.documentClass {
-  color: blue;
+.c-title, .c-title--header {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+  border-bottom: solid 4px #fff;
+  /* Englishタイトル */
+  /* 罫線のアクセントカラー設定 */
+}
+@media (max-width: 1024px) {
+  .c-title, .c-title--header {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title, .c-title--header {
+    padding-bottom: 15px;
+  }
+}
+.c-title--header::before {
+  content: attr(title-english);
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+}
+.c-title::after, .c-title--header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 10px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .c-title::after, .c-title--header::after {
+    padding-top: 15px;
+  }
+}
+
+.c-title-large {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #252525;
+  width: 100%;
+  padding-bottom: 46px;
+  border-bottom: solid 4px #fff;
+  /* 罫線のアクセントカラー設定 */
+}
+.c-title-large::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: solid 4px #897C70;
+  width: 42px;
+  padding-top: 46px;
+}
+
+.c-title-small, .p-shop-card__title {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #252525;
+  /* 罫線 */
+}
+.c-title-small::after, .p-shop-card__title::after {
+  content: "";
+  display: block;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-small--center {
+  position: relative;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  /* 罫線 */
+}
+.c-title-small--center::after {
+  content: "";
+  display: block;
+  margin: auto;
+  border-bottom: solid 3px #fff;
+  width: 80px;
+  margin-top: 44px;
+}
+
+.c-title-noborder {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #897C70;
+}
+
+.p-price-card {
+  width: 400px;
+  height: 315px;
+  position: relative;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-price-card {
+    width: 100%;
+  }
+}
+.p-price-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-price-card__price {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 41px;
+  width: 100%;
+  line-height: 41px;
+  padding-right: 10px;
+  text-align: right;
+  color: #fff;
+  background-color: rgba(63, 46, 31, 0.6);
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.p-product-card {
+  width: 280px;
+  height: 350px;
+  background-color: #fff;
+}
+.p-product-card__image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-shop-card {
+  background-color: #FFF;
+  background-image: url("../production/images/monyou05.png");
+  background-repeat: repeat;
+  border: solid 10px #DED6CC;
+  padding: 5% 5% 5% 7%;
+  position: relative;
+  z-index: -2;
+}
+.p-shop-card::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  z-index: -1;
+}
+.p-shop-card__title {
+  margin-bottom: 30px;
+}
+.p-shop-card__title::after {
+  margin-top: 27px;
+  border-color: #897C70;
+}
+.p-shop-card__link img {
+  width: 24px;
+  height: 24px;
+}
+.p-shop-card__text {
+  width: 50%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-shop-card__text {
+    width: 100%;
+  }
+}
+.p-shop-card__image {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 62%;
+  transform: translateY(-25%);
+  /* tablet */
+  /* SmartPhone */
+}
+.p-shop-card__image img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .p-shop-card__image {
+    position: relative;
+    transform: translateY(0);
+    right: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+}
+
+.c-background--dot {
+  background: url("../production/images/background-dot.png") repeat;
+  background-attachment: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.c-background--wave {
+  /* Safariに対応する */
+  position: sticky;
+  /* 要素を固定/解除する */
+  top: 0;
+  /* 縦方向の閾値 */
+  left: 0;
+  /* 横方向の閾値 */
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #F0E7DB;
+}
+.c-background--wave .shape-fill {
+  fill: #E0D7CA;
+  opacity: 0.633;
 }
 
 .c-button--primary {
@@ -239,37 +626,6 @@ body {
   opacity: 0.3;
 }
 
-.c-button--sns, .c-button--sns--insta, .c-button--sns--youtube {
-  font-family: "Georgia", sans-serif;
-  display: inline-block;
-  position: relative;
-  width: 124px;
-  height: 40px;
-  font-size: 15px;
-  border-radius: 5px;
-  background-color: #444;
-  color: #fff !important;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  text-align: center;
-  /* YouTubeマウスホバー時 */
-  /* Instagramマウスホバー時 */
-}
-.c-button--sns:hover, .c-button--sns--insta:hover, .c-button--sns--youtube:hover {
-  text-decoration: none;
-}
-.c-button--sns .fab, .c-button--sns--insta .fab, .c-button--sns--youtube .fab {
-  height: 10px;
-}
-.c-button--sns--youtube:hover {
-  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
-}
-.c-button--sns--insta:hover {
-  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-}
-
 .c-button--direction__top {
   background-color: #fff;
   border: none;
@@ -358,40 +714,6 @@ body {
   width: 60%;
 }
 
-.c-tab {
-  display: inline-block;
-  background-color: #fff;
-  text-decoration: none;
-  color: black;
-  border: 2px solid #e0d7ca;
-  border-radius: 30px;
-  padding: 8px 10px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.c-button--mix, .c-button--mix--after, .c-button--mix--before {
-  width: 223px;
-  height: 60px;
-  display: inline-block;
-  background-color: #fff;
-  color: black;
-  line-height: 55px;
-  border: solid #707070;
-  cursor: pointer;
-  text-decoration: none;
-}
-.c-button--mix--before {
-  text-align: left;
-  padding-left: 44px;
-}
-.c-button--mix--after {
-  text-align: right;
-}
-.c-button--mix--after i {
-  margin-right: 20px;
-}
-
 .c-button--inquiry--menu-inner {
   display: inline-block;
   text-decoration: none;
@@ -450,135 +772,39 @@ body {
 .c-definition__detail__item:only-child {
   margin-left: 15%;
 }
-
-.c-text {
+.c-definition--figcaption {
+  margin: 0px 40px;
+}
+.c-definition--figcaption__term {
   font-size: 1.6rem;
-  color: #2E2E2E;
+  color: #202124;
 }
-.c-text--white {
-  font-size: 1.6rem;
-  color: #ffffff;
-}
-.c-text--large {
-  font-size: 2.4rem;
-  color: #897C70;
-  font-weight: bold;
+.c-definition--figcaption__description {
+  font-size: 1.2rem;
+  color: #A6ADB4;
+  line-height: 1.6;
 }
 
-.c-title, .c-title--header {
-  position: relative;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  color: #252525;
-  width: 100%;
-  padding-bottom: 10px;
-  /* レスポンシブ（タイトルとの余白） */
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-  border-bottom: solid 4px #fff;
-  /* Englishタイトル */
-  /* 罫線のアクセントカラー設定 */
+.c-pagination, .c-pagination--next, .c-pagination--previous {
+  width: 223px;
+  height: 60px;
+  display: inline-block;
+  background-color: #fff;
+  color: black;
+  line-height: 55px;
+  border: solid #707070;
+  cursor: pointer;
+  text-decoration: none;
 }
-@media (max-width: 1024px) {
-  .c-title, .c-title--header {
-    padding-bottom: 20px;
-  }
+.c-pagination--previous {
+  text-align: left;
+  padding-left: 44px;
 }
-@media (max-width: 599px) {
-  .c-title, .c-title--header {
-    padding-bottom: 15px;
-  }
+.c-pagination--next {
+  text-align: right;
 }
-.c-title--header::before {
-  content: attr(title-english);
-  display: block;
-  font-size: 1.4rem;
-  margin-bottom: 50px;
-}
-.c-title::after, .c-title--header::after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-bottom: solid 4px #897C70;
-  width: 42px;
-  padding-top: 10px;
-  /* レスポンシブ（タイトルとの余白） */
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-title::after, .c-title--header::after {
-    padding-top: 20px;
-  }
-}
-@media (max-width: 599px) {
-  .c-title::after, .c-title--header::after {
-    padding-top: 15px;
-  }
-}
-
-.c-title-large {
-  position: relative;
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  color: #252525;
-  width: 100%;
-  padding-bottom: 46px;
-  border-bottom: solid 4px #fff;
-  /* 罫線のアクセントカラー設定 */
-}
-.c-title-large::after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-bottom: solid 4px #897C70;
-  width: 42px;
-  padding-top: 46px;
-}
-
-.c-title-small {
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2rem;
-  color: #252525;
-  /* 罫線 */
-}
-.c-title-small::after {
-  content: "";
-  display: block;
-  border-bottom: solid 3px #fff;
-  width: 80px;
-  margin-top: 44px;
-}
-
-.c-title-small--center {
-  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  color: #fff;
-  /* 罫線 */
-}
-.c-title-small--center::after {
-  content: "";
-  display: block;
-  margin: auto;
-  border-bottom: solid 3px #fff;
-  width: 80px;
-  margin-top: 44px;
-}
-
-.c-title-noborder {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-  color: #897C70;
+.c-pagination--next i {
+  margin-right: 20px;
 }
 
 .c-pattern {
@@ -638,6 +864,63 @@ body {
 }
 .c-pattern__layer--right {
   right: -300px;
+}
+
+.c-tab {
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #e0d7ca;
+  border-radius: 30px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c-sns, .c-sns--insta, .c-sns--youtube {
+  font-family: "Georgia", sans-serif;
+  display: inline-block;
+  position: relative;
+  width: 124px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff !important;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  /* YouTubeマウスホバー時 */
+  /* Instagramマウスホバー時 */
+}
+.c-sns:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
+  text-decoration: none;
+}
+.c-sns .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
+  height: 10px;
+}
+.c-sns--youtube:hover {
+  background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+}
+.c-sns--insta:hover {
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+
+.c-text {
+  font-size: 1.6rem;
+  color: #2E2E2E;
+}
+.c-text--white {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.c-text--large {
+  font-size: 2.4rem;
+  color: #897C70;
+  font-weight: bold;
 }
 
 /* --------------------------------------------------------

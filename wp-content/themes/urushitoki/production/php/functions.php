@@ -1,6 +1,5 @@
 <?php
 
-	//フッターメニューをサポートのため追加
 	add_action('init', function () {
 		register_nav_menus([
 			'menu-main_nav' => 'メニュー：メインナビ',
@@ -9,11 +8,12 @@
 			'footer-contact_nav' => 'フッター:お問い合わせナビ',
 		]);
 		add_theme_support( 'post-thumbnails');
+		add_theme_support("editor-styles");
 		codex_craft_init();
 		codex_information_init();
 		codex_accessory_init();
 		codex_shop_init();
-
+		wp_register_style( 'urushidoki-block-style', get_theme_file_uri() . '/css/urushidoki-block-style.css' );
 	});
 
     //*****************************************************************
@@ -30,9 +30,12 @@
     }
     add_action('wp_enqueue_scripts','mysite_script');
 
+	add_editor_style(get_theme_file_uri() . '/css/editor-style.css');
+
     //*****************************************************************
-	//  カスタムブロック ブロックスタイル追加
+	//  Gutenberg ブロックスタイル追加
 	//*****************************************************************
+	//カスタムブロック 背景付きテキスト/画像
 	register_block_style(
 		'create-block/background-text',
 		array(
@@ -46,9 +49,76 @@
 		array(
 			'name'         => 'background-02',
 			'label'        => '茶（薄）',
-			'inline_style' => '.wp-block-create-block-background-text.is-style-background-02 {
-					background-color: rgba(33,12,2,0.9);
-			}',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+
+	//見出し
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-large',
+			'label'        => '大見出し',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-small',
+			'label'        => '小見出し',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-small--center',
+			'label'        => '小見出し・中央寄せ・白',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/heading',
+		array(
+			'name'         => 'c-title-noborder',
+			'label'        => '小見出し・中央寄せ・茶',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+
+	//段落
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text',
+			'label'        => '通常',
+			'is_default'   => true,
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text--large',
+			'label'        => '太文字',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'         => 'c-text--white',
+			'label'        => '白文字',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/group',
+		array(
+			'name'         => 'p-contents-card-column',
+			'label'        => '階段',
+			'style_handle' => 'urushidoki-block-style'
 		)
 	);
 
@@ -227,31 +297,26 @@
 	}
 
 	/*ヘッダー画像をassetから取得する*/
-	/*ファイルパスとスラッグ名は仮*/
 	/*トップページは動画のため除外*/
 	function urushitoki_get_header_image(){
-		if(is_page('accessory-archive'))://アクセサリー
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.jpg');
+		if(is_page('archive_accessory'))://アクセサリー
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.png');
 		elseif(is_page('kintsugi'))://金継ぎ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.jpg');
-		elseif(is_page('うるしと生活'))://うるしと生活
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.png');
+		elseif(is_page('life'))://うるしと生活
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.png');
-		elseif(is_page('うるしと楽器'))://うるしと楽器
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-musical.png');
+		elseif(is_page('instrument'))://うるしと楽器
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-instrument.png');
 		elseif(is_page('About'))://About
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.jpg');
-		elseif(is_page('gallery'))://gallery
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_page('SNS'))://SNS
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_page('よくある質問'))://よくある質問
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_page('問い合わせ'))://問い合わせ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_page('information-archive'))://information-archive
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
-		elseif(is_single())://投稿ページ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-post.jpg');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.png');
+		elseif(is_page('archive_craft')||is_page('archive_information')||is_page('archive_post')||is_single()||is_tag())://gallery
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-craft-article-information.png');
+		elseif(is_page('sns'))://SNS
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-sns.png');
+		elseif(is_page('faq'))://よくある質問
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-faq.png');
+		elseif(is_page('contact'))://問い合わせ
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-contact.png');
 		else://未登録の画像
 			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
 		endif;

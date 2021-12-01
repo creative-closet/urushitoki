@@ -1,112 +1,67 @@
-<!-- 仮 -->
-<style>
-	.c-flex{
-		display:flex;
-	}
-	.c-flex--space-between{
-		justify-content: space-between;
-	}
+<!-- index.phpを使うページ -->
+<!--
+グループ1：the_contentのみ
+- うるしと生活 固定ページ
+- うるしと楽器 固定ページ
+- よくある質問 固定ページ
+- お問い合わせ 固定ページ
+- お問い合わせ確認 固定ページ
+- お問い合わせ完了 固定ページ
+- お問い合わせプライバシーポリシー 固定ページ
 
-	.tag_list{
-		list-style-type:none;
-		gap:10px;
-	}
-	.pager{
-		/* text-align:center; */
-	}
-	.p-archive{
-		padding-top: 39px;
-		padding-bottom:39px;
-	}
-	.c-button--primary{
-		margin-left: auto;
-	}
-</style>
-<!-- 仮 -->
+グループ2：the_contentとギャラリーパーツファイル
+- アクセサリー 固定ページ
+- 金継ぎ 固定ページ
+- 工芸作品 固定
+
+グループ3：投稿内容とアーカイブ
+- カスタム投稿アーカイブ
+- カスタム投稿詳細ページ
+- 投稿アーカイブ
+- 投稿詳細ページ
+-->
+
 
 <?php get_header(); ?>
 <body>
-	<!-- ヘッダーのフロントに表示 -->
+	<!-- ヘッダー画像・タイトル -->
 	<?php get_template_part('/includes/header')?>
 
-	<!-- 記述内容の表示 -->
-	<!-- <?php get_template_part('/includes/have-post-loop');?> -->
+	<!-- メインコンテンツ -->
+	<main class="" id="">
 
-	<!-- カスタム投稿アクセサリー ループ表示 -->
-	<?php if (
-		is_page('accessory-archive') || is_singular('accessory')) { ?>
-		<?php get_template_part('/includes/archive-accessory');?>
-	<?php } ?>
+		<!-- 個別投稿とアーカイブ以外 -->
+		<?php if (!(is_single()||is_tag())): ?>
+			<!-- グループ1：the_contentのみ -->
+			<div class="c-wrapper">
+				<?php get_template_part('./includes/have-post-loop');?>
+			</div>
+			<!-- グループ2：the_contentとギャラリーパーツファイル -->
+			<?php if(is_page('archive_accessory')) {?>
+				<?php get_template_part('./includes/archive-accessory');?>
+			<?php } ?>
 
-	<!-- Article ループ表示 -->
-	<?php if (is_page('kintsugi') || is_archive()
-	|| !(is_singular(array('accessory','craft','information'))) || is_single()) { ?>
+			<?php if(is_page('kintsugi')) {?>
+				<?php get_template_part('./includes/archive-post');?>
+			<?php } ?>
 
+			<?php if(is_page('archive_craft')) {?>
+				<?php get_template_part('./includes/archive-craft');?>
+			<?php } ?>
 
-	<!-- 個別投稿ページ ループ表示 -->
-	<?php if (is_single()) { ?>
-		<?php if (have_posts()): ?>
-			<?php while (have_posts()) : the_post(); ?>
-				<section class="c-wrapper">
-					<h2 class="c-title-large"><?php the_title();?></h2>
-					<p class="c-text"><?php the_time();?></p>
-					<?php
-						$tags = get_the_tags();
-						if($tags):
-							echo '<ul class="tag_list c-flex">';
-
-							foreach($tags as $tag):
-							$tag_name = $tag->name;
-							$tag_link = get_tag_link($tag->term_id);
-
-							echo '<li><a class="c-tab" href="'.$tag_link.'">'.$tag_name.'</a></li>';
-							endforeach;
-
-							echo '</ul>';
-						endif;
-					?>
-					<?php the_content() ?>
-					<div class="pager c-flex c-flex--space-between">
-						<?php
-						$linkPrevious = get_previous_post_link('%link',"%title");
-						if ($linkPrevious){
-							$linkPrevious = str_replace('<a','<a class="c-button--mix--before"',$linkPrevious);
-							echo $linkPrevious;
-						}
-						$linkNext = get_next_post_link('%link','%title');
-						if ($linkNext){
-							$linkNext = str_replace('<a','<a class="c-button--mix--after"',$linkNext);
-							echo $linkNext;
-						}
-						?>
-					</div>
-				</section>
-			<?php endwhile; ?>
-		<?php else: ?>
-			投稿が無い時の処理を書く
 		<?php endif; ?>
-	<?php } ?>
 
-	<!-- 投稿ミニアーカイブ -->
-	<section class="p-archive c-wrapper">
-		<h2 class="c-title-large">Article</h2>
-		<?php get_template_part('/includes/archive-post'); ?>
-		<a href="<?php echo home_url('/archive/'); ?>" class="c-button--primary" id="p-ripples--effect">
-			<span class="c-button--primary--text">MORE</span>
-			<span class="c-button--primary--line"></span>
-		</a>
-	</section>
-	<?php } ?>
+		<!-- グループ3：投稿詳細とギャラリーパーツファイルor投稿詳細のみ -->
+		<?php if (is_single()){ ?>
+			<?php get_template_part('./includes/post');?>
+		<?php } ?>
+
+		<?php if (is_tag()){ ?>
+			<?php get_template_part('./includes/archive-post');?>
+		<?php } ?>
 
 
-	<!-- カスタム投稿工芸作品 ループ表示 -->
-	<?php if (is_page('gallery') || is_singular('craft')) { ?>
-		<?php get_template_part('/includes/archive-craft'); ?>
-	<?php } ?>
 
-	<!-- カスタム投稿Information ループ表示 -->
-	<?php if (is_page('information-archive') || is_singular('information')) { ?>
-		<?php get_template_part('/includes/archive-information'); ?>
-	<?php } ?>
+	</main>
 
 	<?php get_footer(); ?>

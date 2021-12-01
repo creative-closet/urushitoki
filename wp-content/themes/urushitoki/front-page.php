@@ -69,7 +69,7 @@
 			<div class="k-accessory__text">
 				<h3 class="c-title-small">アクセサリー</h3>
 				<p>年代を問わずにお使いいただける、シンプルなデザインのアクセサリー流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
-				<a href="<?php echo home_url('/accessory-archive/'); ?>" class="c-button--primary" id="p-ripples--effect">
+				<a href="<?php echo home_url('/archive_accessory/'); ?>" class="c-button--primary" id="p-ripples--effect">
 					<span class="c-button--primary--text">MORE</span>
 					<span class="c-button--primary--line"></span>
 				</a>
@@ -116,7 +116,7 @@
 			<div class="k-music__text">
 				<h3 class="c-title-small">うるしと楽器</h3>
 				<p class="c-text">楽器や楽器付属品に付加価値を。漆の魅力を音楽にのせて伝えます。</p>
-				<a href="<?php echo home_url('/music/'); ?>" class="c-button--primary" id="p-ripples--effect">
+				<a href="<?php echo home_url('/instrument/'); ?>" class="c-button--primary" id="p-ripples--effect">
 					<span class="c-button--primary--text">MORE</span>
 					<span class="c-button--primary--line"></span>
 				</a>
@@ -131,14 +131,13 @@
 
 		<!-- informationのギャラリー表示 -->
 		<article class="k-information">
-			<h2 class="c-title">Information</h2>
 			<div class="c-pattern">
 				<div class="k-information__archive k-flex">
 					<?php get_template_part('/includes/archive-information')?>
 				</div>
 				<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
 			</div>
-			<a href="<?php echo home_url('/information-archive/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
+			<a href="<?php echo home_url('/archive_information/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
 				<span class="c-button--primary--text">MORE</span>
 				<span class="c-button--primary--line"></span>
 			</a>
@@ -148,14 +147,13 @@
 
 		<!-- 投稿のギャラリー表示 -->
 		<article class="k-article">
-			<h2 class="c-title">Article</h2>
 			<div class="c-pattern">
 				<div class="k-article__archive k-flex">
 					<?php get_template_part('/includes/archive-post')?>
 				</div>
 				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
 			</div>
-			<a href="<?php echo home_url('/article-archive/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
+			<a href="<?php echo home_url('/archive_post/'); ?>" class="c-button--primary k-button-position" id="p-ripples--effect">
 				<span class="c-button--primary--text">MORE</span>
 				<span class="c-button--primary--line"></span>
 			</a>

@@ -23,6 +23,7 @@ project
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
+@forward './object/component/background-icon';
 @forward './object/component/background';
 @forward './object/component/button';
 @forward './object/component/bullet';

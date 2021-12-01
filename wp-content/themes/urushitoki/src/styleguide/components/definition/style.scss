@@ -16,18 +16,24 @@
 		display: flex;
 		margin-inline-start: 0px;
 		border-bottom: solid 1px variable.$border-color--definiton-descripton;
-		height: 60px;
+		min-height: 60px;
 		align-items: center;
 		&__item{
 			&:nth-last-child(2){
 				width: 15%;
 				text-align: center;
+				@include mixin.breakpoint( breakpoint-sp ){
+					margin-right: 5%;
+				}
 			}
 			&:nth-child(2){
 				width: 85%;
 			}
 			&:only-child{
 				margin-left: 15%;
+				@include mixin.breakpoint( breakpoint-sp ){
+					margin-left: 20%;
+				}
 			}
 		}
 	}

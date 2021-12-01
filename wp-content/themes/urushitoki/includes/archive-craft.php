@@ -47,7 +47,7 @@
 	<?php
 		endwhile;//(投稿データ出力ループ -end-)
 		echo '</section>';
-		if (is_page('craft-archive')){
+		if (is_page('archive_crafts')){
 			$big = 999999999; // need an unlikely integer
 			echo '<div class="p-pager c-flex c-flex--center">';
 			echo paginate_links( array(

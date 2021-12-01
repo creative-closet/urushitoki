@@ -48,7 +48,7 @@ if($accessory_query -> have_posts())://(投稿データ有無確認 -start-)
 	endwhile;//(投稿データ出力ループ -end-)
 	echo '</section>';
 	// アーカイブページの場合はページネーションを表示する
-	if (is_page('archive-accessory')){
+	if (is_page('archive_accessory')){
 		$big = 999999999; // need an unlikely integer
 		echo '<div class="p-pager c-flex c-flex--center">';
 		echo paginate_links( array(

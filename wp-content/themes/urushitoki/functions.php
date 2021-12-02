@@ -300,25 +300,25 @@
 	/*トップページは動画のため除外*/
 	function urushitoki_get_header_image(){
 		if(is_page('archive_accessory'))://アクセサリー
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-accessory.jpg');
 		elseif(is_page('kintsugi'))://金継ぎ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-kintsugi.jpg');
 		elseif(is_page('life'))://うるしと生活
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-life.jpg');
 		elseif(is_page('instrument'))://うるしと楽器
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-instrument.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-instrument.jpg');
 		elseif(is_page('about'))://About
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.jpg');
 		elseif(is_page('archive_craft')||is_page('archive_information')||is_page('archive_post')||is_single()||is_tag())://gallery
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-craft-article-information.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-craft-article-information.jpg');
 		elseif(is_page('sns'))://SNS
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-sns.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-sns.jpg');
 		elseif(is_page('faq'))://よくある質問
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-faq.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-faq.jpg');
 		elseif(is_page('contact'))://問い合わせ
-			$headerImage = array(get_template_directory_uri(). '/assets/image/header-contact.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/header-contact.jpg');
 		else://未登録の画像
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');
+			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image.png');//no-image is temp
 		endif;
 		return $headerImage;
 	}

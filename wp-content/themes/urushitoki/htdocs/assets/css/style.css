@@ -430,6 +430,15 @@ body {
   border: solid 10px #DED6CC;
   padding: 5% 5% 5% 7%;
   position: relative;
+  display: grid;
+  grid-template-columns: 70% minmax(300px, 26%);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-shop-card {
+    display: block;
+  }
 }
 .p-shop-card::before {
   position: absolute;
@@ -458,23 +467,7 @@ body {
   height: 24px;
   transform: translateY(25%);
 }
-.p-shop-card__text {
-  width: 50%;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .p-shop-card__text {
-    width: 100%;
-  }
-}
 .p-shop-card__image {
-  position: absolute;
-  bottom: 0;
-  right: 5%;
-  height: 205px;
-  width: 300px;
-  transform: translateY(-50%);
   /* tablet */
   /* SmartPhone */
 }

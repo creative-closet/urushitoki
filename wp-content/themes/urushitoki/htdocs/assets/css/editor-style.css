@@ -456,6 +456,7 @@ body {
 .p-shop-card__link img {
   width: 24px;
   height: 24px;
+  transform: translateY(25%);
 }
 .p-shop-card__text {
   width: 50%;

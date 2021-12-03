@@ -450,6 +450,9 @@ body {
   margin-top: 27px;
   border-color: #897C70;
 }
+.p-shop-card__link a {
+  text-decoration: none;
+}
 .p-shop-card__link img {
   width: 24px;
   height: 24px;

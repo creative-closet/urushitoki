@@ -430,7 +430,6 @@ body {
   border: solid 10px #DED6CC;
   padding: 5% 5% 5% 7%;
   position: relative;
-  z-index: -2;
 }
 .p-shop-card::before {
   position: absolute;

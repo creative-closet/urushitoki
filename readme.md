@@ -295,13 +295,10 @@ local環境でコマンド
 
 1.  データベース内文字列置換
 
-local環境でコマンドを２回実施
-` wp search-replace 'wp_' 'wpe81544'`
-
+local環境でコマンドを実施
 ` wp search-replace 'http://fp.rash.jp/urushitoki' <自分のローカルのsitetopのurl>`
 （例 ： ` wp search-replace 'http://fp.rash.jp/urushitoki' 'http://urushitokilocal.local'`）
 *それぞれの環境でurl違う可能性あり
-
 
 2. プレフィックスの変更する
 
@@ -330,5 +327,5 @@ siteurlとhome
 
 ` http://urushitokilocal.local`
 
-
+*上記まで実行してうまくいかない時はキャッシュクリアしてみること
 

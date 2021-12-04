@@ -286,7 +286,13 @@ localの管理画面(緑のやつ)からプロジェクト一覧の該当プロ�
 データのエクスポートの実施
 local環境でコマンド
 ` wp db import <ファイル名> `
-（例 ： ` wp db import  /Users/<各自のパス>/wordpress_20210901.sql `）
+
+（例 ：
+` wp db import  /Users/<各自のパス>/wordpress_20210901.sql `
+または、publicがカレントディレクトリの状態で
+` wp db import wordpress_20210901.sql `
+）
+
 
 成功すると以下が表示される
 ` Success: Imported from '/Users/isa/Desktop/wordpress_20210901.sql'.`

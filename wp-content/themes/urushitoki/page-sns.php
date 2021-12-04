@@ -17,7 +17,7 @@
 					<img src="twitter-icon" alt="twitter"></a>
 				<?php }
 				elseif($my_sns == 'Instagram'){ ?>
-					<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-button--sns--insta" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-sns--insta" target="_blank" rel="noopener noreferrer">
 						<i class="fab fa-instagram"></i>
 						<span class="c-title__profile">Instagram</span>
 					</a>
@@ -27,13 +27,13 @@
 					<img src="facebook-icon" alt="facebook"></a>
 				<?php }
 				elseif($my_sns == 'YouTube'){ ?>
-					<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-button--sns--youtube" target="_blank" rel="noopener noreferrer">
+					<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-sns--youtube" target="_blank" rel="noopener noreferrer">
 						<i class="fab fa-youtube"></i>
 						<span class="c-title__profile">YouTube</span>
 					</a>
 				<?php } ?>
-				<p><?php echo $fields['sns_name']; ?></p>
-				<p><?php echo $fields['sns_description']; ?></p>
+				<p class="c-text--large"><?php echo $fields['sns_name']; ?></p>
+				<p class="c-text"><?php echo $fields['sns_description']; ?></p>
 			<?php }
 		}
 	} ?>

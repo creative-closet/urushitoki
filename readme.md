@@ -329,3 +329,15 @@ siteurlとhome
 
 *上記まで実行してうまくいかない時はキャッシュクリアしてみること
 
+4. upload 画像の反映
+
+うるしときのdropboxに下記zipを置いておくので、
+
+` backup_20211204uploads.zip`
+
+取得して
+` urushitokilocal/app/public/wp-content/uploads`
+uploadsフォルダを入れ替える
+
+
+

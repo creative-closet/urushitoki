@@ -24,7 +24,7 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |        └─ package-lock.json
 └─ README.md
 ```
-## 1. Local by FlywheelでWordPress開発環境を構築  
+## 1. Local by FlywheelでWordPress開発環境を構築
 
 Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オプションが不要
 
@@ -66,7 +66,7 @@ Local の Site Domain が urushitoki.local の場合
 
 Site Domain が別の場合
 
-``` npx gulp --domain "サイトのドメイン" ```  
+``` npx gulp --domain "サイトのドメイン" ```
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
@@ -252,3 +252,83 @@ main ブランチ->本番環境にデプロイ
 ` git stash clear `
 
  → 退避した内容の全てを削除
+
+ ## データ取り込み フロー
+
+### 流れ
+
+
+### ①データ取得(export)
+
+*新しくdumpデータをdevelopから取得したい時のみ実行
+
+
+develop環境で実行する
+
+`cd /home/rietime/www/urushitoki`
+` wp db export <ファイル名> `
+（例 ： ` wp db export wordpress_20210901.sql `）
+
+成功すると以下が表示される
+` Success: Exported to 'wordpress_20210901.sql'.`
+
+・dump済みのファイルはesaから取得できる
+ *データは最新日付の使用を推奨
+
+https://urushitoki.esa.io/posts/35
+
+
+### ②ローカルでのデータ取り込み(import)
+
+ここからはlocalでの作業にうつる
+localの管理画面(緑のやつ)からプロジェクト一覧の該当プロジェクトを右クリックして「open site shell」をクリックで、WP-CLIのターミナルが立ち上がる
+
+データのエクスポートの実施
+local環境でコマンド
+` wp db import <ファイル名> `
+（例 ： ` wp db import  /Users/<各自のパス>/wordpress_20210901.sql `）
+
+成功すると以下が表示される
+` Success: Imported from '/Users/isa/Desktop/wordpress_20210901.sql'.`
+
+### ③WordPress内の設定
+
+1.  データベース内文字列置換
+
+local環境でコマンドを２回実施
+` wp search-replace 'wp_' 'wpe81544'`
+
+` wp search-replace 'http://fp.rash.jp/urushitoki' <自分のローカルのsitetopのurl>`
+（例 ： ` wp search-replace 'http://fp.rash.jp/urushitoki' 'http://urushitokilocal.local'`）
+*それぞれの環境でurl違う可能性あり
+
+
+2. プレフィックスの変更する
+
+以下のファイルの変数の中身を変更する
+/urushitokilocal/app/public/wp-config.php
+
+` $table_prefix = 'wp_';`
+
+↓
+
+` $table_prefix = 'wpe81544';`
+
+3. siteurlやhomeの確認
+
+自分のローカルのパスであっているか確認する(特にwpe81544optionsのsiteurlやhome)
+間違っていたらローカル管理画面のDATABASE ->OPEN ADMINERから
+開いて、テーブルのデータを手動変更する
+
+
+siteurlとhome
+(例)
+
+` http://fp.rash.jp/urushitoki/`
+
+↓
+
+` http://urushitokilocal.local`
+
+
+

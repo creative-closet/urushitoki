@@ -118,6 +118,14 @@
 		color:#FFF;
 	}
 
+	/* SNSページ */
+	.k-sns{
+		display: flex;
+		margin: 15px 0;
+	}
+	.k-sns__introduction > .c-text--large{
+		font-size: 16px;
+	}
 
 </style>
 

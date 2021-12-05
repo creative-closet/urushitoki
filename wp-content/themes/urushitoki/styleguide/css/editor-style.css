@@ -463,6 +463,7 @@ body {
 }
 .p-shop-card__link a {
   text-decoration: none;
+  word-break: break-all;
 }
 .p-shop-card__link img {
   width: 24px;

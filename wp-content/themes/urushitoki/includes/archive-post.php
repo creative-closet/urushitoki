@@ -37,7 +37,7 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	//informationのギャラリー表示
 	echo '<h2 class="c-title">Article</h2>';
 	//タグ表示ここから（記事に紐付けられているタグを全て取得して表示する）
-	if(is_page('post_archive')){
+	if(is_page('archive_post')){
 		echo '<ul class="p-archive__tags c-flex">';;
 		$term_list = get_terms('post_tag');
 		$result_list = [];
@@ -49,7 +49,11 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	}
 	//タグ表示ここまで
 
-	echo '<section class="p-archive__cards c-flex c-flex--wrap c-flex--column">';
+	if (is_front_page()){
+		echo '<section class="p-archive__cards c-flex c-flex--column">';
+	}else{
+		echo '<section class="p-archive__cards c-flex c-flex--wrap c-flex--column">';
+	}
 	while($post_query -> have_posts())://(投稿データ出力ループ -start-)
 		$post_query -> the_post();
 		//記事の各種データを取得
@@ -66,7 +70,7 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 <?php
 	endwhile;//(投稿データ出力ループ -end-)
 	echo '</section>';
-	if (is_archive()||is_page('post_archive')){
+	if (is_tag()||is_page('archive_post')){
 		$big = 999999999; // need an unlikely integer
 		echo '<div class="p-pager c-flex c-flex--center">';
 		echo paginate_links( array(

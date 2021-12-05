@@ -808,16 +808,35 @@ body {
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   border-bottom: solid 1px #DDD4CD;
+  min-height: 60px;
+  align-items: center;
+}
+.c-definition__detail__item {
+  padding: 13px 0;
 }
 .c-definition__detail__item:nth-last-child(2) {
   width: 15%;
   text-align: center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-definition__detail__item:nth-last-child(2) {
+    margin-right: 5%;
+  }
 }
 .c-definition__detail__item:nth-child(2) {
   width: 85%;
 }
 .c-definition__detail__item:only-child {
   margin-left: 15%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-definition__detail__item:only-child {
+    margin-left: 20%;
+  }
 }
 .c-definition--figcaption {
   margin: 0px 40px;
@@ -968,6 +987,36 @@ body {
   font-size: 2.4rem;
   color: #897C70;
   font-weight: bold;
+}
+
+.c-textbox, .c-textbox--sub, .c-textbox--main {
+  font-size: 1.6rem;
+  width: 100%;
+}
+.c-textbox--main {
+  max-width: 680px;
+  background-color: #F0E7DB;
+  padding-top: min(50px, 7%);
+  padding-bottom: min(26px, 4%);
+  padding-right: 0;
+  padding-left: 5%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-textbox--main {
+    padding-right: 5%;
+  }
+}
+.c-textbox--sub {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  max-width: 640px;
+  background-color: #270B0B;
+  padding-top: min(60px, 9%);
+  padding-bottom: min(50px, 8%);
+  padding-right: 9%;
+  padding-left: 9%;
 }
 
 /* --------------------------------------------------------

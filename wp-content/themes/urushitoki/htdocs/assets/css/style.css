@@ -989,6 +989,36 @@ body {
   font-weight: bold;
 }
 
+.c-textbox, .c-textbox--sub, .c-textbox--main {
+  font-size: 1.6rem;
+  width: 100%;
+}
+.c-textbox--main {
+  max-width: 680px;
+  background-color: #F0E7DB;
+  padding-top: min(50px, 7%);
+  padding-bottom: min(26px, 4%);
+  padding-right: 0;
+  padding-left: 5%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-textbox--main {
+    padding-right: 5%;
+  }
+}
+.c-textbox--sub {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  max-width: 640px;
+  background-color: #270B0B;
+  padding-top: min(60px, 9%);
+  padding-bottom: min(50px, 8%);
+  padding-right: 9%;
+  padding-left: 9%;
+}
+
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */

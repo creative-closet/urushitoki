@@ -1,0 +1,32 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.c-textbox{
+	font-size : variable.$font-size--base--pc;
+	width: 100%;
+	// 文字メイン
+	&--main{
+		@extend .c-textbox;
+		max-width: 680px;
+		background-color: variable.$background-color--main;
+		padding-top: min(50px, 7%);
+		padding-bottom: min(26px, 4%);
+		padding-right: 0;
+		padding-left: 5%;
+		@include mixin.breakpoint( breakpoint-tab ){
+			padding-right: 5%;
+		}
+	}
+	// 文字サブ（白）
+	&--sub{
+		@extend .c-textbox;
+		@include mixin.font-yumincho;
+		max-width: 640px;
+		background-color: variable.$primary;
+		padding-top: min(60px, 9%);
+		padding-bottom: min(50px, 8%);
+		padding-right: 9%;
+		padding-left: 9%;
+	}
+}

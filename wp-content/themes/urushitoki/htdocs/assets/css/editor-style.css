@@ -98,14 +98,20 @@ body {
   line-height: 105px;
 }
 .p-circle-card {
-  width: 345px;
+  width: 100%;
+  max-width: 345px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.p-circle-card .p-circle-card__image {
+  width: 100%;
+  max-width: 345px;
+}
 .p-circle-card .p-circle-card__text {
   margin-top: 25px;
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
 }
 .p-circle-card .p-circle-card__text .c-text, .p-circle-card .p-circle-card__text .is-style-c-text {
   margin-top: 30px;
@@ -804,16 +810,35 @@ body {
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   border-bottom: solid 1px #DDD4CD;
+  min-height: 60px;
+  align-items: center;
+}
+.c-definition__detail__item {
+  padding: 13px 0;
 }
 .c-definition__detail__item:nth-last-child(2) {
   width: 15%;
   text-align: center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-definition__detail__item:nth-last-child(2) {
+    margin-right: 5%;
+  }
 }
 .c-definition__detail__item:nth-child(2) {
   width: 85%;
 }
 .c-definition__detail__item:only-child {
   margin-left: 15%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-definition__detail__item:only-child {
+    margin-left: 20%;
+  }
 }
 .c-definition--figcaption {
   margin: 0px 40px;

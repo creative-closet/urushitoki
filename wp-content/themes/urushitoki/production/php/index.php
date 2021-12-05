@@ -13,6 +13,12 @@
 - アクセサリー 固定ページ
 - 金継ぎ 固定ページ
 - 工芸作品 固定
+
+グループ3：投稿内容とアーカイブ
+- カスタム投稿アーカイブ
+- カスタム投稿詳細ページ
+- 投稿アーカイブ
+- 投稿詳細ページ
 -->
 
 
@@ -24,15 +30,14 @@
 	<!-- メインコンテンツ -->
 	<main class="" id="">
 
-		<!-- アーカイブ以外 -->
-		<?php if (!(is_single())): ?>
-
+		<!-- 個別投稿とアーカイブ以外 -->
+		<?php if (!(is_single()||is_tag())): ?>
 			<!-- グループ1：the_contentのみ -->
 			<div class="c-wrapper">
 				<?php get_template_part('./includes/have-post-loop');?>
 			</div>
 			<!-- グループ2：the_contentとギャラリーパーツファイル -->
-			<?php if(is_page('archive-accessory')) {?>
+			<?php if(is_page('archive_accessory')) {?>
 				<?php get_template_part('./includes/archive-accessory');?>
 			<?php } ?>
 
@@ -40,11 +45,23 @@
 				<?php get_template_part('./includes/archive-post');?>
 			<?php } ?>
 
-			<?php if(is_page('craft-archive')) {?>
+			<?php if(is_page('archive_craft')) {?>
 				<?php get_template_part('./includes/archive-craft');?>
 			<?php } ?>
 
 		<?php endif; ?>
+
+		<!-- グループ3：投稿詳細とギャラリーパーツファイルor投稿詳細のみ -->
+		<?php if (is_single()){ ?>
+			<?php get_template_part('./includes/post');?>
+		<?php } ?>
+
+		<?php if (is_tag()){ ?>
+			<?php get_template_part('./includes/archive-post');?>
+		<?php } ?>
+
+
+
 	</main>
 
 	<?php get_footer(); ?>

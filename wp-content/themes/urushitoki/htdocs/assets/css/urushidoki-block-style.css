@@ -431,7 +431,9 @@ body {
   padding: 5% 5% 5% 7%;
   position: relative;
   display: grid;
-  grid-template-columns: 70% minmax(300px, 26%);
+  grid-template-columns: 1fr 300px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   /* tablet */
   /* SmartPhone */
 }

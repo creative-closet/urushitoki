@@ -392,3 +392,10 @@ sqlファイルをデスクトップに解凍していれば上記のように�
 https://urushitoki.esa.io/posts/35
 
 ※local環境を`urushitokilocal`で作成していない場合はうまく効かない可能性あり
+
+#### ③WordPress内の設定でDropboxからzipデータを解凍するとファイル名が文字化けする場合
+
+Mac⇔Winの差によるもの
+https://itojisan.xyz/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB/windows10%E3%81%A6%E3%82%99zip%E3%83%BBrar%E3%82%92%E8%A7%A3%E5%87%8D%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91/
+
+こちらを元にWindowsのシステムロケール設定を確認する

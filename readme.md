@@ -347,3 +347,55 @@ uploadsフォルダを入れ替える
 
 
 
+### イレギュラー対応
+#### ②ローカルでのデータ取り込み(import)でwpコマンドが効かない場合
+
+` wp db import <ファイル名> `が効かない場合はmysqlコマンドでデータを取り込む
+
+1. MySQLへログイン
+`$ mysql -u [MySQLのユーザ名] -p`
+
+例：ユーザー名がrootなら`mysql -uroot -p`
+
+
+上記を打つとPWを要求されるので従って入力する
+
+ユーザー名とパスワードは
+
+`C:\Users\ユーザー名\Local Sites\urushitokilocal\app\public\wp-config.php` で確認できる
+
+
+2. データを展開する宛先（データベース名）を指定
+
+`mysql> use db_name`
+
+例：データベース名がlocalなら`use local`
+
+localのDATABASEタブ＞Connect＞OPEN ADMIERよりデータベースにアクセスできる
+
+3. 読み込みたいファイルのパスを指定
+
+`mysql> source /Users/ユーザー名/Desktop/example.sql`
+
+sqlファイルをデスクトップに解凍していれば上記のようになる
+
+成功すると`Query OK, n rows affected(0.00sec)`が大量に表示され、
+2で指定したデータベースにデータが格納されていることがAdmierから確認できる
+
+#### ③WordPress内の設定でwpコマンドが効かない場合
+
+` wp search-replace 'http://fp.rash.jp/urushitoki' 'http://urushitokilocal.local'`
+
+が効かない場合、イレギュラー版のsqlファイル（URLの置換が完了しているもの）を使用する
+
+こちらで取り込めば既にURLの置換が済んでいるため、③の対応そのものが不要となる
+https://urushitoki.esa.io/posts/35
+
+※local環境を`urushitokilocal`で作成していない場合はうまく効かない可能性あり
+
+#### ③WordPress内の設定でDropboxからzipデータを解凍するとファイル名が文字化けする場合
+
+Mac⇔Winの差によるもの
+https://itojisan.xyz/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB/windows10%E3%81%A6%E3%82%99zip%E3%83%BBrar%E3%82%92%E8%A7%A3%E5%87%8D%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91/
+
+こちらを元にWindowsのシステムロケール設定を確認する

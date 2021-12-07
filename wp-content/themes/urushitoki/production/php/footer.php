@@ -64,7 +64,7 @@
 			foreach($users as $user) {
 				$user_id = $user->ID;
 				$group = SCF::get_user_meta($user_id,'sns');
-					foreach ($group as $fields ) {
+					foreach ((array)$group as $fields ) {
 						if($fields['sns_type'] != "" && $fields['sns_url'] != ""){
 							if(!$have_ul_tag){ ?>
 								<ul class="footer-sns_nav">

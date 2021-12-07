@@ -72,11 +72,7 @@
 							}
 							$my_sns = $fields['sns_type']; ?>
 							<li class="footer-sns_nav__list">
-								<?php if($my_sns == 'Twitter'){ ?>
-									<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="k-menu-twitter" target="_blank" rel="noopener noreferrer">
-									<i class="fab fa-twitter"></i><?php echo $fields['sns_name']; ?>
-								<?php }
-								elseif($my_sns == 'Instagram'){ ?>
+								<?php if($my_sns == 'Instagram'){ ?>
 									<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="k-menu-insta" target="_blank" rel="noopener noreferrer">
 										<i class="fab fa-instagram"></i><?php echo $fields['sns_name']; ?>
 									</a>

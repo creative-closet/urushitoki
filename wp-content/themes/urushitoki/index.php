@@ -44,11 +44,15 @@
 			<?php } ?>
 
 			<?php if(is_page('kintsugi')) {?>
-				<?php get_template_part('./includes/archive-post');?>
+				<article class="p-content c-wrapper">
+					<?php get_template_part('./includes/archive-post');?>
+				</article>
 			<?php } ?>
 
 			<?php if(is_page('archive_craft')) {?>
-				<?php get_template_part('./includes/archive-craft');?>
+				<article class="p-content c-wrapper">
+					<?php get_template_part('./includes/archive-craft');?>
+				</article>
 			<?php } ?>
 
 		<?php endif; ?>

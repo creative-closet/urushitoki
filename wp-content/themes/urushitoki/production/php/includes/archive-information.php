@@ -21,7 +21,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">Information</h2>';
 	if (is_front_page()){
-		echo '<div class="p-archive__cards c-flex c-flex--column c-flex--space-between">';
+		echo '<div class="p-archive__cards c-flex c-flex--column c-flex--center">';
 	}else{
 		echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--space-between">';
 	}

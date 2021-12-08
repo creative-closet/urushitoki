@@ -26,6 +26,8 @@
 		height: 100%;
 		background-color:rgba($color: variable.$background-color--postCard, $alpha: 0.5);
 		background-blend-mode:lighten;
-		z-index: -1;
+	}
+	&__wrap{
+		z-index: 1;
 	}
 }

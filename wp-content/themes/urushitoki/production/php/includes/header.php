@@ -181,10 +181,10 @@
 	}
 
 	.p-information-archive{
-			width: 1280px;
-		}
+		width: 1280px;
+	}
 	@media screen and (max-width:1024px) {
-			.p-information-archive{
+		.p-information-archive{
 			width:100%;
 		}
 	}
@@ -199,15 +199,14 @@
 	}
 
 	.p-post-archive > .p-archive__cards{
-			gap:40px;
+		gap:40px;
 	}
 	.p-information-archive > .p-archive__cards{
-			gap:15px;
+		gap:15px;
 	}
 	.p-accessory-archive > .p-archive__cards{
 		gap:53px;
 	}
-
 
 	@media screen and (max-width:1024px) {
 		.p-post-archive > .p-archive__cards{
@@ -239,7 +238,6 @@
 	.u-margin-top--large{
 		margin-top:200px;
 	}
-
 	.u-margin-bottom{
 		margin-bottom :30px;
 	}

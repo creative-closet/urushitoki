@@ -20,7 +20,7 @@ if($accessory_query -> have_posts())://(投稿データ有無確認 -start-)
 	echo '<article class="p-accessory-archive">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">作品集</h2>';
-	echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--space-between">';
+	echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--center">';
 	while($accessory_query -> have_posts())://(投稿データ出力ループ -start-)
 		$accessory_query -> the_post();
 	//記事の各種データを取得
@@ -29,18 +29,21 @@ if($accessory_query -> have_posts())://(投稿データ有無確認 -start-)
 		$link_in_query = get_permalink( );
 ?>
 <a href="<?php echo esc_url($link_in_query);?>">
-	<figure class="p-post-card">
-		<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">
-		<figcaption class="p-post-card__text">
-			<h2 class="p-post-card__text__title"><?php the_title(); ?></h2>
-			<p class="p-post-card__text__sentence">
-				<?php
-				if (has_excerpt()){
-					$excerpt = get_the_excerpt();
-					echo esc_html($excerpt);
-				}
-				?>
-			</p>
+
+	<figure class="p-product-card">
+		<img class="p-product-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="アクセサリーの画像です">
+		<figcaption class="p-product-card__text">
+			<dl class="c-definition--figcaption">
+				<dt class="c-definition--figcaption__term"><?php the_title(); ?></dt>
+				<dd class="c-definition--figcaption__description">
+					<?php
+					if (has_excerpt()){
+						$excerpt = get_the_excerpt();
+						echo esc_html($excerpt);
+					}
+					?>
+				</dd>
+			</dl>
 		</figcaption>
 	</figure>
 </a>

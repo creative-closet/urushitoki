@@ -3,12 +3,14 @@
 	<!-- ヘッダー画像・タイトル -->
 	<?php get_template_part('/includes/header')?>
 	<!-- メインコンテンツ -->
-	<main class="" id="">
+	<main class="l-main" id="">
 		<!-- 記述内容の表示 -->
-		<div class="c-wrapper">
+		<article class="c-wrapper">
 			<?php get_template_part('./includes/have-post-loop');?>
-		</div>
-		<?php get_template_part('./includes/archive-information');?>
+		</article>
+		<article class="c-wrapper">
+			<?php get_template_part('./includes/archive-information');?>
+		</article>
 	</main>
 
 	<?php get_footer(); ?>

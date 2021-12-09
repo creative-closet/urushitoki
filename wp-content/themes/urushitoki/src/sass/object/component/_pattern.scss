@@ -2,45 +2,191 @@
 @use "../../foundation/variable.scss";
 @use "../../foundation/mixin.scss";
 
+// .c-pattern{
+// 	position: relative;
+// 	width: 980px;
+// 	height: 380px;
+// 	margin-top: 30px;
+// 	@include mixin.breakpoint( breakpoint-tab ){
+// 		width: 100%;
+// 		height: 310px;
+// 	}
+// 	@include mixin.breakpoint( breakpoint-sp ){
+// 		height: 180px;
+// 	}
+// 	&__image{
+// 		width: 100%;
+// 		height: 100%;
+// 		object-fit: cover;
+// 	}
+// 	&__layer{
+// 		position: absolute;
+// 		object-fit: cover;
+// 		top: 0px;
+// 		z-index: 1;
+// 		width: 621px;
+// 		height: 488px;
+// 		@include mixin.breakpoint( breakpoint-tab ){
+// 			top:140px;
+// 			width: 437px;
+// 			height: 350px;
+// 		}
+// 		@include mixin.breakpoint( breakpoint-sp ){
+// 			display: none;
+// 		}
+// 		&--left{
+// 			@extend .c-pattern__layer;
+// 			left: -300px;
+// 		}
+// 		&--right{
+// 			@extend .c-pattern__layer;
+// 			right: -300px;
+// 		}
+// 	}
+// }
+
+// ここから下、リファクタリング
+
 .c-pattern{
 	position: relative;
-	width: 980px;
-	height: 380px;
-	margin-top: 30px;
-	@include mixin.breakpoint( breakpoint-tab ){
-		width: 100%;
-		height: 310px;
-	}
-	@include mixin.breakpoint( breakpoint-sp ){
-		height: 180px;
-	}
-	&__image{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	&__layer{
-		position: absolute;
-		object-fit: cover;
-		top: 0px;
-		z-index: 1;
-		width: 621px;
-		height: 488px;
-		@include mixin.breakpoint( breakpoint-tab ){
-			top:140px;
-			width: 437px;
-			height: 350px;
+	width: 100%;
+	height: 100%;
+	// margin-left: 500px;
+	&--lower-left{
+		@extend .c-pattern;
+		&::after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-image: url("../components/raw/pattern/monyou-pc01.png");
+			position: absolute;
+			top: 300px;
+			left: -350px;
+			@include mixin.breakpoint( breakpoint-tab ){
+				background-image: url("../components/raw/pattern/monyou-tab01.png");
+				width: 615px;
+				top: 75px;
+				left: 0;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				background-image: url("../components/raw/pattern/monyou-sp01.png");
+				width: 375px;
+				top: 253px;
+			}
 		}
-		@include mixin.breakpoint( breakpoint-sp ){
-			display: none;
+		&__image{
+			width: 800px;
+			object-fit: cover;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 615px;
+				// height: 310px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				width: 375px;
+				height: 387px;
+			}
 		}
-		&--left{
-			@extend .c-pattern__layer;
-			left: -300px;
+	}
+	&--lower-left--nonsp{
+		@extend .c-pattern;
+		&::after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-image: url("../components/raw/pattern/monyou-pc02.png");
+			position: absolute;
+			top: 100px;
+			left: -609px;
+			@include mixin.breakpoint( breakpoint-tab ){
+				background-image: url("../components/raw/pattern/monyou-tab02.png");
+				// background-position: left bottom;
+				width: 834px;
+				top: 107px;
+				// bottom: 0;
+				left: 0;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				display: none;
+			}
 		}
-		&--right{
-			@extend .c-pattern__layer;
-			right: -300px;
+		&__image{
+			width: 980px;
+			object-fit: cover;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 834px;
+				// height: 310px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				width: 375px;
+				// height: 387px;
+			}
+		}
+	}
+	&--right{
+		@extend .c-pattern;
+		&::after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-image: url("../components/raw/pattern/monyou-pc03.png");
+			position: absolute;
+			left: 679px;
+			@include mixin.breakpoint( breakpoint-tab ){
+				background-image: url("../components/raw/pattern/monyou-tab03.png");
+				// background-position: left bottom;
+				width: 384px;
+				// top: auto;
+				// bottom: 0;
+				left: 531px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				display: none;
+			}
+		}
+		&__image{
+			width: 980px;
+			object-fit: cover;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 834px;
+				// height: 310px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				width: 375px;
+				// height: 387px;
+			}
+		}
+	}
+	&--left{
+		@extend .c-pattern;
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-image: url("../components/raw/pattern/monyou-pc03.png");
+			position: absolute;
+			left: -320px;
+			@include mixin.breakpoint( breakpoint-tab ){
+				background-image: url("../components/raw/pattern/monyou-tab04.png");
+				width: 384px;
+				// top: 0;
+				// bottom: 0;
+				left: 0;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				display: none;
+			}
+		}
+		&__image{
+			width: 980px;
+			object-fit: cover;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 834px;
+				// height: 310px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				width: 375px;
+				// height: 387px;
+			}
 		}
 	}
 }

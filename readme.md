@@ -345,6 +345,13 @@ siteurlとhome
 ` urushitokilocal/app/public/wp-content/uploads`
 uploadsフォルダを入れ替える
 
+5. プラグイン有効化
+
+
+` wp plugin install duplicate-post show-current-template smart-custom-fields snow-monkey-forms duplicate-post`
+
+` wp plugin activate --all`
+
 
 
 ### イレギュラー対応

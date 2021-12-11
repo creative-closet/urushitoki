@@ -22,7 +22,7 @@
 		color: #E0D7CA;
 	}
 	.menu-list{
-		background-color: rgba(39, 11, 11, 0.7);
+		background-image: <?php echo get_theme_file_uri('/assets/image/') ?>;
 		position: fixed;
 		z-index: 10;
 		top: 0;
@@ -54,7 +54,7 @@
 	<article class="menu-list">
 		<a href="<?php echo esc_url(home_url('/')); ?>">
 			<!-- width="200" height="58"はマークアップ完了までの仮置き -->
-			<img src="<?php echo get_theme_file_uri('/production/images/うるしどきロゴ.png'); ?>" alt="うるしどきロゴ" width="200" height="58">
+			<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ" width="200" height="58">
 		</a>
 		<?php
 			$menu_name = 'menu-main_nav';

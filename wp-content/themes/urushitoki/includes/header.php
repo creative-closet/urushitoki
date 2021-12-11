@@ -1,8 +1,10 @@
 <!-- 仮のスタイルは絶対に読み込まれるヘッダーにまとめた -->
 <style>
 	.c-wrapper{
-		padding-left:17%;
-		padding-right:17%;
+
+		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+
 	}
 	header{
 		background-size:cover;
@@ -11,29 +13,40 @@
 	}
 	.l-header{
 		padding-top: 140px;
+		height:420px;
+		background-size:cover;
+		background-position:center;
+	}
+	.l-header--top{
+		height: 840px;
 	}
 	.p-header{
 		max-width:640px;
 		width:100%;
 	}
-
+	.p-header--top{
+		height:100%;
+		width:100%;
+	}
 	.p-archive__tags{
 		list-style:none;
 	}
 
 	.c-flex{
-	display:flex;
+		display:flex;
+	}
+	.c-flex--align-center{
+		align-items:center;
 	}
 
 	@media screen and (max-width:1024px) {
-	.c-flex--column {
+	:not(.p-accessory-archive) >.c-flex--column {
 		flex-direction:column;
 	}
 	}
 	.c-flex--center{
 		justify-content: center;
 		align-items:center;
-		gap:50px;
 	}
 	.c-flex--wrap{
 		flex-wrap: wrap;
@@ -45,6 +58,7 @@
 		padding-top: 39px;
 		padding-bottom:39px;
 	}
+
 	.c-button--primary{
 		margin-left: auto;
 	}
@@ -53,25 +67,34 @@
 		gap:10px;
 	}
 	/* ページネーション */
+	.p-pager{
+		gap:clamp(10px, calc( 100vw - 1000px ) ,50px);
+	}
+	@media screen and (max-width:1024px) {
+		.p-post > .p-pager{
+			gap:50%;
+		}
+	}
+
 	.page-numbers{
 		text-decoration: none;
 		color:black;
-		border:solid 1px;
+		border:solid 0px;
 		border-radius:50%;
-		width:70px;
-		height:70px;
+		width:clamp(30px, calc( 100vw - 710px ) ,70px);
+		height:clamp(30px, calc( 100vw - 710px ) ,70px);
 		background-color:#FFF;
 		text-align:center;
-		line-height:70px;
+		line-height:clamp(30px, calc( 100vw - 710px ) ,70px);
 		font-size:16px;
 	}
 	.current{
 		background-color:#270B0B;
 		color:#FFF;
 	}
-	.page-numbers:hover{
-	background-color:#270B0B;
-	color:#FFF;
+	.page-numbers:not(.dots):hover{
+		background-color:#270B0B;
+		color:#FFF;
 	}
 	/* ページネーション */
 	.p-pager>a{
@@ -81,7 +104,7 @@
 	.p-pager__previous:before{
 		text-decoration: none;
 		color:black;
-		border:solid 1px;
+		border:solid 0px;
 		border-radius:50%;
 		width:70px;
 		height:70px;
@@ -101,7 +124,7 @@
 	.p-pager__next:after{
 		text-decoration: none;
 		color:black;
-		border:solid 1px;
+		border:solid 0px;
 		border-radius:50%;
 		width:70px;
 		height:70px;
@@ -117,6 +140,16 @@
 		background-color:#270B0B;
 		color:#FFF;
 	}
+	@media screen and (max-width:1024px) {
+		.p-pager__previous > span{
+			display:none;
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.p-pager__next > span{
+			display:none;
+		}
+	}
 
 	/* SNSページ */
 	.k-sns{
@@ -127,11 +160,100 @@
 		font-size: 16px;
 	}
 
+	/* メインコンテンツのスタイリング */
+	.l-main{
+		padding-top:200px;
+		padding-bottom:200px;
+	}
+	.p-post__tags{
+		gap:20px;
+
+	}
+	.p-post-archive{
+		width: 1280px;
+		}
+	@media screen and (max-width:1024px) {
+		.p-post-archive{
+			width:100%;
+		}
+	}
+
+	.p-information-archive{
+		width: 1280px;
+	}
+	@media screen and (max-width:1024px) {
+		.p-information-archive{
+			width:100%;
+		}
+	}
+
+	.p-accessory-archive{
+			width: 100%;
+		}
+	@media screen and (max-width:1024px) {
+			.p-accessory-archive{
+			width:100%;
+		}
+	}
+
+	.p-post-archive > .p-archive__cards{
+		gap:40px;
+	}
+	.p-information-archive > .p-archive__cards{
+		gap:15px;
+	}
+	.p-accessory-archive > .p-archive__cards{
+		gap:53px;
+	}
+	.p-craft-archive > .p-archive__cards{
+		gap:53px;
+	}
+
+	@media screen and (max-width:1024px) {
+		.p-post-archive > .p-archive__cards{
+			gap:20px;
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.p-information-archive > .p-archive__cards{
+			gap:15px;
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.p-accessory-archive > .p-archive__cards{
+			gap:15px;
+		}
+	}
+
+
+
+	.u-margin-top{
+		margin-top:30px;
+	}
+	.u-margin-top--small{
+		margin-top:70px;
+	}
+	.u-margin-top--medium{
+		margin-top:100px;
+	}
+	.u-margin-top--large{
+		margin-top:200px;
+	}
+	.u-margin-bottom{
+		margin-bottom :30px;
+	}
+	.u-margin-bottom--medium{
+		margin-bottom :100px;
+	}
+	.u-margin-bottom--large{
+		margin-bottom :200px;
+	}
+
 </style>
 
 <!-- カスタムフィールドの値を取得 -->
 <?php
-	if (!(is_tag()||is_category()||(is_single()))){
+	if (!(is_tag()||is_category()||is_single())){
 	// カスタムフィールドの値を取得と各項目を変数に格納
 		global $wp_query;
 		$postID = $wp_query->post->ID;
@@ -162,30 +284,31 @@
 <?php if (!(is_front_page(  ))):
 	$img = urushitoki_get_header_image();
 ?>
-<header class="masthead c-wrapper temp" style="background-image: url('<?php echo $img[0];?>')">
-	<div class="l-header p-header temp">
-		<h1 class="c-title--header" title-english="<?php echo esc_attr($titleEnglish);?>"><?php echo $title;?></h1>
-		<p><?php echo $description;?></p>
-	</div>
-	<?php get_template_part('includes/menu'); ?>
-</header>
+	<header class="l-header c-wrapper" style="background-image: url('<?php echo $img[0];?>')">
+		<div class="p-header">
+			<h1 class="c-title--header" title-english="<?php echo esc_attr($titleEnglish);?>"><?php echo $title;?></h1>
+			<p><?php echo $description;?></p>
+		</div>
+		<?php get_template_part('includes/menu'); ?>
+	</header>
 <?php else:?>
-	<!-- フロントページのヘッダー動画テスト -->
-	<?php $headerMovie = array(get_template_directory_uri(). '/assets/movie/movie.mp4');?>
-	<video id="video" poster="img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
-        <!--
-        poster：動画ファイルが利用できない環境で代替表示される画像
-        webkit-playsinline：iOS 9までのSafari用インライン再生指定
-        playsinline：iOS 10以降のSafari用インライン再生指定
-        muted：音声をミュートさせる
-        autoplay：動画を自動再生させる
-        loop：動画をループさせる
-        controls：コントロールバーを表示する
-        -->
-        <source src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
-        <!-- <source src="video/movie.ogv" type="video/ogv">
-        <source src="video/movie.webm" type="video/webm"> -->
-        </video>
-	<h1>こちらはフロントページのヘッダー</h1>
+	<!-- フロントページのヘッダー -->
+	<?php $headerMovie = array(get_template_directory_uri(). '/assets/movie/header_movie.mp4');?>
+	<header class="l-header--top">
+		<video class="p-header--top" poster="/assets/image/header-top.jpg" webkit-playsinline playsinline muted autoplay loop>
+			<!--
+			poster：動画ファイルが利用できない環境で代替表示される画像
+			webkit-playsinline：iOS 9までのSafari用インライン再生指定
+			playsinline：iOS 10以降のSafari用インライン再生指定
+			muted：音声をミュートさせる
+			autoplay：動画を自動再生させる
+			loop：動画をループさせる
+			controls：コントロールバーを表示する
+			-->
+			<source src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
+			<!-- <source src="video/movie.ogv" type="video/ogv">
+			<source src="video/movie.webm" type="video/webm"> -->
+		</video>
+	</header>
 <?php endif;?>
 

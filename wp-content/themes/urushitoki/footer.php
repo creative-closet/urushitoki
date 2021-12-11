@@ -1,7 +1,7 @@
 	<!-- styleはマークアップ完了までの仮置き -->
 	<style>
 		.k-footer{
-			background-image: url("<?php echo get_theme_file_uri('/production/images/4M3A9744-full.jpg'); ?>");
+			background-image: url("<?php echo get_theme_file_uri('/assets/image/footer-background.jpg'); ?>");
 			background-size: cover;
 			height: 800px;
 		}
@@ -32,7 +32,7 @@
 		.k-footer-logo{
 			display: flex;
 			justify-content: space-between;
-			margin-top: auto;
+			margin: auto 0 60px;
 		}
 		.k-copyright{
 			margin-top: auto;
@@ -64,7 +64,7 @@
 			foreach($users as $user) {
 				$user_id = $user->ID;
 				$group = SCF::get_user_meta($user_id,'sns');
-					foreach ($group as $fields ) {
+					foreach ((array)$group as $fields ) {
 						if($fields['sns_type'] != "" && $fields['sns_url'] != ""){
 							if(!$have_ul_tag){ ?>
 								<ul class="footer-sns_nav">
@@ -72,11 +72,7 @@
 							}
 							$my_sns = $fields['sns_type']; ?>
 							<li class="footer-sns_nav__list">
-								<?php if($my_sns == 'Twitter'){ ?>
-									<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="k-menu-twitter" target="_blank" rel="noopener noreferrer">
-									<i class="fab fa-twitter"></i><?php echo $fields['sns_name']; ?>
-								<?php }
-								elseif($my_sns == 'Instagram'){ ?>
+								<?php if($my_sns == 'Instagram'){ ?>
 									<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="k-menu-insta" target="_blank" rel="noopener noreferrer">
 										<i class="fab fa-instagram"></i><?php echo $fields['sns_name']; ?>
 									</a>
@@ -100,7 +96,7 @@
 			<?php } ?>
 			<div class="k-footer-logo">
 				<!-- width heightはマークアップ完了までの仮置き -->
-				<img src="<?php echo get_theme_file_uri('/production/images/うるしどきロゴ.png'); ?>" alt="うるしどきロゴ" width="334" height="98">
+				<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ">
 				<p class="k-copyright k-text--white">©︎ 2021 URUSHITOKI ALL RIGHTS RESERVED.</p>
 			</div>
 		</div>

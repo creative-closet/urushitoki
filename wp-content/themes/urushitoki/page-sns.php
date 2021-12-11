@@ -11,15 +11,11 @@
 
 		<?php /* SNS */
 			$group = SCF::get_user_meta($user_id,'sns');
-			foreach ($group as $fields ) {
+			foreach ((array)$group as $fields ) {
 				if($fields['sns_type'] != "" && $fields['sns_url'] != ""){ ?>
 					<figure class="k-sns">
 						<?php $my_sns = $fields['sns_type'];
-						if($my_sns == 'Twitter'){ ?>
-							<a href="<?php echo esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
-							<img src="twitter-icon" alt="twitter"></a>
-						<?php }
-						elseif($my_sns == 'Instagram'){ ?>
+						if($my_sns == 'Instagram'){ ?>
 							<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-sns--insta" target="_blank" rel="noopener noreferrer">
 								<i class="fab fa-instagram"></i>
 								<span class="c-title__profile">Instagram</span>

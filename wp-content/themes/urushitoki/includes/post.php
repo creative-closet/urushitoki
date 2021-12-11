@@ -5,7 +5,7 @@
 		<?php while (have_posts()) : the_post(); ?>
 			<h2 class="p-post__title c-title-large u-margin-bottom "><?php the_title();?></h2>
 			<div class="p-post__tags c-flex c-flex--align-center c-flex--wrap u-margin-bottom">
-				<p class="c-text--large"><?php the_time();?></p>
+				<p class="c-text--large"><?php the_time('Y.m.d');?></p>
 				<?php
 				$tags = get_the_tags();
 				if($tags){
@@ -51,7 +51,6 @@
 		投稿が無い時の処理を書く
 	<?php endif; ?>
 	</article>
-
 
 	<!-- 投稿用ミニアーカイブ -->
 	<?php if (!(is_singular( array( 'information', 'craft', 'shop', 'accessory')))) :?>

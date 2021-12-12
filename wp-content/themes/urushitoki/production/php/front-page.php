@@ -31,15 +31,14 @@
 			<!-- 仮置きスタイル -->
 		<article class="k-urushi k-flex c-wrapper--right">
 			<div class="c-pattern">
-				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou02.png'); ?>" alt="">
-				<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/production/images/16.jpg'); ?>" alt="">
+				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+				<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-tree.jpg'); ?>" alt="うるしの木">
 			</div>
 			<div class="k-urushi__text">
 				<h2 class="c-title">天然漆にこだわる</h2>
 				<p>化学塗料、漆の吹付塗装の技術が進化している中でも、天然漆にこだわり手塗りの伝統の技法を大切にした
 					漆本来の味わいやぬくもりのある物づくりをすることで日本人が忘れかけている伝統工芸の本筋を正すことが進化と考えています。</p>
-				<!-- width heightはマークアップ完了までの仮置き -->
-				<img class="" src="<?php echo get_theme_file_uri('/production/images/3天然漆.png'); ?>" alt="" width="508" height="329">
+				<img class="" src="<?php echo get_theme_file_uri('/assets/image/top-urushi.jpg'); ?>" alt="うるし">
 			</div>
 		</article>
 
@@ -47,87 +46,86 @@
 
 		<article class="k-makie k-flex c-wrapper--left">
 			<div class="c-pattern">
-				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
+				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
 				<div class="k-makie__text">
 					<h2 class="c-title-large">指物と乾漆で素地から塗り蒔絵まで一貫した制作</h2>
 					<p>仏壇蒔絵や仏壇修理修繕を行いながら、素地(木地・乾漆)から塗り蒔絵まで一貫した取り組みで厨子や器、
 						漆アクセサリーなどの漆工芸品の制作活動に力をいれオーダーメイドにも対応しています。今の時代に合ったデザインで伝統的な漆の良さを伝えます。</p>
 				</div>
 			</div>
-			<!-- width heightはマークアップ完了までの仮置き -->
-			<img class="" src="<?php echo get_theme_file_uri('/production/images/30.JPG'); ?>" alt="" width="911" height="368">
+			<img class="" src="<?php echo get_theme_file_uri('/assets/image/top-make.jpg'); ?>" alt="制作">
 		</article>
 
-			<br><br><br><br><br>
+		<br><br><br><br><br>
+
+		<h2 class="c-title-large">Urushi Contents</h2>
+
+		<article class="k-accessory k-flex">
+			<div class="c-pattern">
+				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+				<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-accessory.jpg'); ?>" alt="">
+			</div>
+			<div class="k-accessory__text">
+				<h3 class="c-title-small">アクセサリー</h3>
+				<p>年代を問わずにお使いいただける、シンプルなデザインのアクセサリー流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
+				<a href="<?php echo home_url('/archive_accessory/'); ?>" class="c-button--primary" id="p-ripples--effect">
+					<span class="c-button--primary--text">MORE</span>
+					<span class="c-button--primary--line"></span>
+				</a>
+			</div>
+		</article>
+
+		<br><br><br><br><br>
+
+		<article class="k-kintsugi k-flex">
+			<div class="k-kintsugi__text">
+				<h3 class="c-title-small">金継ぎ</h3>
+				<p class="c-text">壊れてしまった大切なものを蘇らせます。金継ぎをすることでより味わい深いものに仕上げます。</p>
+				<a href="<?php echo home_url('/kintsugi/'); ?>" class="c-button--primary" id="p-ripples--effect">
+					<span class="c-button--primary--text">MORE</span>
+					<span class="c-button--primary--line"></span>
+				</a>
+			</div>
+			<div class="c-pattern">
+				<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+				<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-kintsugi.jpg'); ?>" alt="">
+			</div>
+		</article>
 
 		<div class="c-wrapper">
 			<h2 class="c-title-large">Urushi Contents</h2>
 
-			<article class="k-accessory k-flex">
-				<div class="c-pattern">
-					<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou02.png'); ?>" alt="">
-					<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/production/images/20.jpg'); ?>" alt="">
-				</div>
-				<div class="k-accessory__text">
-					<h3 class="c-title-small">アクセサリー</h3>
-					<p>年代を問わずにお使いいただける、シンプルなデザインのアクセサリー流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
-					<a href="<?php echo home_url('/archive_accessory/'); ?>" class="c-button--primary" id="p-ripples--effect">
-						<span class="c-button--primary--text">MORE</span>
-						<span class="c-button--primary--line"></span>
-					</a>
-				</div>
-			</article>
-
-			<br><br><br><br><br>
-
-			<article class="k-kintsugi k-flex">
-				<div class="k-kintsugi__text">
-					<h3 class="c-title-small">金継ぎ</h3>
-					<p class="c-text">壊れてしまった大切なものを蘇らせます。金継ぎをすることでより味わい深いものに仕上げます。</p>
-					<a href="<?php echo home_url('/kintsugi/'); ?>" class="c-button--primary" id="p-ripples--effect">
-						<span class="c-button--primary--text">MORE</span>
-						<span class="c-button--primary--line"></span>
-					</a>
-				</div>
-				<div class="c-pattern">
-					<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/production/images/monyou02.png'); ?>" alt="">
-					<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/production/images/07.jpg'); ?>" alt="">
-				</div>
-			</article>
+		<article class="k-life k-flex">
+			<div class="c-pattern">
+				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+				<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-life.jpg'); ?>" alt="">
+			</div>
+			<div class="k-life__text">
+				<h3 class="c-title-small">うるしと生活</h3>
+				<p>天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。皆様の生活がより豊かになるようなものづくりを心がけています。</p>
+				<a href="<?php echo home_url('/life/'); ?>" class="c-button--primary" id="p-ripples--effect">
+					<span class="c-button--primary--text">MORE</span>
+					<span class="c-button--primary--line"></span>
+				</a>
+			</div>
+		</article>
 
 			<br><br><br><br><br><br>
 
-			<article class="k-life k-flex">
-				<div class="c-pattern">
-					<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou02.png'); ?>" alt="">
-					<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/production/images/87.jpg'); ?>" alt="">
-				</div>
-				<div class="k-life__text">
-					<h3 class="c-title-small">うるしと生活</h3>
-					<p>天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。皆様の生活がより豊かになるようなものづくりを心がけています。</p>
-					<a href="<?php echo home_url('/life/'); ?>" class="c-button--primary" id="p-ripples--effect">
-						<span class="c-button--primary--text">MORE</span>
-						<span class="c-button--primary--line"></span>
-					</a>
-				</div>
-			</article>
-
-			<br><br><br><br><br>
-
-			<article class="k-music k-flex">
-				<div class="k-music__text">
-					<h3 class="c-title-small">うるしと楽器</h3>
-					<p class="c-text">楽器や楽器付属品に付加価値を。漆の魅力を音楽にのせて伝えます。</p>
-					<a href="<?php echo home_url('/instrument/'); ?>" class="c-button--primary" id="p-ripples--effect">
-						<span class="c-button--primary--text">MORE</span>
-						<span class="c-button--primary--line"></span>
-					</a>
-				</div>
-				<div class="c-pattern">
-					<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/production/images/monyou02.png'); ?>" alt="">
-					<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/production/images/DSC06771.jpg'); ?>" alt="">
-				</div>
-			</article>
+		<article class="k-music k-flex">
+			<div class="k-music__text">
+				<h3 class="c-title-small">うるしと楽器</h3>
+				<p class="c-text">楽器や楽器付属品に付加価値を。漆の魅力を音楽にのせて伝えます。</p>
+				<a href="<?php echo home_url('/instrument/'); ?>" class="c-button--primary" id="p-ripples--effect">
+					<span class="c-button--primary--text">MORE</span>
+					<span class="c-button--primary--line"></span>
+				</a>
+			</div>
+			<div class="c-pattern">
+				<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+				<img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-music.jpg'); ?>" alt="">
+			</div>
+		</article>
 
 			<br><br><br><br><br>
 
@@ -137,8 +135,10 @@
 					<div class="k-information__archive k-flex">
 						<?php get_template_part('/includes/archive-information')?>
 					</div>
-					<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
+					<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
 				</div>
+				<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
+			</div>
 
 			</article>
 
@@ -152,6 +152,8 @@
 					</div>
 					<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/production/images/monyou01.png'); ?>" alt="">
 				</div>
+				<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
+			</div>
 
 			</article>
 

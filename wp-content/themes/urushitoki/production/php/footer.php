@@ -1,7 +1,7 @@
 	<!-- styleはマークアップ完了までの仮置き -->
 	<style>
 		.k-footer{
-			background-image: url("<?php echo get_theme_file_uri('/production/images/4M3A9744-full.jpg'); ?>");
+			background-image: url("<?php echo get_theme_file_uri('/assets/image/footer-background.jpg'); ?>");
 			background-size: cover;
 			height: 100vh;
 		}
@@ -32,7 +32,7 @@
 		.k-footer-logo{
 			display: flex;
 			justify-content: space-between;
-			margin-top: auto;
+			margin: auto 0 60px;
 		}
 		.k-copyright{
 			margin-top: auto;
@@ -96,7 +96,7 @@
 			<?php } ?>
 			<div class="k-footer-logo">
 				<!-- width heightはマークアップ完了までの仮置き -->
-				<img src="<?php echo get_theme_file_uri('/production/images/うるしどきロゴ.png'); ?>" alt="うるしどきロゴ" width="334" height="98">
+				<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ">
 				<p class="k-copyright k-text--white">©︎ 2021 URUSHITOKI ALL RIGHTS RESERVED.</p>
 			</div>
 		</div>

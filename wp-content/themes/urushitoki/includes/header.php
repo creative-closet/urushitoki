@@ -1,8 +1,6 @@
 <!-- 仮のスタイルは絶対に読み込まれるヘッダーにまとめた -->
 <style>
 	.c-wrapper{
-		/* padding-left:5%;
-		padding-right:5%; */
 		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
 		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	}
@@ -230,6 +228,9 @@
 		gap:15px;
 	}
 	.p-accessory-archive > .p-archive__cards{
+		gap:53px;
+	}
+	.p-craft-archive > .p-archive__cards{
 		gap:53px;
 	}
 

@@ -336,6 +336,8 @@
 		</video>
 		<div class="p-video-wrap">
 			<div class="p-top-title">
+				<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ">
+				<br><br>
 				<p class="c-text--white">URUSHITOKI SADAIKE</p>
 				<p class="c-top-description c-text--white">工芸の街「金沢」で天然素材にこだわり、素地から塗り蒔絵と一貫した漆工芸品を、一点一点手作業で丁寧に制作しています。<br>
 					輪島で身につけ金沢で育んだ技の数々が作り出す、「うるしとき 定池」をどうぞご覧ください。</p>

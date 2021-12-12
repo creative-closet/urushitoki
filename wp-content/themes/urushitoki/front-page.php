@@ -1,16 +1,11 @@
 <style>
-
+	.l-body{
+		width: 100%;
+		overflow-x: hidden;
+	}
 	.k-flex--space-between{
 		display: flex;
 		justify-content: space-between;
-	}
-
-	/* ヘッダー部品 */
-	.k-top-contact{
-		position: absolute;
-		top: 0;
-		right: 50px;
-		z-index: 20;
 	}
 
 	/* 天然漆にこだわる */
@@ -71,9 +66,22 @@
 		z-index: 1;
 	}
 
+	/* Information , Article */
 	.k-information__archive , .k-article__archive{
 		position: relative;
 		z-index: 10;
+	}
+	.k-information__monyou{
+		position: absolute;
+		right: -5%;
+		transform: translateY(-60%);
+		z-index: -1;
+	}
+	.k-article__monyou{
+		position: absolute;
+		left: -5%;
+		transform: translateY(-90%);
+		z-index: -1;
 	}
 
 
@@ -81,27 +89,8 @@
 
 
 <?php get_header(); ?>
-<body>
+<body class="l-body">
 	<?php get_template_part('includes/menu'); ?>
-	<svg class="k-top-contact" xmlns="http://www.w3.org/2000/svg" width="210.869" height="108.131" viewBox="0 0 210.869 108.131">
-		<g transform="translate(-1585.957 -0.5)">
-			<line y2="65" transform="translate(1600 0.5)" fill="none" stroke="#fff" stroke-width="3" />
-			<line y2="65" transform="translate(1780 0.5)" fill="none" stroke="#fff" stroke-width="3" />
-			<a href="<?php echo home_url('/contact/');  ?>" class="k-top-contact__button">
-				<g id="パス_814" data-name="パス 814" transform="translate(1585.957 65)" fill="none">
-					<path d="M8.492,0H201.436l9.433,43.631H0Z" stroke="none" />
-					<path d="M 10.96409606933594 2.999988555908203 L 3.64013671875 40.6308708190918 L 207.1511993408203 40.6308708190918 L 199.0151519775391 2.999988555908203 L 10.96409606933594 2.999988555908203 M 8.491683959960938 -1.1444091796875e-05 L 201.4358367919922 -1.1444091796875e-05 L 210.8691253662109 43.6308708190918 L -1.52587890625e-05 43.6308708190918 L 8.491683959960938 -1.1444091796875e-05 Z" stroke="none" fill="#fff" />
-				</g>
-				<g transform="translate(1601 81)">
-					<path id="パス_765" data-name="パス 765" d="M1,6.712v6.429a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2V6.712L9,10.641Z" transform="translate(-1 -3.141)" fill="#fff" />
-					<path id="パス_766" data-name="パス 766" d="M15,3.141H3a2,2,0,0,0-2,2v.071L9,9.141l8-3.929V5.141A2,2,0,0,0,15,3.141Z" transform="translate(-1 -3.141)" fill="#fff" />
-				</g>
-				<text transform="translate(1703 93)" fill="#fff" font-size="16" font-family="HiraginoSans-W6, Hiragino Sans">
-					<tspan x="-80" y="0">お問い合わせ・ご依頼</tspan>
-				</text>
-			</a>
-		</g>
-	</svg>
 	<?php get_template_part('includes/header'); ?>
 
 	<div class="c-background--dot">
@@ -219,24 +208,20 @@
 
 			<!-- informationのギャラリー表示 -->
 			<article class="k-information">
-				<div class="c-pattern">
-					<div class="k-information__archive k-flex--space-between">
-						<?php get_template_part('/includes/archive-information')?>
-					</div>
-					<img class="c-pattern__layer--right" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
+				<div class="k-information__archive k-flex--space-between">
+					<?php get_template_part('/includes/archive-information')?>
 				</div>
+				<img class="k-information__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
 			</article>
 
 			<br><br><br><br><br><br><br>
 
 			<!-- 投稿のギャラリー表示 -->
 			<article class="k-article">
-				<div class="c-pattern">
-					<div class="k-article__archive k-flex--space-between">
-						<?php get_template_part('/includes/archive-post')?>
-					</div>
-					<img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
+				<div class="k-article__archive k-flex--space-between">
+					<?php get_template_part('/includes/archive-post')?>
 				</div>
+				<img class="k-article__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
 			</article>
 
 			<br><br><br><br><br><br><br>

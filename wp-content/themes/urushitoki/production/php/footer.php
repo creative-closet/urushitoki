@@ -3,7 +3,7 @@
 		.k-footer{
 			background-image: url("<?php echo get_theme_file_uri('/production/images/4M3A9744-full.jpg'); ?>");
 			background-size: cover;
-			height: 800px;
+			height: 100vh;
 		}
 		.c-wrapper--footer{
 			display: flex;

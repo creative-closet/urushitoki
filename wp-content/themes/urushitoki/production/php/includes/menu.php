@@ -29,7 +29,7 @@
 		right: -100%;
 		padding-top: 250px;
 		padding-left: 60px;
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 	}
 	.menu-list.active{

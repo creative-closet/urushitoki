@@ -1,12 +1,16 @@
 <!-- 仮のスタイルは絶対に読み込まれるヘッダーにまとめた -->
 <style>
 	.c-wrapper{
-
 		/* padding-left:5%;
 		padding-right:5%; */
 		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
 		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
-
+	}
+	.c-wrapper--left{
+		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	}
+	.c-wrapper--right{
+		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	}
 	header{
 		background-size:cover;
@@ -20,20 +24,41 @@
 		background-position:center;
 	}
 	.l-header--top{
-		height: 840px;
+		height: 100vh;
 	}
 	.p-header{
 		max-width:640px;
 		width:100%;
 	}
 	.p-header--top{
-		height:100%;
+		height:inherit;
 		width:100%;
+		object-fit: cover;
+		position: relative;
+	}
+	.p-video-wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		height: inherit;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	.p-top-title{
+		display: flex;
+		height: inherit;
+		width: inherit;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.c-top-description{
+		text-align: center;
 	}
 	.p-archive__tags{
 		list-style:none;
 	}
-
 	.c-flex{
 		display:flex;
 	}
@@ -304,10 +329,17 @@
 			loop：動画をループさせる
 			controls：コントロールバーを表示する
 			-->
-			<source src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
+			<source lass="p-header--top__source" src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
 			<!-- <source src="video/movie.ogv" type="video/ogv">
 			<source src="video/movie.webm" type="video/webm"> -->
 		</video>
+		<div class="p-video-wrap">
+			<div class="p-top-title">
+				<p class="c-text--white">URUSHITOKI SADAIKE</p>
+				<p class="c-top-description c-text--white">工芸の街「金沢」で天然素材にこだわり、素地から塗り蒔絵と一貫した漆工芸品を、一点一点手作業で丁寧に制作しています。<br>
+					輪島で身につけ金沢で育んだ技の数々が作り出す、「うるしとき 定池」をどうぞご覧ください。</p>
+			</div>
+		</div>
 	</header>
 <?php endif;?>
 

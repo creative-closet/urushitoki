@@ -281,6 +281,14 @@
 		right: 50px;
 		z-index: 20;
 	}
+
+	.k-header-monyou{
+		position: absolute;
+		z-index: 100;
+		top: 60%;
+		left: 80%;
+
+	}
 </style>
 
 <!-- カスタムフィールドの値を取得 -->
@@ -369,7 +377,7 @@
 					輪島で身につけ金沢で育んだ技の数々が作り出す、「うるしとき 定池」をどうぞご覧ください。</p>
 			</div>
 		</div>
-		<img class="" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+		<img class="k-header-monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
 	</header>
 <?php endif;?>
 

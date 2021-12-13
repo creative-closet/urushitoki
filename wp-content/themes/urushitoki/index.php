@@ -38,7 +38,7 @@
 			</div>
 			<!-- グループ2：the_contentとギャラリーパーツファイル -->
 			<?php if(is_page('archive_accessory')) {?>
-				<article class="p-content c-wrapper">
+				<article class="p-content c-wrapper"><!-- c-wrapperはエディタ内で必要なブロックにのみ追加CSSで付加 -->
 					<?php get_template_part('./includes/archive-accessory');?>
 				</article>
 			<?php } ?>

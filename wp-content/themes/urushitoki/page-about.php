@@ -3,7 +3,7 @@
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
 	<!-- メインコンテンツ -->
-	<main class="l-main" id="">
+	<main class="l-main">
 		<article class=c-wrapper>
 		<!-- 記述内容の表示 -->
 		<?php get_template_part('/includes/have-post-loop');?>
@@ -20,7 +20,7 @@
 				if(SCF::get_user_meta($user_id,'user_photo') != ""){
 					$img = SCF::get_user_meta($user_id,'user_photo');
 					echo '<article class="p-craftman c-flex c-flex--center">';
-					echo '<div class=p-craftman__image>';
+					echo '<div class="p-craftman__image">';
 					echo wp_get_attachment_image( $img , 'large' );
 					echo '</div>';
 				} ?>

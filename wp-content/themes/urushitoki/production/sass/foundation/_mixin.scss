@@ -21,3 +21,8 @@
 	font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;	// Windows用, mac用, その他
     font-weight: variable.$font-weight--normal;					// normal:400
 }
+
+@font-face{
+	font-family: "MOBO";
+	src: url("./font/Georgia-Bold.woff");
+}

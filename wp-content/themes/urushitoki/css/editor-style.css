@@ -808,16 +808,35 @@ body {
   -webkit-margin-start: 0px;
           margin-inline-start: 0px;
   border-bottom: solid 1px #DDD4CD;
+  min-height: 60px;
+  align-items: center;
+}
+.c-definition__detail__item {
+  padding: 13px 0;
 }
 .c-definition__detail__item:nth-last-child(2) {
   width: 15%;
   text-align: center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-definition__detail__item:nth-last-child(2) {
+    margin-right: 5%;
+  }
 }
 .c-definition__detail__item:nth-child(2) {
   width: 85%;
 }
 .c-definition__detail__item:only-child {
   margin-left: 15%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-definition__detail__item:only-child {
+    margin-left: 20%;
+  }
 }
 .c-definition--figcaption {
   margin: 0px 40px;
@@ -930,7 +949,7 @@ body {
   display: inline-block;
   position: relative;
   width: 124px;
-  height: 40px;
+  height: 50px;
   font-size: 15px;
   border-radius: 5px;
   background-color: #444;
@@ -938,8 +957,10 @@ body {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   cursor: pointer;
   text-align: center;
+  line-height: 1;
   /* YouTubeマウスホバー時 */
   /* Instagramマウスホバー時 */
 }
@@ -947,7 +968,7 @@ body {
   text-decoration: none;
 }
 .c-sns .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
-  height: 10px;
+  font-size: 2.3rem;
 }
 .c-sns--youtube:hover {
   background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);

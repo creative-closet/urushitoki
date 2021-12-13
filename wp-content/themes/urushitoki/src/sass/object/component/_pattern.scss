@@ -1,6 +1,6 @@
-@use "../../foundation/base.scss";
-@use "../../foundation/variable.scss";
-@use "../../foundation/mixin.scss";
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
 
 // .c-pattern{
 // 	position: relative;
@@ -92,17 +92,17 @@
 		&::after{
 			content: "";
 			width: 100%;
-			height: 100%;
+			height: 130%;	// 画像がズレた分の調整
 			background-image: url("../components/raw/pattern/monyou-pc02.png");
 			position: absolute;
 			top: 100px;
 			left: -609px;
 			@include mixin.breakpoint( breakpoint-tab ){
+				height: 97%;	// 高さが12px大きくなるので調整
 				background-image: url("../components/raw/pattern/monyou-tab02.png");
-				// background-position: left bottom;
-				width: 834px;
-				top: 107px;
-				// bottom: 0;
+				background-position: left bottom;
+				background-size: 80%;	// 見た目でこの値に…。
+				top: 0;
 				left: 0;
 			}
 			@include mixin.breakpoint( breakpoint-sp ){
@@ -113,12 +113,7 @@
 			width: 980px;
 			object-fit: cover;
 			@include mixin.breakpoint( breakpoint-tab ){
-				width: 834px;
-				// height: 310px;
-			}
-			@include mixin.breakpoint( breakpoint-sp ){
-				width: 375px;
-				// height: 387px;
+				width: 100%;
 			}
 		}
 	}
@@ -127,17 +122,20 @@
 		&::after{
 			content: "";
 			width: 100%;
-			height: 100%;
+			height: 130%;	// 画像がズレた分の調整
 			background-image: url("../components/raw/pattern/monyou-pc03.png");
 			position: absolute;
 			left: 679px;
 			@include mixin.breakpoint( breakpoint-tab ){
+				height: 97%;	// 高さが12px大きくなるので調整
 				background-image: url("../components/raw/pattern/monyou-tab03.png");
-				// background-position: left bottom;
-				width: 384px;
+				background-position: right;
+				background-size: 38%;	// 見た目でこの値に…。
+				// width: 384px;
 				// top: auto;
 				// bottom: 0;
-				left: 531px;
+				// left: 531px;
+				left: 0;
 			}
 			@include mixin.breakpoint( breakpoint-sp ){
 				display: none;
@@ -147,12 +145,7 @@
 			width: 980px;
 			object-fit: cover;
 			@include mixin.breakpoint( breakpoint-tab ){
-				width: 834px;
-				// height: 310px;
-			}
-			@include mixin.breakpoint( breakpoint-sp ){
-				width: 375px;
-				// height: 387px;
+				width: 100%;
 			}
 		}
 	}
@@ -161,13 +154,16 @@
 		&::after {
 			content: "";
 			width: 100%;
-			height: 100%;
+			height: 130%;	// 画像がズレた分の調整
 			background-image: url("../components/raw/pattern/monyou-pc03.png");
 			position: absolute;
 			left: -320px;
 			@include mixin.breakpoint( breakpoint-tab ){
+				height: 97%;	// 高さが12px大きくなるので調整
 				background-image: url("../components/raw/pattern/monyou-tab04.png");
-				width: 384px;
+				background-position: left;
+				background-size: 38%;	// 見た目でこの値に…。
+				// width: 384px;
 				// top: 0;
 				// bottom: 0;
 				left: 0;
@@ -180,12 +176,8 @@
 			width: 980px;
 			object-fit: cover;
 			@include mixin.breakpoint( breakpoint-tab ){
-				width: 834px;
-				// height: 310px;
-			}
-			@include mixin.breakpoint( breakpoint-sp ){
-				width: 375px;
-				// height: 387px;
+				// width: 834px;
+				width: 100%;
 			}
 		}
 	}

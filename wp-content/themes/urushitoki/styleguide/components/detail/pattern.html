@@ -700,9 +700,9 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code hljs">
-                                <pre><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/base.scss&quot;</span>;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/variable.scss&quot;</span>;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/mixin.scss&quot;</span>;
+                                <pre><span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/base&quot;</span>;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/variable&quot;</span>;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/mixin&quot;</span>;
 
 <span class="hljs-comment">// .c-pattern{</span>
 <span class="hljs-comment">// 	position: relative;</span>
@@ -794,17 +794,17 @@
 		&amp;<span class="hljs-selector-pseudo">::after</span>{
 			<span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
 			<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-			<span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+			<span class="hljs-attribute">height</span>: <span class="hljs-number">130%</span>;	<span class="hljs-comment">// 画像がズレた分の調整</span>
 			<span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">&quot;../components/raw/pattern/monyou-pc02.png&quot;</span>);
 			<span class="hljs-attribute">position</span>: absolute;
 			<span class="hljs-attribute">top</span>: <span class="hljs-number">100px</span>;
 			<span class="hljs-attribute">left</span>: -<span class="hljs-number">609px</span>;
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+				<span class="hljs-attribute">height</span>: <span class="hljs-number">97%</span>;	<span class="hljs-comment">// 高さが12px大きくなるので調整</span>
 				<span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">&quot;../components/raw/pattern/monyou-tab02.png&quot;</span>);
-				<span class="hljs-comment">// background-position: left bottom;</span>
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">834px</span>;
-				<span class="hljs-attribute">top</span>: <span class="hljs-number">107px</span>;
-				<span class="hljs-comment">// bottom: 0;</span>
+				<span class="hljs-attribute">background-position</span>: left bottom;
+				<span class="hljs-attribute">background-size</span>: <span class="hljs-number">80%</span>;	<span class="hljs-comment">// 見た目でこの値に…。</span>
+				<span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
 				<span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 			}
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
@@ -815,12 +815,7 @@
 			<span class="hljs-attribute">width</span>: <span class="hljs-number">980px</span>;
 			<span class="hljs-selector-tag">object</span>-fit: cover;
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">834px</span>;
-				<span class="hljs-comment">// height: 310px;</span>
-			}
-			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">375px</span>;
-				<span class="hljs-comment">// height: 387px;</span>
+				<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 			}
 		}
 	}
@@ -829,17 +824,20 @@
 		&amp;<span class="hljs-selector-pseudo">::after</span>{
 			<span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
 			<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-			<span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+			<span class="hljs-attribute">height</span>: <span class="hljs-number">130%</span>;	<span class="hljs-comment">// 画像がズレた分の調整</span>
 			<span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">&quot;../components/raw/pattern/monyou-pc03.png&quot;</span>);
 			<span class="hljs-attribute">position</span>: absolute;
 			<span class="hljs-attribute">left</span>: <span class="hljs-number">679px</span>;
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+				<span class="hljs-attribute">height</span>: <span class="hljs-number">97%</span>;	<span class="hljs-comment">// 高さが12px大きくなるので調整</span>
 				<span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">&quot;../components/raw/pattern/monyou-tab03.png&quot;</span>);
-				<span class="hljs-comment">// background-position: left bottom;</span>
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">384px</span>;
+				<span class="hljs-attribute">background-position</span>: right;
+				<span class="hljs-attribute">background-size</span>: <span class="hljs-number">38%</span>;	<span class="hljs-comment">// 見た目でこの値に…。</span>
+				<span class="hljs-comment">// width: 384px;</span>
 				<span class="hljs-comment">// top: auto;</span>
 				<span class="hljs-comment">// bottom: 0;</span>
-				<span class="hljs-attribute">left</span>: <span class="hljs-number">531px</span>;
+				<span class="hljs-comment">// left: 531px;</span>
+				<span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
 			}
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
 				<span class="hljs-attribute">display</span>: none;
@@ -849,12 +847,7 @@
 			<span class="hljs-attribute">width</span>: <span class="hljs-number">980px</span>;
 			<span class="hljs-selector-tag">object</span>-fit: cover;
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">834px</span>;
-				<span class="hljs-comment">// height: 310px;</span>
-			}
-			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">375px</span>;
-				<span class="hljs-comment">// height: 387px;</span>
+				<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 			}
 		}
 	}
@@ -863,13 +856,16 @@
 		&amp;<span class="hljs-selector-pseudo">::after</span> {
 			<span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
 			<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-			<span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+			<span class="hljs-attribute">height</span>: <span class="hljs-number">130%</span>;	<span class="hljs-comment">// 画像がズレた分の調整</span>
 			<span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">&quot;../components/raw/pattern/monyou-pc03.png&quot;</span>);
 			<span class="hljs-attribute">position</span>: absolute;
 			<span class="hljs-attribute">left</span>: -<span class="hljs-number">320px</span>;
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+				<span class="hljs-attribute">height</span>: <span class="hljs-number">97%</span>;	<span class="hljs-comment">// 高さが12px大きくなるので調整</span>
 				<span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">&quot;../components/raw/pattern/monyou-tab04.png&quot;</span>);
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">384px</span>;
+				<span class="hljs-attribute">background-position</span>: left;
+				<span class="hljs-attribute">background-size</span>: <span class="hljs-number">38%</span>;	<span class="hljs-comment">// 見た目でこの値に…。</span>
+				<span class="hljs-comment">// width: 384px;</span>
 				<span class="hljs-comment">// top: 0;</span>
 				<span class="hljs-comment">// bottom: 0;</span>
 				<span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
@@ -882,12 +878,8 @@
 			<span class="hljs-attribute">width</span>: <span class="hljs-number">980px</span>;
 			<span class="hljs-selector-tag">object</span>-fit: cover;
 			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">834px</span>;
-				<span class="hljs-comment">// height: 310px;</span>
-			}
-			<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
-				<span class="hljs-attribute">width</span>: <span class="hljs-number">375px</span>;
-				<span class="hljs-comment">// height: 387px;</span>
+				<span class="hljs-comment">// width: 834px;</span>
+				<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 			}
 		}
 	}
@@ -908,7 +900,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.1 KB</span>
+                    <span class="Meta-value">4.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1724,8 +1716,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-09T02:58:28.255Z">
-                                12/9/2021
+                            <time datetime="2021-12-13T16:14:07.863Z">
+                                12/14/2021
                             </time>
                         
                     </dd>

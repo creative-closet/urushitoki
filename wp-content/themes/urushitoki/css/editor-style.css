@@ -1007,13 +1007,13 @@ body {
   padding-top: min(50px, 7%);
   padding-bottom: min(26px, 4%);
   padding-right: 0;
-  padding-left: 5%;
+  padding-left: min(40px, 5%);
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
   .c-textbox--main {
-    padding-right: 5%;
+    padding-right: min(40px, 5%);
   }
 }
 .c-textbox--sub {
@@ -1023,8 +1023,8 @@ body {
   background-color: #270B0B;
   padding-top: min(60px, 9%);
   padding-bottom: min(50px, 8%);
-  padding-right: 9%;
-  padding-left: 9%;
+  padding-right: min(60px, 9%);
+  padding-left: min(60px, 9%);
 }
 
 .u-margin-top, .u-margin-top--tab {

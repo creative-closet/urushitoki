@@ -23,16 +23,16 @@
 	.menu-main_nav{
 		margin: 50px 0;
 	}
-	.menu-main_nav__list{
+	.menu_nav__list{
 		position: relative;
 		list-style: none;
 		margin-bottom: 30px;
 	}
-	.menu-main_nav__list a{
+	.menu_nav__list a{
 		text-decoration: none;
 		color: #fff;
 	}
-	.menu-main_nav__list::after {
+	.menu_nav__list::after {
 		content: attr(title) "";
 		position: absolute;
 		left: 200px;
@@ -87,7 +87,7 @@
 			<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ" width="200" height="58">
 		</a>
 		<?php
-			$menu_name = 'menu-main_nav';
+			$menu_name = 'menu_nav';
 			get_template_part('includes/nav-menu', null , $menu_name );
 		?>
 		<a href="<?php echo home_url('/contact/');  ?>" class="c-button--inquiry--menu-inner">

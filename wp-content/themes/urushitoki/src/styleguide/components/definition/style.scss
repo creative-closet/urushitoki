@@ -73,7 +73,11 @@
 				transform: translateY(25%);
 			}
 		}
+		&__text{
+			position: relative;
+		}
 		&__image{
+			z-index: 1;
 			img{
 				width: 100%;
 				height: 100%;

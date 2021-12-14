@@ -25,10 +25,7 @@
 			margin-top: 50px;
 		}
 		.k-footer-link{
-			display: flex;
-		}
-		.footer-main_nav,.footer-post_nav{
-			padding-right: 50px;
+			flex-grow: 1;
 		}
 		.k-footer-logo{
 			display: flex;
@@ -45,16 +42,15 @@
 		<div class="c-wrapper--footer">
 			<nav class="k-footer-nav">
 				<div class="k-footer-link">
-					<?php $menu_name = 'footer-main_nav';
-					get_template_part('includes/nav-menu', null , $menu_name );
-
-					$menu_name = 'footer-post_nav';
-					get_template_part('includes/nav-menu', null , $menu_name ); ?>
+					<?php
+						$menu_name = 'menu_nav';
+						get_template_part('includes/nav-menu', null , $menu_name );
+					?>
 				</div>
 
 				<div class="k-contact">
-					<?php $menu_name = 'footer-contact_nav';
-					get_template_part('includes/nav-menu', null , $menu_name );?>
+					<p><a href="<?php echo home_url('/contact/');  ?>" class="k-text--white">お問い合わせ・ご依頼</a></p>
+					<p><a href="<?php echo home_url('/faq/');  ?>" class="k-text--white">よくある質問</a></p>
 					<address class="k-text--white">076-229-0860</address>
 				</div>
 			</nav>

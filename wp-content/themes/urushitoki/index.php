@@ -33,7 +33,7 @@
 		<!-- 個別投稿とアーカイブ以外 -->
 		<?php if (!(is_single()||is_tag())): ?>
 			<!-- グループ1：the_contentのみ -->
-			<div class=""><!-- c-wrapperはエディタ内で必要なブロックにのみ追加CSSで付加 -->
+			<div><!-- c-wrapperはエディタ内で必要なブロックにのみ追加CSSで付加 -->
 				<?php get_template_part('./includes/have-post-loop');?>
 			</div>
 			<!-- グループ2：the_contentとギャラリーパーツファイル -->

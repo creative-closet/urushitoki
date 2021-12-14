@@ -43,7 +43,7 @@
 		z-index: 300;
 		overflow-y: scroll;
 		top: 0;
-		right: -100%;
+		left: -100%;
 		padding-top: 250px;
 		padding-left: 60px;
 		width: 100%;

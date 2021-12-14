@@ -225,6 +225,47 @@
 		}
 	}
 
+	/* うるしときについて */
+	.p-craftman{
+		gap:60px;
+		align-items: flex-start;
+	}
+	@media screen and (max-width:599px) {
+		.p-craftman{
+			flex-direction:column-reverse;
+		}
+	}
+	.p-craftman:not(:nth-of-type(1)){
+		margin-top:120px;
+	}
+	.p-craftman__image{
+		width:42%;
+	}
+	.p-craftman__image>img{
+		width:100%;
+		height:100%;
+	}
+	@media screen and (max-width:599px) {
+		.p-craftman__image{
+			width:100%;
+		}
+	}
+	.p-craftman__information{
+		width:53%;
+	}
+	@media screen and (max-width:599px) {
+		.p-craftman__information{
+			width:100%;
+		}
+	}
+
+
+	.p-sns{
+		gap:20px;
+	}
+	.p-shop-card:not(:nth-of-type(1)){
+		margin-top:20px;
+	}
 
 
 	.u-margin-top{
@@ -241,6 +282,9 @@
 	}
 	.u-margin-bottom{
 		margin-bottom :30px;
+	}
+	.u-margin--small{
+		margin-bottom:70px;
 	}
 	.u-margin-bottom--medium{
 		margin-bottom :100px;

@@ -299,6 +299,34 @@
 		margin-top:20px;
 	}
 
+	/*アクセサリー*/
+	@media screen and (max-width:599px) {
+		.p-accessory-column-block{
+			width:100%;
+			display:flex;
+			flex-direction:column-reverse;
+			gap:20px;
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.p-accessory-circle-card-column-block{
+			width:100%;
+			display:flex;
+			flex-direction:column;
+			gap:60px;
+			flex-wrap:nowrap;
+		}
+		.wp-block-columns{
+			flex-wrap:nowrap;
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.p-circle-card{
+			margin:0 auto;
+		}
+	}
+
+
 
 	.u-margin-bottom{
 		margin-bottom :30px;
@@ -312,6 +340,17 @@
 	.u-margin-bottom--large{
 		margin-bottom :200px;
 	}
+	/*画面幅に合わせて縮小する（ブロックエディタで追加した画像にクラスをあてる） */
+	.c-image-stretch > img{
+		width:100%;
+		height:auto;
+	}
+
+
+
+
+
+
 
 	/* front-pageお問い合わせ */
 	.k-top-contact{

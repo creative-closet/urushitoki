@@ -387,6 +387,10 @@ body {
   color: #897C70;
 }
 
+.c-title__profile {
+  font-size: 1.3rem;
+}
+
 .p-price-card {
   width: 400px;
   height: 315px;
@@ -949,7 +953,8 @@ body {
 }
 
 .c-sns, .c-sns--facebook, .c-sns--insta, .c-sns--youtube {
-  font-family: "Georgia", sans-serif;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
   display: inline-block;
   position: relative;
   width: 124px;
@@ -957,7 +962,7 @@ body {
   font-size: 15px;
   border-radius: 5px;
   background-color: #444;
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -972,7 +977,8 @@ body {
   text-decoration: none;
 }
 .c-sns .fab, .c-sns--facebook .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
+  margin-bottom: 3px;
 }
 .c-sns--youtube:hover {
   background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);

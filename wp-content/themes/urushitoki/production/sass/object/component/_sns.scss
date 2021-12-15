@@ -3,7 +3,7 @@
 @use "../../foundation/variable";
 
 .c-sns {
-	font-family: "Georgia", sans-serif;
+	@include mixin.font-yumincho;
 	display: inline-block;
 	position: relative;
 	width: 124px;
@@ -11,7 +11,7 @@
 	font-size: 15px;
 	border-radius: 5px;
 	background-color: #444;
-	color: #fff !important;
+	color: variable.$font-color--sub;
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
@@ -23,7 +23,8 @@
 		text-decoration: none;
 	}
 	.fab {
-		font-size:2.3rem;
+		font-size:2.2rem;
+		margin-bottom: 3px;
 	}
 	/* YouTubeマウスホバー時 */
 	&--youtube {

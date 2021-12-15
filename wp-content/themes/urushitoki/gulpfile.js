@@ -39,9 +39,14 @@ const destPath = {
 }
 //styleguide用
 const sg_srcPath = {
+  'base' : './src/styleguide',
   'scss' : './src/sass/**/*.scss',
   'js'   : './src/js/**/*.js',
   'watch': './src/**/*'
+}
+const src_destPath = {
+	'scss': './src/sass/',
+	'js'  : './src/js/',
 }
 const sg_destPath = {
   'css'  : './htdocs/assets/css/',
@@ -58,6 +63,8 @@ const postcss      = require( 'gulp-postcss' );                 //Node.js製、C
 const autoprefixer = require( 'gulp-autoprefixer' );            // ベンダープレフィックス自動付与(条件はpackage.jsonに記載)
 const browserSync  = require( 'browser-sync' );                 // ブラウザシンク
 const minimist     = require( 'minimist' );                     // コマンドラインパーサー
+const rename       = require( 'gulp-rename' );                  // リネーム
+const del          = require( 'del' );                          //ディレクトリ削除
 const fractal      = require( '@frctl/fractal' ).create();      // fractal
 
 //---------------------------------------------------------
@@ -66,7 +73,9 @@ const fractal      = require( '@frctl/fractal' ).create();      // fractal
 // プロジェクト関連のメタデータ設定
 fractal.set( 'project.title', 'gulp wordpress styleguide' );
 // コンポーネント設定
-fractal.components.set( 'path', './src/styleguide/components/' );
+//fractal.components.set( 'path', './src/styleguide/components/' );
+//	↑styleguideディレクトリ以下すべて読み込むように変更
+fractal.components.set( 'path', './src/styleguide/' );
 // ドキュメントページ設定
 fractal.docs.set( 'path', './src/styleguide/docs' );
 // 静的ファイルの設定
@@ -192,6 +201,66 @@ const sg_browserSyncOption = {
 }
 
 //---------------------------------------------------------
+//  dev copy
+//---------------------------------------------------------
+
+const clean = ( done ) => {
+	return del( [src_destPath.scss] );
+	done();
+}
+
+const srccopySass = ( done ) => {
+	return src([ srcPath.scss], {
+		dot: true
+	} )
+	.pipe( dest( src_destPath.scss ) );
+	done();
+};
+
+const srccopyJs = ( done ) => {
+	return src([ srcPath.js], {
+		dot: true
+	} )
+	.pipe( dest( src_destPath.js ) );
+	done();
+};
+
+// ComponentはComponentsへコピー
+const devcopyComponent = ( done ) => {
+	return src([
+		// srcPath.scss,
+		// '!./production/sass/foundation/*.scss',
+		// '!./production/sass/style.scss',
+    './production/sass/object/component/*.scss'
+	], {
+		dot: true
+	} )
+	.pipe( rename ( function ( path ) {
+		path.dirname = '/components/' + path.basename.replace( '_', '' );
+		path.basename = 'style';
+	} ) )
+	.pipe( dest( sg_srcPath.base ) );
+	done();
+};
+
+// ProjectはProjectsへコピー
+const devcopyProject = ( done ) => {
+	return src([
+		'./production/sass/object/project/*.scss',
+	], {
+		dot: true
+	} )
+	.pipe( rename ( function ( path ) {
+		path.dirname = '/projects/' + path.basename.replace( '_', '' );
+		path.basename = 'style';
+	} ) )
+	.pipe( dest( sg_srcPath.base ) );
+	done();
+};
+
+exports.devcopy = series( clean, srccopySass, srccopyJs, devcopyComponent, devcopyProject );
+
+//---------------------------------------------------------
 //  watchタスク
 //---------------------------------------------------------
 const watchFiles = (done) => {
@@ -217,6 +286,7 @@ exports.default = series(
 );
 
 exports.styleguide = series(
-  parallel( sg_jsWatch, styleguide_scssCompile, styleguideTask ),
+  // parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopy, styleguideTask ),
+  parallel( sg_jsWatch, srccopySass, srccopyJs, styleguide_scssCompile, devcopyComponent, devcopyProject, styleguideTask ),
   parallel( watchStyleguide, sg_browserSyncFunc )
 );

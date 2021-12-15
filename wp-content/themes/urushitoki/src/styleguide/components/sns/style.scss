@@ -42,4 +42,10 @@
 				no-repeat;
 		}
 	}
+	&--facebook{
+		@extend .c-sns;
+		&:hover{
+			background: linear-gradient(135deg, #6092ff 0%, #3B5998 100%);
+		}
+	}
 }

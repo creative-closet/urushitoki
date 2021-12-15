@@ -44,6 +44,10 @@ body {
   line-height: 2.125;
 }
 
+@font-face {
+  font-family: "MOBO";
+  src: url("./font/Georgia-Bold.woff");
+}
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
 .p-article-card, .p-article-card--wide {
@@ -944,7 +948,7 @@ body {
   cursor: pointer;
 }
 
-.c-sns, .c-sns--insta, .c-sns--youtube {
+.c-sns, .c-sns--facebook, .c-sns--insta, .c-sns--youtube {
   font-family: "Georgia", sans-serif;
   display: inline-block;
   position: relative;
@@ -964,10 +968,10 @@ body {
   /* YouTubeマウスホバー時 */
   /* Instagramマウスホバー時 */
 }
-.c-sns:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
+.c-sns:hover, .c-sns--facebook:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
   text-decoration: none;
 }
-.c-sns .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
+.c-sns .fab, .c-sns--facebook .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
   font-size: 2.3rem;
 }
 .c-sns--youtube:hover {
@@ -975,6 +979,9 @@ body {
 }
 .c-sns--insta:hover {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+.c-sns--facebook:hover {
+  background: linear-gradient(135deg, #6092ff 0%, #3B5998 100%);
 }
 
 .c-text {

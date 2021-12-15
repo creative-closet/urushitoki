@@ -8,6 +8,9 @@
 		justify-content: space-between;
 	}
 
+	.k-description-margin{
+		margin-top: 20px;
+	}
 	/* 天然漆にこだわる */
 	.k-urushi{
 		padding-top: 200px;
@@ -49,7 +52,7 @@
 		justify-content: space-between;
 	}
 	.k-urushi-contents__text--right{
-		padding: 30px 0 0 30px;
+		padding: 30px 0 0 25px;
 	}
 	.k-urushi-contents__text--left{
 		padding: 30px 30px 0 0;
@@ -108,7 +111,7 @@
 			</div>
 			<section class="k-urushi__text">
 				<h2 class="c-title">天然漆にこだわる</h2>
-				<p>化学塗料、漆の吹付塗装の技術が進化している中でも、天然漆にこだわり手塗りの伝統の技法を大切にした
+				<p class="c-text k-description-margin">化学塗料、漆の吹付塗装の技術が進化している中でも、天然漆にこだわり手塗りの伝統の技法を大切にした
 					漆本来の味わいやぬくもりのある物づくりをすることで日本人が忘れかけている伝統工芸の本筋を正すことが進化と考えています。</p>
 			</section>
 		</article>
@@ -118,7 +121,7 @@
 		<article class="k-make k-flex--space-between c-wrapper--left">
 			<section class="k-make__text">
 				<h2 class="c-title">指物と乾漆で素地から塗り蒔絵まで一貫した制作</h2>
-				<p>仏壇蒔絵や仏壇修理修繕を行いながら、素地(木地・乾漆)から塗り蒔絵まで一貫した取り組みで厨子や器、
+				<p class="c-text k-description-margin">仏壇蒔絵や仏壇修理修繕を行いながら、素地(木地・乾漆)から塗り蒔絵まで一貫した取り組みで厨子や器、
 					漆アクセサリーなどの漆工芸品の制作活動に力をいれオーダーメイドにも対応しています。今の時代に合ったデザインで伝統的な漆の良さを伝えます。</p>
 				<img class="k-make__text__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
 			</section>
@@ -138,7 +141,7 @@
 				<div class="k-urushi-contents__description-area">
 					<section class="k-urushi-contents__text--right">
 						<h3 class="c-title-small">アクセサリー</h3>
-						<p class="c-text">年代を問わずにお使いいただける、シンプルなデザインのアクセサリー流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
+						<p class="c-text k-description-margin">年代を問わずにお使いいただける、シンプルなデザインのアクセサリー流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
 					</section>
 					<a href="<?php echo home_url('/archive_accessory/'); ?>" class="k-urushi-contents__button--right c-button--primary" id="p-ripples--effect">
 						<span class="c-button--primary--text">MORE</span>
@@ -153,7 +156,7 @@
 				<div class="k-urushi-contents__description-area">
 					<section class="k-urushi-contents__text--left">
 						<h3 class="c-title-small">金継ぎ</h3>
-						<p class="c-text">壊れてしまった大切なものを蘇らせます。金継ぎをすることでより味わい深いものに仕上げます。</p>
+						<p class="c-text k-description-margin">壊れてしまった大切なものを蘇らせます。金継ぎをすることでより味わい深いものに仕上げます。</p>
 					</section>
 					<a href="<?php echo home_url('/kintsugi/'); ?>" class="k-urushi-contents__button--left c-button--primary" id="p-ripples--effect">
 						<span class="c-button--primary--text">MORE</span>
@@ -176,7 +179,7 @@
 				<div class="k-urushi-contents__description-area">
 					<section class="k-urushi-contents__text--right">
 						<h3 class="c-title-small">うるしと生活</h3>
-						<p class="c-text">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。皆様の生活がより豊かになるようなものづくりを心がけています。</p>
+						<p class="c-text k-description-margin">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。皆様の生活がより豊かになるようなものづくりを心がけています。</p>
 					</section>
 					<a href="<?php echo home_url('/life/'); ?>" class="k-urushi-contents__button--right c-button--primary" id="p-ripples--effect">
 						<span class="c-button--primary--text">MORE</span>
@@ -191,7 +194,7 @@
 				<div class="k-urushi-contents__description-area">
 					<section class="k-urushi-contents__text--left">
 						<h3 class="c-title-small">うるしと楽器</h3>
-						<p class="c-text">楽器や楽器付属品に付加価値を、<br>漆の魅力を音楽にのせて伝えます。</p>
+						<p class="c-text k-description-margin">楽器や楽器付属品に付加価値を、<br>漆の魅力を音楽にのせて伝えます。</p>
 					</section>
 					<a href="<?php echo home_url('/instrument/'); ?>" class="k-urushi-contents__button--left c-button--primary" id="p-ripples--effect">
 						<span class="c-button--primary--text">MORE</span>

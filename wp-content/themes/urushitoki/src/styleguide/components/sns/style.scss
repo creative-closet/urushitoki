@@ -9,7 +9,7 @@
 	height: 50px;
 	font-size: 15px;
 	border-radius: 5px;
-	background-color: #3C3C3C;
+	background-color: #252525;
 	color: variable.$font-color--sub;
 	text-decoration: none;
 	display: flex;
@@ -21,7 +21,7 @@
 	&:hover {
 		text-decoration: none;
 	}
-	&__profile{
+	&__title{
 		font-size: variable.$font-size--title-sns;
 	}
 	.fab {

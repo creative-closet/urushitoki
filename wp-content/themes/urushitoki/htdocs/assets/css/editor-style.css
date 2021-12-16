@@ -358,7 +358,15 @@ a {
   display: block;
   border-bottom: solid 3px #fff;
   width: 80px;
-  margin-top: 44px;
+  margin-top: 30px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-title-small::after, .is-style-c-title-small::after, .c-definition--shop-card__title::after {
+    margin-top: 20px;
+  }
 }
 
 .c-title-small--center, .is-style-c-title-small--center {
@@ -999,6 +1007,36 @@ a {
   font-size: 2.4rem;
   color: #897C70;
   font-weight: bold;
+}
+
+.c-textbox, .c-textbox--sub, .c-textbox--main {
+  font-size: 1.6rem;
+  width: 100%;
+}
+.c-textbox--main {
+  max-width: 680px;
+  background-color: #F0E7DB;
+  padding-top: min(50px, 7%);
+  padding-bottom: min(26px, 4%);
+  padding-right: 0;
+  padding-left: min(40px, 5%);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-textbox--main {
+    padding-right: min(40px, 5%);
+  }
+}
+.c-textbox--sub {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
+  max-width: 640px;
+  background-color: #270B0B;
+  padding-top: min(60px, 9%);
+  padding-bottom: min(50px, 8%);
+  padding-right: min(60px, 9%);
+  padding-left: min(60px, 9%);
 }
 
 .u-margin-top, .u-margin-top--tab {

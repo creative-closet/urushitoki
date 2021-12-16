@@ -24,7 +24,7 @@
 			}
 			?>
 			<!-- ページネーション　前後ページリンク -->
-			<div class="p-pager c-flex c-flex--center u-margin-top--medium u-margin-bottom--medium">
+			<div class="p-pager c-flex c-flex--center u-margin-top--large u-margin-bottom--medium">
 				<?php
 				$linkPrevious = get_previous_post_link('%link','%title');
 				if ($linkPrevious){

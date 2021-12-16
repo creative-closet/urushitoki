@@ -44,6 +44,10 @@ body {
   line-height: 2.125;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
 .p-article-card, .p-article-card--wide {

@@ -44,6 +44,10 @@ body {
   line-height: 2.125;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
 .p-article-card, .p-article-card--wide {
@@ -997,6 +1001,27 @@ body {
   font-weight: bold;
 }
 
+.u-margin-top, .u-margin-top--tab {
+  margin-top: 30px;
+}
+.u-margin-top--tab {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .u-margin-top--tab {
+    margin-top: 20px;
+  }
+}
+
+.u-margin-top--small {
+  margin-top: 20px;
+}
+
+.u-margin-top--large {
+  margin-top: 60px;
+}
+
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
@@ -1008,4 +1033,7 @@ project
 -------------------------------------------------------- */
 /* --------------------------------------------------------
 component
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+utility
 -------------------------------------------------------- */

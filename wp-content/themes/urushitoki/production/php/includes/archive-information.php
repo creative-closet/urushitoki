@@ -17,13 +17,13 @@ $information_query = new WP_Query($args_query);
 
 //サブクエリループ
 if($information_query -> have_posts())://(投稿データ有無確認 -start-)
-	echo '<article class="p-archive c-wrapper">';
+	echo '<article class="p-information-archive">';
 	//informationのギャラリー表示
-	echo '<h2 class="c-title">Information</h2>';
+	echo '<h2 class="c-title u-margin-bottom">Information</h2>';
 	if (is_front_page()){
-		echo '<section class="p-archive__cards c-flex c-flex--column">';
+		echo '<div class="p-archive__cards c-flex c-flex--column c-flex--space-between">';
 	}else{
-		echo '<section class="p-archive__cards c-flex c-flex--wrap c-flex--column">';
+		echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--center">';
 	}
 		while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
@@ -52,21 +52,31 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 </a>
 <?php
 	endwhile;//(投稿データ出力ループ -end-)
-	echo '</section>';
+	echo '</div>';
 	if (is_page('archive_information')){
 		$big = 999999999; // need an unlikely integer
-		echo '<div class="p-pager c-flex c-flex--center">';
+		echo '<div class="p-pager c-flex c-flex--center u-margin-top--large">';
 		echo paginate_links( array(
 			'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),//ページ番号付きのリンクを生成するために使われるベースの URL を指定します。例えば 'http://example.com/all_posts.php%_%' を指定すると、それに含まれる '%_%' は 'format' 引数（下記参照）により置き換えられます。
 			'current'   => max( 1, $paged),//現在のページ番号
 			'total'     => $information_query->max_num_pages,//全体のページ数 queryの絞り込み条件をmax_num_pagesに反映させる
-			'mid_size'  => 5,//現在のページの両側にいくつの数字を表示するか。ただし現在のページは含みません。
+			'mid_size'  => 2,//現在のページの両側にいくつの数字を表示するか。ただし現在のページは含みません。
 			'end_size'  => 1,//ページ番号のリストの両端（最初と最後）にいくつの数字を表示するか。
 			'prev_text' => '＜',//前ページへの文字
 			'next_text' => '＞',//次のページへの文字
 		) );
 		echo '</div>';
+	}else{
+?>
+		<a href="<?php echo home_url('/archive_information/'); ?>" class="c-button--primary u-margin-top" id="p-ripples--effect">
+			<span class="c-button--primary--text">MORE</span>
+			<span class="c-button--primary--line"></span>
+		</a>
+<?php
 	}
 endif;//(投稿データ有無確認 -end-)
-wp_reset_postdata();
 ?>
+
+</article>
+<?wp_reset_postdata();?>
+<!-- サブクエリここまで -->

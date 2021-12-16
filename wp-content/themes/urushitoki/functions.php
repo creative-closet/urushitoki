@@ -2,10 +2,7 @@
 
 	add_action('init', function () {
 		register_nav_menus([
-			'menu-main_nav' => 'メニュー：メインナビ',
-			'footer-main_nav' => 'フッター:メインナビ',
-			'footer-post_nav' => 'フッター:投稿ナビ',
-			'footer-contact_nav' => 'フッター:お問い合わせナビ',
+			'menu_nav' => 'メニュー'
 		]);
 		add_theme_support( 'post-thumbnails');
 		add_theme_support("editor-styles");

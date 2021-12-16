@@ -76,7 +76,11 @@
 		display       : block;
 		border-bottom : solid 3px variable.$border-color--main;
 		width         : 80px;       // 線の長さ
-		margin-top    : 44px;       // タイトルとの余白
+		margin-top    : 30px;       // タイトルとの余白
+		/* レスポンシブ（タイトルとの余白） */
+		@include mixin.breakpoint( breakpoint-tab ){
+			margin-top: 20px;
+		}
 	}
 }
 
@@ -94,7 +98,7 @@
 		border-bottom : solid 3px variable.$border-color--main;
 		width         : 80px;       // 線の長さ
 		margin-top    : 44px;       // タイトルとの余白
-}
+	}
 }
 
 .c-title-noborder{

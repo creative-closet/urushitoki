@@ -964,35 +964,43 @@ a {
   cursor: pointer;
 }
 
-.c-sns, .c-sns--insta, .c-sns--youtube {
-  font-family: "Georgia", sans-serif;
-  display: inline-block;
-  position: relative;
+.c-sns, .c-sns--facebook, .c-sns--insta, .c-sns--youtube {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 400;
   width: 124px;
-  height: 40px;
+  height: 50px;
   font-size: 15px;
   border-radius: 5px;
-  background-color: #444;
-  color: #fff !important;
+  background-color: #252525;
+  color: #fff;
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   cursor: pointer;
   text-align: center;
+  line-height: 1;
   /* YouTubeマウスホバー時 */
   /* Instagramマウスホバー時 */
 }
-.c-sns:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
+.c-sns:hover, .c-sns--facebook:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
   text-decoration: none;
 }
-.c-sns .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
-  height: 10px;
+.c-sns__title {
+  font-size: 1.6rem;
+}
+.c-sns .fab, .c-sns--facebook .fab, .c-sns--insta .fab, .c-sns--youtube .fab {
+  font-size: 2rem;
+  margin-bottom: 3px;
 }
 .c-sns--youtube:hover {
   background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
 }
 .c-sns--insta:hover {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+.c-sns--facebook:hover {
+  background: linear-gradient(135deg, #6092ff 0%, #3B5998 100%);
 }
 
 .c-text, .is-style-c-text {

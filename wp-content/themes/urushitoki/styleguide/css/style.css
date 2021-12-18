@@ -44,6 +44,10 @@ body {
   line-height: 2.125;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
 .p-article-card, .p-article-card--wide {
@@ -354,7 +358,15 @@ body {
   display: block;
   border-bottom: solid 3px #fff;
   width: 80px;
-  margin-top: 44px;
+  margin-top: 30px;
+  /* レスポンシブ（タイトルとの余白） */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-title-small::after, .c-definition--shop-card__title::after {
+    margin-top: 20px;
+  }
 }
 
 .c-title-small--center {

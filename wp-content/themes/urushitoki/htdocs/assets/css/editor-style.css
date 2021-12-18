@@ -682,7 +682,7 @@ a {
   cursor: pointer;
   width: 120px;
   height: 120px;
-  border: 2px solid #333;
+  border: 2px solid #270b0b;
   border-radius: 50%;
   /* tablet */
   /* SmartPhone */
@@ -713,7 +713,6 @@ a {
   position: absolute;
   left: 22.5%;
   height: 3px;
-  border-radius: 2px;
   background: #fff;
   width: 55%;
   transform: rotate(-155deg);
@@ -722,13 +721,13 @@ a {
   display: inline-block;
 }
 .c-open--button span:nth-of-type(2) {
-  top: calc(50% - 3px);
+  top: calc(50% - 1px);
 }
 .c-open--button span:nth-of-type(1) {
-  top: calc(30% - 3px);
+  top: calc(30% - 1px);
 }
 .c-open--button span:nth-of-type(3) {
-  top: calc(70% - 3px);
+  top: calc(70% - 1px);
 }
 
 /*activeクラスが付与されると

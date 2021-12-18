@@ -140,7 +140,7 @@
 	cursor: pointer;
 	width: 120px;
 	height: 120px;
-	border: 2px solid #333;
+	border: 2px solid #270b0b;
 	border-radius: 50%;
 	@include  mixin.breakpoint( breakpoint-tab ) {
 		width: 100px;
@@ -161,55 +161,47 @@
 }
 
 .c-open--button {
-	span,&::before,&::after{
+	span{
 		position: absolute;
 		left: calc(50% - 27.5%);
 		height: 3px;
-		border-radius: 2px;
 		background: #fff;
 		width: 55%;
 		transform:rotate(-155deg);
 		transition: all 0.4s; /*アニメーションの設定*/
+		display: inline-block;
 	}
-	span {
-	display: inline-block;
-	top:calc(50% - 3px);
+	span:nth-of-type(2){
+		top:calc(50% - 1px);
 	}
-	&::before,&::after{
-		content: '';
-		display: block;
+	span:nth-of-type(1){
+		top:calc(30% - 1px);
 	}
-	&::before{
-		top:calc(30% - 3px);
-	}
-	&::after{
-		top: calc(70% - 3px);
+	span:nth-of-type(3){
+		top: calc(70% - 1px);
 	}
 }
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
-
-.c-open--button.active {
+.c-open--button.active .c-open--button--area {
 	transform: rotateY(-360deg);
 }
-
 .c-open--button.active {
-	.c-open--button--area{
-		transform: rotate(-360deg);
-	}
-	span{
+	span:nth-of-type(2){
 		opacity: 0;
+		transform: rotateY(-360deg);
 	}
-	&::before {
+	span:nth-of-type(1),span:nth-of-type(3){
 		top: calc(50% - 3px);
-		transform: rotate(-135deg);
+		left:calc(50% - 30%);
 		width: 60%;
 	}
-	&::after {
-		top: calc(50% - 3px);
+	span:nth-of-type(1){
 		transform: rotate(135deg);
-		width: 60%;
+	}
+	span:nth-of-type(3){
+		transform: rotate(-135deg);
 	}
 }
 

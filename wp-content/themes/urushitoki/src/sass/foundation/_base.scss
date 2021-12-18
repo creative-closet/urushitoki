@@ -12,7 +12,6 @@ body{
     line-height      : 2.125;     //   Xd行送り34px/文字サイズ16px
 }
 
-@font-face{
-	font-family: "MOBO";
-	src: url("./font/Georgia-Bold.woff");
+a{
+	text-decoration: none;
 }

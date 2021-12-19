@@ -21,4 +21,4 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }} 
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
           LOCAL_DIR: ./                           
-          REMOTE_DIR: "/home/rietime/www/urushitoki/"
+          REMOTE_DIR: "/home/users/0/chu.jp-urushi/web/sadaike/urushitoki"

@@ -36,10 +36,12 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	// echo '<article class="p-archive">';
 	echo '<article class="p-post-archive">';
 	//投稿のギャラリー表示
-	echo '<h2 class="c-title u-margin-bottom">Article</h2>';
+	if (!is_page('archive_post')){
+		echo '<h2 class="c-title u-margin-bottom">Article</h2>';
+	}
 	//タグ表示ここから（記事に紐付けられているタグを全て取得して表示する）
 	if(is_page('archive_post')){
-		echo '<ul class="p-archive__tags u-margin-bottom c-flex">';;
+		echo '<ul class="p-archive__tags u-margin-top--large u-margin-bottom c-flex">';;
 		$term_list = get_terms('post_tag');
 		$result_list = [];
 		foreach ($term_list as $term) {
@@ -74,7 +76,7 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	//ページネーション　ページ数リンク
 	if (is_tag()||is_page('archive_post')){
 		$big = 999999999; // need an unlikely integer
-		echo '<div class="p-pager c-flex c-flex--center u-margin-top--small">';
+		echo '<div class="p-pager c-flex c-flex--center u-margin-top--large">';
 		echo paginate_links( array(
 			'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),//ページ番号付きのリンクを生成するために使われるベースの URL を指定します。例えば 'http://example.com/all_posts.php%_%' を指定すると、それに含まれる '%_%' は 'format' 引数（下記参照）により置き換えられます。
 			'current'   => max( 1, $paged),//現在のページ番号

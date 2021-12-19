@@ -3,25 +3,29 @@
 @use "../../foundation/variable";
 
 .c-sns {
-	font-family: "Georgia", sans-serif;
-	display: inline-block;
-	position: relative;
+	@include mixin.font-yumincho;
 	width: 124px;
-	height: 40px;
+	height: 50px;
 	font-size: 15px;
 	border-radius: 5px;
-	background-color: #444;
-	color: #fff !important;
+	background-color: #252525;
+	color: variable.$font-color--sub;
 	text-decoration: none;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	cursor: pointer;
 	text-align: center;
+	line-height: 1;
 	&:hover {
 		text-decoration: none;
 	}
+	&__title{
+		font-size: variable.$font-size--title-sns;
+	}
 	.fab {
-		height: 10px;
+		font-size:2rem;
+		margin-bottom: 3px;
 	}
 	/* YouTubeマウスホバー時 */
 	&--youtube {
@@ -38,6 +42,12 @@
 				no-repeat;
 			background: linear-gradient(135deg, #427eff 0%, #f13f79 70%)
 				no-repeat;
+		}
+	}
+	&--facebook{
+		@extend .c-sns;
+		&:hover{
+			background: linear-gradient(135deg, #6092ff 0%, #3B5998 100%);
 		}
 	}
 }

@@ -1,24 +1,38 @@
 <!-- styleはマークアップ完了までの仮置き -->
 <style>
+	body::before{
+		content: '';
+		background-color: transparent;
+		transition: all 0.5s;
+	}
 	body.active{
+		position: relative;
 		overflow-y: hidden;
 	}
-	menu{
-		overflow: hidden;
+	body.active::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		z-index: 200;
+	}
+	.menu{
+		width: 100%;
 	}
 	.menu-main_nav{
 		margin: 50px 0;
 	}
-	.menu-main_nav__list{
+	.menu_nav__list{
 		position: relative;
 		list-style: none;
 		margin-bottom: 30px;
 	}
-	.menu-main_nav__list a{
+	.menu_nav__list a{
 		text-decoration: none;
 		color: #fff;
 	}
-	.menu-main_nav__list::after {
+	.menu_nav__list::after {
 		content: attr(title) "";
 		position: absolute;
 		left: 200px;
@@ -26,32 +40,35 @@
 	}
 	.menu-list{
 		position: fixed;
-		z-index: 100;
+		z-index: 300;
 		overflow-y: scroll;
 		top: 0;
-		right: -100%;
-		padding-top: 250px;
-		padding-left: 60px;
-		width: 100vw;
+		left: -100%;
+		padding: 250px 0 100px 60px;
+		width: 100%;
 		height: 100vh;
+		transition: all 0.5s;
 	}
 	.menu-list.active{
-		right: 0;
+		left: 0;
 	}
 	.k-menu-background{
-		position: absolute;
-		top :0px;
-		left:0px;
+		position: fixed;
+		top :0;
+		left:-100%;
 		z-index: -1;
-		width: 100%;
-		object-fit: cover;
-
+		height: 100%;
+		object-fit: contain;
+		transition: all 0.5s;
+	}
+	.k-menu-background.active{
+		left:0;
 	}
 	.k-open--button{
 		top: 60px;
 		left: 60px;
 		position: fixed;
-		z-index: 200;
+		z-index: 1000;
 	}
 </style>
 <!-- styleはマークアップ完了までの仮置き -->
@@ -70,7 +87,7 @@
 			<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ" width="200" height="58">
 		</a>
 		<?php
-			$menu_name = 'menu-main_nav';
+			$menu_name = 'menu_nav';
 			get_template_part('includes/nav-menu', null , $menu_name );
 		?>
 		<a href="<?php echo home_url('/contact/');  ?>" class="c-button--inquiry--menu-inner">
@@ -78,3 +95,4 @@
 		</a>
 	</article>
 </menu>
+

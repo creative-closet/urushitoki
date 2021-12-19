@@ -30,6 +30,13 @@
 	}
 	.p-archive__tags{
 		list-style:none;
+		width:30%;
+		flex-wrap:wrap;
+	}
+	@media screen and (max-width:1024px) {
+		.p-archive__tags{
+			width:100%;
+		}
 	}
 
 	.c-flex{
@@ -225,22 +232,82 @@
 		}
 	}
 
+	/* うるしときについて */
+	.p-craftman{
+		gap:60px;
+		align-items: flex-start;
+	}
+	@media screen and (max-width:599px) {
+		.p-craftman{
+			flex-direction:column-reverse;
+		}
+	}
+	.p-craftman:not(:nth-of-type(1)){
+		margin-top:120px;
+	}
+	.p-craftman__image{
+		width:42%;
+	}
+	.p-craftman__image>img{
+		width:100%;
+		height:100%;
+	}
+	@media screen and (max-width:599px) {
+		.p-craftman__image{
+			width:100%;
+		}
+	}
+	.p-craftman__information{
+		width:53%;
+	}
+	@media screen and (max-width:599px) {
+		.p-craftman__information{
+			width:100%;
+		}
+	}
 
 
-	.u-margin-top{
-		margin-top:30px;
+	.p-sns{
+		gap:20px;
 	}
-	.u-margin-top--small{
-		margin-top:70px;
+	.p-shop-card:not(:nth-of-type(1)){
+		margin-top:20px;
 	}
-	.u-margin-top--medium{
-		margin-top:100px;
+
+	/*アクセサリー*/
+	@media screen and (max-width:599px) {
+		.p-accessory-column-block{
+			width:100%;
+			display:flex;
+			flex-direction:column-reverse;
+			gap:20px;
+		}
 	}
-	.u-margin-top--large{
-		margin-top:200px;
+	@media screen and (max-width:1024px) {
+		.p-accessory-circle-card-column-block{
+			width:100%;
+			display:flex;
+			flex-direction:column;
+			gap:60px;
+			flex-wrap:nowrap;
+		}
+		.wp-block-columns{
+			flex-wrap:nowrap;
+		}
 	}
+	@media screen and (max-width:1024px) {
+		.p-circle-card{
+			margin:0 auto;
+		}
+	}
+
+
+
 	.u-margin-bottom{
 		margin-bottom :30px;
+	}
+	.u-margin--small{
+		margin-bottom:70px;
 	}
 	.u-margin-bottom--medium{
 		margin-bottom :100px;
@@ -248,6 +315,17 @@
 	.u-margin-bottom--large{
 		margin-bottom :200px;
 	}
+	/*画面幅に合わせて縮小する（ブロックエディタで追加した画像にクラスをあてる） */
+	.c-image-stretch > img{
+		width:100%;
+		height:auto;
+	}
+
+
+
+
+
+
 
 </style>
 
@@ -287,7 +365,7 @@
 	<header class="l-header c-wrapper" style="background-image: url('<?php echo $img[0];?>')">
 		<div class="p-header">
 			<h1 class="c-title--header" title-english="<?php echo esc_attr($titleEnglish);?>"><?php echo $title;?></h1>
-			<p><?php echo $description;?></p>
+			<p class="u-margin-top--small"><?php echo $description;?></p>
 		</div>
 		<?php get_template_part('includes/menu'); ?>
 	</header>

@@ -4,6 +4,7 @@
 
 ## --ディレクトリ構造--
 
+
 ```
 urushitoki        //WordPress 本体のディレクトリと同一（ Local の場合 public と同一）
 ├─ wp-content

@@ -20,17 +20,26 @@
 	.menu{
 		width: 100%;
 	}
-	.menu-main_nav{
+	.menu_nav{
 		margin: 50px 0;
+		width: 100%;
+	}
+	.menu_nav__link{
+		display: block;
+		width: 420px;
+		text-decoration: none;
+		color: #fff;
+		background-color: transparent;
+	}
+	.menu_nav__link:hover{
+		background-color: rgba(255, 255, 255, 0.2);
+		transition: all 0.2s;
 	}
 	.menu_nav__list{
 		position: relative;
+		display: block;
 		list-style: none;
 		margin-bottom: 30px;
-	}
-	.menu_nav__list a{
-		text-decoration: none;
-		color: #fff;
 	}
 	.menu_nav__list::after {
 		content: attr(title) "";

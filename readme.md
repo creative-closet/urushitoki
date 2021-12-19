@@ -4,6 +4,7 @@
 
 ## --ディレクトリ構造--
 
+
 ```
 urushitoki        //WordPress 本体のディレクトリと同一（ Local の場合 public と同一）
 ├─ wp-content
@@ -406,4 +407,3 @@ Mac⇔Winの差によるもの
 https://itojisan.xyz/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB/windows10%E3%81%A6%E3%82%99zip%E3%83%BBrar%E3%82%92%E8%A7%A3%E5%87%8D%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91/
 
 こちらを元にWindowsのシステムロケール設定を確認する
-

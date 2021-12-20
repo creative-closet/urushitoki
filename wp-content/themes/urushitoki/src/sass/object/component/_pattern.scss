@@ -49,8 +49,8 @@
 
 .c-pattern{
 	position: relative;
-	width: 100%;
-	height: 100%;
+	max-width: 100%;
+	height: auto;
 	// margin-left: 500px;
 	&--lower-left{
 		@extend .c-pattern;

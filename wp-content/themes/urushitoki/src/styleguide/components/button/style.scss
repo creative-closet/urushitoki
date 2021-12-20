@@ -140,64 +140,69 @@
 	cursor: pointer;
 	width: 120px;
 	height: 120px;
-	border: 2px solid #333;
+	border: 2px solid #270b0b;
 	border-radius: 50%;
+	@include  mixin.breakpoint( breakpoint-tab ) {
+		width: 100px;
+		height: 100px;
+	}
+	@include  mixin.breakpoint( breakpoint-sp ) {
+		width: 60px;
+		height: 60px;
+	}
 }
 
 /*ボタン内側*/
 
 .c-open--button .c-open--button--area {
 	transition: all 0.4s;
+	width: 100%;
+	height: 100%;
 }
 
-.c-open--button span {
-	display: inline-block;
-	transition: all 0.4s; /*アニメーションの設定*/
-	position: absolute;
-	left: 30px;
-	top: 50;
-	height: 3px;
-	border-radius: 2px;
-	background: #fff;
-	width: 55%;
-	transform: translateY(6px) rotate(-160deg);
-}
-
-.c-open--button span:nth-of-type(1) {
-	top: 30px;
-}
-
-.c-open--button span:nth-of-type(2) {
-	top: 50px;
-}
-
-.c-open--button span:nth-of-type(3) {
-	top: 70px;
+.c-open--button {
+	span{
+		position: absolute;
+		left: calc(50% - 27.5%);
+		height: 3px;
+		background: #fff;
+		width: 55%;
+		transform:rotate(-155deg);
+		transition: all 0.4s; /*アニメーションの設定*/
+		display: inline-block;
+	}
+	span:nth-of-type(2){
+		top:calc(50% - 1px);
+	}
+	span:nth-of-type(1){
+		top:calc(30% - 1px);
+	}
+	span:nth-of-type(3){
+		top: calc(70% - 1px);
+	}
 }
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
-
 .c-open--button.active .c-open--button--area {
 	transform: rotateY(-360deg);
 }
-
-.c-open--button.active span:nth-of-type(1) {
-	top: 50px;
-	left: 25px;
-	transform: translateY(6px) rotate(-135deg);
-	width: 60%;
-}
-
-.c-open--button.active span:nth-of-type(2) {
-	opacity: 0;
-}
-
-.c-open--button.active span:nth-of-type(3) {
-	top: 60px;
-	left: 25px;
-	transform: translateY(-6px) rotate(135deg);
-	width: 60%;
+.c-open--button.active {
+	span:nth-of-type(2){
+		opacity: 0;
+		transform: rotateY(-360deg);
+	}
+	span:nth-of-type(1),span:nth-of-type(3){
+		top: calc(50% - 3px);
+		left:calc(50% - 30%);
+		width: 60%;
+	}
+	span:nth-of-type(1){
+		transform: rotate(135deg);
+	}
+	span:nth-of-type(3){
+		transform: rotate(-135deg);
+	}
 }
 
 .c-button--inquiry--menu-inner {

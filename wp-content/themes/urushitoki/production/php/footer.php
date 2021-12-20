@@ -21,6 +21,10 @@
 		.k-footer-nav{
 			display: flex;
 			justify-content: space-between;
+			margin-top: 50px;
+		}
+		.k-contact{
+			margin-top: 50px;
 		}
 		.k-footer-link{
 			flex-grow: 1;
@@ -28,7 +32,7 @@
 		.k-footer-logo{
 			display: flex;
 			justify-content: space-between;
-			margin: auto 0 60px;
+			margin: 60px 0;
 		}
 		.k-copyright{
 			margin-top: auto;

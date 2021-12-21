@@ -13,7 +13,7 @@
 
 .c-background--wave{
     position: -webkit-sticky;   /* Safariに対応する */
-    position: sticky;           /* 要素を固定/解除する */
+    position: fixed;           /* 要素を固定/解除する */
     top: 0;                     /* 縦方向の閾値 */
     left: 0;                    /* 横方向の閾値 */
     z-index: -1;                // 値は調整

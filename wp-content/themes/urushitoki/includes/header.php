@@ -1,10 +1,14 @@
 <!-- 仮のスタイルは絶対に読み込まれるヘッダーにまとめた -->
 <style>
 	.c-wrapper{
-
 		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
 		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
-
+	}
+	.c-wrapper--left{
+		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	}
+	.c-wrapper--right{
+		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	}
 	header{
 		background-size:cover;
@@ -18,15 +22,42 @@
 		background-position:center;
 	}
 	.l-header--top{
-		height: 840px;
+		height: 100vh;
 	}
 	.p-header{
 		max-width:640px;
 		width:100%;
 	}
 	.p-header--top{
-		height:100%;
+		height:inherit;
 		width:100%;
+		object-fit: cover;
+		position: relative;
+	}
+	.p-video-wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		height: inherit;
+		width: 100%;
+		background: url("<?php echo get_theme_file_uri('/assets/image/background-dot-black.png') ?>");
+	}
+	<?php if( is_user_logged_in() ) : ?>
+		.p-video-wrap{
+			margin-top: 32px;
+		}
+	<?php endif; ?>
+	.p-top-title{
+		display: flex;
+		height: inherit;
+		width: inherit;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.c-top-description{
+		text-align: center;
 	}
 	.p-archive__tags{
 		list-style:none;
@@ -38,7 +69,6 @@
 			width:100%;
 		}
 	}
-
 	.c-flex{
 		display:flex;
 	}
@@ -284,34 +314,6 @@
 		margin-top:20px;
 	}
 
-	/*アクセサリー*/
-	@media screen and (max-width:599px) {
-		.p-accessory-column-block{
-			width:100%;
-			display:flex;
-			flex-direction:column-reverse;
-			gap:20px;
-		}
-	}
-	@media screen and (max-width:1024px) {
-		.p-accessory-circle-card-column-block{
-			width:100%;
-			display:flex;
-			flex-direction:column;
-			gap:60px;
-			flex-wrap:nowrap;
-		}
-		.wp-block-columns{
-			flex-wrap:nowrap;
-		}
-	}
-	@media screen and (max-width:1024px) {
-		.p-circle-card{
-			margin:0 auto;
-		}
-	}
-
-
 
 	.u-margin-bottom{
 		margin-bottom :30px;
@@ -325,18 +327,35 @@
 	.u-margin-bottom--large{
 		margin-bottom :200px;
 	}
-	/*画面幅に合わせて縮小する（ブロックエディタで追加した画像にクラスをあてる） */
-	.c-image-stretch > img{
-		width:100%;
-		height:auto;
+
+	/* front-pageお問い合わせ */
+	.k-top-contact{
+		position: absolute;
+		top: 0;
+		right: 50px;
+		z-index: 20;
 	}
+	.k-header-monyou--left{
+		position: absolute;
+		z-index: 100;
+		top: 60%;
+		right: 50%;
 
+	}
+	.k-header-monyou--right{
+		position: absolute;
+		z-index: 100;
+		top: 60%;
+		left: 80%;
 
+	}
+	.k-header-arrow{
+		position: absolute;
+		z-index: 100;
+		bottom: 0;
+		left: 50%;
 
-
-
-
-
+	}
 </style>
 
 <!-- カスタムフィールドの値を取得 -->
@@ -393,10 +412,41 @@
 			loop：動画をループさせる
 			controls：コントロールバーを表示する
 			-->
-			<source src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
+			<source lass="p-header--top__source" src="<?php echo esc_url( $headerMovie[0] );?>" type="video/mp4">
 			<!-- <source src="video/movie.ogv" type="video/ogv">
 			<source src="video/movie.webm" type="video/webm"> -->
 		</video>
+		<div class="p-video-wrap">
+			<svg class="k-top-contact" xmlns="http://www.w3.org/2000/svg" width="210.869" height="108.131" viewBox="0 0 210.869 108.131">
+				<g transform="translate(-1585.957 -0.5)">
+					<line y2="65" transform="translate(1600 0.5)" fill="none" stroke="#fff" stroke-width="3" />
+					<line y2="65" transform="translate(1780 0.5)" fill="none" stroke="#fff" stroke-width="3" />
+					<a href="<?php echo home_url('/contact/');  ?>" class="k-top-contact__button">
+						<g id="パス_814" data-name="パス 814" transform="translate(1585.957 65)" fill="none">
+							<path d="M8.492,0H201.436l9.433,43.631H0Z" stroke="none" />
+							<path d="M 10.96409606933594 2.999988555908203 L 3.64013671875 40.6308708190918 L 207.1511993408203 40.6308708190918 L 199.0151519775391 2.999988555908203 L 10.96409606933594 2.999988555908203 M 8.491683959960938 -1.1444091796875e-05 L 201.4358367919922 -1.1444091796875e-05 L 210.8691253662109 43.6308708190918 L -1.52587890625e-05 43.6308708190918 L 8.491683959960938 -1.1444091796875e-05 Z" stroke="none" fill="#fff" />
+						</g>
+						<g transform="translate(1601 81)">
+							<path id="パス_765" data-name="パス 765" d="M1,6.712v6.429a2,2,0,0,0,2,2H15a2,2,0,0,0,2-2V6.712L9,10.641Z" transform="translate(-1 -3.141)" fill="#fff" />
+							<path id="パス_766" data-name="パス 766" d="M15,3.141H3a2,2,0,0,0-2,2v.071L9,9.141l8-3.929V5.141A2,2,0,0,0,15,3.141Z" transform="translate(-1 -3.141)" fill="#fff" />
+						</g>
+						<text transform="translate(1703 93)" fill="#fff" font-size="16" font-family="HiraginoSans-W6, Hiragino Sans">
+							<tspan x="-80" y="0">お問い合わせ・ご依頼</tspan>
+						</text>
+					</a>
+				</g>
+			</svg>
+			<div class="p-top-title">
+				<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ">
+				<br><br>
+				<p class="c-text--white">URUSHITOKI SADAIKE</p>
+				<p class="c-top-description c-text--white">工芸の街「金沢」で天然素材にこだわり、素地から塗り蒔絵と一貫した漆工芸品を、一点一点手作業で丁寧に制作しています。<br>
+					輪島で身につけ金沢で育んだ技の数々が作り出す、「うるしとき 定池」をどうぞご覧ください。</p>
+			</div>
+			<img class="k-header-monyou--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02-large.png'); ?>" alt="">
+			<img class="k-header-monyou--right" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
+			<img class="k-header-arrow" src="<?php echo get_theme_file_uri('/assets/image/top-arrow.png'); ?>" alt="">
+		</div>
 	</header>
 <?php endif;?>
 

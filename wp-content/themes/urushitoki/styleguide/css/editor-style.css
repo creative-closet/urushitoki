@@ -946,63 +946,174 @@ a {
   margin-right: 20px;
 }
 
-.c-pattern {
+.c-pattern, .c-pattern--left, .c-pattern--right, .c-pattern--lower-left--nonsp, .c-pattern--lower-left {
   position: relative;
-  width: 980px;
-  height: 380px;
-  margin-top: 30px;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
+  max-width: 100%;
+  height: auto;
 }
-@media (max-width: 1024px) {
-  .c-pattern {
-    width: 100%;
-    height: 310px;
-  }
-}
-@media (max-width: 599px) {
-  .c-pattern {
-    height: 180px;
-  }
-}
-.c-pattern__image {
+.c-pattern--lower-left::after {
+  content: "";
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+  background-image: url("../components/raw/pattern/monyou-pc01.png");
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 0px;
-  z-index: 1;
-  width: 621px;
-  height: 488px;
+  top: 300px;
+  left: -350px;
   /* tablet */
   /* SmartPhone */
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
-    top: 140px;
-    width: 437px;
-    height: 350px;
+  .c-pattern--lower-left::after {
+    background-image: url("../components/raw/pattern/monyou-tab01.png");
+    width: 615px;
+    top: 75px;
+    left: 0;
   }
 }
 @media (max-width: 599px) {
-  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+  .c-pattern--lower-left::after {
+    background-image: url("../components/raw/pattern/monyou-sp01.png");
+    width: 375px;
+    top: 253px;
+  }
+}
+.c-pattern--lower-left__image {
+  width: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern--lower-left__image {
+    width: 615px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern--lower-left__image {
+    width: 375px;
+    height: 387px;
+  }
+}
+.c-pattern--lower-left--nonsp::after {
+  content: "";
+  width: 100%;
+  height: 130%;
+  background-image: url("../components/raw/pattern/monyou-pc02.png");
+  position: absolute;
+  top: 100px;
+  left: -609px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern--lower-left--nonsp::after {
+    height: 97%;
+    background-image: url("../components/raw/pattern/monyou-tab02.png");
+    background-position: left bottom;
+    background-size: 80%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern--lower-left--nonsp::after {
     display: none;
   }
 }
-.c-pattern__layer--left {
-  left: -300px;
+.c-pattern--lower-left--nonsp__image {
+  width: 980px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
 }
-.c-pattern__layer--right {
-  right: -300px;
+@media (max-width: 1024px) {
+  .c-pattern--lower-left--nonsp__image {
+    width: 100%;
+  }
+}
+.c-pattern--right::after {
+  content: "";
+  width: 100%;
+  height: 130%;
+  background-image: url("../components/raw/pattern/monyou-pc03.png");
+  position: absolute;
+  left: 679px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern--right::after {
+    height: 97%;
+    background-image: url("../components/raw/pattern/monyou-tab03.png");
+    background-position: right;
+    background-size: 38%;
+    left: 0;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern--right::after {
+    display: none;
+  }
+}
+.c-pattern--right__image {
+  width: 980px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern--right__image {
+    width: 100%;
+  }
+}
+.c-pattern--left::after {
+  content: "";
+  width: 100%;
+  height: 130%;
+  background-image: url("../components/raw/pattern/monyou-pc03.png");
+  position: absolute;
+  left: -320px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern--left::after {
+    height: 97%;
+    background-image: url("../components/raw/pattern/monyou-tab04.png");
+    background-position: left;
+    background-size: 38%;
+    left: 0;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern--left::after {
+    display: none;
+  }
+}
+.c-pattern--left__image {
+  width: 980px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-pattern--left__image {
+    width: 100%;
+  }
 }
 
 .c-tab {

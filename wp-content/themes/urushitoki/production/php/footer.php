@@ -3,6 +3,7 @@
 		.k-footer{
 			background-image: url("<?php echo get_theme_file_uri('/assets/image/footer-background.jpg'); ?>");
 			background-size: cover;
+			height: 100vh;
 		}
 		.c-wrapper--footer{
 			display: flex;
@@ -21,6 +22,7 @@
 		.k-footer-nav{
 			display: flex;
 			justify-content: space-between;
+			margin-top: 50px;
 		}
 		.k-footer-link{
 			flex-grow: 1;

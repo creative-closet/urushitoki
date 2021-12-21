@@ -526,8 +526,9 @@ a {
 }
 
 .c-background--wave {
+  position: -webkit-sticky;
   /* Safariに対応する */
-  position: sticky;
+  position: fixed;
   /* 要素を固定/解除する */
   top: 0;
   /* 縦方向の閾値 */

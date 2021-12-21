@@ -21,6 +21,22 @@
 		.k-footer-nav{
 			display: flex;
 			justify-content: space-between;
+			margin-top: 50px;
+		}
+		.k-contact{
+			margin-top: 50px;
+		}
+		.k-contact__nav{
+			margin-bottom: 30px;
+		}
+		.footer-sns_nav__list{
+			margin-bottom: 30px;
+			width: 420px;
+			background-color: transparent;
+		}
+		.footer-sns_nav__list:hover{
+			background-color: rgba(255, 255, 255, 0.2);
+			transition: all 0.2s;
 		}
 		.k-footer-link{
 			flex-grow: 1;
@@ -28,7 +44,7 @@
 		.k-footer-logo{
 			display: flex;
 			justify-content: space-between;
-			margin: auto 0 60px;
+			margin: 60px 0;
 		}
 		.k-copyright{
 			margin-top: auto;
@@ -47,9 +63,9 @@
 				</div>
 
 				<div class="k-contact">
-					<p><a href="<?php echo home_url('/contact/');  ?>" class="k-text--white">お問い合わせ・ご依頼</a></p>
-					<p><a href="<?php echo home_url('/faq/');  ?>" class="k-text--white">よくある質問</a></p>
-					<address class="k-text--white">076-229-0860</address>
+					<p class="k-contact__nav"><a href="<?php echo home_url('/contact/');  ?>" class="k-text--white">お問い合わせ・ご依頼</a></p>
+					<p class="k-contact__nav"><a href="<?php echo home_url('/faq/');  ?>" class="k-text--white">よくある質問</a></p>
+					<address class="k-contact__nav k-text--white">076-229-0860</address>
 				</div>
 			</nav>
 

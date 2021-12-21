@@ -3,7 +3,6 @@
 		.k-footer{
 			background-image: url("<?php echo get_theme_file_uri('/assets/image/footer-background.jpg'); ?>");
 			background-size: cover;
-			height: 100vh;
 		}
 		.c-wrapper--footer{
 			display: flex;
@@ -26,6 +25,18 @@
 		}
 		.k-contact{
 			margin-top: 50px;
+		}
+		.k-contact__nav{
+			margin-bottom: 30px;
+		}
+		.footer-sns_nav__list{
+			margin-bottom: 30px;
+			width: 420px;
+			background-color: transparent;
+		}
+		.footer-sns_nav__list:hover{
+			background-color: rgba(255, 255, 255, 0.2);
+			transition: all 0.2s;
 		}
 		.k-footer-link{
 			flex-grow: 1;
@@ -52,9 +63,9 @@
 				</div>
 
 				<div class="k-contact">
-					<p><a href="<?php echo home_url('/contact/');  ?>" class="k-text--white">お問い合わせ・ご依頼</a></p>
-					<p><a href="<?php echo home_url('/faq/');  ?>" class="k-text--white">よくある質問</a></p>
-					<address class="k-text--white">076-229-0860</address>
+					<p class="k-contact__nav"><a href="<?php echo home_url('/contact/');  ?>" class="k-text--white">お問い合わせ・ご依頼</a></p>
+					<p class="k-contact__nav"><a href="<?php echo home_url('/faq/');  ?>" class="k-text--white">よくある質問</a></p>
+					<address class="k-contact__nav k-text--white">076-229-0860</address>
 				</div>
 			</nav>
 

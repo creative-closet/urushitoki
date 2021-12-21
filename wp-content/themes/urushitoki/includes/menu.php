@@ -21,7 +21,7 @@
 		width: 100%;
 	}
 	.menu_nav{
-		margin: 50px 0;
+		margin: 30px 0;
 		width: 100%;
 	}
 	.menu_nav__link{

@@ -20,35 +20,34 @@ if($craft_query -> have_posts())://(投稿データ有無確認 -start-)
 	echo '<article class="p-craft-archive">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">工芸作品</h2>';
-	echo '<ul class="c-grid--col4">';
+	echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--center">';
 	while($craft_query -> have_posts())://(投稿データ出力ループ -start-)
 		$craft_query -> the_post();
-		//記事の各種データを取得
+	//記事の各種データを取得
 		$id_in_query = get_post_thumbnail_id();
 		$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 		$link_in_query = get_permalink( );
-		?>
-		<li class="c-grid--col4__item">
-			<a href="<?php echo esc_url($link_in_query);?>">
-				<figure class="p-product-card">
-					<img class="p-product-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="アクセサリーの画像です">
-					<figcaption class="p-product-card__text">
-						<dl class="c-definition--figcaption">
-							<dt class="c-definition--figcaption__term"><?php the_title(); ?></dt>
-							<dd class="c-definition--figcaption__description">
-								<?php
-								if (has_excerpt()){
-									$excerpt = get_the_excerpt();
-									echo esc_html($excerpt);
-								}
-								?>
-							</dd>
-						</dl>
-					</figcaption>
-				</figure>
-			</a>
-		</li>
-	<?php endwhile;//(投稿データ出力ループ -end-)
+?>
+	<a href="<?php echo esc_url($link_in_query);?>">
+	<figure class="p-product-card">
+		<img class="p-product-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="アクセサリーの画像です">
+		<figcaption class="p-product-card__text">
+			<dl class="c-definition--figcaption">
+				<dt class="c-definition--figcaption__term"><?php the_title(); ?></dt>
+				<dd class="c-definition--figcaption__description">
+					<?php
+					if (has_excerpt()){
+						$excerpt = get_the_excerpt();
+						echo esc_html($excerpt);
+					}
+					?>
+				</dd>
+			</dl>
+		</figcaption>
+	</figure>
+</a>
+<?php
+	endwhile;//(投稿データ出力ループ -end-)
 	echo '</div>';
 	// アーカイブページの場合はページネーションを表示する
 	if (is_page('archive_craft')){

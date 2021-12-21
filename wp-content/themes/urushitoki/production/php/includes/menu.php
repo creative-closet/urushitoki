@@ -53,7 +53,8 @@
 		overflow-y: scroll;
 		top: 0;
 		left: -100%;
-		padding: 250px 0 100px 60px;
+		padding-top: 250px;
+		padding-left: 60px;
 		width: 100%;
 		height: 100vh;
 		transition: all 0.5s;

@@ -234,16 +234,21 @@
 	}
 
 	.p-post-archive > .p-archive__cards{
-		gap:40px;
+		/*カードサイズ 400px  3pcs*/
+		gap:calc((1280px - 400px * 3) / ( 3 - 1 ));
+
 	}
 	.p-information-archive > .p-archive__cards{
-		gap:15px;
+		/*カードサイズ 305px  4pcs */
+		gap:calc((1280px - 305px * 4) / ( 4 - 1 ));
 	}
 	.p-accessory-archive > .p-archive__cards{
-		gap:53px;
+		/*カードサイズ 280px  4pcs */
+		gap:calc((1280px - 280px * 4) / ( 4 - 1 ));
 	}
 	.p-craft-archive > .p-archive__cards{
-		gap:53px;
+		/*カードサイズ 280px  4pcs */
+		gap:calc((1280px - 280px * 4) / ( 4 - 1 ));
 	}
 
 	@media screen and (max-width:1024px) {
@@ -259,6 +264,11 @@
 	@media screen and (max-width:1024px) {
 		.p-accessory-archive > .p-archive__cards{
 			gap:15px;
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.p-archive__cards>a{
+			width:100%;
 		}
 	}
 

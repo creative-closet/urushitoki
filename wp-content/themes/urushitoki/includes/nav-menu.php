@@ -16,9 +16,11 @@
 				$blank     = 'target="_blank" rel="noopener noreferrer"';
 			}
 			$menu_list .=
-			'<a class="p-menu__list__link' . '"href="' . esc_attr($url) . '"'. $blank .'>
-			<li class="p-menu__list__item'. $add_class .'" title="'. $attr_title .'">' . esc_html($title) . '</li>
-			</a>';
+			'<li class="p-menu__list__item">
+			<a class="p-menu__list__item__link' . '"href="' . esc_attr($url) . '"'. $blank .'>
+			<p class="p-menu__list__item__text'. $add_class .'" title="'. $attr_title .'">' . esc_html($title) . '</p>
+			</a>
+			</li>';
 			$add_class = "";
 			$blank     = "";
 		}

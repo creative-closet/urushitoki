@@ -5,24 +5,23 @@
 .p-menu{
     position: fixed;
     z-index: 300;
-    overflow-y: scroll;
     top: 0;
     left: -100%;
-    padding-top: 150px;
-    padding-left: 60px;
-    width: 100%;
+	padding: 150px 0 150px 60px;
+    width: 90%;
     height: 100vh;
     transition: all 0.5s;
 	background: url( ../assets/image/menu-background.jpg ) no-repeat 0 -120px;
+	overflow-y: scroll;
 	@include mixin.breakpoint( breakpoint-tab ){
 		width: 88.72%;
 		height: 100%;
-		background-position-x: 60%;
+		background-position: 70% 0;
 	}
 	@include mixin.breakpoint( breakpoint-sp ){
 		width: 100%;
 		padding-top: 120px;
-		background-position-y: 40%;
+		background-size: cover;
 	}
 	&.active{
 		left: 0;
@@ -34,36 +33,50 @@
 		margin-left: 60px;
 	}
 	&__list{
-		margin: 30px 0;
-		width: 100%;
-	}
-	&__list__link{
-		display: block;
-		width: 420px;
-		text-decoration: none;
-		color: #fff;
-		background-color: transparent;
-	}
-	&__list__link:hover{
-		background-color: rgba(255, 255, 255, 0.2);
-		transition: all 0.2s;
-	}
-	&__list__item{
-		position: relative;
-		display: block;
-		list-style: none;
-		margin-bottom: 10px;
-		@include mixin.breakpoint( breakpoint-sp ){
+		margin: 30px 0 60px;
+		width: auto;
+		@include mixin.breakpoint( breakpoint-tab ){
 			margin-bottom: 30px;
 		}
-		&::after {
-			content: attr(title) "";
-			position: absolute;
-			left: 200px;
-			color: #E0D7CA;
+		&__item {
+			position: relative;
+			display: block;
+			list-style: none;
+			margin-bottom: 10px;
 			@include mixin.breakpoint( breakpoint-sp ){
-				left: 0;
-				top: 20px;
+				margin-bottom: 30px;
+			}
+			&__link{
+				display: block;
+				width: 420px;
+				text-decoration: none;
+				color: #fff;
+				background-color: transparent;
+				@include mixin.breakpoint( breakpoint-sp ){
+					width: inherit;
+				}
+				&:hover{
+					background-color: rgba(255, 255, 255, 0.2);
+					transition: all 0.2s;
+					@include mixin.breakpoint( breakpoint-sp ){
+						background-color: inherit;
+						transition: inherit;
+					}
+				}
+			}
+			&__text {
+				&::after {
+					content: attr(title) "";
+					position: absolute;
+					top: 3px;
+					left: 200px;
+					color: variable.$font-color--brown--right;
+					font-size: 1.4rem;
+					@include mixin.breakpoint( breakpoint-sp ){
+						left: 0;
+						top: 23px;
+					}
+				}
 			}
 		}
 	}
@@ -75,4 +88,22 @@
 	}
 }
 
-
+body{
+	&::before{
+		content: '';
+		background-color: transparent;
+		transition: all 0.5s;
+	}
+	&.active{
+		position: relative;
+		overflow-y: hidden;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			z-index: 200;
+		}
+	}
+}

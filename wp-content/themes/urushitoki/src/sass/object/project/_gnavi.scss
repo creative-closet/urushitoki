@@ -1,0 +1,16 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+.p-gnavi {
+	.c-button--open{
+		top: 60px;
+		left: 60px;
+		position: fixed;
+		z-index: 1000;
+		@include mixin.breakpoint( breakpoint-sp ){
+			top: 30px;
+			left: 30px;
+		}
+	}
+}

@@ -179,6 +179,155 @@ a {
   }
 }
 
+.p-gnavi .c-button--open {
+  top: 60px;
+  left: 60px;
+  position: fixed;
+  z-index: 1000;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-gnavi .c-button--open {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+.p-menu {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: -100%;
+  padding: 150px 0 150px 60px;
+  width: 90%;
+  height: 100vh;
+  transition: all 0.5s;
+  background: url(../assets/image/menu-background.jpg) no-repeat 0 -120px;
+  overflow-y: scroll;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-menu {
+    width: 88.72%;
+    height: 100%;
+    background-position: 70% 0;
+  }
+}
+@media (max-width: 599px) {
+  .p-menu {
+    width: 100%;
+    padding-top: 120px;
+    background-size: cover;
+  }
+}
+.p-menu.active {
+  left: 0;
+}
+.p-menu.active .p-menu__list {
+  margin-left: 60px;
+}
+.p-menu__logo {
+  margin-left: 60px;
+}
+.p-menu__list {
+  margin: 30px 0 60px;
+  width: auto;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-menu__list {
+    margin-bottom: 30px;
+  }
+}
+.p-menu__list__item {
+  position: relative;
+  display: block;
+  list-style: none;
+  margin-bottom: 10px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-menu__list__item {
+    margin-bottom: 30px;
+  }
+}
+.p-menu__list__item__link {
+  display: block;
+  width: 420px;
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-menu__list__item__link {
+    width: inherit;
+  }
+}
+.p-menu__list__item__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-menu__list__item__link:hover {
+    background-color: inherit;
+    transition: inherit;
+  }
+}
+.p-menu__list__item__text::after {
+  content: attr(title) "";
+  position: absolute;
+  top: 3px;
+  left: 200px;
+  color: #BF9A87;
+  font-size: 1.4rem;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-menu__list__item__text::after {
+    left: 0;
+    top: 23px;
+  }
+}
+.p-menu .c-button--inquiry--menu-inner {
+  margin-left: 60px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-menu .c-button--inquiry--menu-inner {
+    margin-top: 30px;
+  }
+}
+
+body::before {
+  content: "";
+  background-color: transparent;
+  transition: all 0.5s;
+}
+body.active {
+  position: relative;
+  overflow-y: hidden;
+}
+body.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 200;
+}
+
 .p-post-card {
   width: 305px;
   height: 353px;
@@ -674,14 +823,14 @@ a {
 }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.c-open--button {
+.c-button--open {
   /*ボタン内側の基点となるためrelativeを指定。
   追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
   position: relative;
   background: #270b0b;
   cursor: pointer;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   border: 2px solid #270b0b;
   border-radius: 50%;
   /* tablet */
@@ -689,30 +838,17 @@ a {
   /* tablet */
   /* SmartPhone */
 }
-@media (max-width: 1024px) {
-  .c-open--button {
-    width: 100px;
-    height: 100px;
-  }
-}
-@media (max-width: 599px) {
-  .c-open--button {
-    width: 60px;
-    height: 60px;
-  }
-}
-
 /*ボタン内側*/
-.c-open--button .c-open--button--area {
+.c-button--open .c-button--open--area {
   transition: all 0.4s;
   width: 100%;
   height: 100%;
 }
 
-.c-open--button span {
+.c-button--open span {
   position: absolute;
   left: 22.5%;
-  height: 3px;
+  height: 2px;
   background: #fff;
   width: 55%;
   transform: rotate(-155deg);
@@ -720,35 +856,36 @@ a {
   /*アニメーションの設定*/
   display: inline-block;
 }
-.c-open--button span:nth-of-type(2) {
+.c-button--open span:nth-of-type(2) {
   top: calc(50% - 1px);
+  font-size: 0;
 }
-.c-open--button span:nth-of-type(1) {
+.c-button--open span:nth-of-type(1) {
   top: calc(30% - 1px);
 }
-.c-open--button span:nth-of-type(3) {
+.c-button--open span:nth-of-type(3) {
   top: calc(70% - 1px);
 }
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
-.c-open--button.active .c-open--button--area {
+.c-button--open.active .c-button--open--area {
   transform: rotateY(-360deg);
 }
 
-.c-open--button.active span:nth-of-type(2) {
+.c-button--open.active span:nth-of-type(2) {
   opacity: 0;
   transform: rotateY(-360deg);
 }
-.c-open--button.active span:nth-of-type(1), .c-open--button.active span:nth-of-type(3) {
+.c-button--open.active span:nth-of-type(1), .c-button--open.active span:nth-of-type(3) {
   top: calc(50% - 3px);
   left: 20%;
   width: 60%;
 }
-.c-open--button.active span:nth-of-type(1) {
+.c-button--open.active span:nth-of-type(1) {
   transform: rotate(135deg);
 }
-.c-open--button.active span:nth-of-type(3) {
+.c-button--open.active span:nth-of-type(3) {
   transform: rotate(-135deg);
 }
 
@@ -947,174 +1084,63 @@ a {
   margin-right: 20px;
 }
 
-.c-pattern, .c-pattern--left, .c-pattern--right, .c-pattern--lower-left--nonsp, .c-pattern--lower-left {
+.c-pattern {
   position: relative;
-  max-width: 100%;
-  height: auto;
+  width: 980px;
+  height: 380px;
+  margin-top: 30px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
 }
-.c-pattern--lower-left::after {
-  content: "";
+@media (max-width: 1024px) {
+  .c-pattern {
+    width: 100%;
+    height: 310px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pattern {
+    height: 180px;
+  }
+}
+.c-pattern__image {
   width: 100%;
   height: 100%;
-  background-image: url("../components/raw/pattern/monyou-pc01.png");
-  position: absolute;
-  top: 300px;
-  left: -350px;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-pattern--lower-left::after {
-    background-image: url("../components/raw/pattern/monyou-tab01.png");
-    width: 615px;
-    top: 75px;
-    left: 0;
-  }
-}
-@media (max-width: 599px) {
-  .c-pattern--lower-left::after {
-    background-image: url("../components/raw/pattern/monyou-sp01.png");
-    width: 375px;
-    top: 253px;
-  }
-}
-.c-pattern--lower-left__image {
-  width: 800px;
   -o-object-fit: cover;
      object-fit: cover;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
 }
-@media (max-width: 1024px) {
-  .c-pattern--lower-left__image {
-    width: 615px;
-  }
-}
-@media (max-width: 599px) {
-  .c-pattern--lower-left__image {
-    width: 375px;
-    height: 387px;
-  }
-}
-.c-pattern--lower-left--nonsp::after {
-  content: "";
-  width: 100%;
-  height: 130%;
-  background-image: url("../components/raw/pattern/monyou-pc02.png");
+.c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
   position: absolute;
-  top: 100px;
-  left: -609px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0px;
+  z-index: 1;
+  width: 621px;
+  height: 488px;
   /* tablet */
   /* SmartPhone */
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
-  .c-pattern--lower-left--nonsp::after {
-    height: 97%;
-    background-image: url("../components/raw/pattern/monyou-tab02.png");
-    background-position: left bottom;
-    background-size: 80%;
-    top: 0;
-    left: 0;
+  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
+    top: 140px;
+    width: 437px;
+    height: 350px;
   }
 }
 @media (max-width: 599px) {
-  .c-pattern--lower-left--nonsp::after {
+  .c-pattern__layer, .c-pattern__layer--right, .c-pattern__layer--left {
     display: none;
   }
 }
-.c-pattern--lower-left--nonsp__image {
-  width: 980px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* tablet */
-  /* SmartPhone */
+.c-pattern__layer--left {
+  left: -300px;
 }
-@media (max-width: 1024px) {
-  .c-pattern--lower-left--nonsp__image {
-    width: 100%;
-  }
-}
-.c-pattern--right::after {
-  content: "";
-  width: 100%;
-  height: 130%;
-  background-image: url("../components/raw/pattern/monyou-pc03.png");
-  position: absolute;
-  left: 679px;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-pattern--right::after {
-    height: 97%;
-    background-image: url("../components/raw/pattern/monyou-tab03.png");
-    background-position: right;
-    background-size: 38%;
-    left: 0;
-  }
-}
-@media (max-width: 599px) {
-  .c-pattern--right::after {
-    display: none;
-  }
-}
-.c-pattern--right__image {
-  width: 980px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-pattern--right__image {
-    width: 100%;
-  }
-}
-.c-pattern--left::after {
-  content: "";
-  width: 100%;
-  height: 130%;
-  background-image: url("../components/raw/pattern/monyou-pc03.png");
-  position: absolute;
-  left: -320px;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-pattern--left::after {
-    height: 97%;
-    background-image: url("../components/raw/pattern/monyou-tab04.png");
-    background-position: left;
-    background-size: 38%;
-    left: 0;
-  }
-}
-@media (max-width: 599px) {
-  .c-pattern--left::after {
-    display: none;
-  }
-}
-.c-pattern--left__image {
-  width: 980px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-pattern--left__image {
-    width: 100%;
-  }
+.c-pattern__layer--right {
+  right: -300px;
 }
 
 .c-tab {

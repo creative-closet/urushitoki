@@ -1,4 +1,3 @@
-console.log( "aaaa" );
 jQuery(".js-menu-open").on( "click", function () {
 	jQuery(this).toggleClass("active");
 	jQuery(".js-menu").toggleClass("active");

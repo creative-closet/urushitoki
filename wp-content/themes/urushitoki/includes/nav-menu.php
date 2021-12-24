@@ -1,11 +1,10 @@
 <?php
 	$menu_name = $args;
-	$menu_name_class = "p-menu__list__item";
 	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
 	$menu       = wp_get_nav_menu_object($locations[$menu_name]);
 	$menu_items = wp_get_nav_menu_items($menu->term_id);
 
-	$menu_list = '<ul class="' . $menu_name_class . '">';
+	$menu_list = '<ul class="' . $menu_name . '">';
 
 		foreach ((array) $menu_items as $key => $menu_item){
 			$title      = $menu_item->title;
@@ -17,9 +16,9 @@
 				$blank     = 'target="_blank" rel="noopener noreferrer"';
 			}
 			$menu_list .=
-				'<li class="'. $menu_name_class . '__list'. $add_class .'" title="'. $attr_title .'">
-					<a class="'. $menu_name_class . '__link' . '"href="' . esc_attr($url) . '"'. $blank .'>' . esc_html($title) . '</a>
-				</li>';
+			'<a class="'. $menu_name . '__link' . '"href="' . esc_attr($url) . '"'. $blank .'>
+			<li class="'. $menu_name . '__list'. $add_class .'" title="'. $attr_title .'">' . esc_html($title) . '</li>
+			</a>';
 			$add_class = "";
 			$blank     = "";
 		}

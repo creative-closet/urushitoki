@@ -196,7 +196,11 @@
 	.k-sns__introduction > .c-text--large{
 		font-size: 16px;
 	}
-
+	.k-sns__introduction{
+		margin-left: 40px;
+		width: calc(100% - 124px - 40px);
+		/* ボタンと余白以外をテキストの幅とする */
+	}
 	/* メインコンテンツのスタイリング */
 	.l-main{
 		padding-top:200px;

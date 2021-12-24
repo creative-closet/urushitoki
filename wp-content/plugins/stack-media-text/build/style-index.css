@@ -10,8 +10,27 @@
 /*
 .wp-block-create-block-stack-media-text {}
 */
-.text-background {
+.p-stack-contents {
+  position: relative;
+  overflow: hidden;
+}
+
+.p-stack-contents__image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 1100px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-stack-contents__description {
+  margin-top: 300px;
   background-color: #210c02;
+  padding: 3%;
+  width: 50%;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

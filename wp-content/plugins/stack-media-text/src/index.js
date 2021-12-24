@@ -1,10 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 import {
-	TextControl,
-	TextareaControl,
-} from '@wordpress/components';
-import {
+	InnerBlocks,
 	MediaUpload,
 	MediaUploadCheck,
 	useBlockProps
@@ -15,15 +12,9 @@ import './editor.scss';
 
 registerBlockType( 'create-block/stack-media-text', {
 	attributes: {
-		title: {
-			type    : 'string',
-			source  : 'text',
-			selector: 'h3.c-title-large',
-		},
 		description: {
-			type    : 'string',
-			source  : 'text',
-			selector: 'p.c-text--white',
+			type   : 'string',
+			default: ''
 		},
 		mediaID: {
             type: 'number',
@@ -45,12 +36,19 @@ registerBlockType( 'create-block/stack-media-text', {
 
 	edit: ( { attributes, setAttributes } ) => {
 		const {
-			title,
-			description,
 			mediaURL,
 			mediaID,
 			mediaAlt
 		} = attributes;
+		const description = [
+			[
+				"core/paragraph",
+				{
+					className: "c-text--white",
+					placeholder: "説明が入ります。",
+				},
+			],
+		];
 		const onSelectImage = ( media ) => {
             setAttributes( {
                 mediaURL: media.url,
@@ -63,7 +61,7 @@ registerBlockType( 'create-block/stack-media-text', {
 				return (
 					<img
 						src={ mediaURL }
-						className="image"
+						className="p-stack-contents__image"
 						alt={ mediaAlt }
 					/>
 				);
@@ -89,39 +87,30 @@ registerBlockType( 'create-block/stack-media-text', {
 			});
 		}
 		const blockProps = useBlockProps( {
-			className: 'p-classname',
+			className: 'p-stack-contents',
 		} );
 		return (
 			<div { ...blockProps }>
-					<TextControl
-						placeholder="タイトル"
-						value={ title }
-						onChange={( value ) => setAttributes( { title: value } )}
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={ onSelectImage }
+						allowedTypes={ ['image'] }
+						value={ mediaID }
+						render={ ({ open }) => getImageButton( open ) }
 					/>
+				</MediaUploadCheck>
+				{ mediaID != 0  &&
 					<MediaUploadCheck>
-						<MediaUpload
-							onSelect={ onSelectImage }
-							allowedTypes={ ['image'] }
-							value={ mediaID }
-							render={ ({ open }) => getImageButton( open ) }
-						/>
+						<Button
+						onClick={removeMedia}
+						className="button button-large">
+						画像を削除
+						</Button>
 					</MediaUploadCheck>
-					{ mediaID != 0  &&
-						<MediaUploadCheck>
-							<Button
-							onClick={removeMedia}
-							className="button button-large">
-							画像を削除
-							</Button>
-						</MediaUploadCheck>
-					}
-					<div className="text-background">
-						<TextareaControl
-							placeholder="説明"
-							value={ description }
-							onChange={ ( value ) => setAttributes({ description: value })}
-						/>
-					</div>
+				}
+				<div className="p-stack-contents__description">
+					<InnerBlocks template= { description } templateLock="all" />
+				</div>
 			</div>
 		);
 	},
@@ -132,6 +121,7 @@ registerBlockType( 'create-block/stack-media-text', {
 			if(alt) {
 				return (
 					<img
+						className="p-stack-contents__image"
 						src={ src }
 						alt={ alt }
 					/>
@@ -139,6 +129,7 @@ registerBlockType( 'create-block/stack-media-text', {
 			}
 			return (
 				<img
+					className="p-stack-contents__image"
 					src={ src }
 					alt=""
 					aria-hidden="true"
@@ -146,14 +137,15 @@ registerBlockType( 'create-block/stack-media-text', {
 			);
 		};
 		const blockProps = useBlockProps.save( {
-			className: 'p-classname',
+			className: 'p-stack-contents',
 		} );
 		return (
-				<div {...blockProps}>
-					<h3 className="c-title-large">{ attributes.title }</h3>
+				<figure {...blockProps}>
 					{ getImagesSave(attributes.mediaURL, attributes.mediaAlt) }
-					<p className="c-text--white text-background">{ attributes.description }</p>
-				</div>
+					<div className="p-stack-contents__description">
+						<InnerBlocks.Content />
+					</div>
+				</figure>
 		);
 	},
 } );

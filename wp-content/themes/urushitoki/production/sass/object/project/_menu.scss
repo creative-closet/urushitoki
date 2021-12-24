@@ -1,0 +1,108 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+.p-menu{
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    left: -100%;
+	padding: 150px 0 150px 60px;
+    width: 90%;
+    height: 100vh;
+    transition: all 0.5s;
+	background: url( ../assets/image/menu-background.jpg ) no-repeat 0 -120px;
+	overflow-y: scroll;
+	@include mixin.breakpoint( breakpoint-tab ){
+		width: 88.72%;
+		height: 100%;
+		background-position: 70% 0;
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		min-width: 320px;
+		width: 100%;
+		padding-top: 120px;
+		background-size: cover;
+	}
+	&.active{
+		left: 0;
+		.p-menu__list {
+			margin-left: 60px;
+		}
+	}
+	&__logo {
+		margin-left: 60px;
+	}
+	&__list{
+		margin: 30px 0 60px;
+		width: auto;
+		@include mixin.breakpoint( breakpoint-tab ){
+			margin-bottom: 30px;
+		}
+		&__item {
+			position: relative;
+			display: block;
+			list-style: none;
+			margin-bottom: 10px;
+			@include mixin.breakpoint( breakpoint-sp ){
+				margin-bottom: 30px;
+			}
+			&__link{
+				display: block;
+				width: 420px;
+				text-decoration: none;
+				color: #fff;
+				background-color: transparent;
+				@include mixin.breakpoint( breakpoint-sp ){
+					width: inherit;
+				}
+				&:hover{
+					background-color: rgba(255, 255, 255, 0.2);
+					transition: all 0.2s;
+					@include mixin.breakpoint( breakpoint-sp ){
+						background-color: inherit;
+						transition: inherit;
+					}
+				}
+				&::after {
+					content: attr(title) "";
+					position: absolute;
+					top: 3px;
+					left: 200px;
+					color: variable.$font-color--brown--right;
+					font-size: 1.4rem;
+					@include mixin.breakpoint( breakpoint-sp ){
+						left: 0;
+						top: 23px;
+					}
+				}
+			}
+		}
+	}
+	.c-button--inquiry--menu-inner {
+		margin-left: 60px;
+		@include mixin.breakpoint( breakpoint-sp ){
+			margin-top: 30px;
+		}
+	}
+}
+
+body{
+	&::before{
+		content: '';
+		background-color: transparent;
+		transition: all 0.5s;
+	}
+	&.active{
+		position: relative;
+		overflow-y: hidden;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color:rgba(255, 255, 255, 0.45);
+			z-index: 200;
+		}
+	}
+}

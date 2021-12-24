@@ -4,9 +4,6 @@ on:
   push:                 
     branches:           
       - develop
-  pull_request:
-    branches:
-      - develop
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action

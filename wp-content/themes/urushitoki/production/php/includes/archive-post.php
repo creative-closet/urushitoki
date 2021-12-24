@@ -52,27 +52,25 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	}
 	//タグ表示ここまで
 
-	if (is_front_page()){
-		echo '<div class="p-archive__cards c-flex c-flex--column c-flex--space-between">';
-	}else{
-		echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--center">';
-	}
+	echo '<ul class="c-grid--col3 u-gap--40--tab20">';
 	while($post_query -> have_posts())://(投稿データ出力ループ -start-)
 		$post_query -> the_post();
 		//記事の各種データを取得
 		$id_in_query = get_post_thumbnail_id();
 		$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 		$link_in_query = get_permalink( );
-?>
-		<figure class="p-article-card">
-			<a href="<?php echo esc_url($link_in_query);?>">
-				<img class="p-article-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="投稿の画像です">
-				<figcaption class="p-article-card__title"><?php the_title(); ?></figcaption>
-			</a>
-		</figure>
-<?php
+		?>
+			<li class="c-grid--col3__item">
+				<figure class="p-article-card">
+					<a href="<?php echo esc_url($link_in_query);?>">
+						<img class="p-article-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="投稿の画像です">
+						<figcaption class="p-article-card__title"><?php the_title(); ?></figcaption>
+					</a>
+				</figure>
+			</li>
+		<?php
 	endwhile;//(投稿データ出力ループ -end-)
-	echo '</div>';
+	echo '</ul>';
 	//ページネーション　ページ数リンク
 	if (is_tag()||is_page('archive_post')){
 		$big = 999999999; // need an unlikely integer

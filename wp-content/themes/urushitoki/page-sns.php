@@ -22,8 +22,10 @@
 							</a>
 						<?php }
 						elseif($my_sns == 'Facebook'){ ?>
-							<a href="<?php echo esc_attr($fields['sns_url']) ?>" target="_blank" rel="noopener noreferrer">
-							<img src="facebook-icon" alt="facebook"></a>
+							<a href="<?php echo esc_attr($fields['sns_url']) ?>"  class="c-sns--facebook" target="_blank" rel="noopener noreferrer">
+								<i class="fab fa-facebook-f"></i>
+								<span class="c-sns__title">Facebook</span>
+							</a>
 						<?php }
 						elseif($my_sns == 'YouTube'){ ?>
 							<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-sns--youtube" target="_blank" rel="noopener noreferrer">

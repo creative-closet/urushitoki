@@ -3,6 +3,15 @@
 @use "../../foundation/mixin";
 
 .u-gap {
+	&--40 {
+		gap: 40px;
+		&--tab20 {
+			@extend .u-gap--40;
+			@include  mixin.breakpoint( breakpoint-tab ) {
+				gap: 20px;
+			}
+		}
+	}
 	&--53 {
 		gap: 53px;
 	}

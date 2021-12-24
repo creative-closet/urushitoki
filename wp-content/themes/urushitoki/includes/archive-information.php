@@ -20,37 +20,39 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 	echo '<article class="p-information-archive">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">Information</h2>';
-	echo '<ul class="c-grid--col4">';
-	while($information_query -> have_posts())://(投稿データ出力ループ -start-)
+	if (is_front_page()){
+		echo '<div class="p-archive__cards c-flex c-flex--column c-flex--space-between">';
+	}else{
+		echo '<div class="p-archive__cards c-flex c-flex--wrap c-flex--column c-flex--center">';
+	}
+		while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
-		//記事の各種データを取得
+	//記事の各種データを取得
 		$id_in_query = get_post_thumbnail_id();
 		$img_in_query = urushitoki_get_eyecatch_default();//wp_get_attachment_image_src($id_in_query,'large');
 		$link_in_query = get_permalink( );
 		$time_in_query = get_the_time( 'Y年n月j日' );
-		?>
-			<li class="c-grid--col4__item">
-				<a href="<?php echo esc_url($link_in_query);?>">
-					<figure class="p-post-card">
-						<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">
-						<figcaption class="p-post-card__text">
-							<h2 class="p-post-card__text__title"><?php the_title(); ?></h2>
-							<p class="p-post-card__text__sentence">
-								<?php
-								if (has_excerpt()){
-									$excerpt = get_the_excerpt();
-									echo esc_html($excerpt);
-								}
-								?>
-							</p>
-							<time class="p-post-card__text__date"><?php echo $time_in_query;?></time>
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-		<?php
+?>
+<a href="<?php echo esc_url($link_in_query);?>">
+	<figure class="p-post-card">
+		<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">
+		<figcaption class="p-post-card__text">
+			<h2 class="p-post-card__text__title"><?php the_title(); ?></h2>
+			<p class="p-post-card__text__sentence">
+				<?php
+				if (has_excerpt()){
+					$excerpt = get_the_excerpt();
+					echo esc_html($excerpt);
+				}
+				?>
+			</p>
+			<time class="p-post-card__text__date"><?php echo $time_in_query;?></time>
+		</figcaption>
+	</figure>
+</a>
+<?php
 	endwhile;//(投稿データ出力ループ -end-)
-	echo '</ul>';
+	echo '</div>';
 	if (is_page('archive_information')){
 		$big = 999999999; // need an unlikely integer
 		echo '<div class="p-pager c-flex c-flex--center u-margin-top--large">';

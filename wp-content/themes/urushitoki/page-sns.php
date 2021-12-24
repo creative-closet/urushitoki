@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<body>
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
 

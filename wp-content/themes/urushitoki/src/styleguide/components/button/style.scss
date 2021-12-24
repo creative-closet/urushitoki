@@ -132,39 +132,39 @@
 }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.c-open--button {
+.c-button--open {
 	/*ボタン内側の基点となるためrelativeを指定。
 追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
 	position: relative;
 	background: #270b0b;
 	cursor: pointer;
-	width: 120px;
-	height: 120px;
+	width: 60px;
+	height: 60px;
 	border: 2px solid #270b0b;
 	border-radius: 50%;
 	@include  mixin.breakpoint( breakpoint-tab ) {
-		width: 100px;
-		height: 100px;
+		// width: 100px;
+		// height: 100px;
 	}
 	@include  mixin.breakpoint( breakpoint-sp ) {
-		width: 60px;
-		height: 60px;
+		// width: 60px;
+		// height: 60px;
 	}
 }
 
 /*ボタン内側*/
 
-.c-open--button .c-open--button--area {
+.c-button--open .c-button--open--area {
 	transition: all 0.4s;
 	width: 100%;
 	height: 100%;
 }
 
-.c-open--button {
+.c-button--open {
 	span{
 		position: absolute;
 		left: calc(50% - 27.5%);
-		height: 3px;
+		height: 2px;
 		background: #fff;
 		width: 55%;
 		transform:rotate(-155deg);
@@ -173,6 +173,7 @@
 	}
 	span:nth-of-type(2){
 		top:calc(50% - 1px);
+		font-size: 0;
 	}
 	span:nth-of-type(1){
 		top:calc(30% - 1px);
@@ -184,10 +185,10 @@
 
 /*activeクラスが付与されると
 線と周りのエリアが回転して×になる*/
-.c-open--button.active .c-open--button--area {
+.c-button--open.active .c-button--open--area {
 	transform: rotateY(-360deg);
 }
-.c-open--button.active {
+.c-button--open.active {
 	span:nth-of-type(2){
 		opacity: 0;
 		transform: rotateY(-360deg);

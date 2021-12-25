@@ -1,11 +1,10 @@
 <?php
 /**
- * Plugin Name:       Stack Media Text
- * Description:       Example block written with ESNext standard and JSX support – build step required.
+ * Plugin Name:       重ね合わせ(画像/説明)
+ * Description:       画像と背景付き説明が重なったスタイルを表示します。
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       stack-media-text

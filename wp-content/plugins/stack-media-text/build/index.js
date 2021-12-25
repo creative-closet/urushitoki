@@ -15,10 +15,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 
@@ -28,18 +28,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('create-block/stack-media-text', {
   attributes: {
-    title: {
-      type: 'string',
-      source: 'text',
-      selector: 'h3.c-title-large'
-    },
     description: {
       type: 'string',
-      source: 'text',
-      selector: 'p.c-text--white'
+      default: ''
     },
     mediaID: {
       type: 'number',
@@ -64,12 +57,14 @@ __webpack_require__.r(__webpack_exports__);
       setAttributes
     } = _ref;
     const {
-      title,
-      description,
       mediaURL,
       mediaID,
       mediaAlt
     } = attributes;
+    const description = [["core/paragraph", {
+      className: "c-text--white",
+      placeholder: "説明が入ります。"
+    }]];
 
     const onSelectImage = media => {
       setAttributes({
@@ -83,13 +78,13 @@ __webpack_require__.r(__webpack_exports__);
       if (mediaURL) {
         return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
           src: mediaURL,
-          className: "image",
+          className: "p-stack-contents__image",
           alt: mediaAlt
         });
       } else {
         return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
           className: "button-container"
-        }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+        }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
           onClick: open,
           className: "button button-large"
         }, "\u753B\u50CF\u3092\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9"));
@@ -104,16 +99,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     };
 
-    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
-      className: 'p-classname'
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)({
+      className: 'p-stack-contents'
     });
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-      placeholder: "\u30BF\u30A4\u30C8\u30EB",
-      value: title,
-      onChange: value => setAttributes({
-        title: value
-      })
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.MediaUpload, {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
       onSelect: onSelectImage,
       allowedTypes: ['image'],
       value: mediaID,
@@ -123,17 +112,14 @@ __webpack_require__.r(__webpack_exports__);
         } = _ref2;
         return getImageButton(open);
       }
-    })), mediaID != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+    })), mediaID != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
       onClick: removeMedia,
       className: "button button-large"
     }, "\u753B\u50CF\u3092\u524A\u9664")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "text-background"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
-      placeholder: "\u8AAC\u660E",
-      value: description,
-      onChange: value => setAttributes({
-        description: value
-      })
+      className: "p-stack-contents__description"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
+      template: description,
+      templateLock: "all"
     })));
   },
   save: _ref3 => {
@@ -146,26 +132,26 @@ __webpack_require__.r(__webpack_exports__);
 
       if (alt) {
         return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+          className: "p-stack-contents__image",
           src: src,
           alt: alt
         });
       }
 
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+        className: "p-stack-contents__image",
         src: src,
         alt: "",
         "aria-hidden": "true"
       });
     };
 
-    const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps.save({
-      className: 'p-classname'
+    const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save({
+      className: 'p-stack-contents'
     });
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
-      className: "c-title-large"
-    }, attributes.title), getImagesSave(attributes.mediaURL, attributes.mediaAlt), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      className: "c-text--white text-background"
-    }, attributes.description));
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", blockProps, getImagesSave(attributes.mediaURL, attributes.mediaAlt), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "p-stack-contents__description"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null)));
   }
 });
 

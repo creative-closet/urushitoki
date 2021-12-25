@@ -1155,6 +1155,8 @@ body.active::before {
   padding: 8px 10px;
   text-align: center;
   cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .c-sns, .c-sns--facebook, .c-sns--insta, .c-sns--youtube {

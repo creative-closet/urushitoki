@@ -92,7 +92,6 @@
 
 
 <?php get_header(); ?>
-<body class="l-body">
 	<?php get_template_part('includes/menu'); ?>
 	<?php get_template_part('includes/header'); ?>
 

@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<body>
 	<!-- ヘッダー画像・タイトル -->
 	<?php get_template_part('/includes/header')?>
 	<!-- メインコンテンツ -->

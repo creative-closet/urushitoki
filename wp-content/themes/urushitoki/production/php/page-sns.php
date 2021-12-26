@@ -13,7 +13,7 @@
 			$group = SCF::get_user_meta($user_id,'sns');
 			foreach ((array)$group as $fields ) {
 				if($fields['sns_type'] != "" && $fields['sns_url'] != ""){ ?>
-					<figure class="k-sns">
+					<figure class="p-sns">
 						<?php $my_sns = $fields['sns_type'];
 						if($my_sns == 'Instagram'){ ?>
 							<a href="<?php echo esc_attr($fields['sns_url']) ?>" class="c-sns--insta" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@
 								<span class="c-title__profile">YouTube</span>
 							</a>
 						<?php } ?>
-						<div class="k-sns__introduction">
+						<div class="p-sns__introduction">
 							<p class="c-text--large"><?php echo $fields['sns_name']; ?></p>
 							<p class="c-text"><?php echo $fields['sns_description']; ?></p>
 						</div>

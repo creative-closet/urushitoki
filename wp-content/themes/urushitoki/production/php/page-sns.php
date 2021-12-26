@@ -5,10 +5,6 @@
 
 		<div class="c-wrapper">
 
-		<?php $users = get_users(array('orderby'=>'ID','order'=>'ASC'));
-		foreach($users as $user) {
-			$user_id = $user->ID;?>
-
 		<?php /* SNS */
 			$group = SCF::get_user_meta($user_id,'sns');
 			foreach ((array)$group as $fields ) {

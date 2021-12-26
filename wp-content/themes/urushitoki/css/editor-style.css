@@ -38,6 +38,7 @@ html {
 }
 
 body {
+  min-width: 375px;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Noto Sans Japanese", sans-serif;
@@ -219,6 +220,7 @@ a {
 }
 @media (max-width: 599px) {
   .p-menu {
+    min-width: 320px;
     width: 100%;
     padding-top: 120px;
     background-size: cover;
@@ -283,7 +285,7 @@ a {
     transition: inherit;
   }
 }
-.p-menu__list__item__text::after {
+.p-menu__list__item__link::after {
   content: attr(title) "";
   position: absolute;
   top: 3px;
@@ -294,7 +296,7 @@ a {
   /* SmartPhone */
 }
 @media (max-width: 599px) {
-  .p-menu__list__item__text::after {
+  .p-menu__list__item__link::after {
     left: 0;
     top: 23px;
   }

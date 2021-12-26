@@ -728,6 +728,28 @@ body.active::before {
   z-index: 1;
 }
 
+.p-sns {
+  display: flex;
+  margin: 15px 0;
+}
+.p-sns__introduction {
+  margin-left: 40px;
+  width: calc(100% - 124px - 40px);
+  /* ボタンと余白以外をテキストの幅とする */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-sns__introduction {
+    margin-left: 10px;
+    width: calc(100% - 124px - 10px);
+  }
+}
+
+.p-sns__introduction > .c-text--large, .p-sns__introduction > .is-style-c-text--large {
+  font-size: 16px;
+}
+
 .c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
   transform: translateX(-35px);
   width: 600px;

@@ -1,7 +1,8 @@
 @forward './style.scss';
+@use './foundation/variable';
 
 //カスタムブロック 背景付きテキスト/画像
-.wp-block-create-block-background-text.is-style-background-02 {
+.wp-block-create-block-background-text.is-style-background-02{
 	background-color: rgba(33,12,2,0.9);
 }
 
@@ -36,6 +37,73 @@
 //グループ 階段
 .is-style-p-contents-card-column{
 	.wp-block-group__inner-container{
-		@extend .p-contents-card-column
+		@extend .p-contents-card-column;
+	}
+}
+
+//お問い合わせフォーム
+.smf-item{
+	&__label__text{
+		//ラベルテキストのスタイリング
+		color:variable.$brown;
+		font-weight: bold;
+		font-size: 1.6rem;
+	}
+}
+.smf-form .smf-item {
+	input[type="text"].smf-text-control__control,
+	input[type="email"].smf-text-control__control,
+	input[type="tel"].smf-text-control__control,
+	select.smf-select-control__control,
+	textarea.smf-textarea-control__control{
+		//入力部分のスタイリング
+		appearance: none; /*ブラウザ標準スタイルを無効にする*/
+		border-color:variable.$midbrown;
+		padding: 10px 20px;
+		color:variable.$darkbrown;
+	}
+	::placeholder{
+		//入力例のフォントカラー
+		color: #CDD6DD;
+	}
+	textarea.smf-textarea-control__control{
+		//テキストエリアの幅指定
+		max-width: 740px;
+	}
+	select.smf-select-control__control{
+		//プルダウンの余白修正
+		padding-right: 50px;
+	}
+	.smf-select-control .smf-select-control__toggle:before{
+		//プルダウンの下向き記号の色・太さ・配置修正
+		appearance: none;
+		right: 1em;
+		border-bottom: 2px solid #98A6B5;
+		border-right: 2px solid #98A6B5;
+	}
+	input[type="text"].smf-text-control__control:focus,
+	input[type="email"].smf-text-control__control:focus,
+	input[type="tel"].smf-text-control__control:focus,
+	select.smf-select-control__control:focus,
+	textarea.smf-textarea-control__control:focus{
+		//入力時の色指定
+		border-color:variable.$primary;
+	}
+	select.smf-select-control__control:focus +.smf-select-control__toggle:before{
+		//プルダウンの下向き記号の色が選択時にも変わらないようにする
+		border-color:#98A6B5;
+	}
+}
+.smf-action {
+	display: flex;
+	.smf-button-control {
+		.smf-button-control__control{
+			//ボタンのCSS修正
+			appearance: none; /*ブラウザ標準スタイルを無効にする*/
+			background-image:none;
+			@extend .c-button--primary;
+			@extend .c-button--primary--text;
+			display: block;
+		}
 	}
 }

@@ -1,0 +1,21 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
+.c-wrapper{
+	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+}
+.c-wrapper--left{
+	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+}
+.c-wrapper--right{
+	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+}
+.c-wrapper--footer{
+	display: flex;
+	flex-direction: column;
+	padding-left:17%;
+	padding-right:17%;
+	height: inherit;
+}

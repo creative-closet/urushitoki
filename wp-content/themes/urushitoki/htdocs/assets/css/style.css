@@ -38,6 +38,7 @@ html {
 }
 
 body {
+  min-width: 375px;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Noto Sans Japanese", sans-serif;
@@ -179,6 +180,109 @@ a {
   }
 }
 
+.p-footer {
+  background: url(../assets/image/footer-background.jpg);
+  background-size: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer {
+    background-position: 70% 0;
+  }
+}
+
+.p-footer__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__nav {
+    flex-direction: column;
+  }
+}
+
+.p-footer__contact {
+  margin-top: 30px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__contact {
+    margin-top: -20px;
+  }
+}
+@media (max-width: 599px) {
+  .p-footer__contact {
+    margin-top: 0px;
+  }
+}
+
+.p-footer__contact__list {
+  list-style: none;
+  margin-bottom: 10px;
+  width: 100%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__contact__list {
+    width: 420px;
+  }
+}
+.p-footer__contact__list * {
+  padding-right: 10px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__contact__list * {
+    padding-right: 0;
+  }
+}
+.p-footer__contact__list a {
+  display: block;
+  background-color: transparent;
+}
+.p-footer__contact__list a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-footer__contact__list a:hover {
+    background-color: inherit;
+    transition: inherit;
+  }
+}
+
+.p-footer-logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer-logo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .p-footer-logo__link {
+    margin-bottom: 30px;
+  }
+}
+
+.p-footer-logo__copyright {
+  margin-top: auto;
+}
+
 .p-gnavi .c-button--open {
   top: 60px;
   left: 60px;
@@ -219,6 +323,7 @@ a {
 }
 @media (max-width: 599px) {
   .p-menu {
+    min-width: 320px;
     width: 100%;
     padding-top: 120px;
     background-size: cover;
@@ -283,7 +388,7 @@ a {
     transition: inherit;
   }
 }
-.p-menu__list__item__text::after {
+.p-menu__list__item__link::after {
   content: attr(title) "";
   position: absolute;
   top: 3px;
@@ -294,7 +399,7 @@ a {
   /* SmartPhone */
 }
 @media (max-width: 599px) {
-  .p-menu__list__item__text::after {
+  .p-menu__list__item__link::after {
     left: 0;
     top: 23px;
   }
@@ -1260,6 +1365,27 @@ body.active::before {
   padding-bottom: min(50px, 8%);
   padding-right: min(60px, 9%);
   padding-left: min(60px, 9%);
+}
+
+.c-wrapper {
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--left {
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--right {
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 17%;
+  padding-right: 17%;
+  height: inherit;
 }
 
 .u-margin-top, .u-margin-top--tab {

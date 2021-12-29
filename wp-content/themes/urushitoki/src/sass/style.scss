@@ -16,6 +16,7 @@ project
 @forward './object/project/article-card';
 @forward './object/project/circle-card';
 @forward './object/project/contents-card';
+@forward './object/project/footer';
 @forward './object/project/gnavi';
 @forward './object/project/menu';
 @forward './object/project/post-card';
@@ -39,6 +40,7 @@ component
 @forward './object/component/text';
 @forward './object/component/textbox';
 @forward './object/component/title';
+@forward './object/component/wrapper';
 /* --------------------------------------------------------
 utility
 -------------------------------------------------------- */

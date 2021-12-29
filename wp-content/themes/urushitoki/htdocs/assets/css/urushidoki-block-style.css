@@ -180,6 +180,109 @@ a {
   }
 }
 
+.p-footer {
+  background: url(../assets/image/footer-background.jpg);
+  background-size: cover;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer {
+    background-position: 70% 0;
+  }
+}
+
+.p-footer__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__nav {
+    flex-direction: column;
+  }
+}
+
+.p-footer__contact {
+  margin-top: 30px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__contact {
+    margin-top: -20px;
+  }
+}
+@media (max-width: 599px) {
+  .p-footer__contact {
+    margin-top: 0px;
+  }
+}
+
+.p-footer__contact__list {
+  list-style: none;
+  margin-bottom: 10px;
+  width: 100%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__contact__list {
+    width: 420px;
+  }
+}
+.p-footer__contact__list * {
+  padding-right: 10px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer__contact__list * {
+    padding-right: 0;
+  }
+}
+.p-footer__contact__list a {
+  display: block;
+  background-color: transparent;
+}
+.p-footer__contact__list a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-footer__contact__list a:hover {
+    background-color: inherit;
+    transition: inherit;
+  }
+}
+
+.p-footer-logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-footer-logo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .p-footer-logo__link {
+    margin-bottom: 30px;
+  }
+}
+
+.p-footer-logo__copyright {
+  margin-top: auto;
+}
+
 .p-gnavi .c-button--open {
   top: 60px;
   left: 60px;
@@ -625,6 +728,28 @@ body.active::before {
   z-index: 1;
 }
 
+.p-sns {
+  display: flex;
+  margin: 15px 0;
+}
+.p-sns__introduction {
+  margin-left: 40px;
+  width: calc(100% - 124px - 40px);
+  /* ボタンと余白以外をテキストの幅とする */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-sns__introduction {
+    margin-left: 10px;
+    width: calc(100% - 124px - 10px);
+  }
+}
+
+.p-sns__introduction > .c-text--large, .p-sns__introduction > .is-style-c-text--large {
+  font-size: 16px;
+}
+
 .c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
   transform: translateX(-35px);
   width: 600px;
@@ -695,7 +820,7 @@ body.active::before {
   opacity: 0.633;
 }
 
-.c-button--primary {
+.c-button--primary, .smf-action .smf-button-control .smf-button-control__control {
   display: inline-block;
   background-color: #fff;
   border: 2px solid;
@@ -708,7 +833,7 @@ body.active::before {
   text-decoration: none;
   cursor: pointer;
 }
-.c-button--primary .c-button--primary--text {
+.c-button--primary .c-button--primary--text, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--text, .c-button--primary .smf-action .smf-button-control .smf-button-control__control, .smf-action .smf-button-control .c-button--primary .smf-button-control__control, .smf-action .smf-button-control .smf-button-control__control .smf-button-control__control {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -718,20 +843,20 @@ body.active::before {
   font-weight: 400;
   font-weight: bold;
 }
-.c-button--primary:hover {
+.c-button--primary:hover, .smf-action .smf-button-control .smf-button-control__control:hover {
   background-color: #270b0b;
   color: white;
 }
-.c-button--primary:hover .c-button--primary--line {
+.c-button--primary:hover .c-button--primary--line, .smf-action .smf-button-control .smf-button-control__control:hover .c-button--primary--line {
   color: #fff;
 }
-.c-button--primary:hover .c-button--primary--line::before {
+.c-button--primary:hover .c-button--primary--line::before, .smf-action .smf-button-control .smf-button-control__control:hover .c-button--primary--line::before {
   background-color: #fff;
 }
-.c-button--primary:hover .c-button--primary--line::after {
+.c-button--primary:hover .c-button--primary--line::after, .smf-action .smf-button-control .smf-button-control__control:hover .c-button--primary--line::after {
   background-color: #fff;
 }
-.c-button--primary .c-button--primary--line {
+.c-button--primary .c-button--primary--line, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -745,7 +870,7 @@ body.active::before {
   transition: 0.3s;
   text-decoration: none;
 }
-.c-button--primary .c-button--primary--line::before {
+.c-button--primary .c-button--primary--line::before, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -755,10 +880,10 @@ body.active::before {
   height: 2px;
   background-color: #707070;
 }
-.c-button--primary .c-button--primary--line:hover::before {
+.c-button--primary .c-button--primary--line:hover::before, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line:hover::before {
   background-color: #fff;
 }
-.c-button--primary .c-button--primary--line::after {
+.c-button--primary .c-button--primary--line::after, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line::after {
   content: "";
   position: absolute;
   top: 60%;
@@ -768,7 +893,7 @@ body.active::before {
   height: 2px;
   background-color: #707070;
 }
-.c-button--primary .c-button--primary--line:hover::after {
+.c-button--primary .c-button--primary--line:hover::after, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line:hover::after {
   background-color: #fff;
 }
 
@@ -1242,6 +1367,27 @@ body.active::before {
   padding-left: min(60px, 9%);
 }
 
+.c-wrapper {
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--left {
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--right {
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 17%;
+  padding-right: 17%;
+  height: inherit;
+}
+
 .u-margin-top, .u-margin-top--tab {
   margin-top: 30px;
 }
@@ -1284,4 +1430,69 @@ utility
 -------------------------------------------------------- */
 .wp-block-create-block-background-text.is-style-background-02 {
   background-color: rgba(33, 12, 2, 0.9);
+}
+
+.smf-item__label__text {
+  color: #897c70;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.smf-form .smf-item input[type=text].smf-text-control__control,
+.smf-form .smf-item input[type=email].smf-text-control__control,
+.smf-form .smf-item input[type=tel].smf-text-control__control,
+.smf-form .smf-item select.smf-select-control__control,
+.smf-form .smf-item textarea.smf-textarea-control__control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*ブラウザ標準スタイルを無効にする*/
+  border-color: #e0d7ca;
+  padding: 10px 20px;
+  color: #252525;
+}
+.smf-form .smf-item ::-moz-placeholder {
+  color: #CDD6DD;
+}
+.smf-form .smf-item :-ms-input-placeholder {
+  color: #CDD6DD;
+}
+.smf-form .smf-item ::placeholder {
+  color: #CDD6DD;
+}
+.smf-form .smf-item textarea.smf-textarea-control__control {
+  max-width: 740px;
+}
+.smf-form .smf-item select.smf-select-control__control {
+  padding-right: 50px;
+}
+.smf-form .smf-item .smf-select-control .smf-select-control__toggle:before {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  right: 1em;
+  border-bottom: 2px solid #98A6B5;
+  border-right: 2px solid #98A6B5;
+}
+.smf-form .smf-item input[type=text].smf-text-control__control:focus,
+.smf-form .smf-item input[type=email].smf-text-control__control:focus,
+.smf-form .smf-item input[type=tel].smf-text-control__control:focus,
+.smf-form .smf-item select.smf-select-control__control:focus,
+.smf-form .smf-item textarea.smf-textarea-control__control:focus {
+  border-color: #270B0B;
+}
+.smf-form .smf-item select.smf-select-control__control:focus + .smf-select-control__toggle:before {
+  border-color: #98A6B5;
+}
+
+.smf-action {
+  display: flex;
+}
+.smf-action .smf-button-control .smf-button-control__control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*ブラウザ標準スタイルを無効にする*/
+  background-image: none;
+  display: block;
 }

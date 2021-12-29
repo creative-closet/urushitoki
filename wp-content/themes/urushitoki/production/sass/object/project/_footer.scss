@@ -40,9 +40,23 @@
 		}
 	}
 	& a{
+		position: relative;
 		display: block;
-		background-color: transparent;
-		&:hover{
+		&::before {
+			content: "";
+			position: absolute;
+			left: -20px;
+			width: 250px;
+			height: 34px;
+			background-color: transparent;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 440px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				display: none;
+			}
+		}
+		&:hover::before{
 			background-color: rgba(255, 255, 255, 0.2);
 			transition: all 0.2s;
 			@include mixin.breakpoint( breakpoint-sp ){

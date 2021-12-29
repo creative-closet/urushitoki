@@ -19,6 +19,7 @@
 		background-position: 70% 0;
 	}
 	@include mixin.breakpoint( breakpoint-sp ){
+		min-width: 320px;
 		width: 100%;
 		padding-top: 120px;
 		background-size: cover;
@@ -63,8 +64,6 @@
 						transition: inherit;
 					}
 				}
-			}
-			&__text {
 				&::after {
 					content: attr(title) "";
 					position: absolute;

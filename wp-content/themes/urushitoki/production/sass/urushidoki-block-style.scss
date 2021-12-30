@@ -40,7 +40,26 @@
 		@extend .p-contents-card-column;
 	}
 }
-
+//メディアとテキスト
+.is-style-p-media-text{
+	grid-template-columns:auto auto;
+	.wp-block-media-text__content{
+		background-color: variable.$lightbrown;
+		max-width: 680px;
+		margin-left: -245px;
+		padding: 50px;
+		align-self:end;
+	}
+}
+.is-style-p-price-card{
+	figure{
+		@extend .p-price-card;
+		figcaption.blocks-gallery-item__caption{
+			@extend .p-price-card__price;
+			padding: 0px 10px 0px 0px;
+		}
+	}
+}
 //お問い合わせフォーム
 .smf-item{
 	&__label__text{

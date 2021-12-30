@@ -118,6 +118,23 @@
 			'style_handle' => 'urushidoki-block-style'
 		)
 	);
+	//金継ぎメディアとテキスト
+	register_block_style(
+		'core/media-text',
+		array(
+			'name'         => 'p-media-text',
+			'label'        => 'テキスト重ね表示',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/gallery',
+		array(
+			'name'         => 'p-price-card',
+			'label'        => '値段表示グリッド',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
 
     //*****************************************************************
 	//  カスタム投稿

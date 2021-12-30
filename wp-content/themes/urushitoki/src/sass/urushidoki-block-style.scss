@@ -40,7 +40,14 @@
 		@extend .p-contents-card-column;
 	}
 }
-
+//メディアとテキスト
+.is-style-p-media-text{
+	.wp-block-media-text__content{
+		background-color: variable.$lightbrown;
+		width: 58%;
+		margin-right: 0px;
+	}
+}
 //お問い合わせフォーム
 .smf-item{
 	&__label__text{

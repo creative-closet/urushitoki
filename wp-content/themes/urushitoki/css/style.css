@@ -1030,10 +1030,10 @@ body.active::before {
 .c-bullet {
   list-style: none;
 }
-.c-bullet__item {
+.c-bullet__item, .c-bullet li {
   line-height: 2.8;
 }
-.c-bullet__item::before {
+.c-bullet__item::before, .c-bullet li::before {
   display: inline-block;
   content: "";
   margin: 17px 10px 0 0;
@@ -1043,7 +1043,7 @@ body.active::before {
   border-radius: 5px;
   background-color: #897C70;
 }
-.c-bullet__item:last-child {
+.c-bullet__item:last-child, .c-bullet li:last-child {
   margin-bottom: 0;
 }
 
@@ -1093,6 +1093,7 @@ body.active::before {
 .c-definition {
   width: 100%;
   color: #2E2E2E;
+  margin-bottom: 30px;
 }
 .c-definition__title {
   font-size: 2rem;

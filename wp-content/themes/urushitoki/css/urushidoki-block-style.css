@@ -1110,6 +1110,11 @@ body.active::before {
   cursor: pointer;
 }
 
+.c-body-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .c-bullet {
   list-style: none;
 }
@@ -1467,8 +1472,8 @@ body.active::before {
 .c-wrapper--footer {
   display: flex;
   flex-direction: column;
-  padding-left: 17%;
-  padding-right: 17%;
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
   height: inherit;
 }
 

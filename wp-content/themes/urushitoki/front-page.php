@@ -1,46 +1,67 @@
 <style>
-    .c-body-wrapper{
-        width: 100%;
-        overflow-x: hidden;
-	}
     .k-flex--space-between{
         display: flex;
         justify-content: space-between;
     }
-
     .k-description-margin{
         margin-top: 20px;
     }
     /* 天然漆にこだわる */
     .k-urushi{
         padding-top: 200px;
+		width: 100%;
     }
     .k-urushi__text{
-        padding: 40px 0 0 40px;
+        padding: 40px 0 30px 40px;
+		position: relative;
+		width: 40%;
+		min-width: 480px;
     }
+	.k-urushi__text__description{
+		padding-bottom: 50px;
+	}
+	.k-urushi__text__image2{
+		position: absolute;
+		left: -50%;
+		object-fit: cover;
+		height: 330px;
+	}
     .k-urushi__pattern{
         position: relative;
+		width: 60%;
     }
     .k-urushi__pattern__layer--left{
         position: absolute;
         top: 50%;
-        left: -40%;
-    }
-    .k-urushi__pattern__image2{
-        position: absolute;
-        top: 50%;
-        right: -30%;
+        right: 50%;
     }
 
+    .k-urushi__pattern__image1{
+		object-fit: cover;
+		width: 100%;
+		height: 600px;
+	}
+
     /* 指物と乾漆で素地から塗り蒔絵まで一貫した制作 */
+	.k-make{
+		width: 100%;
+	}
     .k-make__text{
+		position: relative;
         padding: 40px 40px 0 0;
+		width: 45%;
+		min-width: 580px;
     }
     .k-make__text__monyou{
         position: absolute;
-        left: -5%;
-        transform: translateY(-10%);
+        left: -50%;
+        top: 60%;
+		z-index: -1;
     }
+	.k-make__img{
+		object-fit: cover;
+		width: 55%;
+	}
 
     /* Urushi Contents */
     .k-urushi-contents__description-area{
@@ -104,14 +125,14 @@
         <!-- 仮置きスタイル -->
         <article class="k-urushi k-flex--space-between c-wrapper--right">
             <div class="k-urushi__pattern">
-                <img class="k-urushi__pattern_image1" src="<?php echo get_theme_file_uri('/assets/image/top-tree.jpg'); ?>" alt="うるしの木">
+                <img class="k-urushi__pattern__image1" src="<?php echo get_theme_file_uri('/assets/image/top-tree.jpg'); ?>" alt="うるしの木">
                 <img class="k-urushi__pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
-                <img class="k-urushi__pattern__image2" src="<?php echo get_theme_file_uri('/assets/image/top-urushi.jpg'); ?>" alt="うるし">
             </div>
             <section class="k-urushi__text">
-                <h2 class="c-title">天然漆にこだわる</h2>
-                <p class="c-text k-description-margin">化学塗料、漆の吹付塗装の技術が進化している中でも、天然漆にこだわり手塗りの伝統の技法を大切にした
-                    漆本来の味わいやぬくもりのある物づくりをすることで日本人が忘れかけている伝統工芸の本筋を正すことが進化と考えています。</p>
+				<h2 class="c-title">天然漆にこだわる</h2>
+                <p class="k-urushi__text__description c-text k-description-margin">化学塗料、漆の吹付塗装の技術が進化している中でも、天然漆にこだわり手塗りの伝統の技法を大切にした
+					漆本来の味わいやぬくもりのある物づくりをすることで日本人が忘れかけている伝統工芸の本筋を正すことが進化と考えています。</p>
+				<img class="k-urushi__text__image2" src="<?php echo get_theme_file_uri('/assets/image/top-urushi.jpg'); ?>" alt="うるし">
             </section>
         </article>
 

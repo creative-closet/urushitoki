@@ -1,0 +1,70 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
+/* --------------------------------------------------------
+front-page以外
+-------------------------------------------------------- */
+.p-header{
+	max-width:640px;
+	width:100%;
+}
+
+/* --------------------------------------------------------
+front-page
+-------------------------------------------------------- */
+.p-header-video{
+	position: relative;
+	height:inherit;
+	width:100%;
+	object-fit: cover;
+}
+.p-header-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: inherit;
+	width: 100%;
+	background: url( "../assets/image/background-dot-black.png" ) ;
+}
+.p-header-wrap__title{
+	display: flex;
+	height: inherit;
+	width: inherit;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__description{
+		text-align: center;
+	}
+}
+
+    /* front-pageお問い合わせ */
+    .p-header-wrap__contact{
+        position: absolute;
+        top: 0;
+        right: 50px;
+        z-index: 20;
+    }
+    .p-header-monyou--left{
+        position: absolute;
+        z-index: 100;
+        top: 60%;
+        right: 50%;
+
+    }
+    .p-header-monyou--right{
+        position: absolute;
+        z-index: 100;
+        top: 60%;
+        left: 80%;
+
+    }
+    .p-header-arrow{
+        position: absolute;
+        z-index: 100;
+        bottom: 0;
+        left: 50%;
+
+    }

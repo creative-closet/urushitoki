@@ -183,6 +183,9 @@
 		padding-top:200px;
 		padding-bottom:200px;
 	}
+	.l-main--about{
+		margin-top: 478px;
+	}
 	.p-post__tags{
 		gap:20px;
 

@@ -33,5 +33,18 @@
 				margin-bottom: 20px;
 			}
 		}
+		&--tab1 {
+			@extend .c-grid--col4;
+			@include mixin.breakpoint( breakpoint-tab ) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr;
+			}
+			&__item {
+				@extend .c-grid--col4__item;
+				@include  mixin.breakpoint( breakpoint-tab ) {
+					margin-bottom: 20px;
+				}
+			}
+		}
 	}
 }

@@ -20,7 +20,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 	echo '<article class="p-information-archive">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">Information</h2>';
-	echo '<ul class="c-grid--col4">';
+	echo '<ul class="c-grid--col4--tab1">';
 	while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
 		//記事の各種データを取得
@@ -29,7 +29,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 		$link_in_query = get_permalink( );
 		$time_in_query = get_the_time( 'Y年n月j日' );
 		?>
-			<li class="c-grid--col4__item">
+			<li class="c-grid--col4--tab1__item">
 				<a href="<?php echo esc_url($link_in_query);?>">
 					<figure class="p-post-card">
 						<img class="p-post-card__image" src="<?php echo esc_url($img_in_query[0]); ?>" alt="作品の画像です">

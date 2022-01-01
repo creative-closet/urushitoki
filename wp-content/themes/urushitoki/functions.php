@@ -135,6 +135,14 @@
 			'style_handle' => 'urushidoki-block-style'
 		)
 	);
+	register_block_style(
+		'core/columns',
+		array(
+			'name'         => 'p-media-column',
+			'label'        => '画像表示グリッド',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
 
     //*****************************************************************
 	//  カスタム投稿

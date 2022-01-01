@@ -48,6 +48,15 @@
 		margin-right: 0px;
 	}
 }
+.wp-block-columns.is-style-p-media-column{
+	flex-basis: content;
+	.wp-block-column{
+		flex-basis: content;
+	}
+	img{
+		object-fit: cover;
+	}
+}
 //お問い合わせフォーム
 .smf-item{
 	&__label__text{

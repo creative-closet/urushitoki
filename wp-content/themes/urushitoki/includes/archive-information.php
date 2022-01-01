@@ -20,7 +20,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 	echo '<article class="p-information-archive">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">Information</h2>';
-	echo '<ul class="c-grid--col4--tab1">';
+	echo '<ul class="c-grid--col4--tab1 u-gap--20">';
 	while($information_query -> have_posts())://(投稿データ出力ループ -start-)
 		$information_query -> the_post();
 		//記事の各種データを取得

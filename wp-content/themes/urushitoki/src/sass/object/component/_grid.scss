@@ -41,9 +41,6 @@
 			}
 			&__item {
 				@extend .c-grid--col4__item;
-				@include  mixin.breakpoint( breakpoint-tab ) {
-					margin-bottom: 20px;
-				}
 			}
 		}
 	}

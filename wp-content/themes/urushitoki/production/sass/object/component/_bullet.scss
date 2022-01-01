@@ -1,6 +1,6 @@
 .c-bullet {
     list-style: none;
-    &__item {
+    &__item,li{
         line-height: 2.8;
         &::before {
             display: inline-block;

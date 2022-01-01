@@ -522,6 +522,32 @@ body.active::before {
   }
 }
 
+.p-post-archive {
+  width: 1280px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-archive {
+    width: 100%;
+  }
+}
+.p-post-archive .c-grid--col3 {
+  gap: 31px;
+}
+.p-post-archive .c-grid--col3__item {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-post-archive .c-grid--col3__item {
+    margin-bottom: 20px;
+  }
+  .p-post-archive .c-grid--col3__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .c-title, .c-title--header {
   position: relative;
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
@@ -1047,26 +1073,54 @@ body.active::before {
   margin-bottom: 0;
 }
 
-.c-grid, .c-grid--col4, .c-grid--col4--tab1 {
+.c-grid, .c-grid--col4, .c-grid--col4--tab1, .c-grid--col3 {
   display: grid;
+  box-sizing: border-box;
   /* tablet */
   /* SmartPhone */
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 599px) {
-  .c-grid, .c-grid--col4, .c-grid--col4--tab1 {
+  .c-grid, .c-grid--col4, .c-grid--col4--tab1, .c-grid--col3 {
     display: block;
   }
 }
-.c-grid__item, .c-grid--col4__item, .c-grid--col4--tab1__item {
+.c-grid__item, .c-grid--col4__item, .c-grid--col4--tab1__item, .c-grid--col3__item {
   list-style-type: none;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-grid__item, .c-grid--col4__item, .c-grid--col4--tab1__item, .c-grid--col3__item {
+    margin-bottom: 20px;
+  }
+  .c-grid__item:last-child, .c-grid--col4__item:last-child, .c-grid--col4--tab1__item:last-child, .c-grid--col3__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.c-grid--col3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-grid--col3 {
+    display: block;
+  }
+}
+.c-grid--col3__item {
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
 }
 .c-grid--col4, .c-grid--col4--tab1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 20px;
-  box-sizing: border-box;
   /* tablet */
   /* SmartPhone */
   /* tablet */
@@ -1076,17 +1130,6 @@ body.active::before {
   .c-grid--col4, .c-grid--col4--tab1 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-  }
-}
-.c-grid--col4__item, .c-grid--col4--tab1__item {
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 599px) {
-  .c-grid--col4__item, .c-grid--col4--tab1__item {
-    margin-bottom: 20px;
   }
 }
 .c-grid--col4--tab1 {
@@ -1419,6 +1462,9 @@ body.active::before {
   margin-top: 60px;
 }
 
+.u-gap--20 {
+  gap: 20px;
+}
 .u-gap--53 {
   gap: 53px;
 }
@@ -1442,8 +1488,6 @@ utility
   background-color: rgba(33, 12, 2, 0.9);
 }
 
-<<<<<<< HEAD
-=======
 .is-style-p-media-text.wp-block-media-text {
   grid-template-columns: 70% 30%;
   /* tablet */
@@ -1571,7 +1615,6 @@ utility
   height: auto;
 }
 
->>>>>>> b57ab210751d164d4b0a2ae9fb6a2e6de413d072
 .smf-item__label__text {
   color: #897c70;
   font-weight: bold;

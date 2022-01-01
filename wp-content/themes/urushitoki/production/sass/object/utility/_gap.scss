@@ -3,7 +3,6 @@
 @use "../../foundation/mixin";
 
 .u-gap {
-	&--53 {
-		gap: 53px;
-	}
+	&--20 { gap: 20px; }
+	&--53 { gap: 53px; }
 }

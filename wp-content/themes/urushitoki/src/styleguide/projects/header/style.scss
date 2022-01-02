@@ -48,23 +48,7 @@ front-page
 	top: 0;
 	right: 50px;
 	z-index: 20;
-	@include mixin.breakpoint( breakpoint-sp ){
-		display: none;
-	}
-	&--sp{
-		display: none;
-		position: absolute;
-		top: 0;
-		right: 50px;
-		z-index: 20;
-		@include mixin.breakpoint( breakpoint-sp ){
-			display: inline;
-		}
-	}
 }
-
-
-
 .p-header-monyou--left{
 	position: absolute;
 	z-index: 100;

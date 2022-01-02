@@ -360,6 +360,27 @@ front-page
   top: 0;
   right: 50px;
   z-index: 20;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-header-wrap__contact {
+    display: none;
+  }
+}
+.p-header-wrap__contact--sp {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 20;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-header-wrap__contact--sp {
+    display: inline;
+  }
 }
 
 .p-header-monyou--left {

@@ -52,17 +52,23 @@
 				width: 420px;
 				text-decoration: none;
 				color: #fff;
-				background-color: transparent;
 				@include mixin.breakpoint( breakpoint-sp ){
 					width: inherit;
 				}
-				&:hover{
+				&::before {
+					content: "";
+					position: absolute;
+					left: -20px;
+					width: 440px;
+					height: 34px;
+					background-color: transparent;
+					@include mixin.breakpoint( breakpoint-sp ){
+						display: none;
+					}
+				}
+				&:hover::before{
 					background-color: rgba(255, 255, 255, 0.2);
 					transition: all 0.2s;
-					@include mixin.breakpoint( breakpoint-sp ){
-						background-color: inherit;
-						transition: inherit;
-					}
 				}
 				&::after {
 					content: attr(title) "";
@@ -72,7 +78,7 @@
 					color: variable.$font-color--brown--right;
 					font-size: 1.4rem;
 					@include mixin.breakpoint( breakpoint-sp ){
-						left: 0;
+						left: 0px;
 						top: 23px;
 					}
 				}

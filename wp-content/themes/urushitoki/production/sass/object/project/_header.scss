@@ -35,36 +35,47 @@ front-page
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	&__description{
 		text-align: center;
 	}
 }
 
-    /* front-pageお問い合わせ */
-    .p-header-wrap__contact{
-        position: absolute;
-        top: 0;
-        right: 50px;
-        z-index: 20;
-    }
-    .p-header-monyou--left{
-        position: absolute;
-        z-index: 100;
-        top: 60%;
-        right: 50%;
-
-    }
-    .p-header-monyou--right{
-        position: absolute;
-        z-index: 100;
-        top: 60%;
-        left: 80%;
-
-    }
-    .p-header-arrow{
-        position: absolute;
-        z-index: 100;
-        bottom: 0;
-        left: 50%;
-
-    }
+/* front-pageお問い合わせ */
+.p-header-wrap__contact{
+	position: absolute;
+	top: 0;
+	right: 50px;
+	z-index: 20;
+}
+.p-header-monyou--left{
+	position: absolute;
+	z-index: 100;
+	top: 60%;
+	right: 50%;
+	@include mixin.breakpoint( breakpoint-tab ){
+		display: none;
+	}
+}
+.p-header-monyou--right{
+	position: absolute;
+	z-index: 100;
+	top: 60%;
+	left: 80%;
+	@include mixin.breakpoint( breakpoint-tab ){
+		display: none;
+	}
+}
+.p-header-arrow{
+	position: absolute;
+	z-index: 100;
+	bottom: 0;
+	left: 50%;
+	@include mixin.breakpoint( breakpoint-tab ){
+		left: clamp(20px, calc(100vw - 1280px)/2, 320px);
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		display: none;
+	}
+}

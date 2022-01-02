@@ -347,6 +347,8 @@ front-page
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
 }
 .p-header-wrap__title__description {
   text-align: center;
@@ -365,6 +367,13 @@ front-page
   z-index: 100;
   top: 60%;
   right: 50%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-header-monyou--left {
+    display: none;
+  }
 }
 
 .p-header-monyou--right {
@@ -372,6 +381,13 @@ front-page
   z-index: 100;
   top: 60%;
   left: 80%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-header-monyou--right {
+    display: none;
+  }
 }
 
 .p-header-arrow {
@@ -379,6 +395,20 @@ front-page
   z-index: 100;
   bottom: 0;
   left: 50%;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-header-arrow {
+    left: clamp(20px, (100vw - 1280px) / 2, 320px);
+  }
+}
+@media (max-width: 599px) {
+  .p-header-arrow {
+    display: none;
+  }
 }
 
 .p-menu {

@@ -305,6 +305,218 @@ a {
   margin-top: auto;
 }
 
+/* 天然漆にこだわる */
+.p-front-card--left {
+  width: 100%;
+  display: flex;
+  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left {
+    padding-right: 0;
+    flex-direction: column;
+  }
+}
+
+.p-front-card--left__pattern {
+  position: relative;
+  width: 60%;
+  max-width: 800px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left__pattern {
+    width: 73%;
+  }
+}
+@media (max-width: 599px) {
+  .p-front-card--left__pattern {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.p-front-card--left__pattern__layer {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left__pattern__layer {
+    top: 20%;
+    right: 65%;
+  }
+}
+@media (max-width: 599px) {
+  .p-front-card--left__pattern__layer {
+    top: 60%;
+    right: 20%;
+  }
+}
+.p-front-card--left__pattern__image1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 600px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left__pattern__image1 {
+    height: 460px;
+  }
+}
+@media (max-width: 599px) {
+  .p-front-card--left__pattern__image1 {
+    height: 387px;
+  }
+}
+
+.p-front-card--left__text {
+  position: relative;
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 50%;
+  min-width: 400px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left__text {
+    width: 100%;
+    padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+    padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+  }
+}
+@media (max-width: 599px) {
+  .p-front-card--left__text {
+    margin-top: 120px;
+  }
+}
+.p-front-card--left__text__description {
+  padding-bottom: 380px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left__text__description {
+    padding-bottom: 0;
+  }
+}
+.p-front-card--left__text__image2 {
+  position: absolute;
+  height: 330px;
+  left: -50px;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--left__text__image2 {
+    width: 50%;
+    height: 254px;
+    top: 20px;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    transform: translateY(-100%);
+  }
+}
+@media (max-width: 599px) {
+  .p-front-card--left__text__image2 {
+    width: 90%;
+    height: 167px;
+    -o-object-position: 50% 20%;
+       object-position: 50% 20%;
+  }
+}
+
+/* 指物と乾漆で素地から塗り蒔絵まで一貫した制作 */
+.p-front-card--right {
+  position: relative;
+  margin-top: 100px;
+  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--right {
+    margin-top: 60px;
+    padding-left: 0;
+    flex-direction: column-reverse;
+  }
+}
+.p-front-card--right__monyou {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  z-index: -1;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--right__monyou {
+    display: none;
+  }
+}
+
+.p-front-card--right__text {
+  padding-top: 40px;
+  padding-right: 40px;
+  width: 50%;
+  min-width: 580px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--right__text {
+    width: 100%;
+    padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+    padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+  }
+}
+
+.p-front-card--right__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  height: 368px;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-front-card--right__img {
+    width: 100%;
+    height: 337px;
+  }
+}
+@media (max-width: 599px) {
+  .p-front-card--right__img {
+    height: 152px;
+  }
+}
+
 .p-gnavi .c-button--open {
   top: 60px;
   left: 60px;
@@ -852,6 +1064,7 @@ body.active::before {
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 200px 0;
 }
 
 .c-background--wave {
@@ -1450,14 +1663,6 @@ body.active::before {
 
 .c-wrapper {
   padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
-  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
-}
-
-.c-wrapper--left {
-  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
-}
-
-.c-wrapper--right {
   padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
 }
 

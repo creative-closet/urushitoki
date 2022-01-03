@@ -122,6 +122,7 @@
 	min-width: 580px;
 	@include mixin.breakpoint( breakpoint-tab ){
 		width: 100%;
+		min-width: auto;
 		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
 		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	}

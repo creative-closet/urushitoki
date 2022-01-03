@@ -1,37 +1,4 @@
 <style>
-    .k-flex--space-between{
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    /* Urushi Contents */
-    .k-urushi-contents__description-area{
-        position: relative;
-        width: 300px;
-        height: inherit;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .k-urushi-contents__text--right{
-        padding: 30px 0 0 25px;
-    }
-    .k-urushi-contents__text--left{
-        padding: 30px 30px 0 0;
-    }
-    .k-urushi-contents__button--right{
-        position: absolute;
-        top: -15px;
-        right: 50px;
-        z-index: 1;
-    }
-    .k-urushi-contents__button--left{
-        position: absolute;
-        top: -15px;
-        z-index: 1;
-    }
-
     /* Information , Article */
     .k-information__archive , .k-article__archive{
         position: relative;
@@ -49,8 +16,6 @@
         left: -40%;
         z-index: -1;
     }
-
-
 </style>
 
 
@@ -88,37 +53,34 @@
             <img class="p-front-card--right__img" src="<?php echo get_theme_file_uri('/assets/image/top-make.jpg'); ?>" alt="制作">
         </article>
 
-        <br><br><br><br><br><br><br><br><br><br>
-
-        <div class="k-urushi-contents c-wrapper">
+        <div class="p-urushi-contents">
             <h2 class="c-title">Urushi Contents</h2>
 
-            <article class="k-accessory k-flex--space-between">
+            <article class="p-urushi-content">
                 <div class="c-pattern">
                     <img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
                     <img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-accessory.jpg'); ?>" alt="">
                 </div>
-                <div class="k-urushi-contents__description-area">
-                    <section class="k-urushi-contents__text--right">
+                <div class="p-urushi-content__description-area">
+                    <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">アクセサリー</h3>
-                        <p class="c-text u-margin-top">年代を問わずにお使いいただける、シンプルなデザインのアクセサリー流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
+                        <p class="c-text u-margin-top">年代を問わずにお使いいただける、シンプルなデザインのアクセサリー<br>
+						流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
                     </section>
-                    <a href="<?php echo home_url('/archive_accessory/'); ?>" class="k-urushi-contents__button--right c-button--primary" id="p-ripples--effect">
+                    <a href="<?php echo home_url('/archive_accessory/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
                         <span class="c-button--primary--line"></span>
                     </a>
                 </div>
             </article>
 
-            <br><br><br><br><br>
-
-            <article class="k-kintsugi k-flex--space-between">
-                <div class="k-urushi-contents__description-area">
-                    <section class="k-urushi-contents__text--left">
+            <article class="p-urushi-content--reverse u-margin-top--urushi-content">
+                <div class="p-urushi-content__description-area">
+                    <section class="p-urushi-content__description-area__text--left">
                         <h3 class="c-title-small">金継ぎ</h3>
                         <p class="c-text u-margin-top">壊れてしまった大切なものを蘇らせます。金継ぎをすることでより味わい深いものに仕上げます。</p>
                     </section>
-                    <a href="<?php echo home_url('/kintsugi/'); ?>" class="k-urushi-contents__button--left c-button--primary" id="p-ripples--effect">
+                    <a href="<?php echo home_url('/kintsugi/'); ?>" class="p-urushi-content__description-area__button--left c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
                         <span class="c-button--primary--line"></span>
                     </a>
@@ -129,34 +91,31 @@
                 </div>
             </article>
 
-            <br><br><br><br><br>
-
-            <article class="k-life k-flex--space-between">
+            <article class="p-urushi-content u-margin-top--urushi-content">
                 <div class="c-pattern">
                     <img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
                     <img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-life.jpg'); ?>" alt="">
                 </div>
-                <div class="k-urushi-contents__description-area">
-                    <section class="k-urushi-contents__text--right">
+                <div class="p-urushi-content__description-area">
+                    <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">うるしと生活</h3>
-                        <p class="c-text u-margin-top">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。皆様の生活がより豊かになるようなものづくりを心がけています。</p>
+                        <p class="c-text u-margin-top">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。<br>
+						皆様の生活がより豊かになるようなものづくりを心がけています。</p>
                     </section>
-                    <a href="<?php echo home_url('/life/'); ?>" class="k-urushi-contents__button--right c-button--primary" id="p-ripples--effect">
+                    <a href="<?php echo home_url('/life/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
                         <span class="c-button--primary--line"></span>
                     </a>
                 </div>
             </article>
 
-            <br><br><br><br><br><br>
-
-            <article class="k-music k-flex--space-between">
-                <div class="k-urushi-contents__description-area">
-                    <section class="k-urushi-contents__text--left">
+            <article class="p-urushi-content--reverse u-margin-top--urushi-content">
+                <div class="p-urushi-content__description-area">
+                    <section class="p-urushi-content__description-area__text--left">
                         <h3 class="c-title-small">うるしと楽器</h3>
                         <p class="c-text u-margin-top">楽器や楽器付属品に付加価値を、<br>漆の魅力を音楽にのせて伝えます。</p>
                     </section>
-                    <a href="<?php echo home_url('/instrument/'); ?>" class="k-urushi-contents__button--left c-button--primary" id="p-ripples--effect">
+                    <a href="<?php echo home_url('/instrument/'); ?>" class="p-urushi-content__description-area__button--left c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
                         <span class="c-button--primary--line"></span>
                     </a>

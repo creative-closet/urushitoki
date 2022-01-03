@@ -1,0 +1,89 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+/* Urushi Contents */
+.p-urushi-contents{
+	margin-top: 400px;
+	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	@include mixin.breakpoint( breakpoint-tab ){
+		margin-top: 120px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.p-urushi-content{
+	display: flex;
+	justify-content: space-between;
+	@include mixin.breakpoint( breakpoint-tab ){
+		flex-direction: column;
+	}
+	&--reverse{
+		@extend .p-urushi-content;
+		@include mixin.breakpoint( breakpoint-tab ){
+			flex-direction: column-reverse;
+		}
+	}
+}
+
+.p-urushi-content__description-area{
+	position: relative;
+	width: 300px;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@include mixin.breakpoint( breakpoint-tab ){
+		flex-direction: row;
+		width: 100%;
+		padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+		padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		flex-direction: column;
+	}
+}
+
+.p-urushi-content__description-area__text--right{
+	padding-top: 30px;
+	padding-left: 25px;
+	@include mixin.breakpoint( breakpoint-tab ){
+		width: 50%;
+		padding-left: 0;
+		padding-right: 25px;
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		width: 100%;
+	}
+}
+.p-urushi-content__description-area__text--left{
+	padding-top: 30px;
+	padding-right: 25px;
+	@include mixin.breakpoint( breakpoint-tab ){
+		width: 50%;
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		width: 100%;
+	}
+}
+
+.p-urushi-content__description-area__button--right{
+	position: absolute;
+	top: -15px;
+	right: 50px;
+	z-index: 1;
+	@include mixin.breakpoint( breakpoint-tab ){
+		width: 50%;
+		top: 80px;
+		right: 0;
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		width: 100%;
+		top: 30px;
+	}
+}
+.p-urushi-content__description-area__button--left{
+	@extend .p-urushi-content__description-area__button--right;
+	right: 0;
+}

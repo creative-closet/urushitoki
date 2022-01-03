@@ -859,6 +859,12 @@ body.active::before {
   text-decoration: none;
   cursor: pointer;
 }
+@media (max-width: 1024px) {
+  .c-button--primary, .smf-action .smf-button-control .smf-button-control__control {
+    height: 60px;
+    width: 334px;
+  }
+}
 .c-button--primary .c-button--primary--text, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--text, .c-button--primary .smf-action .smf-button-control .smf-button-control__control, .smf-action .smf-button-control .c-button--primary .smf-button-control__control, .smf-action .smf-button-control .smf-button-control__control .smf-button-control__control {
   display: flex;
   justify-content: center;
@@ -901,7 +907,7 @@ body.active::before {
   position: absolute;
   top: 50%;
   right: 0.8em;
-  transform: translateY(calc(-50% - 2px)) rotate(40deg);
+  transform: translateY(calc(-50% - 2px)) rotate(40deg) skew(-58deg);
   width: 32px;
   height: 2px;
   background-color: #707070;
@@ -914,10 +920,15 @@ body.active::before {
   position: absolute;
   top: 60%;
   right: 1em;
-  transform: translateY(-50%);
+  transform: translateY(-50%) skew(58deg);
   width: 193px;
   height: 2px;
   background-color: #707070;
+}
+@media (max-width: 1024px) {
+  .c-button--primary .c-button--primary--line::after, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line::after {
+    top: 64%;
+  }
 }
 .c-button--primary .c-button--primary--line:hover::after, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line:hover::after {
   background-color: #fff;

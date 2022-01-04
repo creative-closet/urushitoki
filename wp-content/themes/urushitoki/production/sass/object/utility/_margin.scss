@@ -18,10 +18,22 @@
 .u-margin-top--large{
 	margin-top: 60px;
 }
-
 .u-margin-top--urushi-content{
 	margin-top: 200px;
 	@include mixin.breakpoint( breakpoint-tab ){
 		margin-top: 120px;
 	}
 }
+.u-margin--small{
+	margin-bottom:70px;
+}
+.u-margin-bottom{
+	margin-bottom :30px;
+}
+.u-margin-bottom--medium{
+	margin-bottom :100px;
+}
+.u-margin-bottom--large{
+	margin-bottom :200px;
+}
+

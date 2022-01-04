@@ -531,19 +531,34 @@ a {
   }
 }
 
+.p-front-posts__archive {
+  position: relative;
+  z-index: 10;
+}
+
+.p-front-posts__monyou {
+  position: absolute;
+  top: 60%;
+  right: -40%;
+  z-index: -1;
+}
+
+.p-front-posts__monyou {
+  position: absolute;
+  top: 60%;
+  left: -40%;
+  z-index: -1;
+}
+
 /* Urushi Contents */
 .p-urushi-contents {
   margin-top: 400px;
-  padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
-  padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
   /* tablet */
   /* SmartPhone */
 }
 @media (max-width: 1024px) {
   .p-urushi-contents {
     margin-top: 120px;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -584,8 +599,6 @@ a {
   .p-urushi-content__description-area {
     flex-direction: row;
     width: 100%;
-    padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
-    padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
   }
 }
 @media (max-width: 599px) {
@@ -805,6 +818,7 @@ front-page
   left: -100%;
   padding: 150px 0 150px 60px;
   width: 90%;
+  max-width: 1700px;
   height: 100vh;
   transition: all 0.5s;
   background: url(../assets/image/menu-background.jpg) no-repeat 0 -120px;
@@ -1372,7 +1386,7 @@ body.active::before {
 }
 @media (max-width: 1024px) {
   .c-button--primary {
-    width: auto;
+    width: 45%;
   }
 }
 @media (max-width: 599px) {
@@ -1410,26 +1424,12 @@ body.active::before {
   position: relative;
   margin: 0 auto;
   padding: 30px 20px;
-  width: 350px;
+  width: 100%;
   color: black;
   font-size: 18px;
   font-weight: 700;
   transition: 0.3s;
   text-decoration: none;
-  /* tablet */
-  /* SmartPhone */
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-button--primary .c-button--primary--line {
-    width: 40vw;
-  }
-}
-@media (max-width: 599px) {
-  .c-button--primary .c-button--primary--line {
-    width: 100%;
-  }
 }
 .c-button--primary .c-button--primary--line::before {
   content: "";
@@ -1959,9 +1959,31 @@ body.active::before {
   padding-left: min(60px, 9%);
 }
 
-.c-wrapper {
+.c-wrapper, .c-wrapper--pc {
   padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
   padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+}
+
+.c-wrapper--pc {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-wrapper--pc {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.c-wrapper--tab {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-wrapper--tab {
+    padding-left: clamp(20px, (100vw - 1280px) / 2, 320px);
+    padding-right: clamp(20px, (100vw - 1280px) / 2, 320px);
+  }
 }
 
 .c-wrapper--footer {
@@ -2002,6 +2024,22 @@ body.active::before {
   .u-margin-top--urushi-content {
     margin-top: 120px;
   }
+}
+
+.u-margin--small {
+  margin-bottom: 70px;
+}
+
+.u-margin-bottom {
+  margin-bottom: 30px;
+}
+
+.u-margin-bottom--medium {
+  margin-bottom: 100px;
+}
+
+.u-margin-bottom--large {
+  margin-bottom: 200px;
 }
 
 .u-gap--20 {

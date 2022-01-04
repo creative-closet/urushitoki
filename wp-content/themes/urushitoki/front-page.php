@@ -1,24 +1,3 @@
-<style>
-    /* Information , Article */
-    .k-information__archive , .k-article__archive{
-        position: relative;
-        z-index: 10;
-    }
-    .k-information__monyou{
-        position: absolute;
-        top: 60%;
-        right: -40%;
-        z-index: -1;
-    }
-    .k-article__monyou{
-        position: absolute;
-        top: 60%;
-        left: -40%;
-        z-index: -1;
-    }
-</style>
-
-
 <?php get_header(); ?>
     <?php get_template_part('includes/menu'); ?>
     <?php get_template_part('includes/header'); ?>
@@ -53,7 +32,7 @@
             <img class="p-front-card--right__img" src="<?php echo get_theme_file_uri('/assets/image/top-make.jpg'); ?>" alt="制作">
         </article>
 
-        <div class="p-urushi-contents">
+        <div class="p-urushi-contents c-wrapper--pc">
             <h2 class="c-title">Urushi Contents</h2>
 
             <article class="p-urushi-content">
@@ -61,7 +40,7 @@
                     <img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
                     <img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-accessory.jpg'); ?>" alt="">
                 </div>
-                <div class="p-urushi-content__description-area">
+                <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">アクセサリー</h3>
                         <p class="c-text u-margin-top">年代を問わずにお使いいただける、シンプルなデザインのアクセサリー<br>
@@ -75,7 +54,7 @@
             </article>
 
             <article class="p-urushi-content--reverse u-margin-top--urushi-content">
-                <div class="p-urushi-content__description-area">
+                <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--left">
                         <h3 class="c-title-small">金継ぎ</h3>
                         <p class="c-text u-margin-top">壊れてしまった大切なものを蘇らせます。金継ぎをすることでより味わい深いものに仕上げます。</p>
@@ -96,7 +75,7 @@
                     <img class="c-pattern__layer--left" src="<?php echo get_theme_file_uri('/assets/image/monyou02.png'); ?>" alt="">
                     <img class="c-pattern__image" src="<?php echo get_theme_file_uri('/assets/image/top-life.jpg'); ?>" alt="">
                 </div>
-                <div class="p-urushi-content__description-area">
+                <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">うるしと生活</h3>
                         <p class="c-text u-margin-top">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。<br>
@@ -110,7 +89,7 @@
             </article>
 
             <article class="p-urushi-content--reverse u-margin-top--urushi-content">
-                <div class="p-urushi-content__description-area">
+                <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--left">
                         <h3 class="c-title-small">うるしと楽器</h3>
                         <p class="c-text u-margin-top">楽器や楽器付属品に付加価値を、<br>漆の魅力を音楽にのせて伝えます。</p>
@@ -129,20 +108,20 @@
             <br><br><br><br><br>
 
             <!-- informationのギャラリー表示 -->
-            <article class="k-information">
-                <div class="k-information__archive k-flex--space-between">
+            <article class="p-front-posts c-wrapper--tab">
+                <div class="p-front-posts__archive">
                     <?php get_template_part('/includes/archive-information')?>
-                    <img class="k-information__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
+                    <img class="p-front-posts__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
                 </div>
             </article>
 
             <br><br><br><br><br>
 
             <!-- 投稿のギャラリー表示 -->
-            <article class="k-article">
-                <div class="k-article__archive k-flex--space-between">
+            <article class="p-front-posts c-wrapper--tab">
+                <div class="p-front-posts__archive">
                     <?php get_template_part('/includes/archive-post')?>
-                    <img class="k-article__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
+                    <img class="p-front-posts__monyou" src="<?php echo get_theme_file_uri('/assets/image/monyou01.png'); ?>" alt="">
                 </div>
             </article>
 

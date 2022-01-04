@@ -2,7 +2,7 @@
 @use "../../foundation/variable";
 @use "../../foundation/mixin";
 
-.u-gap {
-	&--20 { gap: 20px; }
-	&--53 { gap: 53px; }
+.c-body-wrapper{
+	width: 100%;
+	overflow-x: hidden;
 }

@@ -9,7 +9,7 @@
 .c-wrapper--footer{
 	display: flex;
 	flex-direction: column;
-	padding-left:17%;
-	padding-right:17%;
+	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	height: inherit;
 }

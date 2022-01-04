@@ -5,5 +5,5 @@
 </head><meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>URUSHITOKI</title>
-	<?php if( is_front_page() ) $class = "l-body"; ?>
+	<div class="c-body-wrapper">
 	<body <?php body_class( $class ); ?>>

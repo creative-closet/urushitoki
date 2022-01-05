@@ -11,7 +11,7 @@
 				<ul class="p-footer__contact">
 					<li class="p-footer__contact__list"><a href="<?php echo home_url('/contact/');  ?>" class="c-text--white">お問い合わせ・ご依頼</a></li>
 					<li class="p-footer__contact__list"><a href="<?php echo home_url('/faq/');  ?>" class="c-text--white">よくある質問</a></li>
-					<li  class="p-footer__contact__list"><address class="c-text--white">076-229-0860</address></li>
+					<li class="p-footer__contact__list"><address class="c-text--white">076-229-0860</address></li>
 				</ul>
 			</nav>
 
@@ -27,5 +27,6 @@
 
 	<?php wp_footer(); ?>
 </body>
+</div>
 
 </html>

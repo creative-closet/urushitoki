@@ -18,6 +18,12 @@
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
+	@include mixin.breakpoint( breakpoint-tab ){
+		width: 45%;
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		width: 100%;
+	}
 	.c-button--primary--text {
 		display: flex;
 		justify-content: center;
@@ -47,7 +53,7 @@
 		position: relative;
 		margin: 0 auto;
 		padding: 30px 20px;
-		width: 350px;
+		width: 100%;
 		color: black;
 		font-size: 18px;
 		font-weight: 700;
@@ -56,7 +62,7 @@
 		&::before {
 			content: "";
 			position: absolute;
-			top: 50%;
+			top: 45%;
 			right: 0.8em;
 			transform: translateY(calc(-50% - 2px)) rotate(40deg) skew(-58deg);
 			width: 32px;

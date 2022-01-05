@@ -706,12 +706,13 @@
 
 <span class="hljs-selector-class">.c-pattern</span>{
 	<span class="hljs-attribute">position</span>: relative;
-	<span class="hljs-attribute">width</span>: <span class="hljs-number">980px</span>;
+	<span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">300px</span>);
 	<span class="hljs-attribute">height</span>: <span class="hljs-number">380px</span>;
 	<span class="hljs-attribute">margin-top</span>: <span class="hljs-number">30px</span>;
 	<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
 		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 		<span class="hljs-attribute">height</span>: <span class="hljs-number">310px</span>;
+		<span class="hljs-attribute">overflow</span>: hidden;
 	}
 	<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
 		<span class="hljs-attribute">height</span>: <span class="hljs-number">180px</span>;
@@ -729,9 +730,7 @@
 		<span class="hljs-attribute">width</span>: <span class="hljs-number">621px</span>;
 		<span class="hljs-attribute">height</span>: <span class="hljs-number">488px</span>;
 		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
-			<span class="hljs-attribute">top</span>:<span class="hljs-number">140px</span>;
-			<span class="hljs-attribute">width</span>: <span class="hljs-number">437px</span>;
-			<span class="hljs-attribute">height</span>: <span class="hljs-number">350px</span>;
+			<span class="hljs-attribute">top</span>: -<span class="hljs-number">100px</span>;
 		}
 		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-sp ){
 			<span class="hljs-attribute">display</span>: none;
@@ -1768,7 +1767,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-01-05T12:19:07.270Z">
+                            <time datetime="2022-01-05T12:49:38.644Z">
                                 1/5/2022
                             </time>
                         

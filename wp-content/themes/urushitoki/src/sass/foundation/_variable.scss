@@ -97,24 +97,24 @@ $border-color--definiton-descripton: #DDD4CD;
  $background-color--postCard : #FFF;   // 明るいライトブラウン
 
 //フォントサイズ
-$font-size--postCard-title:1.6rem;
-$font-size--postCard-sentence:1.3rem;
-$font-size--postCard-date:1.4rem;
+$font-size--postCard-title   : 1.6rem;
+$font-size--postCard-sentence: 1.3rem;
+$font-size--postCard-date    : 1.4rem;
 //文字の色
-$font-color--postCard-title:#2E2E2E;
-$font-color--postCard-sentence:#BFAD9C;
-$font-color--postCard-date:#2E2E2E;
+$font-color--postCard-title   : #2E2E2E;
+$font-color--postCard-sentence: #BFAD9C;
+$font-color--postCard-date    : #2E2E2E;
 
 /*
  *	product-card
  */
  //フォントサイズ
- $font-size--definiton--figcaption-term:1.6rem;
- $font-size--definiton--figcaption-description:1.2rem;
+ $font-size--definiton--figcaption-term       : 1.6rem;
+ $font-size--definiton--figcaption-description: 1.2rem;
 
  //文字の色
- $font-color--definiton--figcaption-term:#202124;
- $font-color--definiton--figcaption-description:#A6ADB4;
+ $font-color--definiton--figcaption-term       : #202124;
+ $font-color--definiton--figcaption-description: #A6ADB4;
 
 /*
  *	content-card
@@ -125,6 +125,6 @@ $font-color--postCard-date:#2E2E2E;
  /*
  *	shopCard
  */
-$background-color--shop-card : #FFF;
-$border-color--shop-card:#DED6CC;
-$border-color--shop-card__title:#897C70;
+$background-color--shop-card   : #FFF;
+$border-color--shop-card       : #DED6CC;
+$border-color--shop-card__title: #897C70;

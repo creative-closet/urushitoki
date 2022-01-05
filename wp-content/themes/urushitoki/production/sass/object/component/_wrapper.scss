@@ -3,19 +3,26 @@
 @use "../../foundation/mixin";
 
 .c-wrapper{
-	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
-	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+	padding-left : clamp(20px, calc((100vw - 1280px)/2), 320px);
+	padding-right: clamp(20px, calc((100vw - 1280px)/2), 320px);
 }
-.c-wrapper--left{
-	padding-left:clamp(20px, calc(100vw - 1280px)/2, 320px);
+.c-wrapper--pc{
+	@extend .c-wrapper;
+	@include mixin.breakpoint( breakpoint-tab ){
+		padding-left : 0;
+		padding-right: 0;
+	}
 }
-.c-wrapper--right{
-	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
+.c-wrapper--tab{
+	@include mixin.breakpoint( breakpoint-tab ){
+		padding-left : clamp(20px, calc((100vw - 1280px)/2), 320px);
+		padding-right: clamp(20px, calc((100vw - 1280px)/2), 320px);
+	}
 }
 .c-wrapper--footer{
-	display: flex;
+	display       : flex;
 	flex-direction: column;
-	padding-left:17%;
-	padding-right:17%;
-	height: inherit;
+	padding-left  : clamp(20px, calc((100vw - 1280px)/2), 320px);
+	padding-right : clamp(20px, calc((100vw - 1280px)/2), 320px);
+	height        : inherit;
 }

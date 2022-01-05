@@ -9,7 +9,7 @@ foundation
 /* --------------------------------------------------------
 layout
 -------------------------------------------------------- */
-
+@forward "./layout/header";
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
@@ -17,7 +17,11 @@ project
 @forward './object/project/circle-card';
 @forward './object/project/contents-card';
 @forward './object/project/footer';
+@forward './object/project/front-card';
+@forward './object/project/front-posts';
+@forward './object/project/front-urushi-contents';
 @forward './object/project/gnavi';
+@forward './object/project/header';
 @forward './object/project/menu';
 @forward './object/project/post-card';
 @forward './object/project/post-archive';
@@ -31,6 +35,7 @@ component
 @forward './object/component/background-icon';
 @forward './object/component/background';
 @forward './object/component/button';
+@forward './object/component/body-wrapper';
 @forward './object/component/bullet';
 @forward './object/component/grid';
 @forward './object/component/definition';

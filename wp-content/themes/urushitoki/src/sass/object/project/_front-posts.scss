@@ -1,0 +1,20 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+.p-front-posts__archive{
+	position: relative;
+	z-index : 10;
+}
+.p-front-posts__monyou{
+	position: absolute;
+	top     : 60%;
+	right   : -40%;
+	z-index : -1;
+}
+.p-front-posts__monyou{
+	position: absolute;
+	top     : 60%;
+	left    : -40%;
+	z-index : -1;
+}

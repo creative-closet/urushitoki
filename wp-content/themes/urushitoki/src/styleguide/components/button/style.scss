@@ -9,6 +9,10 @@
 	border-color: #707070;
 	width: 350px;
 	height: 80px;
+	@media (max-width: 1024px) {
+		height: 60px;
+		width: 334px;
+	}
 	text-align: center;
 	display: flex;
 	color: black;
@@ -54,7 +58,7 @@
 			position: absolute;
 			top: 50%;
 			right: 0.8em;
-			transform: translateY(calc(-50% - 2px)) rotate(40deg);
+			transform: translateY(calc(-50% - 2px)) rotate(40deg) skew(-58deg);
 			width: 32px;
 			height: 2px;
 			background-color: #707070;
@@ -66,8 +70,11 @@
 			content: "";
 			position: absolute;
 			top: 60%;
+			@media (max-width: 1024px) {
+				top: 64%;
+			}
 			right: 1em;
-			transform: translateY(-50%);
+			transform: translateY(-50%) skew(58deg);
 			width: 193px;
 			height: 2px;
 			background-color: #707070;

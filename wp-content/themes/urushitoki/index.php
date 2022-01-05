@@ -38,19 +38,19 @@
 				</div>
 				<!-- グループ2：the_contentとギャラリーパーツファイル -->
 				<?php if(is_page('archive_accessory')) {?>
-					<article class="p-content c-wrapper">
+					<article class="p-content">
 						<?php get_template_part('./includes/archive-accessory');?>
 					</article>
 				<?php } ?>
 
 				<?php if(is_page('kintsugi')) {?>
-					<article class="p-content c-wrapper">
+					<article class="p-content">
 						<?php get_template_part('./includes/archive-post');?>
 					</article>
 				<?php } ?>
 
 				<?php if(is_page('archive_craft')) {?>
-					<article class="p-content c-wrapper">
+					<article class="p-content">
 						<?php get_template_part('./includes/archive-craft');?>
 					</article>
 				<?php } ?>
@@ -63,7 +63,7 @@
 			<?php } ?>
 
 			<?php if (is_tag()){ ?>
-				<article class="p-content c-wrapper">
+				<article class="p-content">
 					<?php get_template_part('./includes/archive-post');?>
 				</article>
 			<?php } ?>

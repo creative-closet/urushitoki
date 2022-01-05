@@ -288,10 +288,10 @@
         <?php get_template_part('includes/menu'); ?>
     </header>
 <?php else:?>
-    <!-- フロントページのヘッダー -->
-    <?php $headerMovie = array(get_template_directory_uri(). '/assets/movie/header_movie.mp4');?>
+	<!-- フロントページのヘッダー -->
+	<?php $headerMovie = array(get_theme_file_uri('/assets/movie/header_movie.mp4'));?>
     <header class="l-front-header">
-        <video class="p-header-video" poster="/assets/image/header-top.jpg" webkit-playsinline playsinline muted autoplay loop>
+        <video id="header-video" class="p-header-video" poster="<?php echo get_theme_file_uri('/assets/image/header-top.jpg');?>" webkit-playsinline playsinline muted>
             <!--
             poster：動画ファイルが利用できない環境で代替表示される画像
             webkit-playsinline：iOS 9までのSafari用インライン再生指定

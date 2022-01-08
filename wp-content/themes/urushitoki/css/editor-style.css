@@ -56,12 +56,24 @@ a {
   height: 420px;
   background-size: cover;
   background-position: center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .l-header {
+    height: auto;
+  }
 }
 
 .l-front-header {
   position: relative;
   height: 100vh;
   width: 100%;
+}
+
+.p-accessory-column-block img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-article-card, .p-article-card--wide {
@@ -696,6 +708,7 @@ front-page以外
 .p-header {
   max-width: 640px;
   width: 100%;
+  padding-bottom: 60px;
 }
 
 /* --------------------------------------------------------
@@ -2068,6 +2081,10 @@ utility
   background-color: rgba(33, 12, 2, 0.9);
 }
 
+.is-style-p-contents-card-column {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
 .is-style-p-media-text.wp-block-media-text {
   grid-template-columns: 70% 30%;
   /* tablet */

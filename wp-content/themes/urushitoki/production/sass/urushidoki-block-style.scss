@@ -1,4 +1,8 @@
 @forward './style.scss';
+@use "./foundation/base";
+@use "./foundation/variable";
+@use "./foundation/mixin";
+
 
 //カスタムブロック 背景付きテキスト/画像
 .wp-block-create-block-background-text.is-style-background-02{
@@ -35,7 +39,9 @@
 
 //グループ 階段
 .is-style-p-contents-card-column{
-	.wp-block-group__inner-container{
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+.wp-block-group__inner-container{
 		@extend .p-contents-card-column;
 	}
 }

@@ -1,6 +1,7 @@
 @use "../../foundation/base";
 @use "../../foundation/mixin";
 @use "../../foundation/variable";
+@use "../component/title";
 
 .c-definition{
 	width: 100%;
@@ -16,16 +17,25 @@
 		display: flex;
 		margin-inline-start: 0px;
 		border-bottom: solid 1px variable.$border-color--definiton-descripton;
+		min-height: 60px;
+		align-items: center;
 		&__item{
+			padding:13px 0;
 			&:nth-last-child(2){
 				width: 15%;
 				text-align: center;
+				@include mixin.breakpoint( breakpoint-sp ){
+					margin-right: 5%;
+				}
 			}
 			&:nth-child(2){
 				width: 85%;
 			}
 			&:only-child{
 				margin-left: 15%;
+				@include mixin.breakpoint( breakpoint-sp ){
+					margin-left: 20%;
+				}
 			}
 		}
 	}
@@ -40,6 +50,47 @@
 			font-size: variable.$font-size--definiton--figcaption-description;
 			color:variable.$font-color--definiton--figcaption-description;
 			line-height: 1.6;
+		}
+	}
+
+	&--shop-card{
+		&__title{
+			@extend .c-title-small;
+			margin-bottom: 30px;
+			&::after{
+				margin-top: 27px;
+				border-color: variable.$border-color--shop-card__title;
+			}
+		}
+		&__link{
+			a{
+				text-decoration: none;
+				word-break: break-all;
+			}
+			img{
+				width: 24px;
+				height: 24px;
+				transform: translateY(25%);
+			}
+		}
+		&__text{
+			position: relative;
+		}
+		&__image{
+			z-index: 1;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			@include mixin.breakpoint( breakpoint-tab ){
+				position: relative;
+				transform: translateY(0);
+				right: 0;
+				width: 100%;
+				height: auto;
+				margin-top: 30px;
+			}
 		}
 	}
 }

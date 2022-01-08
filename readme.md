@@ -24,7 +24,7 @@ urushitoki        //WordPress 本体のディレクトリと同一（ Local の�
 |        └─ package-lock.json
 └─ README.md
 ```
-## 1. Local by FlywheelでWordPress開発環境を構築  
+## 1. Local by FlywheelでWordPress開発環境を構築
 
 Site Domain を ``` urushitoki.local ``` で作成すると gulp の起動時オプションが不要
 
@@ -66,7 +66,7 @@ Local の Site Domain が urushitoki.local の場合
 
 Site Domain が別の場合
 
-``` npx gulp --domain "サイトのドメイン" ```  
+``` npx gulp --domain "サイトのドメイン" ```
 
 ※サイトのドメイン名は Local の "Site Domain" を入力
 
@@ -252,3 +252,158 @@ main ブランチ->本番環境にデプロイ
 ` git stash clear `
 
  → 退避した内容の全てを削除
+
+ ## データ取り込み フロー
+
+### 流れ
+
+
+### ①データ取得(export)
+
+*新しくdumpデータをdevelopから取得したい時のみ実行
+
+
+develop環境で実行する
+
+`cd /home/rietime/www/urushitoki`
+` wp db export <ファイル名> `
+（例 ： ` wp db export wordpress_20210901.sql `）
+
+成功すると以下が表示される
+` Success: Exported to 'wordpress_20210901.sql'.`
+
+・dump済みのファイルはesaから取得できる
+ *データは最新日付の使用を推奨
+
+https://urushitoki.esa.io/posts/35
+
+
+### ②ローカルでのデータ取り込み(import)
+
+ここからはlocalでの作業にうつる
+localの管理画面(緑のやつ)からプロジェクト一覧の該当プロジェクトを右クリックして「open site shell」をクリックで、WP-CLIのターミナルが立ち上がる
+
+データのエクスポートの実施
+local環境でコマンド
+` wp db import <ファイル名> `
+
+（例 ：
+` wp db import  /Users/<各自のパス>/wordpress_20210901.sql `
+または、publicがカレントディレクトリの状態で
+` wp db import wordpress_20210901.sql `
+）
+
+
+成功すると以下が表示される
+` Success: Imported from '/Users/isa/Desktop/wordpress_20210901.sql'.`
+
+### ③WordPress内の設定
+
+1.  データベース内文字列置換
+
+local環境でコマンドを実施
+` wp search-replace 'http://fp.rash.jp/urushitoki' <自分のローカルのsitetopのurl>`
+（例 ： ` wp search-replace 'http://fp.rash.jp/urushitoki' 'http://urushitokilocal.local'`）
+*それぞれの環境でurl違う可能性あり
+
+2. プレフィックスの変更する
+
+以下のファイルの変数の中身を変更する
+/urushitokilocal/app/public/wp-config.php
+
+` $table_prefix = 'wp_';`
+
+↓
+
+` $table_prefix = 'wpe81544';`
+
+3. siteurlやhomeの確認
+
+自分のローカルのパスであっているか確認する(特にwpe81544optionsのsiteurlやhome)
+間違っていたらローカル管理画面のDATABASE ->OPEN ADMINERから
+開いて、テーブルのデータを手動変更する
+
+
+siteurlとhome
+(例)
+
+` http://fp.rash.jp/urushitoki/`
+
+↓
+
+` http://urushitokilocal.local`
+
+*上記まで実行してうまくいかない時はキャッシュクリアしてみること
+
+4. upload 画像の反映
+
+うるしときのdropboxに下記zipを置いておくので、
+
+` backup_20211204uploads.zip`
+
+取得して
+` urushitokilocal/app/public/wp-content/uploads`
+uploadsフォルダを入れ替える
+
+5. プラグイン有効化
+
+
+` wp plugin install duplicate-post show-current-template smart-custom-fields snow-monkey-forms duplicate-post`
+
+` wp plugin activate --all`
+
+
+
+### イレギュラー対応
+#### ②ローカルでのデータ取り込み(import)でwpコマンドが効かない場合
+
+` wp db import <ファイル名> `が効かない場合はmysqlコマンドでデータを取り込む
+
+1. MySQLへログイン
+`$ mysql -u [MySQLのユーザ名] -p`
+
+例：ユーザー名がrootなら`mysql -uroot -p`
+
+
+上記を打つとPWを要求されるので従って入力する
+
+ユーザー名とパスワードは
+
+`C:\Users\ユーザー名\Local Sites\urushitokilocal\app\public\wp-config.php` で確認できる
+
+
+2. データを展開する宛先（データベース名）を指定
+
+`mysql> use db_name`
+
+例：データベース名がlocalなら`use local`
+
+localのDATABASEタブ＞Connect＞OPEN ADMIERよりデータベースにアクセスできる
+
+3. 読み込みたいファイルのパスを指定
+
+`mysql> source /Users/ユーザー名/Desktop/example.sql`
+
+sqlファイルをデスクトップに解凍していれば上記のようになる
+
+成功すると`Query OK, n rows affected(0.00sec)`が大量に表示され、
+2で指定したデータベースにデータが格納されていることがAdmierから確認できる
+
+#### ③WordPress内の設定でwpコマンドが効かない場合
+
+` wp search-replace 'http://fp.rash.jp/urushitoki' 'http://urushitokilocal.local'`
+
+が効かない場合、イレギュラー版のsqlファイル（URLの置換が完了しているもの）を使用する
+
+こちらで取り込めば既にURLの置換が済んでいるため、③の対応そのものが不要となる
+https://urushitoki.esa.io/posts/35
+
+※local環境を`urushitokilocal`で作成していない場合はうまく効かない可能性あり
+
+#### ③WordPress内の設定でDropboxからzipデータを解凍するとファイル名が文字化けする場合
+
+Mac⇔Winの差によるもの
+https://itojisan.xyz/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB/windows10%E3%81%A6%E3%82%99zip%E3%83%BBrar%E3%82%92%E8%A7%A3%E5%87%8D%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91/
+
+こちらを元にWindowsのシステムロケール設定を確認する
+

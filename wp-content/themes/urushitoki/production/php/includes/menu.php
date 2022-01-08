@@ -4,12 +4,15 @@
 		overflow-y: hidden;
 	}
 	menu{
-		width: 100vw;
 		overflow: hidden;
+	}
+	.menu-main_nav{
+		margin: 50px 0;
 	}
 	.menu-main_nav__list{
 		position: relative;
 		list-style: none;
+		margin-bottom: 30px;
 	}
 	.menu-main_nav__list a{
 		text-decoration: none;
@@ -22,9 +25,9 @@
 		color: #E0D7CA;
 	}
 	.menu-list{
-		background-color: rgba(39, 11, 11, 0.7);
 		position: fixed;
-		z-index: 10;
+		z-index: 100;
+		overflow-y: scroll;
 		top: 0;
 		right: -100%;
 		padding-top: 250px;
@@ -33,13 +36,22 @@
 		height: 100vh;
 	}
 	.menu-list.active{
-		right: 0%;
+		right: 0;
+	}
+	.k-menu-background{
+		position: absolute;
+		top :0px;
+		left:0px;
+		z-index: -1;
+		width: 100%;
+		object-fit: cover;
+
 	}
 	.k-open--button{
 		top: 60px;
 		left: 60px;
 		position: fixed;
-		z-index: 20;
+		z-index: 200;
 	}
 </style>
 <!-- styleはマークアップ完了までの仮置き -->
@@ -52,9 +64,10 @@
 	</div>
 	<!-- タグ・クラス名等マークアップ完了までの仮置き -->
 	<article class="menu-list">
+		<img class="k-menu-background" src="<?php echo get_theme_file_uri('/assets/image/menu-background.jpg') ?>" alt="">
 		<a href="<?php echo esc_url(home_url('/')); ?>">
 			<!-- width="200" height="58"はマークアップ完了までの仮置き -->
-			<img src="<?php echo get_theme_file_uri('/production/images/うるしどきロゴ.png'); ?>" alt="うるしどきロゴ" width="200" height="58">
+			<img src="<?php echo get_theme_file_uri('/assets/image/urushitoki-logo.png'); ?>" alt="うるしときロゴ" width="200" height="58">
 		</a>
 		<?php
 			$menu_name = 'menu-main_nav';

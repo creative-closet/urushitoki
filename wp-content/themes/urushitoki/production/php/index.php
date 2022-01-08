@@ -28,7 +28,7 @@
 	<?php get_template_part('/includes/header')?>
 
 	<!-- メインコンテンツ -->
-	<main class="" id="">
+	<main class="l-main" id="">
 
 		<!-- 個別投稿とアーカイブ以外 -->
 		<?php if (!(is_single()||is_tag())): ?>
@@ -38,15 +38,21 @@
 			</div>
 			<!-- グループ2：the_contentとギャラリーパーツファイル -->
 			<?php if(is_page('archive_accessory')) {?>
-				<?php get_template_part('./includes/archive-accessory');?>
+				<article class="p-content c-wrapper">
+					<?php get_template_part('./includes/archive-accessory');?>
+				</article>
 			<?php } ?>
 
 			<?php if(is_page('kintsugi')) {?>
-				<?php get_template_part('./includes/archive-post');?>
+				<article class="p-content c-wrapper">
+					<?php get_template_part('./includes/archive-post');?>
+				</article>
 			<?php } ?>
 
 			<?php if(is_page('archive_craft')) {?>
-				<?php get_template_part('./includes/archive-craft');?>
+				<article class="p-content c-wrapper">
+					<?php get_template_part('./includes/archive-craft');?>
+				</article>
 			<?php } ?>
 
 		<?php endif; ?>
@@ -57,7 +63,9 @@
 		<?php } ?>
 
 		<?php if (is_tag()){ ?>
-			<?php get_template_part('./includes/archive-post');?>
+			<article class="p-content c-wrapper">
+				<?php get_template_part('./includes/archive-post');?>
+			</article>
 		<?php } ?>
 
 

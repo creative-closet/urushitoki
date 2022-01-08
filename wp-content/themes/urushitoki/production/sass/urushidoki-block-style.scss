@@ -186,6 +186,15 @@
 		//プルダウンの下向き記号の色が選択時にも変わらないようにする
 		border-color:#98A6B5;
 	}
+
+	//checkboxの大きさ修正
+	input[type="checkbox"].smf-checkbox-control__control{
+		width: 30px;
+		height: 30px;
+		&:before{
+			width: 8px;
+		}
+	}
 }
 .smf-action {
 	display: flex;
@@ -197,6 +206,18 @@
 			@extend .c-button--primary;
 			@extend .c-button--primary--text;
 			display: block;
+		}
+	}
+}
+
+// プライバシーポリシーのaタグ装飾
+.wp-block-snow-monkey-forms-item{
+	.is-style-c-text{
+		a{
+			color: #252525;
+			border-bottom: solid;
+			border-color:#252525;
+			border-width: 1px;
 		}
 	}
 }

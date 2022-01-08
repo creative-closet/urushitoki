@@ -2247,6 +2247,13 @@ utility
 .smf-form .smf-item select.smf-select-control__control:focus + .smf-select-control__toggle:before {
   border-color: #98A6B5;
 }
+.smf-form .smf-item input[type=checkbox].smf-checkbox-control__control {
+  width: 30px;
+  height: 30px;
+}
+.smf-form .smf-item input[type=checkbox].smf-checkbox-control__control:before {
+  width: 8px;
+}
 
 .smf-action {
   display: flex;
@@ -2258,4 +2265,11 @@ utility
   /*ブラウザ標準スタイルを無効にする*/
   background-image: none;
   display: block;
+}
+
+.wp-block-snow-monkey-forms-item .is-style-c-text a {
+  color: #252525;
+  border-bottom: solid;
+  border-color: #252525;
+  border-width: 1px;
 }

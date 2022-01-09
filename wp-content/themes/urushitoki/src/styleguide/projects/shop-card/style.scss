@@ -31,3 +31,6 @@
 		z-index: 1;
 	}
 }
+.p-shop-card:not(:nth-of-type(1)){
+	margin-top:20px;
+}

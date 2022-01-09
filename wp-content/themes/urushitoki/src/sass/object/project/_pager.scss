@@ -1,0 +1,88 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
+/* ページネーション */
+.p-pager{
+	gap:clamp(10px, calc( 100vw - 1000px ) ,50px);
+}
+@include mixin.breakpoint( breakpoint-tab ){
+	.p-post > .p-pager{
+		gap:50%;
+	}
+}
+
+.page-numbers{
+	text-decoration: none;
+	color:black;
+	border:solid 0px;
+	border-radius:50%;
+	width:clamp(30px, calc( 100vw - 710px ) ,70px);
+	height:clamp(30px, calc( 100vw - 710px ) ,70px);
+	background-color:#FFF;
+	text-align:center;
+	line-height:clamp(30px, calc( 100vw - 710px ) ,70px);
+	font-size:16px;
+}
+.current{
+	background-color:#270B0B;
+	color:#FFF;
+}
+.page-numbers:not(.dots):hover{
+	background-color:#270B0B;
+	color:#FFF;
+}
+/* ページネーション */
+.p-pager>a{
+	text-decoration: none;
+	color:#3B4043;
+}
+.p-pager__previous:before{
+	text-decoration: none;
+	color:black;
+	border:solid 0px;
+	border-radius:50%;
+	width:70px;
+	height:70px;
+	background-color:#FFF;
+	text-align:center;
+	line-height:70px;
+	font-size:20px;
+	content:"<";
+	display:inline-block;
+	margin-right:20px;
+}
+.p-pager__previous:hover:before {
+	background-color:#270B0B;
+	color:#FFF;
+}
+
+.p-pager__next:after{
+	text-decoration: none;
+	color:black;
+	border:solid 0px;
+	border-radius:50%;
+	width:70px;
+	height:70px;
+	background-color:#FFF;
+	text-align:center;
+	line-height:70px;
+	font-size:20px;
+	content:">";
+	display:inline-block;
+	margin-left:20px;
+}
+.p-pager__next:hover:after {
+	background-color:#270B0B;
+	color:#FFF;
+}
+@include mixin.breakpoint( breakpoint-tab ){
+	.p-pager__previous > span{
+		display:none;
+	}
+}
+@include mixin.breakpoint( breakpoint-tab ){
+	.p-pager__next > span{
+		display:none;
+	}
+}

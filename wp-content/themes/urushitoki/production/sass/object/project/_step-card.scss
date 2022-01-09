@@ -1,0 +1,57 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-step-card{
+	.wp-block-group__inner-container{
+		display: grid;
+		grid-template-columns: 320px 320px 320px;
+		justify-content: center;
+		gap: 80px;
+		grid-template-areas:
+		". . ."
+		"p-step-card4 . p-step-card6";
+		
+		figure{
+			position: relative;
+		}
+		figure:nth-child(1){
+			&::after{
+				@include mixin.p-step-card__line();
+				background-image:url('../assets/image/path1.png') ;
+			}
+		}
+		figure:nth-child(2){
+			margin-top: 235px;
+			&::after{
+				@include mixin.p-step-card__line($r:-115px,$t:70px);
+				background-image:url('../assets/image/path1.png') ;
+			}
+		}
+		figure:nth-child(3){
+			margin-top: 335px;
+		}
+		figure:nth-child(4){
+			grid-area: p-step-card6;
+			::after{
+				@include mixin.p-step-card__line($r:-25px,$t:-200px,$w:200px,$h:210px);
+				background-image:url('../assets/image/path2.png') ;
+			}
+		}
+		figure:nth-child(5){
+			margin-top: 100px;
+			::after{
+				@include mixin.p-step-card__line($t:0px);
+				background-image:url('../assets/image/path3.png') ;
+			}
+		}
+		figure:nth-child(6){
+			grid-area: p-step-card4;
+			margin-top: 200px;
+			::after{
+				@include mixin.p-step-card__line($t:80px,$w:184px,$h:178px);
+				background-image:url('../assets/image/path4.png') ;
+			}
+		}
+	}
+}

@@ -1973,6 +1973,30 @@ body.active::before {
   /* tablet */
   /* SmartPhone */
 }
+.c-grid--col3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-grid--col3 {
+    grid-template-columns: 1fr;
+  }
+}
+.c-grid--col3__item {
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-grid--col3__item {
+    margin-bottom: 20px;
+  }
+}
 .c-grid--col4, .c-grid--col4--tab1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;

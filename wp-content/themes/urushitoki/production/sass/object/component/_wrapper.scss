@@ -1,0 +1,28 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
+.c-wrapper{
+	padding-left : clamp(20px, calc((100vw - 1280px)/2), 320px);
+	padding-right: clamp(20px, calc((100vw - 1280px)/2), 320px);
+}
+.c-wrapper--pc{
+	@extend .c-wrapper;
+	@include mixin.breakpoint( breakpoint-tab ){
+		padding-left : 0;
+		padding-right: 0;
+	}
+}
+.c-wrapper--tab{
+	@include mixin.breakpoint( breakpoint-tab ){
+		padding-left : clamp(20px, calc((100vw - 1280px)/2), 320px);
+		padding-right: clamp(20px, calc((100vw - 1280px)/2), 320px);
+	}
+}
+.c-wrapper--footer{
+	display       : flex;
+	flex-direction: column;
+	padding-left  : clamp(20px, calc((100vw - 1280px)/2), 320px);
+	padding-right : clamp(20px, calc((100vw - 1280px)/2), 320px);
+	height        : inherit;
+}

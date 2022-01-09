@@ -4,6 +4,7 @@
 
 .c-grid {
 	display: grid;
+	box-sizing: border-box;
 	@include  mixin.breakpoint( breakpoint-tab ) {
 	}
 	@include  mixin.breakpoint( breakpoint-sp ) {
@@ -11,6 +12,29 @@
 	}
 	&__item {
 		list-style-type: none;
+		@include  mixin.breakpoint( breakpoint-sp ) {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&--col3 {
+		@extend .c-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			display: block;
+		}
+		@include  mixin.breakpoint( breakpoint-sp ) {
+		}
+		&__item {
+			@extend .c-grid__item;
+			@include  mixin.breakpoint( breakpoint-tab ) {
+			}
+			@include  mixin.breakpoint( breakpoint-sp ) {
+			}
+		}
 	}
 	&--col3 {
 		@extend .c-grid;
@@ -34,8 +58,6 @@
 		@extend .c-grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
-		gap: 20px;
-		box-sizing: border-box;
 		@include  mixin.breakpoint( breakpoint-tab ) {
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 1fr 1fr;
@@ -44,11 +66,15 @@
 		}
 		&__item {
 			@extend .c-grid__item;
-			@include  mixin.breakpoint( breakpoint-tab ) {
-
+		}
+		&--tab1 {
+			@extend .c-grid--col4;
+			@include mixin.breakpoint( breakpoint-tab ) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr;
 			}
-			@include  mixin.breakpoint( breakpoint-sp ) {
-				margin-bottom: 20px;
+			&__item {
+				@extend .c-grid--col4__item;
 			}
 		}
 	}

@@ -1,7 +1,10 @@
 @forward './style.scss';
+@use "./foundation/base";
+@use "./foundation/variable";
+@use "./foundation/mixin";
 
 //カスタムブロック 背景付きテキスト/画像
-.wp-block-create-block-background-text.is-style-background-02 {
+.wp-block-create-block-background-text.is-style-background-02{
 	background-color: rgba(33,12,2,0.9);
 }
 
@@ -36,6 +39,188 @@
 //グループ 階段
 .is-style-p-contents-card-column{
 	.wp-block-group__inner-container{
-		@extend .p-contents-card-column
+		@extend .p-contents-card-column;
+	}
+}
+//金継ぎ
+.is-style-p-media-text.wp-block-media-text{
+	grid-template-columns: 70% 30%;
+	@include mixin.breakpoint( breakpoint-tab ){
+		grid-template-columns: 100%;
+		grid-template-rows:auto auto;
+		grid-auto-flow: column;
+	}
+	.wp-block-media-text__media{
+		grid-column:auto;
+		grid-row: auto;
+		img{
+			object-fit: contain;
+			object-position: top;
+			height: auto;
+		}
+	}
+	.wp-block-media-text__content{
+		background-color: variable.$lightbrown;
+		max-width: 680px;
+		width: auto;
+		margin-top: 150px;
+		margin-left: -245px;
+		padding: 50px;
+		align-self:end;
+		grid-column:auto;
+		grid-row: auto;
+		@include mixin.breakpoint( breakpoint-tab ){
+			margin-left:auto;
+			margin-right:-5vw;
+			margin-top: -10vw;
+			width: 80vw;
+		}
+		@include mixin.breakpoint( breakpoint-sp ){
+			margin-right: auto;
+			margin-top: auto;
+			width: auto;
+			padding: 0px;
+		}
+	}
+}
+.wp-block-gallery.columns-3.is-style-p-price-card ul{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(3, auto);
+	justify-content: center;
+	@include mixin.breakpoint( breakpoint-sp ){
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: auto;
+	}
+	.blocks-gallery-item{
+		width: auto;
+		height: auto;
+		margin-right: 1em;
+	}
+	figure{
+		@extend .p-price-card;
+		max-width: 400px;
+		max-height: 315px;
+		width: auto;
+		height: auto;
+		figcaption.blocks-gallery-item__caption{
+			@extend .p-price-card__price;
+			padding: 0px 10px 0px 0px;
+		}
+		@include mixin.breakpoint( breakpoint-tab ){
+			width: 100%;
+		}
+	}
+}
+.wp-block-columns.is-style-p-media-column{
+	display: grid;
+	grid-template-columns: 63% auto;
+	@include mixin.breakpoint( breakpoint-tab ){
+		grid-template-columns: 100%;
+		grid-template-rows:auto auto;
+		grid-auto-flow: column;
+	}
+	.wp-block-column:nth-child(2n){
+		@include mixin.breakpoint( breakpoint-tab ){
+			margin-left: 0pxz;
+		}
+	}
+	.wp-block-image{
+		text-align: center;
+		img{
+			object-fit: contain;
+			width: 100%;
+			height: 100%;
+			object-position: top;
+			height: auto;
+		}
+	}
+}
+//お問い合わせフォーム
+.smf-item{
+	&__label__text{
+		//ラベルテキストのスタイリング
+		color:variable.$brown;
+		font-weight: bold;
+		font-size: 1.6rem;
+	}
+}
+.smf-form .smf-item {
+	input[type="text"].smf-text-control__control,
+	input[type="email"].smf-text-control__control,
+	input[type="tel"].smf-text-control__control,
+	select.smf-select-control__control,
+	textarea.smf-textarea-control__control{
+		//入力部分のスタイリング
+		appearance: none; /*ブラウザ標準スタイルを無効にする*/
+		border-color:variable.$midbrown;
+		padding: 10px 20px;
+		color:variable.$darkbrown;
+	}
+	::placeholder{
+		//入力例のフォントカラー
+		color: #CDD6DD;
+	}
+	textarea.smf-textarea-control__control{
+		//テキストエリアの幅指定
+		max-width: 740px;
+	}
+	select.smf-select-control__control{
+		//プルダウンの余白修正
+		padding-right: 50px;
+	}
+	.smf-select-control .smf-select-control__toggle:before{
+		//プルダウンの下向き記号の色・太さ・配置修正
+		appearance: none;
+		right: 1em;
+		border-bottom: 2px solid #98A6B5;
+		border-right: 2px solid #98A6B5;
+	}
+	input[type="text"].smf-text-control__control:focus,
+	input[type="email"].smf-text-control__control:focus,
+	input[type="tel"].smf-text-control__control:focus,
+	select.smf-select-control__control:focus,
+	textarea.smf-textarea-control__control:focus{
+		//入力時の色指定
+		border-color:variable.$primary;
+	}
+	select.smf-select-control__control:focus +.smf-select-control__toggle:before{
+		//プルダウンの下向き記号の色が選択時にも変わらないようにする
+		border-color:#98A6B5;
+	}
+
+	//checkboxの大きさ修正
+	input[type="checkbox"].smf-checkbox-control__control{
+		width: 30px;
+		height: 30px;
+		&:before{
+			width: 8px;
+		}
+	}
+}
+.smf-action {
+	display: flex;
+	.smf-button-control {
+		.smf-button-control__control{
+			//ボタンのCSS修正
+			appearance: none; /*ブラウザ標準スタイルを無効にする*/
+			background-image:none;
+			@extend .c-button--primary;
+			@extend .c-button--primary--text;
+			display: block;
+		}
+	}
+}
+
+// プライバシーポリシーのaタグ装飾
+.wp-block-snow-monkey-forms-item{
+	.is-style-c-text{
+		a{
+			color: #252525;
+			border-bottom: solid;
+			border-color:#252525;
+			border-width: 1px;
+		}
 	}
 }

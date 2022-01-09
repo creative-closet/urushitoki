@@ -1,0 +1,32 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-post-archive {
+	width: 100%;
+	padding-top: 39px;
+	padding-bottom:39px;
+	.c-grid--col3 {
+		gap: 31px;
+	}
+	.c-grid--col3__item {
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			margin-bottom: 20px;
+		}
+	}
+	.c-grid--col3__item:last-child {
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.p-post-archive__tags{
+	list-style:none;
+	width:30%;
+	flex-wrap:wrap;
+	gap:10px;
+	@include  mixin.breakpoint( breakpoint-tab ) {
+		width:100%;
+	}
+}

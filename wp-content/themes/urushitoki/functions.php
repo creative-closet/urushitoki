@@ -23,6 +23,7 @@
         wp_enqueue_style('fontawesome','https://use.fontawesome.com/releases/v5.2.0/css/all.css');
         wp_enqueue_style( 'style', get_theme_file_uri( './css/style.css'), array(), '1.0.0' );
         wp_enqueue_script( 'scriptjs', get_theme_file_uri( './js/script.js'), array(), '1.0.0', true );
+		wp_enqueue_script( 'videojs', get_theme_file_uri( './js/header-video.js'), array(), '1.0.0', true );
         wp_enqueue_script('jQuery','https://code.jquery.com/jquery-3.4.1.min.js');
     }
     add_action('wp_enqueue_scripts','mysite_script');
@@ -115,6 +116,31 @@
 		array(
 			'name'         => 'p-contents-card-column',
 			'label'        => '階段',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	//金継ぎメディアとテキスト
+	register_block_style(
+		'core/media-text',
+		array(
+			'name'         => 'p-media-text',
+			'label'        => 'テキスト重ね表示',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/gallery',
+		array(
+			'name'         => 'p-price-card',
+			'label'        => '値段表示グリッド',
+			'style_handle' => 'urushidoki-block-style'
+		)
+	);
+	register_block_style(
+		'core/columns',
+		array(
+			'name'         => 'p-media-column',
+			'label'        => '画像表示グリッド',
 			'style_handle' => 'urushidoki-block-style'
 		)
 	);

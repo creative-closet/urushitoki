@@ -33,7 +33,6 @@ $post_query = new WP_Query($args_query);
 
 //サブクエリループ
 if($post_query -> have_posts())://(投稿データ有無確認 -start-)
-	// echo '<article class="p-archive">';
 	echo '<article class="p-post-archive">';
 	//投稿のギャラリー表示
 	if (!is_page('archive_post')){
@@ -41,7 +40,7 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	}
 	//タグ表示ここから（記事に紐付けられているタグを全て取得して表示する）
 	if(is_page('archive_post')){
-		echo '<ul class="p-archive__tags u-margin-top--large u-margin-bottom c-flex">';;
+		echo '<ul class="p-post-archive__tags u-margin-top--large u-margin-bottom c-flex">';;
 		$term_list = get_terms('post_tag');
 		$result_list = [];
 		foreach ($term_list as $term) {
@@ -87,7 +86,7 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 		echo '</div>';
 	}else{
 ?>
-		<a href="<?php echo home_url('/archive_post/'); ?>" class="c-button--primary u-margin-top" id="p-ripples--effect">
+		<a href="<?php echo home_url('/archive_post/'); ?>" class="c-button--primary u-margin-top u-margin-left--auto" id="p-ripples--effect">
 			<span class="c-button--primary--text">MORE</span>
 			<span class="c-button--primary--line"></span>
 		</a>

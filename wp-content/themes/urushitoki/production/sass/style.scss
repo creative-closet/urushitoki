@@ -3,26 +3,31 @@
 /* --------------------------------------------------------
 foundation
 -------------------------------------------------------- */
-@forward "./foundation/base";
-@forward "./foundation/variable";
-@forward "./foundation/mixin";
+@forward './foundation/base';
+@forward './foundation/variable';
+@forward './foundation/mixin';
 /* --------------------------------------------------------
 layout
 -------------------------------------------------------- */
-@forward "./layout/header";
+@forward './layout/header';
+@forward './layout/main';
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
+@forward './object/project/accessory-archive';
 @forward './object/project/article-card';
 @forward './object/project/circle-card';
 @forward './object/project/contents-card';
+@forward './object/project/craftman';
 @forward './object/project/footer';
 @forward './object/project/front-card';
 @forward './object/project/front-posts';
 @forward './object/project/front-urushi-contents';
 @forward './object/project/gnavi';
 @forward './object/project/header';
+@forward './object/project/information-archive';
 @forward './object/project/menu';
+@forward './object/project/pager';
 @forward './object/project/post-card';
 @forward './object/project/post-archive';
 @forward './object/project/price-card';
@@ -34,11 +39,12 @@ component
 -------------------------------------------------------- */
 @forward './object/component/background-icon';
 @forward './object/component/background';
-@forward './object/component/button';
 @forward './object/component/body-wrapper';
 @forward './object/component/bullet';
-@forward './object/component/grid';
+@forward './object/component/button';
 @forward './object/component/definition';
+@forward './object/component/flex';
+@forward './object/component/grid';
 @forward './object/component/pagination';
 @forward './object/component/pattern';
 @forward './object/component/tab';

@@ -1,4 +1,7 @@
 @forward './urushidoki-block-style.scss';
+@use "./foundation/base";
+@use "./foundation/variable";
+@use "./foundation/mixin";
 
 .is-style-p-contents-card-column{
 	padding-bottom: 120px;

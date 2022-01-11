@@ -1,15 +1,18 @@
+@use "../../foundation/base";
 @use "../../foundation/mixin";
+@use "../../foundation/variable";
 
 .p-sns{
 	display: flex;
-	margin: 15px 0;
+	margin : 15px 0;
+	gap    : 20px;
 	&__introduction{
 		margin-left: 40px;
-		width: calc(100% - 124px - 40px);
+		width      : calc(100% - 124px - 40px);
 		/* ボタンと余白以外をテキストの幅とする */
 		@include mixin.breakpoint( breakpoint-tab ){
 			margin-left: 10px;
-			width: calc(100% - 124px - 10px);
+			width      : calc(100% - 124px - 10px);
 		}
 	}
 }

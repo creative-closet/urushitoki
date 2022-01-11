@@ -71,11 +71,9 @@ a {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .p-accessory-column-block img {
   -o-object-fit: cover;
      object-fit: cover;
-=======
 /* メインコンテンツのスタイリング */
 .l-main {
   padding-top: 200px;
@@ -88,7 +86,6 @@ a {
 
 .p-accessory-archive {
   width: 100%;
->>>>>>> 7209e03f47cdfc330e9789bf50fe7fac55d916b4
 }
 
 .p-article-card, .p-article-card--wide {

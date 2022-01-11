@@ -7,9 +7,6 @@
 	height:420px;
 	background-size:cover;
 	background-position:center;
-	@include mixin.breakpoint( breakpoint-sp ){
-		height: auto;
-	}
 }
 
 .l-front-header{

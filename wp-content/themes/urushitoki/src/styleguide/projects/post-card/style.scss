@@ -3,7 +3,8 @@
 @use "../../foundation/mixin.scss";
 
 .p-post-card{
-	width: 305px;
+	position: relative;
+	width: 100%;
 	height: 353px;
 	display: flex;
 	flex-direction: column;
@@ -23,11 +24,17 @@
 		}
 	}
 	&__text{
+		position: absolute;
+		top: 180px;
 		width: 100%;
 		height: calc(353px - 180px);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		background-color: variable.$background-color--postCard;
 		padding:40px 54px 29px 40px;
 		@include mixin.breakpoint( breakpoint-tab ){
+			position: initial;
 			width: calc(100% - 120px);
 			height: 100%;
 			padding: 10px 30px;

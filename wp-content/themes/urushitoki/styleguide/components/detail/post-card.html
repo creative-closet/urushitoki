@@ -225,15 +225,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-9b778e5aa81a1b3af41021f607a27e0f">4ぐい吞み.jpg</option>
+                <option value="file-1cf6223a66677f0df27bf6dfe8c7d323">4ぐい吞み.jpg</option>
                 
-                <option value="file-054367dfdfcc93dd896bf2e4701a506a">style.scss</option>
+                <option value="file-bffe67cc9b93c18bf65ab5e5afc301ee">style.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-9b778e5aa81a1b3af41021f607a27e0f" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-1cf6223a66677f0df27bf6dfe8c7d323" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -251,7 +251,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/styleguide/projects/post-card/4ぐい吞み.jpg</span>
+                    <span class="Meta-value">src\styleguide\projects\post-card\4ぐい吞み.jpg</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -260,7 +260,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-054367dfdfcc93dd896bf2e4701a506a" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-bffe67cc9b93c18bf65ab5e5afc301ee" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -273,7 +273,8 @@
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&quot;../../foundation/mixin.scss&quot;</span>;
 
 <span class="hljs-selector-class">.p-post-card</span>{
-	<span class="hljs-attribute">width</span>: <span class="hljs-number">305px</span>;
+	<span class="hljs-attribute">position</span>: relative;
+	<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 	<span class="hljs-attribute">height</span>: <span class="hljs-number">353px</span>;
 	<span class="hljs-attribute">display</span>: flex;
 	<span class="hljs-attribute">flex-direction</span>: column;
@@ -293,11 +294,17 @@
 		}
 	}
 	&amp;__text{
+		<span class="hljs-attribute">position</span>: absolute;
+		<span class="hljs-attribute">top</span>: <span class="hljs-number">180px</span>;
 		<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 		<span class="hljs-attribute">height</span>: calc(<span class="hljs-number">353px</span> - <span class="hljs-number">180px</span>);
+		<span class="hljs-attribute">white-space</span>: nowrap;
+		<span class="hljs-attribute">overflow</span>: hidden;
+		<span class="hljs-attribute">text-overflow</span>: ellipsis;
 		<span class="hljs-attribute">background-color</span>: variable.<span class="hljs-variable">$background-color--postCard</span>;
 		<span class="hljs-attribute">padding</span>:<span class="hljs-number">40px</span> <span class="hljs-number">54px</span> <span class="hljs-number">29px</span> <span class="hljs-number">40px</span>;
 		<span class="hljs-keyword">@include</span> mixin.breakpoint( breakpoint-tab ){
+			<span class="hljs-attribute">position</span>: initial;
 			<span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">120px</span>);
 			<span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
 			<span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">30px</span>;
@@ -348,11 +355,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/styleguide/projects/post-card/style.scss</span>
+                    <span class="Meta-value">src\styleguide\projects\post-card\style.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.6 KB</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -389,7 +396,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/styleguide/projects/post-card/post-card.hbs</span>
+            <span class="Meta-value">src\styleguide\projects\post-card\post-card.hbs</span>
         </li>
         
         
@@ -1085,8 +1092,12 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-01-05T13:00:18.506Z">
-                                1/5/2022
+<<<<<<< HEAD
+                            <time datetime="2022-01-09T00:56:43.544Z">
+=======
+                            <time datetime="2022-01-09T10:52:34.714Z">
+>>>>>>> 7209e03f47cdfc330e9789bf50fe7fac55d916b4
+                                1/9/2022
                             </time>
                         
                     </dd>

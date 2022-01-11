@@ -66,7 +66,7 @@ if($information_query -> have_posts())://(投稿データ有無確認 -start-)
 		echo '</div>';
 	}else{
 ?>
-		<a href="<?php echo home_url('/archive_information/'); ?>" class="c-button--primary u-margin-top" id="p-ripples--effect">
+		<a href="<?php echo home_url('/archive_information/'); ?>" class="c-button--primary u-margin-top u-margin-left--auto" id="p-ripples--effect">
 			<span class="c-button--primary--text">MORE</span>
 			<span class="c-button--primary--line"></span>
 		</a>

@@ -1,0 +1,25 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.c-flex{
+	display:flex;
+}
+.c-flex--align-center{
+	align-items:center;
+}
+@include  mixin.breakpoint( breakpoint-tab ) {
+	:not(.p-accessory-archive) >.c-flex--column {
+		flex-direction:column;
+	}
+}
+.c-flex--center{
+	justify-content: center;
+	align-items:center;
+}
+.c-flex--wrap{
+	flex-wrap: wrap;
+}
+.c-flex--space-between{
+	justify-content: space-between;
+}

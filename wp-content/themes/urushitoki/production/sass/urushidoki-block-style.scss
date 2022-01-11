@@ -3,7 +3,6 @@
 @use "./foundation/variable";
 @use "./foundation/mixin";
 
-
 //カスタムブロック 背景付きテキスト/画像
 .wp-block-create-block-background-text.is-style-background-02{
 	background-color: rgba(33,12,2,0.9);
@@ -39,9 +38,7 @@
 
 //グループ 階段
 .is-style-p-contents-card-column{
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
-.wp-block-group__inner-container{
+	.wp-block-group__inner-container{
 		@extend .p-contents-card-column;
 	}
 }

@@ -42,23 +42,14 @@
 
 	&--figcaption{
 		margin:0px 40px;
-		height: 100px;
 		&__term{
 			font-size: variable.$font-size--definiton--figcaption-term;
 			color:variable.$font-color--definiton--figcaption-term;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
 		}
 		&__description{
 			font-size: variable.$font-size--definiton--figcaption-description;
 			color:variable.$font-color--definiton--figcaption-description;
 			line-height: 1.6;
-			height: 38px;
-			overflow: hidden;
-			@include mixin.breakpoint( breakpoint-tab)  {
-				height: auto;
-			}
 		}
 	}
 

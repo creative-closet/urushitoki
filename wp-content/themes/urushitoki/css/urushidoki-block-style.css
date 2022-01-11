@@ -57,13 +57,6 @@ a {
   height: 420px;
   background-size: cover;
   background-position: center;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 599px) {
-  .l-header {
-    height: auto;
-  }
 }
 
 .l-front-header {
@@ -72,9 +65,6 @@ a {
   width: 100%;
 }
 
-.p-accessory-column-block img {
-  -o-object-fit: cover;
-     object-fit: cover;
 /* メインコンテンツのスタイリング */
 .l-main {
   padding-top: 200px;
@@ -766,7 +756,6 @@ front-page以外
 .p-header {
   max-width: 640px;
   width: 100%;
-  padding-bottom: 60px;
 }
 
 /* --------------------------------------------------------
@@ -1995,28 +1984,15 @@ body.active::before {
 }
 .c-definition--figcaption {
   margin: 0px 40px;
-  height: 100px;
 }
 .c-definition--figcaption__term {
   font-size: 1.6rem;
   color: #202124;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .c-definition--figcaption__description {
   font-size: 1.2rem;
   color: #A6ADB4;
   line-height: 1.6;
-  height: 38px;
-  overflow: hidden;
-  /* tablet */
-  /* SmartPhone */
-}
-@media (max-width: 1024px) {
-  .c-definition--figcaption__description {
-    height: auto;
-  }
 }
 .c-definition--shop-card__title {
   margin-bottom: 30px;
@@ -2446,10 +2422,6 @@ utility
   background-color: rgba(33, 12, 2, 0.9);
 }
 
-.is-style-p-contents-card-column {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
 .is-style-p-media-text.wp-block-media-text {
   grid-template-columns: 70% 30%;
   /* tablet */

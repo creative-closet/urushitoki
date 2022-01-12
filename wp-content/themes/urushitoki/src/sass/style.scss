@@ -15,6 +15,7 @@ layout
 project
 -------------------------------------------------------- */
 @forward './object/project/accessory-archive';
+@forward './object/project/accessory-column-block';
 @forward './object/project/article-card';
 @forward './object/project/circle-card';
 @forward './object/project/contents-card';
@@ -34,6 +35,7 @@ project
 @forward './object/project/product-card';
 @forward './object/project/shop-card';
 @forward './object/project/sns';
+@forward './object/project/step-card';
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */

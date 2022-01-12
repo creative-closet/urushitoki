@@ -1,0 +1,9 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-accessory-column-block{
+	img{
+		object-fit: cover;
+	}
+}

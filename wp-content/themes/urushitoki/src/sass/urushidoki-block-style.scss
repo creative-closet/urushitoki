@@ -38,6 +38,8 @@
 
 //グループ 階段
 .is-style-p-contents-card-column{
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
 	.wp-block-group__inner-container{
 		@extend .p-contents-card-column;
 	}

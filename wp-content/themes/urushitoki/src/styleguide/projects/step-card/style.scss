@@ -1,0 +1,89 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.p-step-card{
+	.wp-block-group__inner-container{
+		display: grid;
+		grid-template-columns:repeat(3,minmax(1fr, 320px));
+		justify-content: center;
+		gap:80px;
+		grid-template-areas:
+		". . ."
+		"p-step-card4 . p-step-card6";
+		width: 100%;
+		figure{
+			position: relative;
+			img{
+				height: auto;
+			}
+		}
+		figure:nth-child(1){
+			&::after{
+				@include mixin.p-step-card__line();
+				background-image:url('../assets/image/path1.png') ;
+				@include mixin.breakpoint( breakpoint-tab ){
+					display: none;
+				}
+			}
+		}
+		figure:nth-child(2){
+			margin-top: 235px;
+			&::after{
+				@include mixin.p-step-card__line($r:-115px,$t:70px);
+				background-image:url('../assets/image/path1.png') ;
+				@include mixin.breakpoint( breakpoint-tab ){
+					display: none;
+				}
+			}
+		}
+		figure:nth-child(3){
+			margin-top: 335px;
+		}
+		figure:nth-child(4){
+			grid-area: p-step-card6;
+			::after{
+				@include mixin.p-step-card__line($r:-25px,$t:-200px,$w:200px,$h:210px);
+				background-image:url('../assets/image/path2.png') ;
+			}
+		}
+		figure:nth-child(5){
+			margin-top: 100px;
+			::after{
+				@include mixin.p-step-card__line($t:0px);
+				background-image:url('../assets/image/path3.png') ;
+			}
+		}
+		figure:nth-child(6){
+			grid-area: p-step-card4;
+			margin-top: 200px;
+			::after{
+				@include mixin.p-step-card__line($t:80px,$w:184px,$h:178px);
+				background-image:url('../assets/image/path4.png') ;
+			}
+		}
+		@include mixin.breakpoint( breakpoint-tab ){
+			grid-template-columns: repeat(3,1fr);
+			grid-template-areas:
+			". . ."
+			"p-step-card6 . p-step-card4";
+			gap: 10px;
+		}
+		@include mixin.breakpoint( breakpoint-sp ){
+			display: block;
+		}
+		figure:nth-child(2),figure:nth-child(3),figure:nth-child(5),figure:nth-child(6){
+			@include mixin.breakpoint( breakpoint-tab ){
+				margin-top: 0px;
+			}
+		}
+		figure:nth-child(1),figure:nth-child(2),figure:nth-child(4),figure:nth-child(5),figure:nth-child(6){
+			::after{
+				@include mixin.breakpoint( breakpoint-tab ){
+					display: none;
+				}
+			}
+		}
+
+	}
+}

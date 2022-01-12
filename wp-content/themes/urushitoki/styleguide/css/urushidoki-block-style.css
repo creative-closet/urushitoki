@@ -51,11 +51,19 @@ a {
 
 /* ブレイクポイント・PCファースト */
 /* 游明朝の指定 */
+/*p-step-card破線の位置を指定するための関数*/
 .l-header {
   padding-top: 140px;
   height: 420px;
   background-size: cover;
   background-position: center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .l-header {
+    height: auto;
+  }
 }
 
 .l-front-header {
@@ -76,6 +84,11 @@ a {
 
 .p-accessory-archive {
   width: 100%;
+}
+
+.p-accessory-column-block img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-article-card, .p-article-card--wide {
@@ -755,6 +768,7 @@ front-page以外
 .p-header {
   max-width: 640px;
   width: 100%;
+  padding-bottom: 60px;
 }
 
 /* --------------------------------------------------------
@@ -1483,6 +1497,140 @@ body.active::before {
   font-size: 16px;
 }
 
+.p-step-card .wp-block-group__inner-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(1fr, 320px));
+  justify-content: center;
+  gap: 80px;
+  grid-template-areas: ". . ." "p-step-card4 . p-step-card6";
+  width: 100%;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+.p-step-card .wp-block-group__inner-container figure {
+  position: relative;
+}
+.p-step-card .wp-block-group__inner-container figure img {
+  height: auto;
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  display: block;
+  z-index: 1;
+  top: 100px;
+  right: -110px;
+  width: 150px;
+  height: 150px;
+  background-image: url("../assets/image/path1.png");
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-step-card .wp-block-group__inner-container figure:nth-child(1)::after {
+    display: none;
+  }
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(2) {
+  margin-top: 235px;
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  display: block;
+  z-index: 1;
+  top: 70px;
+  right: -115px;
+  width: 150px;
+  height: 150px;
+  background-image: url("../assets/image/path1.png");
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-step-card .wp-block-group__inner-container figure:nth-child(2)::after {
+    display: none;
+  }
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(3) {
+  margin-top: 335px;
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(4) {
+  grid-area: p-step-card6;
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(4) ::after {
+  position: absolute;
+  content: "";
+  display: block;
+  z-index: 1;
+  top: -200px;
+  right: -25px;
+  width: 200px;
+  height: 210px;
+  background-image: url("../assets/image/path2.png");
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(5) {
+  margin-top: 100px;
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(5) ::after {
+  position: absolute;
+  content: "";
+  display: block;
+  z-index: 1;
+  top: 0px;
+  right: -110px;
+  width: 150px;
+  height: 150px;
+  background-image: url("../assets/image/path3.png");
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(6) {
+  grid-area: p-step-card4;
+  margin-top: 200px;
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(6) ::after {
+  position: absolute;
+  content: "";
+  display: block;
+  z-index: 1;
+  top: 80px;
+  right: -110px;
+  width: 184px;
+  height: 178px;
+  background-image: url("../assets/image/path4.png");
+}
+@media (max-width: 1024px) {
+  .p-step-card .wp-block-group__inner-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". . ." "p-step-card6 . p-step-card4";
+    gap: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .p-step-card .wp-block-group__inner-container {
+    display: block;
+  }
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(2), .p-step-card .wp-block-group__inner-container figure:nth-child(3), .p-step-card .wp-block-group__inner-container figure:nth-child(5), .p-step-card .wp-block-group__inner-container figure:nth-child(6) {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-step-card .wp-block-group__inner-container figure:nth-child(2), .p-step-card .wp-block-group__inner-container figure:nth-child(3), .p-step-card .wp-block-group__inner-container figure:nth-child(5), .p-step-card .wp-block-group__inner-container figure:nth-child(6) {
+    margin-top: 0px;
+  }
+}
+.p-step-card .wp-block-group__inner-container figure:nth-child(1) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(2) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(4) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(5) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(6) ::after {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-step-card .wp-block-group__inner-container figure:nth-child(1) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(2) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(4) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(5) ::after, .p-step-card .wp-block-group__inner-container figure:nth-child(6) ::after {
+    display: none;
+  }
+}
+
 .c-background-icon__left--cloisonne, .c-background-icon__left--gentian {
   transform: translateX(-35px);
   width: 600px;
@@ -1849,15 +1997,28 @@ body.active::before {
 }
 .c-definition--figcaption {
   margin: 0px 40px;
+  height: 100px;
 }
 .c-definition--figcaption__term {
   font-size: 1.6rem;
   color: #202124;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .c-definition--figcaption__description {
   font-size: 1.2rem;
   color: #A6ADB4;
   line-height: 1.6;
+  height: 38px;
+  overflow: hidden;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-definition--figcaption__description {
+    height: auto;
+  }
 }
 .c-definition--shop-card__title {
   margin-bottom: 30px;
@@ -2287,6 +2448,10 @@ utility
   background-color: rgba(33, 12, 2, 0.9);
 }
 
+.is-style-p-contents-card-column {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
 .is-style-p-media-text.wp-block-media-text {
   grid-template-columns: 70% 30%;
   /* tablet */

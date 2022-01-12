@@ -21,3 +21,15 @@
 	font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;	// Windows用, mac用, その他
     font-weight: variable.$font-weight--normal;					// normal:400
 }
+
+/*p-step-card破線の位置を指定するための関数*/
+@mixin p-step-card__line($t:100px,$r:-110px,$w:150px,$h:150px){
+	position: absolute;
+	content: '';
+	display: block;
+	z-index: 1;
+	top:$t;
+	right:$r;
+	width:$w;
+	height:$h;
+}

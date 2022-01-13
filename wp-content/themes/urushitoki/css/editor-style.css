@@ -804,6 +804,13 @@ front-page
 }
 .p-header-wrap__title__description {
   text-align: center;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-header-wrap__title__description {
+    text-align: left;
+  }
 }
 
 /* front-pageお問い合わせ */

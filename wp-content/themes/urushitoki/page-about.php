@@ -19,7 +19,7 @@
 					<?php /* 写真 写真がある場合のみタグを出力する */
 					if(SCF::get_user_meta($user_id,'user_photo') != ""){
 						$img = SCF::get_user_meta($user_id,'user_photo');
-						echo '<article class="p-craftman c-flex c-flex--center">';
+						echo '<article class="p-craftman c-flex">';
 						echo '<div class="p-craftman__image">';
 						echo wp_get_attachment_image( $img , 'large' );
 						echo '</div>';

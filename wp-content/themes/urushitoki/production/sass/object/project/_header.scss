@@ -40,6 +40,9 @@ front-page
 	padding-right:clamp(20px, calc(100vw - 1280px)/2, 320px);
 	&__description{
 		text-align: center;
+		@include mixin.breakpoint( breakpoint-sp ){
+			text-align: left;
+		}
 	}
 }
 

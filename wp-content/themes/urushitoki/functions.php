@@ -332,7 +332,7 @@
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-instrument.jpg');
 		elseif(is_page('about'))://About
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-about.jpg');
-		elseif(is_page('archive_craft')||is_page('archive_information')||is_page('archive_post')||is_single()||is_tag())://gallery
+		elseif(is_page('archive_craft')||is_page('archive_information')||is_page('archive_post')||is_page('privacy-policy')||is_single()||is_tag())://gallery
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-craft-article-information.jpg');
 		elseif(is_page('sns'))://SNS
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-sns.jpg');

@@ -7,7 +7,7 @@
 		<article class="c-wrapper">
 			<?php get_template_part('./includes/have-post-loop');?>
 		</article>
-		<article class="c-wrapper">
+		<article class="c-wrapper l-main--information">
 			<?php get_template_part('./includes/archive-information');?>
 		</article>
 	</main>

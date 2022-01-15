@@ -29,8 +29,8 @@
 						<div class="p-craftman__information">
 							<dl class="c-definition">
 								<!-- 名前 -->
-								<dt>
-									<div><?php the_author_meta('last_name',$user_id); ?> <?php the_author_meta('first_name',$user_id); ?></div>
+								<dt class="p-craftman__information__name c-definition__title c-flex c-flex--space-between">
+									<p><?php the_author_meta('last_name',$user_id); ?> <?php the_author_meta('first_name',$user_id); ?></p>
 									<?php /* SNS */
 									$group = SCF::get_user_meta($user_id,'sns');
 									if(SCF::get_user_meta($user_id,'sns_type') !=""){

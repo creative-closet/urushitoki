@@ -327,6 +327,26 @@ a {
   }
 }
 
+.p-craftman__information__name {
+  display: flex;
+  justify-content: space-between;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-craftman__information__name {
+    display: block;
+  }
+}
+.p-craftman__information__name__detail {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .p-footer {
   background: url(../assets/image/footer-background.jpg);
   background-size: cover;

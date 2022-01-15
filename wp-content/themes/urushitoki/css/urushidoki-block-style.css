@@ -74,7 +74,7 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding-top: 200px;
+  padding-top: 140px;
   padding-bottom: 200px;
 }
 
@@ -2609,6 +2609,10 @@ utility
   height: auto;
 }
 
+.smf-progress-tracker {
+  margin: 5% 0;
+}
+
 .smf-item__label__text {
   color: #897c70;
   font-weight: bold;
@@ -2679,8 +2683,18 @@ utility
   /*ブラウザ標準スタイルを無効にする*/
   background-image: none;
   display: block;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .smf-action .smf-button-control .smf-button-control__control {
+    width: 300px;
+  }
 }
 
+.wp-block-snow-monkey-forms-item .is-style-c-text {
+  width: 300px;
+}
 .wp-block-snow-monkey-forms-item .is-style-c-text a {
   color: #252525;
   border-bottom: solid;

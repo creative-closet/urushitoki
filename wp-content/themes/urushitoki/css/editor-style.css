@@ -2631,7 +2631,7 @@ utility
 }
 @media (max-width: 1024px) {
   .wp-block-columns.is-style-p-media-column .wp-block-column:nth-child(2n) {
-    margin-left: 0pxz;
+    margin-left: 0px;
   }
 }
 .wp-block-columns.is-style-p-media-column .wp-block-image {
@@ -2645,6 +2645,16 @@ utility
   -o-object-position: top;
      object-position: top;
   height: auto;
+}
+
+.wp-block-media-text__content {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .wp-block-media-text__content {
+    margin-top: 20px;
+  }
 }
 
 .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media img {

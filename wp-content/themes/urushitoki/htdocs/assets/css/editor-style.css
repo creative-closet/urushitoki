@@ -74,7 +74,7 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding-top: 200px;
+  padding-top: 140px;
   padding-bottom: 200px;
 }
 
@@ -2230,6 +2230,30 @@ body.active::before {
   /* tablet */
   /* SmartPhone */
 }
+.c-grid--col3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-grid--col3 {
+    grid-template-columns: 1fr;
+  }
+}
+.c-grid--col3__item {
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-grid--col3__item {
+    margin-bottom: 20px;
+  }
+}
 .c-grid--col4, .c-grid--col4--tab1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -2652,6 +2676,10 @@ utility
      object-fit: cover;
 }
 
+.smf-progress-tracker {
+  margin: 5% 0;
+}
+
 .smf-item__label__text {
   color: #897c70;
   font-weight: bold;
@@ -2722,8 +2750,18 @@ utility
   /*ブラウザ標準スタイルを無効にする*/
   background-image: none;
   display: block;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .smf-action .smf-button-control .smf-button-control__control {
+    width: 300px;
+  }
 }
 
+.wp-block-snow-monkey-forms-item .is-style-c-text {
+  width: 300px;
+}
 .wp-block-snow-monkey-forms-item .is-style-c-text a {
   color: #252525;
   border-bottom: solid;

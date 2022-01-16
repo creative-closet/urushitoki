@@ -2605,6 +2605,19 @@ utility
   height: auto;
 }
 
+.smf-progress-tracker {
+  margin-top: 60px;
+  padding-bottom: 40px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .smf-progress-tracker {
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
 .smf-item__label__text {
   color: #897c70;
   font-weight: bold;
@@ -2665,9 +2678,6 @@ utility
   width: 8px;
 }
 
-.smf-action {
-  display: flex;
-}
 .smf-action .smf-button-control .smf-button-control__control {
   -webkit-appearance: none;
      -moz-appearance: none;

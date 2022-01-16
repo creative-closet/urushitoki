@@ -128,3 +128,7 @@ $font-color--postCard-date    : #2E2E2E;
 $background-color--shop-card   : #FFF;
 $border-color--shop-card       : #DED6CC;
 $border-color--shop-card__title: #897C70;
+
+
+//左右余白
+$wrapper : clamp(20px, 8%, 320px);

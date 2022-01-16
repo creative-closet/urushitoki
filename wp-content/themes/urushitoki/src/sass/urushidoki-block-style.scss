@@ -193,7 +193,7 @@
 		//プルダウンの下向き記号の色が選択時にも変わらないようにする
 		border-color:#98A6B5;
 	}
-
+}
 	//checkboxの大きさ修正
 	input[type="checkbox"].smf-checkbox-control__control{
 		width: 30px;
@@ -202,7 +202,7 @@
 			width: 8px;
 		}
 	}
-}
+
 .smf-action {
 	display: flex;
 	.smf-button-control {

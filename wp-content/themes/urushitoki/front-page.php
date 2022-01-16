@@ -33,7 +33,9 @@
         </article>
 
         <div class="p-urushi-contents c-wrapper--pc">
-            <h2 class="c-title">Urushi Contents</h2>
+			<div class="c-wrapper--tab">
+				<h2 class="c-title">Urushi Contents</h2>
+			</div>
 
             <article class="p-urushi-content">
                 <div class="c-pattern">

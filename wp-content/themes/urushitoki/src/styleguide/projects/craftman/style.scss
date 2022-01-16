@@ -29,3 +29,19 @@
 		width:100%;
 	}
 }
+
+.p-craftman__information__name{
+	display: flex;
+	justify-content:space-between;
+	@include mixin.breakpoint( breakpoint-tab ){
+		display: block;
+	}
+	&__detail{
+		font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+		font-weight: bold;
+		font-size: 2rem;
+
+	}
+}
+
+

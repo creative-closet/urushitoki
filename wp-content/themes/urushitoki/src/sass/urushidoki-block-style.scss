@@ -138,6 +138,12 @@
 		}
 	}
 }
+// モバイル時の画像調整
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+	img{
+		object-fit: cover;
+	}
+}
 //お問い合わせフォーム
 .smf-item{
 	&__label__text{

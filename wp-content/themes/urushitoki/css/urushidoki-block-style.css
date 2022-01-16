@@ -865,9 +865,18 @@ front-page
   text-align: center;
   /* tablet */
   /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-header-wrap__title__description {
+    width: 100%;
+    max-width: 480px;
+  }
 }
 @media (max-width: 599px) {
   .p-header-wrap__title__description {
+    max-width: none;
     text-align: left;
   }
 }

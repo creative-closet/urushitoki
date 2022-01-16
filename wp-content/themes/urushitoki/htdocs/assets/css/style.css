@@ -342,9 +342,6 @@ a {
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: bold;
   font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .p-footer {
@@ -1558,6 +1555,10 @@ body.active::before {
 
 .p-shop-card:not(:nth-of-type(1)) {
   margin-top: 20px;
+}
+
+.c-sns__margin {
+  margin: 100px 0 100px 0;
 }
 
 .p-sns {

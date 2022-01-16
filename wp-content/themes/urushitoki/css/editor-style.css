@@ -1566,6 +1566,10 @@ body.active::before {
   margin-top: 20px;
 }
 
+.c-sns__margin {
+  margin: 100px 0 100px 0;
+}
+
 .p-sns {
   display: flex;
   margin: 15px 0;

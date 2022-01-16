@@ -342,9 +342,6 @@ a {
   font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
   font-weight: bold;
   font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .p-footer {
@@ -1560,6 +1557,10 @@ body.active::before {
   margin-top: 20px;
 }
 
+.c-sns__margin {
+  margin: 100px 0 100px 0;
+}
+
 .p-sns {
   display: flex;
   margin: 15px 0;
@@ -2627,6 +2628,11 @@ utility
   -o-object-position: top;
      object-position: top;
   height: auto;
+}
+
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .smf-item__label__text {

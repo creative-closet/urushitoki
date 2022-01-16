@@ -22,7 +22,7 @@
             </section>
         </article>
 
-        <article class="p-front-card--right">
+        <article class="p-front-card--right c-wrapper--left">
             <section class="p-front-card--right__text">
                 <h2 class="c-title">指物と乾漆で素地から塗り蒔絵まで一貫した制作</h2>
                 <p class="c-text u-margin-top--small">仏壇蒔絵や仏壇修理修繕を行いながら、素地(木地・乾漆)から塗り蒔絵まで一貫した取り組みで厨子や器、
@@ -33,7 +33,9 @@
         </article>
 
         <div class="p-urushi-contents c-wrapper--pc">
-            <h2 class="c-title">Urushi Contents</h2>
+			<div class="c-wrapper--tab">
+				<h2 class="c-title">Urushi Contents</h2>
+			</div>
 
             <article class="p-urushi-content">
                 <div class="c-pattern">

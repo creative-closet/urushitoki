@@ -2,7 +2,7 @@
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
 
-		<div class="c-wrapper">
+		<div class="c-wrapper c-sns__margin">
 		<?php $users = get_users(array('orderby'=>'ID','order'=>'ASC'));
 		foreach($users as $user) {
 			$user_id = $user->ID;?>

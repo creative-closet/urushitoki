@@ -1,15 +1,15 @@
 @use "../../foundation/base.scss";
 @use "../../foundation/variable.scss";
 @use "../../foundation/mixin.scss";
+@use "../../object/component/wrapper";
 
 .p-contents-card{
 	background-color: variable.$background-color--content-card;
 	overflow:hidden;
 	height: 100%;
+	@extend .c-wrapper;
 	padding-top:min(116px,15%);
 	padding-bottom: min(160px,10%);
-	padding-right:8%;
-	padding-left: 8%;
 	&__title{
 		max-width: 640px;
 		margin: auto;
@@ -28,6 +28,7 @@
 	}
 	&-column{
 		display: flex;
+		margin-bottom: 180px;
 		@include mixin.breakpoint( breakpoint-tab ){
 			display: block;
 		}
@@ -38,9 +39,9 @@
 			}
 			&:nth-of-type(2){
 				background-color: rgba($color: variable.$background-color--content-card, $alpha: .9);
-				transform: translateY(120px);
+				margin-top: 120px;
 				@include mixin.breakpoint( breakpoint-tab ){
-					transform: translateY(0px);
+					margin-top: 20px;
 				}
 			}
 		}

@@ -17,7 +17,7 @@
 
 //サブクエリループ
 if($craft_query -> have_posts())://(投稿データ有無確認 -start-)
-	echo '<article class="p-craft-archive">';
+	echo '<article class="p-craft-archive u-margin-top--small">';
 	//informationのギャラリー表示
 	echo '<h2 class="c-title u-margin-bottom">工芸作品</h2>';
 	echo '<ul class="c-grid--col4 u-gap--53">';

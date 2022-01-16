@@ -2618,6 +2618,11 @@ utility
   height: auto;
 }
 
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .smf-item__label__text {
   color: #897c70;
   font-weight: bold;

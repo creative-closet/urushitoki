@@ -140,7 +140,12 @@
 }
 //お問い合わせフォーム
 .smf-progress-tracker{
-	margin: 30px 0;
+	margin-top: 60px;
+	padding-bottom: 40px;
+	@include mixin.breakpoint( breakpoint-sp ){
+		margin-top: 30px;
+		padding-bottom: 20px;
+	}
 }
 .smf-item{
 	&__label__text{
@@ -193,7 +198,7 @@
 		//プルダウンの下向き記号の色が選択時にも変わらないようにする
 		border-color:#98A6B5;
 	}
-}
+
 	//checkboxの大きさ修正
 	input[type="checkbox"].smf-checkbox-control__control{
 		width: 30px;
@@ -202,9 +207,8 @@
 			width: 8px;
 		}
 	}
-
+}
 .smf-action {
-	display: flex;
 	.smf-button-control {
 		.smf-button-control__control{
 			//ボタンのCSS修正

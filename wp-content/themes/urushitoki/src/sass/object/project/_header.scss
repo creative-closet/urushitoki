@@ -40,7 +40,12 @@ front-page
 	padding-right  : variable.$wrapper;
 	&__description{
 		text-align    : center;
+		@include mixin.breakpoint( breakpoint-tab ){
+			width: 100%;
+			max-width: 480px;
+		}
 		@include mixin.breakpoint( breakpoint-sp ){
+			max-width: none;
 			text-align   : left;
 		}
 	}

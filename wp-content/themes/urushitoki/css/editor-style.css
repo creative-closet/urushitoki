@@ -2639,12 +2639,13 @@ utility
   height: auto;
 }
 
-.smf-progress-tracker {
-  margin: 5% 0;
-}
 .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.smf-progress-tracker {
+  margin: 5% 0;
 }
 
 .smf-item__label__text {

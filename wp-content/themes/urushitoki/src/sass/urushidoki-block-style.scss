@@ -145,6 +145,11 @@
 	}
 }
 //お問い合わせフォーム
+
+.smf-progress-tracker{
+	margin: 5% 0;
+}
+
 .smf-item{
 	&__label__text{
 		//ラベルテキストのスタイリング
@@ -216,6 +221,9 @@
 			@extend .c-button--primary;
 			@extend .c-button--primary--text;
 			display: block;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 300px;
+			}
 		}
 	}
 }
@@ -223,6 +231,7 @@
 // プライバシーポリシーのaタグ装飾
 .wp-block-snow-monkey-forms-item{
 	.is-style-c-text{
+		width: 300px;
 		a{
 			color: #252525;
 			border-bottom: solid;

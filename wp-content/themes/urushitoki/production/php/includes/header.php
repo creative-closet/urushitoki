@@ -34,7 +34,7 @@
     <header class="l-header c-wrapper" style="background-image: url('<?php echo $img[0];?>')">
         <div class="p-header">
             <h1 class="c-title--header" title-english="<?php echo esc_attr($titleEnglish);?>"><?php echo $title;?></h1>
-            <p class="u-margin-top--small"><?php echo $description;?></p>
+            <p class="u-margin-top--header"><?php echo $description;?></p>
         </div>
         <?php get_template_part('includes/menu'); ?>
     </header>

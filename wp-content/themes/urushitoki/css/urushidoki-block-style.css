@@ -74,12 +74,16 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding-top: 200px;
+  padding-top: 140px;
   padding-bottom: 200px;
 }
 
 .l-main--about {
   margin-top: 478px;
+}
+
+.l-main--information {
+  margin-top: 60px;
 }
 
 .p-accessory-archive {
@@ -210,13 +214,13 @@ input[type=checkbox].p-contact__checkbox::before {
 }
 
 .c-wrapper, .p-contents-card {
-  padding-left: clamp(20px, 8%, 320px);
-  padding-right: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
 }
 
 .c-wrapper--pc {
-  padding-left: clamp(20px, 8%, 320px);
-  padding-right: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -233,13 +237,13 @@ input[type=checkbox].p-contact__checkbox::before {
 }
 @media (max-width: 1024px) {
   .c-wrapper--tab {
-    padding-left: clamp(20px, 8%, 320px);
-    padding-right: clamp(20px, 8%, 320px);
+    padding-left: clamp(20px, 6%, 320px);
+    padding-right: clamp(20px, 6%, 320px);
   }
 }
 
 .c-wrapper--left {
-  padding-left: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -250,7 +254,7 @@ input[type=checkbox].p-contact__checkbox::before {
 }
 
 .c-wrapper--right {
-  padding-right: clamp(20px, 8%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -263,8 +267,8 @@ input[type=checkbox].p-contact__checkbox::before {
 .c-wrapper--footer {
   display: flex;
   flex-direction: column;
-  padding-left: clamp(20px, 8%, 320px);
-  padding-right: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
   height: inherit;
 }
 
@@ -365,6 +369,23 @@ input[type=checkbox].p-contact__checkbox::before {
   .p-craftman__information {
     width: 100%;
   }
+}
+
+.p-craftman__information__name {
+  display: flex;
+  justify-content: space-between;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-craftman__information__name {
+    display: block;
+  }
+}
+.p-craftman__information__name__detail {
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .p-footer {
@@ -496,7 +517,7 @@ input[type=checkbox].p-contact__checkbox::before {
 .p-front-card--left {
   width: 100%;
   display: flex;
-  padding-right: clamp(20px, 8%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -582,8 +603,8 @@ input[type=checkbox].p-contact__checkbox::before {
 @media (max-width: 1024px) {
   .p-front-card--left__text {
     width: 100%;
-    padding-left: clamp(20px, 8%, 320px);
-    padding-right: clamp(20px, 8%, 320px);
+    padding-left: clamp(20px, 6%, 320px);
+    padding-right: clamp(20px, 6%, 320px);
   }
 }
 @media (max-width: 599px) {
@@ -675,8 +696,8 @@ input[type=checkbox].p-contact__checkbox::before {
   .p-front-card--right__text {
     width: 100%;
     min-width: auto;
-    padding-left: clamp(20px, 8%, 320px);
-    padding-right: clamp(20px, 8%, 320px);
+    padding-left: clamp(20px, 6%, 320px);
+    padding-right: clamp(20px, 6%, 320px);
   }
 }
 
@@ -898,16 +919,25 @@ front-page
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: clamp(20px, 8%, 320px);
-  padding-right: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
 }
 .p-header-wrap__title__description {
   text-align: center;
   /* tablet */
   /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .p-header-wrap__title__description {
+    width: 100%;
+    max-width: 480px;
+  }
 }
 @media (max-width: 599px) {
   .p-header-wrap__title__description {
+    max-width: none;
     text-align: left;
   }
 }
@@ -1580,6 +1610,10 @@ body.active::before {
   margin-top: 20px;
 }
 
+.c-sns__margin {
+  margin: 100px 0 100px 0;
+}
+
 .p-sns {
   display: flex;
   margin: 15px 0;
@@ -2240,6 +2274,30 @@ body.active::before {
   /* tablet */
   /* SmartPhone */
 }
+.c-grid--col3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-grid--col3 {
+    grid-template-columns: 1fr;
+  }
+}
+.c-grid--col3__item {
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .c-grid--col3__item {
+    margin-bottom: 20px;
+  }
+}
 .c-grid--col4, .c-grid--col4--tab1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -2454,6 +2512,14 @@ body.active::before {
   }
 }
 
+.u-margin-top--header {
+  margin-top: 20px;
+  display: inline-block;
+  color: #000000;
+  /* 文字の色 */
+  text-shadow: 2px 2px 0px #ffffff, -2px 2px 0px #ffffff, 2px -2px 0px #ffffff, -2px -2px 0px #ffffff, 2px 0px 0px #ffffff, 0px 2px 0px #ffffff, -2px 0px 0px #ffffff, 0px -2px 0px #ffffff;
+}
+
 .u-margin-top--small {
   margin-top: 20px;
 }
@@ -2633,7 +2699,7 @@ utility
 }
 @media (max-width: 1024px) {
   .wp-block-columns.is-style-p-media-column .wp-block-column:nth-child(2n) {
-    margin-left: 0pxz;
+    margin-left: 0px;
   }
 }
 .wp-block-columns.is-style-p-media-column .wp-block-image {
@@ -2656,10 +2722,18 @@ utility
   /* SmartPhone */
 }
 @media (max-width: 599px) {
-  .smf-progress-tracker {
-    margin-top: 30px;
-    padding-bottom: 20px;
+  .wp-block-media-text__content {
+    margin-top: 20px;
   }
+}
+
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.smf-progress-tracker {
+  margin: 5% 0;
 }
 
 .smf-item__label__text {
@@ -2729,8 +2803,18 @@ utility
   /*ブラウザ標準スタイルを無効にする*/
   background-image: none;
   display: block;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .smf-action .smf-button-control .smf-button-control__control {
+    width: 300px;
+  }
 }
 
+.wp-block-snow-monkey-forms-item .is-style-c-text {
+  width: 300px;
+}
 .wp-block-snow-monkey-forms-item .is-style-c-text a {
   color: #252525;
   border-bottom: solid;

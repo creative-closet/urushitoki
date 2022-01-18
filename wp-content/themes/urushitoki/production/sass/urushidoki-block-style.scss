@@ -153,11 +153,14 @@
 	}
 }
 //お問い合わせフォーム
-
 .smf-progress-tracker{
-	margin: 5% 0;
+	margin-top: 60px;
+	padding-bottom: 40px;
+	@include mixin.breakpoint( breakpoint-sp ){
+		margin-top: 30px;
+		padding-bottom: 20px;
+	}
 }
-
 .smf-item{
 	&__label__text{
 		//ラベルテキストのスタイリング
@@ -220,7 +223,6 @@
 	}
 }
 .smf-action {
-	display: flex;
 	.smf-button-control {
 		.smf-button-control__control{
 			//ボタンのCSS修正

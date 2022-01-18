@@ -169,6 +169,50 @@ a {
   margin-top: 30px;
 }
 
+input[type=checkbox].p-contact__checkbox {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+}
+input[type=checkbox].p-contact__checkbox:hover {
+  border-color: rgba(46, 46, 46, 0.5);
+}
+input[type=checkbox].p-contact__checkbox:checked {
+  background-color: #252525;
+  border: #252525;
+}
+input[type=checkbox].p-contact__checkbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  visibility: visible;
+  border-color: #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 0 solid #fff;
+  border-right: 2px solid #fff;
+  border-top: 0 solid #fff;
+  height: 8px;
+  left: calc(50% - 3px);
+  margin: 0;
+  top: calc(50% - 5px);
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.p-contact {
+  display: flex;
+  align-items: center;
+}
+
 .c-wrapper, .p-contents-card {
   padding-left: clamp(20px, 6%, 320px);
   padding-right: clamp(20px, 6%, 320px);

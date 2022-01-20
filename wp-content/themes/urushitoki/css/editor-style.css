@@ -2715,9 +2715,6 @@ utility
   height: auto;
 }
 
-.smf-progress-tracker {
-  margin-top: 60px;
-  padding-bottom: 40px;
 .wp-block-media-text__content {
   /* tablet */
   /* SmartPhone */
@@ -2734,7 +2731,16 @@ utility
 }
 
 .smf-progress-tracker {
-  margin: 5% 0;
+  margin-top: 60px;
+  padding-bottom: 40px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .smf-progress-tracker {
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 .smf-item__label__text {
@@ -2809,6 +2815,23 @@ utility
 }
 @media (max-width: 1024px) {
   .smf-action .smf-button-control .smf-button-control__control {
+    width: 300px;
+  }
+}
+.smf-action .smf-button-control .smf-button-control__control:disabled {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*ブラウザ標準スタイルを無効にする*/
+  background-image: none;
+  background-color: #a9a9a9;
+  color: #f5f5f5;
+  display: block;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .smf-action .smf-button-control .smf-button-control__control:disabled {
     width: 300px;
   }
 }

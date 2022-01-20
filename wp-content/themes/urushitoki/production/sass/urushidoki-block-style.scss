@@ -241,6 +241,16 @@
 				width: 300px;
 			}
 		}
+		.smf-button-control__control:disabled{
+			appearance: none; /*ブラウザ標準スタイルを無効にする*/
+			background-image:none;
+			background-color: #a9a9a9;
+			color: #f5f5f5;
+			display: block;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 300px;
+			}
+		}
 	}
 }
 

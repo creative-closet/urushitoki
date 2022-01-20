@@ -214,13 +214,13 @@ input[type=checkbox].p-contact__checkbox::before {
 }
 
 .c-wrapper, .p-contents-card {
-  padding-left: clamp(20px, 8%, 320px);
-  padding-right: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
 }
 
 .c-wrapper--pc {
-  padding-left: clamp(20px, 8%, 320px);
-  padding-right: clamp(20px, 8%, 320px);
+  padding-left: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 6%, 320px);
   /* tablet */
   /* SmartPhone */
 }

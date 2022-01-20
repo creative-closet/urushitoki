@@ -1936,7 +1936,7 @@ body.active::before {
 .c-button--primary .c-button--primary--line--detail-tab, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line--detail-tab {
   display: none;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .c-button--primary .c-button--primary--line--detail, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line--detail {
     display: block;
   }
@@ -1947,7 +1947,7 @@ body.active::before {
     display: none;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 600px) {
+@media screen and (min-width: 420px) and (max-width: 600px) {
   .c-button--primary .c-button--primary--line--detail-tab, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line--detail-tab {
     display: none;
   }

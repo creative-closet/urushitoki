@@ -57,12 +57,12 @@
 	.c-button--primary--line--detail-tab{display: none};
 
 
-	@media screen and (max-width:400px) {
+	@media screen and (max-width:420px) {
 		.c-button--primary--line--detail{display: block};
 		.c-button--primary--line--detail-tab{display: none};
 		.c-button--primary--line--detail-sp{display: none};
 	}
-	@media screen and (min-width:401px) and (max-width:600px) {
+	@media screen and (min-width:420px) and (max-width:600px) {
 		.c-button--primary--line--detail-tab{display: none};
 		.c-button--primary--line--detail-sp{display: block};
 	}

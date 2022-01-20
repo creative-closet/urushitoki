@@ -13,6 +13,92 @@
 		wp_register_style( 'urushidoki-block-style', get_theme_file_uri() . '/css/urushidoki-block-style.css' );
 	});
 
+	//*****************************************************************
+	//  タイトルタグ関係の処理
+	//*****************************************************************
+
+	function insert_title(){
+		add_theme_support('title-tag');
+	}
+	add_action('after_setup_theme', 'insert_title');
+
+	function change_title_separator($sep){
+		$sep = '|';
+		return $sep;
+	}
+	add_filter('document_title_separator', 'change_title_separator');
+
+	function correct_title($title){
+
+		if(is_home() || is_front_page())://top
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = ' トップページ | '.get_bloginfo("name");
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('archive_accessory'))://アクセサリー
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = 'アクセサリー';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('kintsugi'))://金継ぎ
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = '金継ぎ';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('life'))://うるしと生活
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = 'うるしと生活';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('instrument'))://うるしと楽器
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = 'うるしと楽器';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('about'))://About
+			$title['title'] = 'ABOUT';
+		elseif(is_page('archive_craft') || is_page('archive_information') || is_page('archive_post')||is_single()||is_tag())://gallery
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = 'ギャラリー';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('sns'))://SNS
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = ' SNS';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('faq'))://よくある質問
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = 'よくある質問';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('contact'))://問い合わせ
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = ' 問い合わせ';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_page('privacy-policy'))://プライバシーポリシー
+			if(empty(wp_title('' , false , 'right'))){
+				$title['title'] = 'プライバシーポリシー';
+			} else {
+				$title['title'] = wp_title('' , false , 'right');
+			}
+		elseif(is_404())://404
+			$title['title'] = ' 404 not found';
+		endif;
+		return $title;
+	}
+	add_filter('document_title_parts', 'correct_title');
+
     //*****************************************************************
 	//  フォント・CSS・JavaScriptの呼び出し
 	//*****************************************************************

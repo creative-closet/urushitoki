@@ -1483,6 +1483,7 @@ body.active::before {
   font-weight: 400;
   font-size: 2rem;
   color: #252525;
+  margin-bottom: 27px;
   /* 罫線 */
 }
 .c-title-small::after, .is-style-c-title-small::after, .c-definition--shop-card__title::after {
@@ -2715,9 +2716,6 @@ utility
   height: auto;
 }
 
-.smf-progress-tracker {
-  margin-top: 60px;
-  padding-bottom: 40px;
 .wp-block-media-text__content {
   /* tablet */
   /* SmartPhone */
@@ -2734,7 +2732,16 @@ utility
 }
 
 .smf-progress-tracker {
-  margin: 5% 0;
+  margin-top: 60px;
+  padding-bottom: 40px;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .smf-progress-tracker {
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 .smf-item__label__text {

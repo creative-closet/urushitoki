@@ -38,25 +38,25 @@
 			}
 		elseif(is_page('archive_accessory'))://アクセサリー
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = 'アクセサリー';
+				$title['title'] = 'アクセサリー | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('kintsugi'))://金継ぎ
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = '金継ぎ';
+				$title['title'] = '金継ぎ | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('life'))://うるしと生活
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = 'うるしと生活';
+				$title['title'] = 'うるしと生活 | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('instrument'))://うるしと楽器
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = 'うるしと楽器';
+				$title['title'] = 'うるしと楽器 | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
@@ -64,31 +64,31 @@
 			$title['title'] = 'ABOUT';
 		elseif(is_page('archive_craft') || is_page('archive_information') || is_page('archive_post')||is_single()||is_tag())://gallery
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = 'ギャラリー';
+				$title['title'] = 'ギャラリー | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('sns'))://SNS
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = ' SNS';
+				$title['title'] = ' SNS | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('faq'))://よくある質問
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = 'よくある質問';
+				$title['title'] = 'よくある質問 | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('contact'))://問い合わせ
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = ' 問い合わせ';
+				$title['title'] = ' 問い合わせ | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}
 		elseif(is_page('privacy-policy'))://プライバシーポリシー
 			if(empty(wp_title('' , false , 'right'))){
-				$title['title'] = 'プライバシーポリシー';
+				$title['title'] = 'プライバシーポリシー | '.get_bloginfo("name");
 			} else {
 				$title['title'] = wp_title('' , false , 'right');
 			}

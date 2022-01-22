@@ -70,6 +70,7 @@
 	@include mixin.font-yumincho;
 	font-size : variable.$font-size--title-small--pc;
 	color     : variable.$font-color--main;
+	margin-bottom: 27px;
 	/* 罫線 */
 	&::after{
 		content       : "";

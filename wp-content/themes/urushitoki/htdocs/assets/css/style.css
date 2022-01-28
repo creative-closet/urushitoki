@@ -1483,6 +1483,7 @@ body.active::before {
   font-weight: 400;
   font-size: 2rem;
   color: #252525;
+  margin-bottom: 27px;
   /* 罫線 */
 }
 .c-title-small::after, .c-definition--shop-card__title::after {
@@ -2531,7 +2532,7 @@ body.active::before {
   display: inline-block;
   color: #000000;
   /* 文字の色 */
-  text-shadow: 2px 2px 0px #ffffff, -2px 2px 0px #ffffff, 2px -2px 0px #ffffff, -2px -2px 0px #ffffff, 2px 0px 0px #ffffff, 0px 2px 0px #ffffff, -2px 0px 0px #ffffff, 0px -2px 0px #ffffff;
+  text-shadow: 1px 1px 0px #ffffff, -1px 1px 0px #ffffff, 1px -1px 0px #ffffff, -1px -1px 0px #ffffff, 1px 0px 0px #ffffff, 0px 1px 0px #ffffff, -1px 0px 0px #ffffff, 0px -1px 0px #ffffff;
 }
 
 .u-margin-top--small {

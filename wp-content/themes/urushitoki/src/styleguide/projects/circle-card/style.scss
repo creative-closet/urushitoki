@@ -2,6 +2,16 @@
 @use "../../foundation/variable";
 @use "../../foundation/mixin";
 
+.p-accessory-circle-card-column-block{
+	.wp-block-column{
+		@include mixin.breakpoint( breakpoint-sp ){
+			display: flex;
+			justify-content: center;
+			margin-bottom: 80px;
+		}
+	}
+}
+
 .p-circle-card{
 	width: 100%;
 	max-width: 345px;

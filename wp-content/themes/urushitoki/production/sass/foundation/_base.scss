@@ -6,8 +6,13 @@ html{
 }
 
 body{
+	min-width        : 375px;
     font-size        : variable.$font-size--base--pc;
     font-weight      : variable.$font-weight--normal;
     font-family      : "Noto Sans Japanese", sans-serif;
     line-height      : 2.125;     //   Xd行送り34px/文字サイズ16px
+}
+
+a{
+	text-decoration: none;
 }

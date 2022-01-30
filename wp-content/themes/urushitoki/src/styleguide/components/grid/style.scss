@@ -1,0 +1,63 @@
+@use "../../foundation/base";
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.c-grid {
+	display: grid;
+	box-sizing: border-box;
+	@include  mixin.breakpoint( breakpoint-tab ) {
+	}
+	@include  mixin.breakpoint( breakpoint-sp ) {
+		display: block;
+	}
+	&__item {
+		list-style-type: none;
+		@include  mixin.breakpoint( breakpoint-sp ) {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&--col3 {
+		@extend .c-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			display: block;
+		}
+		@include  mixin.breakpoint( breakpoint-sp ) {
+		}
+		&__item {
+			@extend .c-grid__item;
+			@include  mixin.breakpoint( breakpoint-tab ) {
+			}
+			@include  mixin.breakpoint( breakpoint-sp ) {
+			}
+		}
+	}
+	&--col4 {
+		@extend .c-grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
+		@include  mixin.breakpoint( breakpoint-sp ) {
+		}
+		&__item {
+			@extend .c-grid__item;
+		}
+		&--tab1 {
+			@extend .c-grid--col4;
+			@include mixin.breakpoint( breakpoint-tab ) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr;
+			}
+			&__item {
+				@extend .c-grid--col4__item;
+			}
+		}
+	}
+}

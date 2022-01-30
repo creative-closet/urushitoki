@@ -1,0 +1,8 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
+.u-gap {
+	&--20 { gap: 20px; }
+	&--53 { gap: 53px; }
+}

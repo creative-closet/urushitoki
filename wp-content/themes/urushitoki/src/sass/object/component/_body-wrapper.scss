@@ -1,0 +1,8 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
+.c-body-wrapper{
+	width: 100%;
+	overflow-x: hidden;
+}

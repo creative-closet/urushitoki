@@ -28,28 +28,28 @@ $border-color--accent   : #897C70;   // ブラウン
     文字のサイズ
 -------------------------------------------------------- */
 /* ベース */
-$font-size--base--pc                         : 1.6rem;
-$font-size--base--tab                        : 1.6rem;
-$font-size--base--sp                         : 1.6rem;
+$font-size--base--pc                : 1.6rem;
+$font-size--base--tab               : 1.6rem;
+$font-size--base--sp                : 1.6rem;
 
 /* 見出し */
-$font-size--title-large--pc                  : 2.4rem;
-$font-size--title-large--tab                 : 2.4rem;
-$font-size--title-large--sp                  : 2.4rem;
+$font-size--title-large--pc         : 2.4rem;
+$font-size--title-large--tab        : 2.4rem;
+$font-size--title-large--sp         : 2.4rem;
 
-$font-size--title-large--header--pc          : 1.4rem;
-$font-size--title-large--header--tab         : 1.4rem;
-$font-size--title-large--header--sp          : 1.4rem;
+$font-size--title-large--header--pc : 1.4rem;
+$font-size--title-large--header--tab: 1.4rem;
+$font-size--title-large--header--sp : 1.4rem;
 
-$font-size--title-small--pc                  : 2.0rem;
-$font-size--title-small--tab                 : 2.0rem;
-$font-size--title-small--sp                  : 2.0rem;
+$font-size--title-small--pc         : 2.0rem;
+$font-size--title-small--tab        : 2.0rem;
+$font-size--title-small--sp         : 2.0rem;
 
-$font-size--title-noborder--pc               : 1.8rem;
-$font-size--title-noborder--tab              : 1.8rem;
-$font-size--title-noborder--sp               : 1.8rem;
+$font-size--title-noborder--pc      : 1.8rem;
+$font-size--title-noborder--tab     : 1.8rem;
+$font-size--title-noborder--sp      : 1.8rem;
 
-
+$font-size--title-sns           : 1.6rem;
 
 $primary     : #270B0B;
 $darkbrown   : #252525;
@@ -71,6 +71,7 @@ $font-xxl:4.0rem;
 $font-color--black                 : #2E2E2E;
 $font-color--white                 : #fff;
 $font-color--brown                 : #897C70;
+$font-color--brown--right          : #BF9A87;
 
  //dl・dd・dt用
 $font-color--definiton             : #2E2E2E;
@@ -96,24 +97,24 @@ $border-color--definiton-descripton: #DDD4CD;
  $background-color--postCard : #FFF;   // 明るいライトブラウン
 
 //フォントサイズ
-$font-size--postCard-title:1.6rem;
-$font-size--postCard-sentence:1.3rem;
-$font-size--postCard-date:1.4rem;
+$font-size--postCard-title   : 1.6rem;
+$font-size--postCard-sentence: 1.3rem;
+$font-size--postCard-date    : 1.4rem;
 //文字の色
-$font-color--postCard-title:#2E2E2E;
-$font-color--postCard-sentence:#BFAD9C;
-$font-color--postCard-date:#2E2E2E;
+$font-color--postCard-title   : #2E2E2E;
+$font-color--postCard-sentence: #BFAD9C;
+$font-color--postCard-date    : #2E2E2E;
 
 /*
  *	product-card
  */
  //フォントサイズ
- $font-size--definiton--figcaption-term:1.6rem;
- $font-size--definiton--figcaption-description:1.2rem;
+ $font-size--definiton--figcaption-term       : 1.6rem;
+ $font-size--definiton--figcaption-description: 1.2rem;
 
  //文字の色
- $font-color--definiton--figcaption-term:#202124;
- $font-color--definiton--figcaption-description:#A6ADB4;
+ $font-color--definiton--figcaption-term       : #202124;
+ $font-color--definiton--figcaption-description: #A6ADB4;
 
 /*
  *	content-card
@@ -124,6 +125,6 @@ $font-color--postCard-date:#2E2E2E;
  /*
  *	shopCard
  */
-$background-color--shop-card : #FFF;
-$border-color--shop-card:#DED6CC;
-$border-color--shop-card__title:#897C70;
+$background-color--shop-card   : #FFF;
+$border-color--shop-card       : #DED6CC;
+$border-color--shop-card__title: #897C70;

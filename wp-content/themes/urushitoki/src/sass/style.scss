@@ -9,24 +9,35 @@ foundation
 /* --------------------------------------------------------
 layout
 -------------------------------------------------------- */
-
+@forward "./layout/header";
 /* --------------------------------------------------------
 project
 -------------------------------------------------------- */
 @forward './object/project/article-card';
 @forward './object/project/circle-card';
 @forward './object/project/contents-card';
+@forward './object/project/footer';
+@forward './object/project/front-card';
+@forward './object/project/front-posts';
+@forward './object/project/front-urushi-contents';
+@forward './object/project/gnavi';
+@forward './object/project/header';
+@forward './object/project/menu';
 @forward './object/project/post-card';
+@forward './object/project/post-archive';
 @forward './object/project/price-card';
 @forward './object/project/product-card';
 @forward './object/project/shop-card';
+@forward './object/project/sns';
 /* --------------------------------------------------------
 component
 -------------------------------------------------------- */
 @forward './object/component/background-icon';
 @forward './object/component/background';
 @forward './object/component/button';
+@forward './object/component/body-wrapper';
 @forward './object/component/bullet';
+@forward './object/component/grid';
 @forward './object/component/definition';
 @forward './object/component/pagination';
 @forward './object/component/pattern';
@@ -35,3 +46,9 @@ component
 @forward './object/component/text';
 @forward './object/component/textbox';
 @forward './object/component/title';
+@forward './object/component/wrapper';
+/* --------------------------------------------------------
+utility
+-------------------------------------------------------- */
+@forward './object/utility/margin';
+@forward './object/utility/gap';

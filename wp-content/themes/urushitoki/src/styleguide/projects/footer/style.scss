@@ -1,0 +1,83 @@
+@use "../../foundation/base.scss";
+@use "../../foundation/variable.scss";
+@use "../../foundation/mixin.scss";
+
+.p-footer{
+	background: url(../assets/image/footer-background.jpg);
+	background-size: cover;
+	@include mixin.breakpoint( breakpoint-tab ){
+		background-position: 70% 0;
+	}
+}
+.p-footer__nav{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	@include mixin.breakpoint( breakpoint-tab ){
+		flex-direction: column;
+	}
+}
+.p-footer__contact{
+	margin-top: 30px;
+	@include mixin.breakpoint( breakpoint-tab ){
+		margin-top: -20px;
+	}
+	@include mixin.breakpoint( breakpoint-sp ){
+		margin-top: 0px;
+	}
+}
+.p-footer__contact__list{
+	list-style: none;
+	margin-bottom: 10px;
+	width: 100%;
+	@include mixin.breakpoint( breakpoint-tab ){
+		width: 420px;
+	}
+	& *{
+		padding-right: 10px;
+		@include mixin.breakpoint( breakpoint-tab ){
+			padding-right: 0;
+		}
+	}
+	& a{
+		position: relative;
+		display: block;
+		&::before {
+			content: "";
+			position: absolute;
+			left: -20px;
+			width: 250px;
+			height: 34px;
+			background-color: transparent;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 440px;
+			}
+			@include mixin.breakpoint( breakpoint-sp ){
+				display: none;
+			}
+		}
+		&:hover::before{
+			background-color: rgba(255, 255, 255, 0.2);
+			transition: all 0.2s;
+			@include mixin.breakpoint( breakpoint-sp ){
+				background-color: inherit;
+				transition: inherit;
+			}
+		}
+	}
+}
+.p-footer-logo{
+	display: flex;
+	justify-content: space-between;
+	margin: 60px 0;
+	@include mixin.breakpoint( breakpoint-tab ){
+		flex-direction: column;
+		align-items: center;
+		&__link{
+			margin-bottom: 30px;
+		}
+	}
+}
+.p-footer-logo__copyright{
+	margin-top: auto;
+}

@@ -42,7 +42,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Noto Sans Japanese", sans-serif;
-  line-height: 2.125;
+  line-height: 2.1;
 }
 
 a {
@@ -53,8 +53,8 @@ a {
 /* 游明朝の指定 */
 /*p-step-card破線の位置を指定するための関数*/
 .l-header {
-  padding-top: 140px;
-  height: 420px;
+  padding-top: 80px;
+  height: 300px;
   background-size: cover;
   background-position: center;
   /* tablet */
@@ -65,6 +65,9 @@ a {
     height: auto;
   }
 }
+.l-header.c-wrapper {
+  padding: 80px 11% 0;
+}
 
 .l-front-header {
   position: relative;
@@ -74,8 +77,7 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding-top: 140px;
-  padding-bottom: 200px;
+  padding: 140px 6% 200px;
 }
 
 .l-main--about {
@@ -529,7 +531,7 @@ input[type=checkbox].p-contact__checkbox::before {
 .p-front-card--left {
   width: 100%;
   display: flex;
-  padding-right: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 11%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -682,6 +684,9 @@ input[type=checkbox].p-contact__checkbox::before {
     flex-direction: column-reverse;
   }
 }
+.p-front-card--right.c-wrapper--left {
+  padding-left: clamp(20px, 11%, 320px);
+}
 .p-front-card--right__monyou {
   position: absolute;
   left: 0;
@@ -764,6 +769,10 @@ input[type=checkbox].p-contact__checkbox::before {
   .p-urushi-contents {
     margin-top: 120px;
   }
+}
+.p-urushi-contents.c-wrapper--pc {
+  padding-right: clamp(20px, 11%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
 }
 
 .p-urushi-content, .p-urushi-content--reverse {
@@ -1443,7 +1452,7 @@ body.active::before {
   content: attr(title-english);
   display: block;
   font-size: 1.4rem;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 .c-title::after, .c-title--header::after {
   content: "";

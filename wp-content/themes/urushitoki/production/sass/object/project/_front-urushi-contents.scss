@@ -8,6 +8,10 @@
 	@include mixin.breakpoint( breakpoint-tab ){
 		margin-top: 120px;
 	}
+	&.c-wrapper--pc {
+		padding-right:variable.$wrapper-front;
+		padding-left:variable.$wrapper-front;
+	}
 }
 .p-urushi-content{
 	display: flex;

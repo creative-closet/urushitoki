@@ -408,12 +408,9 @@ https://itojisan.xyz/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%AE%E3%83%88%E3%8
 
 こちらを元にWindowsのシステムロケール設定を確認する
 
-<<<<<<< HEAD
-=======
 
 #### 本番環境
 
 ドメイン変更は以下。
 
 wp search-replace 'http://fp.rash.jp/urushitoki' 'http://sadaike.com/urushitoki'
->>>>>>> 1edccd72599886125a6aee38d833b58f922c4931

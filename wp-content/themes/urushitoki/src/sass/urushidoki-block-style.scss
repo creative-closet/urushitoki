@@ -1,4 +1,7 @@
 @forward './style.scss';
+@use "./foundation/base";
+@use "./foundation/variable";
+@use "./foundation/mixin";
 
 //カスタムブロック 背景付きテキスト/画像
 .wp-block-create-block-background-text.is-style-background-02{
@@ -35,6 +38,8 @@
 
 //グループ 階段
 .is-style-p-contents-card-column{
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
 	.wp-block-group__inner-container{
 		@extend .p-contents-card-column;
 	}
@@ -93,7 +98,6 @@
 	.blocks-gallery-item{
 		width: auto;
 		height: auto;
-		margin-right: 1em;
 	}
 	figure{
 		@extend .p-price-card;
@@ -120,13 +124,13 @@
 	}
 	.wp-block-column:nth-child(2n){
 		@include mixin.breakpoint( breakpoint-tab ){
-			margin-left: 0pxz;
+			margin-left: 0px;
 		}
 	}
 	.wp-block-image{
 		text-align: center;
 		img{
-			object-fit: contain;
+			object-fit: cover;
 			width: 100%;
 			height: 100%;
 			object-position: top;
@@ -134,7 +138,35 @@
 		}
 	}
 }
+
+.wp-block-image{
+	img{
+		object-fit: cover;
+	}
+}
+
+// media-text モバイル時 上部余白
+.wp-block-media-text__content{
+	@include mixin.breakpoint( breakpoint-sp ){
+		margin-top: 20px;
+	}
+}
+
+// モバイル時の画像調整
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+	img{
+		object-fit: cover;
+	}
+}
 //お問い合わせフォーム
+.smf-progress-tracker{
+	margin-top: 60px;
+	padding-bottom: 40px;
+	@include mixin.breakpoint( breakpoint-sp ){
+		margin-top: 30px;
+		padding-bottom: 20px;
+	}
+}
 .smf-item{
 	&__label__text{
 		//ラベルテキストのスタイリング
@@ -197,7 +229,6 @@
 	}
 }
 .smf-action {
-	display: flex;
 	.smf-button-control {
 		.smf-button-control__control{
 			//ボタンのCSS修正
@@ -206,6 +237,32 @@
 			@extend .c-button--primary;
 			@extend .c-button--primary--text;
 			display: block;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 300px;
+			}
+		}
+		.smf-button-control__control:disabled{
+			appearance: none; /*ブラウザ標準スタイルを無効にする*/
+			background-image:none;
+			background-color: #a9a9a9;
+			color: #f5f5f5;
+			display: block;
+			@include mixin.breakpoint( breakpoint-tab ){
+				width: 300px;
+			}
+		}
+	}
+}
+
+// プライバシーポリシーのaタグ装飾
+.wp-block-snow-monkey-forms-item{
+	.is-style-c-text{
+		width: 300px;
+		a{
+			color: #252525;
+			border-bottom: solid;
+			border-color:#252525;
+			border-width: 1px;
 		}
 	}
 }

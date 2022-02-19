@@ -3,19 +3,30 @@
 @use "../../foundation/variable";
 
 .p-post-archive {
-	width: 1280px;
-	@include  mixin.breakpoint( breakpoint-tab ) {
-		width:100%;
-	}
+	width: 100%;
+	padding-top: 39px;
+	padding-bottom:39px;
 	.c-grid--col3 {
 		gap: 31px;
-		&__item {
-			@include  mixin.breakpoint( breakpoint-tab ) {
-				margin-bottom: 20px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
+	}
+	.c-grid--col3__item {
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			margin-bottom: 20px;
 		}
+	}
+	.c-grid--col3__item:last-child {
+		@include  mixin.breakpoint( breakpoint-tab ) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.p-post-archive__tags{
+	list-style:none;
+	width:30%;
+	flex-wrap:wrap;
+	gap:10px;
+	@include  mixin.breakpoint( breakpoint-tab ) {
+		width:100%;
 	}
 }

@@ -1,10 +1,10 @@
 <!-- 記述内容の表示 -->
-<article class="p-content c-wrapper">
+<article class="p-content">
 	<article class="p-post">
 	<?php if (have_posts()): ?>
 		<?php while (have_posts()) : the_post(); ?>
 			<h2 class="p-post__title c-title-large u-margin-bottom "><?php the_title();?></h2>
-			<div class="p-post__tags c-flex c-flex--align-center c-flex--wrap u-margin-bottom">
+			<div class="p-post__tags c-flex c-flex--align-center c-flex--wrap u-margin-bottom u-gap--20">
 				<p class="c-text--large"><?php the_time('Y.m.d');?></p>
 				<?php
 				$tags = get_the_tags();

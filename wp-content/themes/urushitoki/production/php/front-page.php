@@ -22,7 +22,7 @@
             </section>
         </article>
 
-        <article class="p-front-card--right">
+        <article class="p-front-card--right c-wrapper--left">
             <section class="p-front-card--right__text">
                 <h2 class="c-title">指物と乾漆で素地から塗り蒔絵まで一貫した制作</h2>
                 <p class="c-text u-margin-top--small">仏壇蒔絵や仏壇修理修繕を行いながら、素地(木地・乾漆)から塗り蒔絵まで一貫した取り組みで厨子や器、
@@ -33,7 +33,9 @@
         </article>
 
         <div class="p-urushi-contents c-wrapper--pc">
-            <h2 class="c-title">Urushi Contents</h2>
+			<div class="c-wrapper--tab">
+				<h2 class="c-title">Urushi Contents</h2>
+			</div>
 
             <article class="p-urushi-content">
                 <div class="c-pattern">
@@ -48,7 +50,26 @@
                     </section>
                     <a href="<?php echo home_url('/archive_accessory/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
-                        <span class="c-button--primary--line"></span>
+                        <div class="c-button--primary--line">
+                            <svg class="c-button--primary--line--detail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.479 17.889">
+                                <g id="グループ_1771" data-name="グループ 1771" transform="translate(-446.336 -4699.111)">
+                                    <line id="線_1144" data-name="線 1144" x2="193" transform="translate(446.336 4716.5)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="21" y2="17" transform="translate(618.5 4699.5)"  stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-tab" xmlns="http://www.w3.org/2000/svg" width="109.704" height="11.408" viewBox="0 0 109.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-111.764 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="109" transform="translate(111.764 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(208.764 2175)" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-sp" xmlns="http://www.w3.org/2000/svg" width="302.704" height="11.408" viewBox="0 0 302.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-112 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="302" transform="translate(112 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(402 2175)" troke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
                     </a>
                 </div>
             </article>
@@ -61,7 +82,26 @@
                     </section>
                     <a href="<?php echo home_url('/kintsugi/'); ?>" class="p-urushi-content__description-area__button--left c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
-                        <span class="c-button--primary--line"></span>
+                        <div class="c-button--primary--line">
+                            <svg class="c-button--primary--line--detail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.479 17.889">
+                                <g id="グループ_1771" data-name="グループ 1771" transform="translate(-446.336 -4699.111)">
+                                    <line id="線_1144" data-name="線 1144" x2="193" transform="translate(446.336 4716.5)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="21" y2="17" transform="translate(618.5 4699.5)"  stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-tab" xmlns="http://www.w3.org/2000/svg" width="109.704" height="11.408" viewBox="0 0 109.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-111.764 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="109" transform="translate(111.764 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(208.764 2175)" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-sp" xmlns="http://www.w3.org/2000/svg" width="302.704" height="11.408" viewBox="0 0 302.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-112 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="302" transform="translate(112 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(402 2175)" troke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
                     </a>
                 </div>
                 <div class="c-pattern">
@@ -83,7 +123,26 @@
                     </section>
                     <a href="<?php echo home_url('/life/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
-                        <span class="c-button--primary--line"></span>
+                        <div class="c-button--primary--line">
+                            <svg class="c-button--primary--line--detail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.479 17.889">
+                                <g id="グループ_1771" data-name="グループ 1771" transform="translate(-446.336 -4699.111)">
+                                    <line id="線_1144" data-name="線 1144" x2="193" transform="translate(446.336 4716.5)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="21" y2="17" transform="translate(618.5 4699.5)"  stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-tab" xmlns="http://www.w3.org/2000/svg" width="109.704" height="11.408" viewBox="0 0 109.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-111.764 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="109" transform="translate(111.764 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(208.764 2175)" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-sp" xmlns="http://www.w3.org/2000/svg" width="302.704" height="11.408" viewBox="0 0 302.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-112 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="302" transform="translate(112 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(402 2175)" troke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
                     </a>
                 </div>
             </article>
@@ -96,7 +155,26 @@
                     </section>
                     <a href="<?php echo home_url('/instrument/'); ?>" class="p-urushi-content__description-area__button--left c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
-                        <span class="c-button--primary--line"></span>
+                        <div class="c-button--primary--line">
+                            <svg class="c-button--primary--line--detail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193.479 17.889">
+                                <g id="グループ_1771" data-name="グループ 1771" transform="translate(-446.336 -4699.111)">
+                                    <line id="線_1144" data-name="線 1144" x2="193" transform="translate(446.336 4716.5)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="21" y2="17" transform="translate(618.5 4699.5)"  stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-tab" xmlns="http://www.w3.org/2000/svg" width="109.704" height="11.408" viewBox="0 0 109.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-111.764 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="109" transform="translate(111.764 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(208.764 2175)" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                            <svg class="c-button--primary--line--detail-sp" xmlns="http://www.w3.org/2000/svg" width="302.704" height="11.408" viewBox="0 0 302.704 11.408">
+                                <g id="グループ_1664" data-name="グループ 1664" transform="translate(-112 -2174.296)">
+                                    <line id="線_1144" data-name="線 1144" x2="302" transform="translate(112 2185)" stroke-width="1"/>
+                                    <line id="線_1145" data-name="線 1145" x2="12" y2="10" transform="translate(402 2175)" troke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </div>
                     </a>
                 </div>
                 <div class="c-pattern">

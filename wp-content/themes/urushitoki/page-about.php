@@ -19,7 +19,7 @@
 					<?php /* 写真 写真がある場合のみタグを出力する */
 					if(SCF::get_user_meta($user_id,'user_photo') != ""){
 						$img = SCF::get_user_meta($user_id,'user_photo');
-						echo '<article class="p-craftman c-flex c-flex--center">';
+						echo '<article class="p-craftman c-flex">';
 						echo '<div class="p-craftman__image">';
 						echo wp_get_attachment_image( $img , 'large' );
 						echo '</div>';
@@ -29,8 +29,8 @@
 						<div class="p-craftman__information">
 							<dl class="c-definition">
 								<!-- 名前 -->
-								<dt class="p-craftman__information__name c-definition__title c-flex c-flex--space-between">
-									<p><?php the_author_meta('last_name',$user_id); ?> <?php the_author_meta('first_name',$user_id); ?></p>
+								<dt class="p-craftman__information__name">
+									<div class="p-craftman__information__name__detail"><?php the_author_meta('last_name',$user_id); ?> <?php the_author_meta('first_name',$user_id); ?></div>
 									<?php /* SNS */
 									$group = SCF::get_user_meta($user_id,'sns');
 									if(SCF::get_user_meta($user_id,'sns_type') !=""){

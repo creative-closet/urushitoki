@@ -33,7 +33,6 @@ $post_query = new WP_Query($args_query);
 
 //サブクエリループ
 if($post_query -> have_posts())://(投稿データ有無確認 -start-)
-	// echo '<article class="p-archive">';
 	echo '<article class="p-post-archive">';
 	//投稿のギャラリー表示
 	if (!is_page('archive_post')){
@@ -41,7 +40,7 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 	}
 	//タグ表示ここから（記事に紐付けられているタグを全て取得して表示する）
 	if(is_page('archive_post')){
-		echo '<ul class="p-archive__tags u-margin-top--large u-margin-bottom c-flex">';;
+		echo '<ul class="p-post-archive__tags u-margin-top--large u-margin-bottom c-flex">';;
 		$term_list = get_terms('post_tag');
 		$result_list = [];
 		foreach ($term_list as $term) {
@@ -87,9 +86,16 @@ if($post_query -> have_posts())://(投稿データ有無確認 -start-)
 		echo '</div>';
 	}else{
 ?>
-		<a href="<?php echo home_url('/archive_post/'); ?>" class="c-button--primary u-margin-top" id="p-ripples--effect">
+		<a href="<?php echo home_url('/archive_post/'); ?>" class="c-button--primary u-margin-top u-margin-left--auto" id="p-ripples--effect">
 			<span class="c-button--primary--text">MORE</span>
-			<span class="c-button--primary--line"></span>
+			<div class="c-button--primary--line">
+				<svg xmlns="http://www.w3.org/2000/svg" width="193.479" height="17.889" viewBox="0 0 193.479 17.889">
+					<g id="グループ_1771" data-name="グループ 1771" transform="translate(-446.336 -4699.111)">
+						<line class="c-button--primary--line--detail" id="線_1144" data-name="線 1144" x2="193" transform="translate(446.336 4716.5)" stroke-width="1"/>
+						<line class="c-button--primary--line--detail" id="線_1145" data-name="線 1145" x2="21" y2="17" transform="translate(618.5 4699.5)"  stroke-width="1"/>
+					</g>
+				</svg>
+			</div>
 		</a>
 <?php
 	}

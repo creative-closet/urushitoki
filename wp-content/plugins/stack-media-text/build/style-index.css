@@ -13,6 +13,8 @@
 .p-stack-contents {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  margin-top: 60px;
 }
 
 .p-stack-contents__image {
@@ -20,10 +22,16 @@
   z-index: -1;
   top: 0;
   right: 0;
-  width: 1100px;
+  width: 85%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  .p-stack-contents__image {
+    position: initial;
+    width: 100%;
+  }
 }
 
 .p-stack-contents__description {
@@ -31,6 +39,12 @@
   background-color: #210c02;
   padding: 3%;
   width: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .p-stack-contents__description {
+    margin-top: 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

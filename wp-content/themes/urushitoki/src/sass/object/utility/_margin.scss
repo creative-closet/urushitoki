@@ -12,6 +12,20 @@
 		}
 	}
 }
+.u-margin-top--header{
+	margin-top: 20px;
+	display        : inline-block;
+	color          : #000000;            /* 文字の色 */
+	text-shadow    :
+		1px  1px 0px #ffffff,
+		-1px  1px 0px #ffffff,
+		1px -1px 0px #ffffff,
+		-1px -1px 0px #ffffff,
+		1px  0px 0px #ffffff,
+		0px  1px 0px #ffffff,
+		-1px  0px 0px #ffffff,
+		0px -1px 0px #ffffff;
+}
 .u-margin-top--small{
 	margin-top: 20px;
 }
@@ -36,4 +50,6 @@
 .u-margin-bottom--large{
 	margin-bottom :200px;
 }
-
+.u-margin-left--auto{
+	margin-left: auto;
+}

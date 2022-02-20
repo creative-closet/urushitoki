@@ -77,7 +77,7 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding: 140px 6% 200px;
+  padding: 100px 6% 100px;
 }
 
 .l-main--about {
@@ -281,8 +281,8 @@ input[type=checkbox].p-contact__checkbox::before {
 .c-wrapper--footer {
   display: flex;
   flex-direction: column;
-  padding-left: clamp(20px, 6%, 320px);
-  padding-right: clamp(20px, 6%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
+  padding-right: clamp(20px, 11%, 320px);
   height: inherit;
 }
 
@@ -761,7 +761,7 @@ input[type=checkbox].p-contact__checkbox::before {
 
 /* Urushi Contents */
 .p-urushi-contents {
-  margin-top: 400px;
+  margin-top: 100px;
   /* tablet */
   /* SmartPhone */
 }
@@ -1023,7 +1023,7 @@ front-page
 .p-header-arrow {
   position: absolute;
   z-index: 100;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   /* tablet */
   /* SmartPhone */
@@ -1382,7 +1382,7 @@ body.active::before {
 
 .p-post-archive {
   width: 100%;
-  padding-top: 39px;
+  padding-top: 60px;
   padding-bottom: 39px;
 }
 .p-post-archive .c-grid--col3 {
@@ -2397,7 +2397,7 @@ body.active::before {
 .c-pattern {
   position: relative;
   width: calc(100% - 300px);
-  height: 380px;
+  height: 360px;
   margin-top: 30px;
   /* tablet */
   /* SmartPhone */
@@ -2579,7 +2579,7 @@ body.active::before {
 }
 
 .u-margin-top--urushi-content {
-  margin-top: 200px;
+  margin-top: 100px;
   /* tablet */
   /* SmartPhone */
 }

@@ -1650,6 +1650,9 @@ body.active::before {
 .p-sns__introduction > .c-text--large, .p-sns__introduction > .is-style-c-text--large {
   font-size: 16px;
 }
+.p-sns__introduction > .c-text--large::first-line, .p-sns__introduction > .is-style-c-text--large::first-line {
+  line-height: 1.5;
+}
 
 .p-step-card .wp-block-group__inner-container {
   display: grid;

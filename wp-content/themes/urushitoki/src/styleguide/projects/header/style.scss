@@ -95,7 +95,7 @@ front-page
 .p-header-arrow{
 	position: absolute;
 	z-index : 100;
-	bottom  : 0;
+	bottom  : 10px;
 	left    : 50%;
 	@include mixin.breakpoint( breakpoint-tab ){
 		left   : clamp(20px, calc(100vw - 1280px)/2, 320px);

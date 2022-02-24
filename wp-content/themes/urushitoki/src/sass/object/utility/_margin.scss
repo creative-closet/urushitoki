@@ -33,7 +33,7 @@
 	margin-top: 60px;
 }
 .u-margin-top--urushi-content{
-	margin-top: 200px;
+	margin-top: 100px;
 	@include mixin.breakpoint( breakpoint-tab ){
 		margin-top: 120px;
 	}

@@ -42,6 +42,10 @@
 	margin-right: calc(50% - 50vw);
 	.wp-block-group__inner-container{
 		@extend .p-contents-card-column;
+		padding: 0 6%;
+		@include mixin.breakpoint( breakpoint-tab ){
+		padding: 0;
+		}	
 	}
 }
 //金継ぎ
@@ -258,18 +262,6 @@
 .wp-block-snow-monkey-forms-item{
 	.is-style-c-text{
 		width: 300px;
-		a{
-			color: #252525;
-			border-bottom: solid;
-			border-color:#252525;
-			border-width: 1px;
-		}
-	}
-}
-
-// プライバシーポリシーのaタグ装飾
-.wp-block-snow-monkey-forms-item{
-	.is-style-c-text{
 		a{
 			color: #252525;
 			border-bottom: solid;

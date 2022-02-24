@@ -2485,6 +2485,10 @@ body.active::before {
   /* YouTubeマウスホバー時 */
   /* Instagramマウスホバー時 */
 }
+.c-sns.c-wrapper--pc, .c-wrapper--pc.c-sns--facebook, .c-wrapper--pc.c-sns--insta, .c-wrapper--pc.c-sns--youtube {
+  padding-right: clamp(20px, 11%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
+}
 .c-sns:hover, .c-sns--facebook:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
   text-decoration: none;
 }

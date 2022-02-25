@@ -5,7 +5,7 @@
 .c-pattern{
 	position: relative;
 	width: calc(100% - 300px);
-	height: 380px;
+	height: 360px;
 	margin-top: 30px;
 	@include mixin.breakpoint( breakpoint-tab ){
 		width: 100%;

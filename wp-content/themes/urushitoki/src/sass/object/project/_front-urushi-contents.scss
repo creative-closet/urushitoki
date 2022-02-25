@@ -4,9 +4,13 @@
 
 /* Urushi Contents */
 .p-urushi-contents{
-	margin-top: 400px;
+	margin-top: 100px;
 	@include mixin.breakpoint( breakpoint-tab ){
 		margin-top: 120px;
+	}
+	&.c-wrapper--pc {
+		padding-right:variable.$wrapper-front;
+		padding-left:variable.$wrapper-front;
 	}
 }
 .p-urushi-content{

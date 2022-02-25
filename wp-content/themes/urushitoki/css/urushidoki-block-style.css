@@ -42,7 +42,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Noto Sans Japanese", sans-serif;
-  line-height: 2.125;
+  line-height: 2.1;
 }
 
 a {
@@ -53,8 +53,8 @@ a {
 /* 游明朝の指定 */
 /*p-step-card破線の位置を指定するための関数*/
 .l-header {
-  padding-top: 140px;
-  height: 420px;
+  padding-top: 80px;
+  height: 300px;
   background-size: cover;
   background-position: center;
   /* tablet */
@@ -65,6 +65,9 @@ a {
     height: auto;
   }
 }
+.l-header.c-wrapper {
+  padding: 80px 11% 0;
+}
 
 .l-front-header {
   position: relative;
@@ -74,8 +77,7 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding-top: 140px;
-  padding-bottom: 200px;
+  padding: 100px 6% 100px;
 }
 
 .l-main--about {
@@ -149,6 +151,18 @@ a {
   height: 105px;
   line-height: 105px;
 }
+.p-accessory-circle-card-column-block .wp-block-column {
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 599px) {
+  .p-accessory-circle-card-column-block .wp-block-column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+}
+
 .p-circle-card {
   width: 100%;
   max-width: 345px;
@@ -267,8 +281,8 @@ input[type=checkbox].p-contact__checkbox::before {
 .c-wrapper--footer {
   display: flex;
   flex-direction: column;
-  padding-left: clamp(20px, 6%, 320px);
-  padding-right: clamp(20px, 6%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
+  padding-right: clamp(20px, 11%, 320px);
   height: inherit;
 }
 
@@ -517,7 +531,7 @@ input[type=checkbox].p-contact__checkbox::before {
 .p-front-card--left {
   width: 100%;
   display: flex;
-  padding-right: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 11%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -670,6 +684,9 @@ input[type=checkbox].p-contact__checkbox::before {
     flex-direction: column-reverse;
   }
 }
+.p-front-card--right.c-wrapper--left {
+  padding-left: clamp(20px, 11%, 320px);
+}
 .p-front-card--right__monyou {
   position: absolute;
   left: 0;
@@ -744,7 +761,7 @@ input[type=checkbox].p-contact__checkbox::before {
 
 /* Urushi Contents */
 .p-urushi-contents {
-  margin-top: 400px;
+  margin-top: 100px;
   /* tablet */
   /* SmartPhone */
 }
@@ -752,6 +769,10 @@ input[type=checkbox].p-contact__checkbox::before {
   .p-urushi-contents {
     margin-top: 120px;
   }
+}
+.p-urushi-contents.c-wrapper--pc {
+  padding-right: clamp(20px, 11%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
 }
 
 .p-urushi-content, .p-urushi-content--reverse {
@@ -1002,7 +1023,7 @@ front-page
 .p-header-arrow {
   position: absolute;
   z-index: 100;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   /* tablet */
   /* SmartPhone */
@@ -1361,7 +1382,7 @@ body.active::before {
 
 .p-post-archive {
   width: 100%;
-  padding-top: 39px;
+  padding-top: 60px;
   padding-bottom: 39px;
 }
 .p-post-archive .c-grid--col3 {
@@ -1431,7 +1452,7 @@ body.active::before {
   content: attr(title-english);
   display: block;
   font-size: 1.4rem;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 .c-title::after, .c-title--header::after {
   content: "";
@@ -1563,6 +1584,7 @@ body.active::before {
 }
 
 .p-product-card {
+  width: 100%;
   height: 350px;
   background-color: #fff;
 }
@@ -1636,6 +1658,9 @@ body.active::before {
 
 .p-sns__introduction > .c-text--large, .p-sns__introduction > .is-style-c-text--large {
   font-size: 16px;
+}
+.p-sns__introduction > .c-text--large::first-line, .p-sns__introduction > .is-style-c-text--large::first-line {
+  line-height: 1.5;
 }
 
 .p-step-card .wp-block-group__inner-container {
@@ -1923,6 +1948,17 @@ body.active::before {
   display: flex;
   padding: 30px 20px;
   color: #707070;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-button--primary .c-button--primary--line, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line {
+    position: absolute;
+    right: 0;
+    width: 70%;
+  }
 }
 .c-button--primary .c-button--primary--line svg, .smf-action .smf-button-control .smf-button-control__control .c-button--primary--line svg {
   stroke: currentColor;
@@ -2151,20 +2187,32 @@ body.active::before {
   }
 }
 .c-definition--figcaption {
-  margin: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   height: 100px;
 }
 .c-definition--figcaption__term {
   font-size: 1.6rem;
   color: #202124;
+  width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-definition--figcaption__term {
+    width: 90%;
+  }
 }
 .c-definition--figcaption__description {
   font-size: 1.2rem;
   color: #A6ADB4;
   line-height: 1.6;
+  width: 80%;
   height: 38px;
   overflow: hidden;
   /* tablet */
@@ -2172,6 +2220,7 @@ body.active::before {
 }
 @media (max-width: 1024px) {
   .c-definition--figcaption__description {
+    width: 90%;
     height: auto;
   }
 }
@@ -2362,7 +2411,7 @@ body.active::before {
 .c-pattern {
   position: relative;
   width: calc(100% - 300px);
-  height: 380px;
+  height: 360px;
   margin-top: 30px;
   /* tablet */
   /* SmartPhone */
@@ -2450,6 +2499,10 @@ body.active::before {
   /* YouTubeマウスホバー時 */
   /* Instagramマウスホバー時 */
 }
+.c-sns.c-wrapper--pc, .c-wrapper--pc.c-sns--facebook, .c-wrapper--pc.c-sns--insta, .c-wrapper--pc.c-sns--youtube {
+  padding-right: clamp(20px, 11%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
+}
 .c-sns:hover, .c-sns--facebook:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
   text-decoration: none;
 }
@@ -2532,7 +2585,7 @@ body.active::before {
   display: inline-block;
   color: #000000;
   /* 文字の色 */
-  text-shadow: 2px 2px 0px #ffffff, -2px 2px 0px #ffffff, 2px -2px 0px #ffffff, -2px -2px 0px #ffffff, 2px 0px 0px #ffffff, 0px 2px 0px #ffffff, -2px 0px 0px #ffffff, 0px -2px 0px #ffffff;
+  text-shadow: 1px 1px 0px #ffffff, -1px 1px 0px #ffffff, 1px -1px 0px #ffffff, -1px -1px 0px #ffffff, 1px 0px 0px #ffffff, 0px 1px 0px #ffffff, -1px 0px 0px #ffffff, 0px -1px 0px #ffffff;
 }
 
 .u-margin-top--small {
@@ -2544,7 +2597,7 @@ body.active::before {
 }
 
 .u-margin-top--urushi-content {
-  margin-top: 200px;
+  margin-top: 100px;
   /* tablet */
   /* SmartPhone */
 }
@@ -2604,6 +2657,17 @@ utility
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
+.is-style-p-contents-card-column .wp-block-group__inner-container {
+  padding: 0 6%;
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .is-style-p-contents-card-column .wp-block-group__inner-container {
+    padding: 0;
+  }
+}
+
 .is-style-p-media-text.wp-block-media-text {
   grid-template-columns: 70% 30%;
   /* tablet */

@@ -25,7 +25,7 @@
 			content       : attr(title-english);    // アトリビュート
 			display       : block;
 			font-size     : variable.$font-size--title-large--header--pc;
-			margin-bottom : 50px;       // タイトルとの余白
+			margin-bottom : 5px;       // タイトルとの余白
 		}
 	}
 	/* 罫線のアクセントカラー設定 */
@@ -70,6 +70,7 @@
 	@include mixin.font-yumincho;
 	font-size : variable.$font-size--title-small--pc;
 	color     : variable.$font-color--main;
+	margin-bottom: 27px;
 	/* 罫線 */
 	&::after{
 		content       : "";

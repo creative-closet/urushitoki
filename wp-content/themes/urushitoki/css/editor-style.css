@@ -1239,7 +1239,7 @@ body.active::before {
   text-align: center;
   line-height: 70px;
   font-size: 20px;
-  content: "<";
+  content: ">";
   display: inline-block;
   margin-right: 20px;
 }
@@ -1260,7 +1260,7 @@ body.active::before {
   text-align: center;
   line-height: 70px;
   font-size: 20px;
-  content: ">";
+  content: "<";
   display: inline-block;
   margin-left: 20px;
 }

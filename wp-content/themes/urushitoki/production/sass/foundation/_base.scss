@@ -10,7 +10,7 @@ body{
     font-size        : variable.$font-size--base--pc;
     font-weight      : variable.$font-weight--normal;
     font-family      : "Noto Sans Japanese", sans-serif;
-    line-height      : 2.125;     //   Xd行送り34px/文字サイズ16px
+    line-height      : 2.1;     //   Xd行送り34px/文字サイズ16px 小数点２以下除外
 }
 
 a{

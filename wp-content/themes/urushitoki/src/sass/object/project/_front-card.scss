@@ -7,7 +7,7 @@
 .p-front-card--left{
 	width  : 100%;
 	display: flex;
-	padding-right:variable.$wrapper;
+	padding-right:variable.$wrapper-front;
 	@include mixin.breakpoint( breakpoint-tab ){
 		padding-right : 0;
 		flex-direction: column;
@@ -101,6 +101,9 @@
 	@include mixin.breakpoint( breakpoint-tab ){
 		margin-top    : 60px;
 		flex-direction: column-reverse
+	}
+	&.c-wrapper--left{
+		padding-left:variable.$wrapper-front;
 	}
 	&__monyou{
 		position      : absolute;

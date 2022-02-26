@@ -42,7 +42,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Noto Sans Japanese", sans-serif;
-  line-height: 2.125;
+  line-height: 2.1;
 }
 
 a {
@@ -53,8 +53,8 @@ a {
 /* 游明朝の指定 */
 /*p-step-card破線の位置を指定するための関数*/
 .l-header {
-  padding-top: 140px;
-  height: 420px;
+  padding-top: 80px;
+  height: 300px;
   background-size: cover;
   background-position: center;
   /* tablet */
@@ -65,6 +65,9 @@ a {
     height: auto;
   }
 }
+.l-header.c-wrapper {
+  padding: 80px 11% 0;
+}
 
 .l-front-header {
   position: relative;
@@ -74,8 +77,7 @@ a {
 
 /* メインコンテンツのスタイリング */
 .l-main {
-  padding-top: 140px;
-  padding-bottom: 200px;
+  padding: 100px 6% 100px;
 }
 
 .l-main--about {
@@ -279,8 +281,8 @@ input[type=checkbox].p-contact__checkbox::before {
 .c-wrapper--footer {
   display: flex;
   flex-direction: column;
-  padding-left: clamp(20px, 6%, 320px);
-  padding-right: clamp(20px, 6%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
+  padding-right: clamp(20px, 11%, 320px);
   height: inherit;
 }
 
@@ -529,7 +531,7 @@ input[type=checkbox].p-contact__checkbox::before {
 .p-front-card--left {
   width: 100%;
   display: flex;
-  padding-right: clamp(20px, 6%, 320px);
+  padding-right: clamp(20px, 11%, 320px);
   /* tablet */
   /* SmartPhone */
 }
@@ -682,6 +684,9 @@ input[type=checkbox].p-contact__checkbox::before {
     flex-direction: column-reverse;
   }
 }
+.p-front-card--right.c-wrapper--left {
+  padding-left: clamp(20px, 11%, 320px);
+}
 .p-front-card--right__monyou {
   position: absolute;
   left: 0;
@@ -756,7 +761,7 @@ input[type=checkbox].p-contact__checkbox::before {
 
 /* Urushi Contents */
 .p-urushi-contents {
-  margin-top: 400px;
+  margin-top: 100px;
   /* tablet */
   /* SmartPhone */
 }
@@ -764,6 +769,10 @@ input[type=checkbox].p-contact__checkbox::before {
   .p-urushi-contents {
     margin-top: 120px;
   }
+}
+.p-urushi-contents.c-wrapper--pc {
+  padding-right: clamp(20px, 11%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
 }
 
 .p-urushi-content, .p-urushi-content--reverse {
@@ -1014,7 +1023,7 @@ front-page
 .p-header-arrow {
   position: absolute;
   z-index: 100;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   /* tablet */
   /* SmartPhone */
@@ -1373,7 +1382,7 @@ body.active::before {
 
 .p-post-archive {
   width: 100%;
-  padding-top: 39px;
+  padding-top: 60px;
   padding-bottom: 39px;
 }
 .p-post-archive .c-grid--col3 {
@@ -1443,7 +1452,7 @@ body.active::before {
   content: attr(title-english);
   display: block;
   font-size: 1.4rem;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 .c-title::after, .c-title--header::after {
   content: "";
@@ -1939,6 +1948,17 @@ body.active::before {
   display: flex;
   padding: 30px 20px;
   color: #707070;
+  /* tablet */
+  /* SmartPhone */
+  /* tablet */
+  /* SmartPhone */
+}
+@media (max-width: 1024px) {
+  .c-button--primary .c-button--primary--line {
+    position: absolute;
+    right: 0;
+    width: 70%;
+  }
 }
 .c-button--primary .c-button--primary--line svg {
   stroke: currentColor;
@@ -2391,7 +2411,7 @@ body.active::before {
 .c-pattern {
   position: relative;
   width: calc(100% - 300px);
-  height: 380px;
+  height: 360px;
   margin-top: 30px;
   /* tablet */
   /* SmartPhone */
@@ -2478,6 +2498,10 @@ body.active::before {
   line-height: 1;
   /* YouTubeマウスホバー時 */
   /* Instagramマウスホバー時 */
+}
+.c-sns.c-wrapper--pc, .c-wrapper--pc.c-sns--facebook, .c-wrapper--pc.c-sns--insta, .c-wrapper--pc.c-sns--youtube {
+  padding-right: clamp(20px, 11%, 320px);
+  padding-left: clamp(20px, 11%, 320px);
 }
 .c-sns:hover, .c-sns--facebook:hover, .c-sns--insta:hover, .c-sns--youtube:hover {
   text-decoration: none;
@@ -2573,7 +2597,7 @@ body.active::before {
 }
 
 .u-margin-top--urushi-content {
-  margin-top: 200px;
+  margin-top: 100px;
   /* tablet */
   /* SmartPhone */
 }

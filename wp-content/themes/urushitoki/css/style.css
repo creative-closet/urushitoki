@@ -1228,7 +1228,7 @@ body.active::before {
   color: #3B4043;
 }
 
-.p-pager__previous:before {
+.p-pager__previous:after {
   text-decoration: none;
   color: black;
   border: solid 0px;
@@ -1241,7 +1241,7 @@ body.active::before {
   font-size: 20px;
   content: ">";
   display: inline-block;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .p-pager__previous:hover:before {
@@ -1249,7 +1249,7 @@ body.active::before {
   color: #FFF;
 }
 
-.p-pager__next:after {
+.p-pager__next:before {
   text-decoration: none;
   color: black;
   border: solid 0px;
@@ -1262,7 +1262,7 @@ body.active::before {
   font-size: 20px;
   content: "<";
   display: inline-block;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .p-pager__next:hover:after {

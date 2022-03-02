@@ -22,4 +22,7 @@
 }
 .p-sns__introduction > .c-text--large{
 	font-size: 16px;
+	&::first-line {
+		line-height: 1.5;
+	}
 }

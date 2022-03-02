@@ -193,7 +193,6 @@
                 </div>
             </article>
 
-            <br><br><br><br><br>
 
             <!-- 投稿のギャラリー表示 -->
             <article class="p-front-posts c-wrapper--tab">
@@ -203,7 +202,6 @@
                 </div>
             </article>
 
-            <br><br><br><br><br><br><br>
         </div>
 
     </div>

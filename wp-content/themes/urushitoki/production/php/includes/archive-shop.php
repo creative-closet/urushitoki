@@ -36,7 +36,7 @@
 				</dd>
 				<dd class="c-definition--shop-card__link">
 					<a class="c-title-noborder" href="<?php echo esc_url($url); ?>"><?php echo esc_url($url); ?></a>
-					<img src="<? echo esc_url($img_in_query_icon[0]);?>" alt="">
+					<img src="<?php echo esc_url($img_in_query_icon[0]);?>" alt="">
 				</dd>
 			</div>
 			<dd class="c-definition--shop-card__image">

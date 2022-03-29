@@ -19,7 +19,12 @@
 }
 .c-flex--wrap{
 	flex-wrap: wrap;
+
 }
 .c-flex--space-between{
 	justify-content: space-between;
+}
+
+.c-flex--list ul{
+	list-style: none;
 }

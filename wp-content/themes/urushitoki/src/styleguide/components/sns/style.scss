@@ -17,6 +17,10 @@
 	cursor: pointer;
 	text-align: center;
 	line-height: 1;
+	&.c-wrapper--pc {
+		padding-right:variable.$wrapper-front;
+		padding-left:variable.$wrapper-front;
+	}
 	&:hover {
 		text-decoration: none;
 	}

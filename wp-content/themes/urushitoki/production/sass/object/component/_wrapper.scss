@@ -35,7 +35,7 @@
 .c-wrapper--footer{
 	display       : flex;
 	flex-direction: column;
-	padding-left  : variable.$wrapper;
-	padding-right : variable.$wrapper;
+	padding-left  : variable.$wrapper-front;
+	padding-right : variable.$wrapper-front;
 	height        : inherit;
 }

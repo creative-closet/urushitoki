@@ -21,7 +21,6 @@
 - 投稿詳細ページ
 -->
 
-
 <?php get_header(); ?>
 	<!-- ヘッダー画像・タイトル -->
 	<?php get_template_part('/includes/header')?>

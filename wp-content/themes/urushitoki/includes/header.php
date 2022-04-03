@@ -19,8 +19,8 @@
         $titleEnglish = "Archive";
 
     }elseif (is_single()){
-        $title = "アーカイブ";
-        $description = "投稿アーカイブです";
+        $title = "うるしときのアーカイブ";
+        $description = "うるしときの中の様々なことを綴ってします。";
         $titleEnglish = "Archive";
     }
 ?>

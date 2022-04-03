@@ -428,7 +428,7 @@
 		elseif(is_page('contact'))://問い合わせ
 			$headerImage = array(get_template_directory_uri(). '/assets/image/header-contact.jpg');
 		else://未登録の画像
-			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image-tudumi.jpg');//no-image is temp
+			$headerImage = array(get_template_directory_uri(). '/assets/image/no-image-tudumi.jpg');
 		endif;
 		return $headerImage;
 	}

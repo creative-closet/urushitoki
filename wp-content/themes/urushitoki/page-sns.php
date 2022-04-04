@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 	<!-- ヘッダーのフロントに表示 -->
 	<?php get_template_part('/includes/header')?>
-	<main class="l-main">
-		<div class="c-wrapper">
+
+		<div class="c-wrapper c-sns__margin">
 		<?php /* SNS */
 			$group = SCF::get('page-sns');
 			foreach ((array)$group as $fields ) :
@@ -40,5 +40,5 @@
 		<!-- 記述内容の表示 -->
 		<?php get_template_part('/includes/have-post-loop');?>
 	</div>
-	</main>
+
 	<?php get_footer(); ?>

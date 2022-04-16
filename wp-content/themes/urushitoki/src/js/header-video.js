@@ -1,8 +1,8 @@
 jQuery(window).on('load resize', function(){
 	let windowWidth = window.innerWidth;
-	let windowSp    = 599;
+	let windowTab    = 1024;
 	const video     = document.getElementById('header-video');
-	if (windowWidth <= windowSp) {
+	if (windowWidth <= windowTab) {
 		video.pause()
 		video.addEventListener('pause', function() {
 			video.load();

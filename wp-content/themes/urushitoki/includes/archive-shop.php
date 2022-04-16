@@ -2,7 +2,7 @@
 	<h2 class="c-title u-margin--small">取扱店</h2>
 	<!-- サブクエリインスタンス -->
 	<?php
-	$pager = '999';
+	$pager = '-1';
 	$paged =  (get_query_var( 'paged' )) ? absint( get_query_var( 'paged' ) ) : 1;//absint 負の数にならないように絶対値を表示 get_query_var:クエリ変数を取得 pagedは現在のページ送り番号
 	$args_query = array(
 		'post_status'       => 'publish',//公開済の投稿を指定

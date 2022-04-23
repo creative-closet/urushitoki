@@ -75,6 +75,7 @@
 			}
 			&__item {
 				@extend .c-grid--col4__item;
+				min-width: 25%;
 			}
 		}
 	}

@@ -2391,6 +2391,10 @@ body.active::before {
     grid-template-rows: 1fr;
   }
 }
+.c-grid--col4--tab1__item {
+  min-width: 25%;
+}
+
 .c-pagination, .c-pagination--next, .c-pagination--previous {
   width: 223px;
   height: 60px;

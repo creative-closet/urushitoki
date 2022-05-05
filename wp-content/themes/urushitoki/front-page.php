@@ -45,8 +45,7 @@
                 <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">アクセサリー</h3>
-                        <p class="c-text u-margin-top">年代を問わずにお使いいただける、シンプルなデザインのアクセサリー<br>
-						流行りに流されない特別な品を、末永く身につけていただけたら幸いです。</p>
+                        <p class="c-text u-margin-top">年代を問わずにお使いいただけるシンプルなデザインのアクセサリー。流行りに流されない特別な品を末永く身につけていただけたら幸いです。</p>
                     </section>
                     <a href="<?php echo home_url('/archive_accessory/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
@@ -118,8 +117,7 @@
                 <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">うるしと生活</h3>
-                        <p class="c-text u-margin-top">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。<br>
-						皆様の生活がより豊かになるようなものづくりを心がけています。</p>
+                        <p class="c-text u-margin-top">天然素材のものが身近にあることでぬくもりのある生活をおくりませんか。皆様の生活がより豊かになるようなものづくりを心がけています。</p>
                     </section>
                     <a href="<?php echo home_url('/life/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
@@ -151,7 +149,7 @@
                 <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--left">
                         <h3 class="c-title-small">うるしと楽器</h3>
-                        <p class="c-text u-margin-top">楽器や楽器付属品に付加価値を、<br>漆の魅力を音楽にのせて伝えます。</p>
+                        <p class="c-text u-margin-top">楽器や楽器付属品に付加価値を、漆の魅力を音楽にのせて伝えます。</p>
                     </section>
                     <a href="<?php echo home_url('/instrument/'); ?>" class="p-urushi-content__description-area__button--left c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>

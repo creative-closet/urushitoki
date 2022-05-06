@@ -45,7 +45,7 @@
                 <div class="p-urushi-content__description-area c-wrapper--tab">
                     <section class="p-urushi-content__description-area__text--right">
                         <h3 class="c-title-small">アクセサリー</h3>
-                        <p class="c-text u-margin-top">年代を問わずにお使いいただけるシンプルなデザインのアクセサリー。流行りに流されない特別な品を末永く身につけていただけたら幸いです。</p>
+                        <p class="c-text u-margin-top">年代を問わずにお使いいただけるシンプルなデザインの漆アクセサリー。流行りに流されない特別な品を末永く身につけていただけたら幸いです。</p>
                     </section>
                     <a href="<?php echo home_url('/archive_accessory/'); ?>" class="p-urushi-content__description-area__button--right c-button--primary" id="p-ripples--effect">
                         <span class="c-button--primary--text">MORE</span>
